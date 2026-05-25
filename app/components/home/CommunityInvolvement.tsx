@@ -34,7 +34,7 @@ export function CommunityInvolvement() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.7, ease }}
-            className="relative h-[360px] sm:h-[460px] md:h-[520px]"
+            className="relative mb-14 h-[360px] sm:mb-0 sm:h-[460px] md:h-[520px]"
           >
             <div className="absolute left-0 top-0 h-[68%] w-[62%] overflow-hidden rounded-2xl shadow-2xl ring-1 ring-black/5">
               <Image
@@ -60,9 +60,9 @@ export function CommunityInvolvement() {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true, amount: 0.4 }}
               transition={{ duration: 0.6, ease, delay: 0.3 }}
-              className="absolute left-[44%] top-[42%] flex items-center gap-3 rounded-2xl bg-[var(--color-navy-deep)] px-5 py-4 text-white shadow-2xl ring-1 ring-white/10"
+              className="absolute -bottom-8 left-1/2 flex w-[min(86%,320px)] -translate-x-1/2 items-center gap-3 rounded-2xl bg-[var(--color-navy-deep)] px-4 py-3 text-white shadow-2xl ring-1 ring-white/10 sm:left-[44%] sm:top-[42%] sm:bottom-auto sm:w-auto sm:-translate-x-0 sm:px-5 sm:py-4"
             >
-              <span className="grid h-12 w-12 place-items-center rounded-xl bg-gradient-to-br from-[var(--color-pool)] to-[var(--color-pool-deep)] font-[family-name:var(--font-display)] text-xl">
+              <span className="grid h-10 w-10 place-items-center rounded-xl bg-gradient-to-br from-[var(--color-pool)] to-[var(--color-pool-deep)] font-[family-name:var(--font-display)] text-lg sm:h-12 sm:w-12 sm:text-xl">
                 25+
               </span>
               <div className="leading-tight">

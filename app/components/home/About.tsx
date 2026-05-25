@@ -33,7 +33,7 @@ export function About() {
           whileInView="show"
           viewport={{ once: true, amount: 0.2 }}
           variants={fadeUp}
-          className="relative"
+          className="relative mb-14 sm:mb-0"
         >
           <div className="grid h-[420px] grid-cols-6 grid-rows-6 gap-2 sm:h-[560px] sm:gap-3 md:h-[680px]">
             <MosaicImage src={GALLERY[0].src} alt={GALLERY[0].alt} className="col-span-4 row-span-4" delay={0} priority />
@@ -50,18 +50,18 @@ export function About() {
             whileInView={{ opacity: 1, y: 0, scale: 1 }}
             viewport={{ once: true, amount: 0.3 }}
             transition={{ delay: 0.5, duration: 0.7, ease }}
-            className="absolute -bottom-4 -left-2 z-10 flex items-center gap-3 rounded-2xl bg-[var(--color-navy-deep)] p-3 pr-5 shadow-[0_20px_50px_-15px_rgba(0,55,73,0.55)] ring-1 ring-[var(--color-pool)]/30 sm:-bottom-8 sm:-left-8 sm:p-4 sm:pr-6"
+            className="absolute -bottom-10 left-1/2 z-10 flex -translate-x-1/2 items-center gap-2.5 rounded-2xl bg-[var(--color-navy-deep)] p-2.5 pr-4 shadow-[0_20px_50px_-15px_rgba(0,55,73,0.55)] ring-1 ring-[var(--color-pool)]/30 sm:-bottom-8 sm:-left-8 sm:translate-x-0 sm:gap-3 sm:p-4 sm:pr-6"
           >
-            <span className="grid h-12 w-12 place-items-center rounded-xl bg-gradient-to-br from-[var(--color-pool)] to-[var(--color-pool-deep)] text-white">
-              <svg viewBox="0 0 24 24" fill="currentColor" className="h-6 w-6">
+            <span className="grid h-10 w-10 place-items-center rounded-xl bg-gradient-to-br from-[var(--color-pool)] to-[var(--color-pool-deep)] text-white sm:h-12 sm:w-12">
+              <svg viewBox="0 0 24 24" fill="currentColor" className="h-5 w-5 sm:h-6 sm:w-6">
                 <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
               </svg>
             </span>
             <div className="leading-tight">
-              <p className="font-[family-name:var(--font-display)] text-2xl text-white">
+              <p className="font-[family-name:var(--font-display)] text-xl text-white sm:text-2xl">
                 30<span className="text-[var(--color-gold-light)]">+</span>
               </p>
-              <p className="text-[10px] font-semibold uppercase tracking-[0.22em] text-[var(--color-gold-light)]">
+              <p className="text-[9px] font-semibold uppercase tracking-[0.2em] text-[var(--color-gold-light)] sm:text-[10px] sm:tracking-[0.22em]">
                 Years Experience
               </p>
             </div>

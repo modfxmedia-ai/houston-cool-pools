@@ -27,7 +27,7 @@ export function Hero() {
 
 function HeroVisual() {
   return (
-    <section className="relative h-[100svh] min-h-[640px] w-full overflow-hidden bg-[var(--color-navy-deep)] text-white sm:min-h-[720px] lg:min-h-[760px]">
+    <section className="relative min-h-[100svh] w-full overflow-hidden bg-[var(--color-navy-deep)] text-white sm:h-[100svh] sm:min-h-[720px] lg:min-h-[760px]">
       {/* HD luxury pool video background */}
       <video
         className="absolute inset-0 h-full w-full object-cover"
@@ -89,7 +89,7 @@ function HeroVisual() {
                 transition: { staggerChildren: 0.14, delayChildren: 0.35 },
               },
             }}
-            className="font-[family-name:var(--font-display)] mt-6 text-[clamp(2rem,7vw,5rem)] font-bold leading-[1] tracking-[-0.035em] sm:mt-7"
+            className="font-[family-name:var(--font-display)] mt-6 text-[clamp(2.75rem,9vw,5rem)] font-bold leading-[1] tracking-[-0.035em] sm:mt-7"
           >
             <motion.span variants={lineReveal} className="block">
               Dream pools,
@@ -178,6 +178,11 @@ function HeroVisual() {
               </span>
             </a>
           </motion.div>
+
+          {/* Mobile collage — shown beneath the hero copy on small screens */}
+          <div className="relative mx-auto mt-14 h-[300px] w-full max-w-[360px] sm:mt-16 sm:h-[340px] sm:max-w-[420px] lg:hidden">
+            <PoolCollage compact />
+          </div>
         </div>
       </div>
 
@@ -258,7 +263,7 @@ const COLLAGE_IMAGES = [
   },
 ] as const;
 
-function PoolCollage() {
+function PoolCollage({ compact = false }: { compact?: boolean } = {}) {
   // Circular carousel: one image sits front-and-center while the other two
   // orbit behind it. Every few seconds the active image rotates back and the
   // next one comes forward, creating a continuous circular motion.
@@ -273,39 +278,17 @@ function PoolCollage() {
   }, []);
 
   // Slot 0 = front, Slot 1 = back-right, Slot 2 = back-left.
-  // Cards arc through these positions in a circular order.
+  const offsetX = compact ? 70 : 120;
+  const offsetY = compact ? -28 : -40;
   const slots = [
-    // FRONT — large, centered, no tilt
-    {
-      x: 0,
-      y: 0,
-      rotate: 0,
-      scale: 1,
-      zIndex: 30,
-      opacity: 1,
-      filter: "brightness(1)",
-    },
-    // BACK-RIGHT — slightly smaller, tilted right, offset
-    {
-      x: 120,
-      y: -40,
-      rotate: 9,
-      scale: 0.82,
-      zIndex: 20,
-      opacity: 0.85,
-      filter: "brightness(0.7)",
-    },
-    // BACK-LEFT — slightly smaller, tilted left, offset
-    {
-      x: -120,
-      y: -40,
-      rotate: -9,
-      scale: 0.82,
-      zIndex: 10,
-      opacity: 0.85,
-      filter: "brightness(0.7)",
-    },
+    { x: 0, y: 0, rotate: 0, scale: 1, zIndex: 30, opacity: 1, filter: "brightness(1)" },
+    { x: offsetX, y: offsetY, rotate: 9, scale: 0.82, zIndex: 20, opacity: 0.85, filter: "brightness(0.7)" },
+    { x: -offsetX, y: offsetY, rotate: -9, scale: 0.82, zIndex: 10, opacity: 0.85, filter: "brightness(0.7)" },
   ];
+
+  // Card dimensions
+  const cardW = compact ? 200 : 280;
+  const cardH = compact ? 260 : 360;
 
   return (
     <>
@@ -314,22 +297,38 @@ function PoolCollage() {
         initial={{ opacity: 0, scale: 0.8 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ delay: 0.9, duration: 1.2, ease }}
-        className="pointer-events-none absolute right-12 top-44 h-[560px] w-[560px]"
+        className={
+          compact
+            ? "pointer-events-none absolute inset-0"
+            : "pointer-events-none absolute right-12 top-44 h-[560px] w-[560px]"
+        }
         aria-hidden
       >
         <span className="absolute inset-0 rounded-full bg-[var(--color-pool)]/30 blur-3xl" />
-        <span className="absolute inset-16 rounded-full bg-[var(--color-gold-light)]/20 blur-3xl" />
+        <span className={compact ? "absolute inset-8 rounded-full bg-[var(--color-gold-light)]/20 blur-3xl" : "absolute inset-16 rounded-full bg-[var(--color-gold-light)]/20 blur-3xl"} />
       </motion.div>
 
-      {/* Carousel stage — cards are absolutely positioned around a center point */}
-      <div className="absolute right-[10%] top-[28%] h-[420px] w-[340px]">
+      {/* Carousel stage */}
+      <div
+        className={
+          compact
+            ? "absolute inset-0"
+            : "absolute right-[10%] top-[28%] h-[420px] w-[340px]"
+        }
+      >
         {COLLAGE_IMAGES.map((img, i) => {
-          // Each image's current slot rotates with `active`.
           const slot = slots[(i - active + COLLAGE_IMAGES.length) % COLLAGE_IMAGES.length];
           return (
             <motion.div
               key={i}
-              className="absolute left-1/2 top-1/2 -ml-[140px] -mt-[180px] h-[360px] w-[280px]"
+              className="absolute left-1/2 top-1/2"
+              style={{
+                width: cardW,
+                height: cardH,
+                marginLeft: -cardW / 2,
+                marginTop: -cardH / 2,
+                zIndex: slot.zIndex,
+              }}
               initial={{ opacity: 0, scale: 0.6 }}
               animate={{
                 x: slot.x,
@@ -345,7 +344,6 @@ function PoolCollage() {
                 damping: 18,
                 mass: 1,
               }}
-              style={{ zIndex: slot.zIndex }}
             >
               <motion.div
                 animate={{ y: [0, -10, 0] }}
@@ -414,7 +412,7 @@ function PoolCollage() {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 1.8, duration: 0.7, ease }}
-        className="pointer-events-auto absolute bottom-24 left-8 z-40 lg:left-16"
+        className="pointer-events-auto absolute bottom-24 left-8 z-40 hidden lg:left-16 lg:block"
       >
         <motion.div
           animate={{ y: [0, -8, 0] }}
@@ -608,20 +606,20 @@ function StatCard({ stat, index }: { stat: Stat; index: number }) {
       initial={{ opacity: 0, y: 16 }}
       animate={inView ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.5, delay: index * 0.08, ease }}
-      className="group relative flex items-center gap-4 bg-[var(--color-navy-deep)]/70 p-5 transition-colors hover:bg-[var(--color-navy-deep)]/40"
+      className="group relative flex items-center gap-3 bg-[var(--color-navy-deep)]/70 p-3.5 transition-colors hover:bg-[var(--color-navy-deep)]/40 sm:gap-4 sm:p-5"
     >
       {/* Top accent line on hover */}
       <span className="pointer-events-none absolute inset-x-5 -top-px h-px bg-gradient-to-r from-transparent via-[var(--color-pool)] to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
 
       {/* Icon */}
-      <span className="grid h-11 w-11 shrink-0 place-items-center rounded-lg border border-[var(--color-pool)]/30 bg-[var(--color-pool)]/10 text-[var(--color-pool)] transition-colors group-hover:bg-[var(--color-pool)] group-hover:text-white">
+      <span className="grid h-9 w-9 shrink-0 place-items-center rounded-lg border border-[var(--color-pool)]/30 bg-[var(--color-pool)]/10 text-[var(--color-pool)] transition-colors group-hover:bg-[var(--color-pool)] group-hover:text-white sm:h-11 sm:w-11">
         {stat.icon}
       </span>
 
       {/* Number + label */}
       <div className="min-w-0 flex-1">
         <div className="flex items-baseline gap-0.5">
-          <span className="font-[family-name:var(--font-display)] text-3xl leading-none text-white md:text-4xl">
+          <span className="font-[family-name:var(--font-display)] text-2xl leading-none text-white sm:text-3xl md:text-4xl">
             {typeof stat.value === "number" && inView ? (
               <Counter to={stat.value} />
             ) : (
@@ -629,12 +627,12 @@ function StatCard({ stat, index }: { stat: Stat; index: number }) {
             )}
           </span>
           {stat.suffix && (
-            <span className="font-[family-name:var(--font-display)] text-xl text-[var(--color-pool)] md:text-2xl">
+            <span className="font-[family-name:var(--font-display)] text-lg text-[var(--color-pool)] sm:text-xl md:text-2xl">
               {stat.suffix}
             </span>
           )}
         </div>
-        <p className="mt-1 text-[10px] font-semibold uppercase tracking-[0.22em] text-white/70">
+        <p className="mt-1 text-[9px] font-semibold uppercase tracking-[0.18em] text-white/70 sm:text-[10px] sm:tracking-[0.22em]">
           {stat.label}
         </p>
         {/* Hairline underline grows in */}

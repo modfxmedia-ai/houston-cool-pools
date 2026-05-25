@@ -66,7 +66,7 @@ export function VideoShowcase() {
             initial={{ opacity: 0, scale: 0.98 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5, ease }}
-            className="relative aspect-video overflow-hidden rounded-2xl bg-black shadow-[0_30px_80px_-30px_rgba(0,0,0,0.8)] ring-1 ring-white/10"
+            className="relative aspect-video w-full min-w-0 max-w-full overflow-hidden rounded-2xl bg-black shadow-[0_30px_80px_-30px_rgba(0,0,0,0.8)] ring-1 ring-white/10"
           >
             <iframe
               src={`https://www.youtube.com/embed/${active.id}?rel=0`}
@@ -74,7 +74,7 @@ export function VideoShowcase() {
               loading="lazy"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               allowFullScreen
-              className="absolute inset-0 h-full w-full"
+              className="absolute inset-0 h-full w-full max-w-full"
             />
           </motion.div>
 
@@ -84,7 +84,7 @@ export function VideoShowcase() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.6, ease, delay: 0.15 }}
-            className="rounded-2xl border border-white/10 bg-white/[0.03] p-4 backdrop-blur-md"
+            className="min-w-0 max-w-full rounded-2xl border border-white/10 bg-white/[0.03] p-3 backdrop-blur-md sm:p-4"
           >
             <p className="px-3 pb-3 pt-2 text-[10px] font-bold uppercase tracking-[0.28em] text-white/40">
               Up Next
