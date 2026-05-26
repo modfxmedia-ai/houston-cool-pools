@@ -88,7 +88,7 @@ const SERVICES: Service[] = [
 
 export function Services() {
   return (
-    <section className="relative overflow-hidden bg-[var(--color-navy-deep)] py-24 text-white md:py-32">
+    <section className="relative overflow-hidden bg-[var(--color-navy-deep)] py-20 text-white md:py-24">
       <AnimatedDarkBackdrop />
 
       <div className="relative mx-auto max-w-7xl px-6 md:px-10">
@@ -113,13 +113,13 @@ export function Services() {
           </p>
         </motion.div>
 
-        <div className="relative mt-20">
+        <div className="relative mt-14">
           <motion.div
             initial="hidden"
             whileInView="show"
             viewport={{ once: true, amount: 0.1 }}
-            variants={{ show: { transition: { staggerChildren: 0.08 } } }}
-            className="relative grid gap-6 md:grid-cols-2 lg:grid-cols-3"
+            variants={{ show: { transition: { staggerChildren: 0.07 } } }}
+            className="relative grid gap-4 sm:grid-cols-2 sm:gap-5 lg:grid-cols-3"
           >
             {SERVICES.map((s, i) => (
               <ServiceCard key={s.title} service={s} index={i} />
@@ -135,51 +135,58 @@ function ServiceCard({ service, index }: { service: Service; index: number }) {
   return (
     <motion.div
       variants={{
-        hidden: { opacity: 0, y: 28 },
-        show: { opacity: 1, y: 0, transition: { duration: 0.55, ease } },
+        hidden: { opacity: 0, y: 24 },
+        show: { opacity: 1, y: 0, transition: { duration: 0.5, ease } },
       }}
       className="relative"
     >
       <Link
         href={service.href}
-        className="group relative flex h-full flex-col overflow-hidden rounded-2xl bg-white text-[var(--color-navy-deep)] ring-1 ring-black/[0.04] transition-all duration-500 hover:-translate-y-1.5 hover:ring-[var(--color-pool)]/30 hover:shadow-[0_24px_60px_-20px_rgba(0,124,182,0.35)]"
+        className="group relative block aspect-[5/6] overflow-hidden rounded-2xl ring-1 ring-white/[0.06] transition-all duration-500 hover:-translate-y-1.5 hover:ring-[var(--color-pool)]/40 hover:shadow-[0_30px_60px_-20px_rgba(0,124,182,0.4)] sm:aspect-[4/5]"
       >
-        <div className="relative h-56 overflow-hidden">
-          <Image
-            src={service.image}
-            alt={service.title}
-            fill
-            sizes="(min-width:1024px) 33vw, (min-width:768px) 50vw, 100vw"
-            className="object-cover transition-transform duration-[1200ms] ease-out group-hover:scale-105"
-          />
-          <span className="absolute inset-0 bg-gradient-to-t from-[var(--color-navy-deep)]/45 via-transparent to-transparent" />
-          <span className="absolute left-5 top-5 inline-flex items-center gap-1.5 rounded-full bg-white/95 px-3 py-1 text-[10px] font-bold tracking-[0.18em] text-[var(--color-navy-deep)] backdrop-blur">
-            <span className="text-[var(--color-pool)]">0{index + 1}</span>
-            <span className="text-[var(--color-navy-deep)]/30">/</span>
-            <span className="text-[var(--color-navy-deep)]/40">06</span>
+        {/* Image fills entire card */}
+        <Image
+          src={service.image}
+          alt={service.title}
+          fill
+          sizes="(min-width:1024px) 33vw, (min-width:640px) 50vw, 100vw"
+          className="object-cover transition-transform duration-[1400ms] ease-out group-hover:scale-[1.08]"
+        />
+
+        {/* Gradient veil — heavy at bottom for legibility */}
+        <span className="absolute inset-0 bg-gradient-to-t from-[var(--color-navy-deep)] via-[var(--color-navy-deep)]/55 to-[var(--color-navy-deep)]/10" />
+        {/* Hover cyan tint */}
+        <span className="absolute inset-0 bg-[var(--color-pool)]/0 transition-colors duration-500 group-hover:bg-[var(--color-pool)]/15" />
+
+        {/* Top row: index + icon */}
+        <div className="absolute inset-x-4 top-4 flex items-start justify-between">
+          <span className="rounded-full bg-white/15 px-2.5 py-1 text-[10px] font-bold tracking-[0.2em] text-white backdrop-blur-md">
+            <span className="text-[var(--color-gold-light)]">0{index + 1}</span>
+            <span className="mx-1 text-white/40">/</span>
+            <span className="text-white/60">06</span>
+          </span>
+          <span className="grid h-9 w-9 place-items-center rounded-full bg-white/15 text-white backdrop-blur-md transition-all duration-500 group-hover:bg-[var(--color-pool)] group-hover:text-white">
+            {service.icon}
           </span>
         </div>
 
-        <div className="flex flex-1 flex-col px-5 pb-6 pt-5 sm:px-7 sm:pb-7 sm:pt-6">
-          <div className="flex items-start gap-3 sm:gap-4">
-            <span className="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-[var(--color-pool)]/10 text-[var(--color-pool)] transition-colors group-hover:bg-[var(--color-pool)] group-hover:text-white sm:h-11 sm:w-11">
-              {service.icon}
-            </span>
-            <h3 className="font-[family-name:var(--font-display)] text-[1.25rem] leading-tight tracking-tight text-[var(--color-navy-deep)] sm:text-[1.4rem] md:text-[1.55rem]">
-              {service.title}
-            </h3>
-          </div>
-          <p className="mt-4 flex-1 text-[14px] leading-[1.7] text-[var(--color-navy-deep)]/60">
+        {/* Bottom: title + tagline + arrow */}
+        <div className="absolute inset-x-0 bottom-0 p-5 sm:p-6">
+          <h3 className="font-[family-name:var(--font-display)] text-[1.4rem] leading-[1.1] tracking-tight text-white sm:text-[1.55rem]">
+            {service.title}
+          </h3>
+          <p className="mt-2 line-clamp-2 text-sm leading-relaxed text-white/65 transition-colors group-hover:text-white/85 sm:text-base">
             {service.desc}
           </p>
 
-          <div className="mt-6 flex items-center justify-between border-t border-black/[0.06] pt-5">
-            <span className="inline-flex items-center gap-2 text-[11px] font-bold uppercase tracking-[0.24em] text-[var(--color-pool)]">
-              Learn More
+          {/* Animated reveal: thin underline + arrow */}
+          <div className="mt-4 flex items-center justify-between border-t border-white/15 pt-4">
+            <span className="text-[10px] font-bold uppercase tracking-[0.24em] text-[var(--color-gold-light)]">
+              Explore
             </span>
-            <span className="grid h-9 w-9 place-items-center rounded-full bg-[var(--color-navy-deep)]/[0.04] text-[var(--color-navy-deep)] transition-all group-hover:bg-[var(--color-pool)] group-hover:text-white group-hover:translate-x-0">
-              <svg viewBox="0 0 24 24" fill="none" className="h-3.5 w-3.5 transition-transform duration-300 group-hover:translate-x-0.5">
-                <path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+            <span className="grid h-8 w-8 place-items-center rounded-full bg-white/10 text-white transition-all duration-500 group-hover:bg-[var(--color-gold-light)] group-hover:text-[var(--color-navy-deep)]">
+              <svg viewBox="0 0 24 24" fill="none" className="h-3 w-3 transition-transform duration-300 group-hover:translate-x-0.5">
+                <path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
             </span>
           </div>
