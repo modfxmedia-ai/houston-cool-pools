@@ -128,7 +128,7 @@ function HeroVisual() {
             className="mt-6 max-w-xl text-sm leading-relaxed text-white/75 sm:mt-8 sm:text-base md:text-lg"
           >
             Houston&apos;s most trusted custom gunite pool builder since 1996 —
-            crafting backyard retreats with a 100% on-budget guarantee.
+            crafting backyard retreats with a 100% commitment to quality construction.
           </motion.p>
 
           <motion.div
@@ -141,7 +141,7 @@ function HeroVisual() {
               href={QUOTE_HREF}
               className="group relative inline-flex items-center gap-3 overflow-hidden rounded-full bg-[var(--color-pool)] px-8 py-4 text-[11px] font-bold uppercase tracking-[0.28em] text-white shadow-[0_12px_40px_-12px_rgba(0,124,182,0.85)] transition-all hover:shadow-[0_18px_55px_-12px_rgba(79,195,224,1)]"
             >
-              <span className="relative z-10">Start Your Design</span>
+              <span className="relative z-10">Schedule Your Free Pool Consultation</span>
               <span className="relative z-10 grid h-7 w-7 place-items-center rounded-full bg-white/15 transition-transform group-hover:translate-x-1">
                 <svg className="h-3 w-3" viewBox="0 0 16 16" fill="none">
                   <path
@@ -250,16 +250,19 @@ const COLLAGE_IMAGES = [
     src: "/images/gallery/_mg_0210.jpg",
     alt: "Luxury custom pool with spa",
     badge: "Custom Build",
+    href: "/gallery",
   },
   {
     src: "/images/gallery/_mg_0611.jpg",
     alt: "Modern infinity-edge pool",
     badge: "Infinity Edge",
+    href: "/pool-specifications",
   },
   {
     src: "/images/gallery/_mg_0078.jpg",
     alt: "Backyard pool with water features",
     badge: "Water Features",
+    href: "/custom-pool-features-1",
   },
 ] as const;
 
@@ -355,7 +358,11 @@ function PoolCollage({ compact = false }: { compact?: boolean } = {}) {
                 className="group relative h-full w-full"
               >
                 {/* Gradient border wrapper */}
-                <div className="relative h-full w-full overflow-hidden rounded-2xl bg-gradient-to-br from-[var(--color-pool)] via-[var(--color-gold-light)]/50 to-[var(--color-pool-deep)] p-[2px] shadow-[0_30px_60px_-20px_rgba(0,0,0,0.7)]">
+                <Link
+                  href={img.href}
+                  aria-label={img.alt}
+                  className="pointer-events-auto relative block h-full w-full overflow-hidden rounded-2xl bg-gradient-to-br from-[var(--color-pool)] via-[var(--color-gold-light)]/50 to-[var(--color-pool-deep)] p-[2px] shadow-[0_30px_60px_-20px_rgba(0,0,0,0.7)]"
+                >
                   <div className="relative h-full w-full overflow-hidden rounded-[14px] bg-[var(--color-navy-deep)]">
                     <Image
                       src={img.src}
@@ -383,7 +390,7 @@ function PoolCollage({ compact = false }: { compact?: boolean } = {}) {
                       </svg>
                     </div>
                   </div>
-                </div>
+                </Link>
               </motion.div>
             </motion.div>
           );
@@ -533,13 +540,13 @@ const STATS: Stat[] = [
     ),
   },
   {
-    label: "On Budget",
+    label: "Commitment to Quality",
     value: 100,
     suffix: "%",
-    caption: "Guaranteed every build",
+    caption: "Quality construction, every build",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" className="h-5 w-5">
-        <path d="M12 1v22M17 5H9.5a3.5 3.5 0 100 7h5a3.5 3.5 0 110 7H6" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" />
+        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" stroke="currentColor" strokeWidth="1.6" strokeLinejoin="round" />
       </svg>
     ),
   },
@@ -581,9 +588,24 @@ function StatsBand() {
               Built on <span className="italic text-[var(--color-gold-light)]">three decades</span> of craft
             </h2>
           </div>
-          <p className="text-xs text-white/55 md:text-right">
-            Award-winning custom pools — on time, on budget, built to last.
-          </p>
+          <div className="flex flex-col items-start gap-3 md:items-end">
+            <p className="text-xs text-white/55 md:text-right">
+              Award-winning custom pools — on time, on budget, built to last.
+            </p>
+            <ul className="flex flex-wrap items-center gap-2">
+              {["BBB A+ Rated", "Genesis 3 Member", "APSP Member", "Houstonia Award"].map((a) => (
+                <li
+                  key={a}
+                  className="inline-flex items-center gap-1.5 rounded-full border border-[var(--color-gold-light)]/30 bg-[var(--color-gold-light)]/10 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.16em] text-[var(--color-gold-light)]"
+                >
+                  <svg viewBox="0 0 24 24" fill="currentColor" className="h-3 w-3">
+                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                  </svg>
+                  {a}
+                </li>
+              ))}
+            </ul>
+          </div>
         </motion.div>
 
         <div className="grid grid-cols-2 gap-px overflow-hidden rounded-xl border border-white/10 bg-white/5 backdrop-blur-md lg:grid-cols-4">

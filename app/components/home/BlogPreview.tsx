@@ -25,7 +25,7 @@ const POSTS: Post[] = [
     tag: "Pool Design",
     readTime: "6 min",
     date: "Mar 14, 2026",
-    img: "/images/gallery/_mg_0078.jpg",
+    img: "/images/gallery/_mg_0033.jpg",
   },
   {
     title: "Modern pool design trends to know in 2026",
@@ -35,7 +35,7 @@ const POSTS: Post[] = [
     tag: "Trends",
     readTime: "5 min",
     date: "Feb 22, 2026",
-    img: "/images/gallery/_mg_0210.jpg",
+    img: "/images/gallery/_mg_0701.jpg",
   },
   {
     title: "10 steps to building your dream pool",
@@ -45,7 +45,7 @@ const POSTS: Post[] = [
     tag: "Free Guide",
     readTime: "PDF",
     date: "Jan 09, 2026",
-    img: "/images/gallery/_mg_0300.jpg",
+    img: "/images/gallery/_mg_0611.jpg",
   },
 ];
 

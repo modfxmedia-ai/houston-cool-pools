@@ -101,32 +101,6 @@ export function VideoShowcase() {
             </ul>
           </motion.div>
         </div>
-
-        {/* ----- Community grid (thumbnails) ----- */}
-        <div className="mt-20">
-          <div className="mb-8 flex items-end justify-between gap-6">
-            <div>
-              <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-[var(--color-pool)]">
-                Community Series
-              </p>
-              <h3 className="font-[family-name:var(--font-display)] mt-2 text-2xl md:text-3xl">
-                Featuring local Houston businesses & causes
-              </h3>
-            </div>
-          </div>
-
-          <motion.div
-            initial="hidden"
-            whileInView="show"
-            viewport={{ once: true, amount: 0.1 }}
-            variants={{ show: { transition: { staggerChildren: 0.06 } } }}
-            className="grid gap-5 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3"
-          >
-            {VIDEOS.map((v) => (
-              <VideoThumb key={v.id} video={v} onSelect={() => setActive(v)} isActive={v.id === active.id} />
-            ))}
-          </motion.div>
-        </div>
       </div>
     </section>
   );
@@ -175,60 +149,5 @@ function PlaylistItem({
         </span>
       </button>
     </li>
-  );
-}
-
-function VideoThumb({
-  video,
-  onSelect,
-  isActive,
-}: {
-  video: Video;
-  onSelect: () => void;
-  isActive: boolean;
-}) {
-  return (
-    <motion.button
-      type="button"
-      onClick={onSelect}
-      variants={{
-        hidden: { opacity: 0, y: 24 },
-        show: { opacity: 1, y: 0, transition: { duration: 0.5, ease } },
-      }}
-      className={`group relative aspect-video overflow-hidden rounded-xl bg-black text-left ring-1 transition-all hover:-translate-y-1 ${
-        isActive
-          ? "ring-[var(--color-pool)]/70 shadow-[0_20px_50px_-20px_rgba(0,124,182,0.6)]"
-          : "ring-white/10 hover:ring-[var(--color-pool)]/50"
-      }`}
-    >
-      <Image
-        src={`https://i.ytimg.com/vi/${video.id}/hqdefault.jpg`}
-        alt={video.title}
-        fill
-        sizes="(min-width:1024px) 28vw, (min-width:768px) 33vw, 100vw"
-        unoptimized
-        className="object-cover transition-transform duration-700 group-hover:scale-110"
-      />
-      <span className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
-
-      {/* Play button */}
-      <span className="absolute inset-0 grid place-items-center">
-        <span className="grid h-14 w-14 place-items-center rounded-full bg-[var(--color-pool)] text-white shadow-lg shadow-black/40 ring-4 ring-white/15 transition-transform group-hover:scale-110">
-          <svg viewBox="0 0 24 24" fill="currentColor" className="h-5 w-5 translate-x-[2px]">
-            <path d="M8 5v14l11-7z" />
-          </svg>
-        </span>
-      </span>
-
-      {/* Caption */}
-      <span className="absolute inset-x-0 bottom-0 p-4">
-        <span className="block text-[10px] font-bold uppercase tracking-[0.22em] text-[var(--color-gold-light)]">
-          {video.category}
-        </span>
-        <span className="mt-1 block text-sm font-semibold leading-tight text-white">
-          {video.title}
-        </span>
-      </span>
-    </motion.button>
   );
 }

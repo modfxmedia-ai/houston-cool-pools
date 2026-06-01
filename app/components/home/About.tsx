@@ -12,12 +12,12 @@ const fadeUp = {
 };
 
 const GALLERY = [
-  { src: "/images/gallery/_mg_0611.jpg", alt: "Custom gunite pool with spa" },
-  { src: "/images/gallery/_mg_0210.jpg", alt: "Luxury backyard pool retreat" },
-  { src: "/images/gallery/_mg_0078.jpg", alt: "Modern pool with water features" },
   { src: "/images/gallery/_mg_0300.jpg", alt: "Resort-style pool design" },
   { src: "/images/gallery/_mg_0033.jpg", alt: "Pool with elegant decking" },
   { src: "/images/gallery/_mg_0701.jpg", alt: "Custom pool and outdoor living space" },
+  { src: "/images/gallery/_mg_0611.jpg", alt: "Custom gunite pool with spa" },
+  { src: "/images/gallery/_mg_0210.jpg", alt: "Luxury backyard pool retreat" },
+  { src: "/images/gallery/_mg_0078.jpg", alt: "Modern pool with water features" },
 ] as const;
 
 export function About() {
@@ -123,17 +123,6 @@ export function About() {
               design and a 100 percent commitment to quality construction.
             </p>
           </div>
-
-          <ul className="mt-7 flex flex-wrap gap-2">
-            {["Custom Gunite", "Spas & Water Features", "Outdoor Living", "BBB A+ Rated"].map((f) => (
-              <li
-                key={f}
-                className="rounded-full border border-[var(--color-pool)]/25 bg-[var(--color-pool)]/5 px-3.5 py-1.5 text-[11px] font-semibold uppercase tracking-[0.14em] text-[var(--color-pool-deep)]"
-              >
-                {f}
-              </li>
-            ))}
-          </ul>
 
           <div className="mt-9 flex flex-wrap items-center gap-5">
             <Link
