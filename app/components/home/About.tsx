@@ -12,12 +12,12 @@ const fadeUp = {
 };
 
 const GALLERY = [
-  { src: "/images/gallery/_mg_0300.jpg", alt: "Resort-style pool design" },
   { src: "/images/gallery/_mg_0033.jpg", alt: "Pool with elegant decking" },
-  { src: "/images/gallery/_mg_0701.jpg", alt: "Custom pool and outdoor living space" },
-  { src: "/images/gallery/_mg_0611.jpg", alt: "Custom gunite pool with spa" },
-  { src: "/images/gallery/_mg_0210.jpg", alt: "Luxury backyard pool retreat" },
   { src: "/images/gallery/_mg_0078.jpg", alt: "Modern pool with water features" },
+  { src: "/images/gallery/img_1011.jpg", alt: "Backyard pool retreat at twilight" },
+  { src: "/images/gallery/_mg_0611.jpg", alt: "Custom gunite pool with spa" },
+  { src: "/images/gallery/img_2466.jpg", alt: "Custom pool and outdoor living space" },
+  { src: "/images/gallery/img_8893.jpg", alt: "Resort-style pool design" },
 ] as const;
 
 export function About() {

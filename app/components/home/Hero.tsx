@@ -253,13 +253,13 @@ const COLLAGE_IMAGES = [
     href: "/gallery",
   },
   {
-    src: "/images/gallery/_mg_0611.jpg",
+    src: "/images/gallery/_mg_0108.jpg",
     alt: "Modern infinity-edge pool",
     badge: "Infinity Edge",
     href: "/pool-specifications",
   },
   {
-    src: "/images/gallery/_mg_0078.jpg",
+    src: "/images/gallery/_mg_0285.jpg",
     alt: "Backyard pool with water features",
     badge: "Water Features",
     href: "/custom-pool-features-1",

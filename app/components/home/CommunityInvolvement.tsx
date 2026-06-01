@@ -38,7 +38,7 @@ export function CommunityInvolvement() {
           >
             <div className="absolute left-0 top-0 h-[68%] w-[62%] overflow-hidden rounded-2xl shadow-2xl ring-1 ring-black/5">
               <Image
-                src="/images/gallery/_mg_0611.jpg"
+                src="/images/gallery/_mg_0701.jpg"
                 alt="Houston Cool Pools community project"
                 fill
                 sizes="(min-width:1024px) 30vw, 60vw"
@@ -47,7 +47,7 @@ export function CommunityInvolvement() {
             </div>
             <div className="absolute bottom-0 right-0 h-[60%] w-[58%] overflow-hidden rounded-2xl shadow-2xl ring-4 ring-white">
               <Image
-                src="/images/gallery/_mg_0300.jpg"
+                src="/images/gallery/_mg_0033.jpg"
                 alt="Houston Cool Pools custom build"
                 fill
                 sizes="(min-width:1024px) 28vw, 58vw"

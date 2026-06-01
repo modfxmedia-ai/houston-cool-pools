@@ -21,7 +21,7 @@ const SERVICES: Service[] = [
     title: "Pricing",
     desc: "Transparent pool pricing with packages from $45K to $55K and up.",
     href: "/pricing-45k-55k",
-    image: "/images/gallery/_mg_0210.jpg",
+    image: "/images/gallery/_mg_0300.jpg",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" className="h-5 w-5">
         <path d="M12 1v22M17 5H9.5a3.5 3.5 0 100 7h5a3.5 3.5 0 110 7H6" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
@@ -32,7 +32,7 @@ const SERVICES: Service[] = [
     title: "Features",
     desc: "Waterfalls, spas, fire bowls, bubblers and dozens of custom features.",
     href: "/custom-pool-features-1",
-    image: "/images/gallery/_mg_0611.jpg",
+    image: "/images/gallery/_mg_0701.jpg",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" className="h-5 w-5">
         <path d="M12 3s-5 5-5 9a5 5 0 0010 0c0-4-5-9-5-9z" stroke="currentColor" strokeWidth="1.8" strokeLinejoin="round" />
@@ -43,7 +43,7 @@ const SERVICES: Service[] = [
     title: "Financing",
     desc: "Flexible pool financing options to fit any budget.",
     href: "/poolfinancing",
-    image: "/images/gallery/_mg_0078.jpg",
+    image: "/images/gallery/andersontarr_4.jpg",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" className="h-5 w-5">
         <rect x="2" y="6" width="20" height="14" rx="2" stroke="currentColor" strokeWidth="1.8" />
@@ -55,7 +55,7 @@ const SERVICES: Service[] = [
     title: "Why Choose Us",
     desc: "30 years building Houston's most beautiful custom gunite pools.",
     href: "/whychoosehcp",
-    image: "/images/gallery/_mg_0300.jpg",
+    image: "/images/gallery/drexel1.jpg",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" className="h-5 w-5">
         <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" stroke="currentColor" strokeWidth="1.8" strokeLinejoin="round" />
@@ -66,7 +66,7 @@ const SERVICES: Service[] = [
     title: "Pool Service",
     desc: "Professional pool service and maintenance — now offered to our customers.",
     href: "/contact",
-    image: "/images/gallery/_mg_0701.jpg",
+    image: "/images/gallery/breth_1_2.jpg",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" className="h-5 w-5">
         <path d="M14.7 6.3a4 4 0 00-5.4 5.4l-6 6 2 2 6-6a4 4 0 005.4-5.4l-2.4 2.4-2-2 2.4-2.4z" stroke="currentColor" strokeWidth="1.8" strokeLinejoin="round" />
@@ -77,7 +77,7 @@ const SERVICES: Service[] = [
     title: "Pool Remodel",
     desc: "Transform your old pool into a backyard paradise with a custom remodel.",
     href: "/pool-remodel",
-    image: "/images/gallery/_mg_0033.jpg",
+    image: "/images/gallery/merlin3.jpg",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" className="h-5 w-5">
         <path d="M3 12a9 9 0 0115-6.7L21 8M21 3v5h-5M21 12a9 9 0 01-15 6.7L3 16M3 21v-5h5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
