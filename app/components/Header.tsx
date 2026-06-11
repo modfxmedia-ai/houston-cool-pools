@@ -13,6 +13,7 @@ import {
   QUOTE_HREF,
   type NavGroup,
 } from "../../lib/navigation";
+import { PromoBanner } from "./PromoBanner";
 
 export function Header() {
   const [scrolled, setScrolled] = useState(false);
@@ -44,6 +45,9 @@ export function Header() {
             : "border-white/10 bg-gradient-to-b from-[var(--color-navy-deep)]/90 via-[var(--color-navy-deep)]/75 to-[var(--color-navy-deep)]/60 backdrop-blur-md"
         }`}
       >
+        {/* Promo banner — collapses once the user scrolls past the hero */}
+        <PromoBanner collapsed={scrolled} />
+
         {/* Top utility bar — desktop only */}
         <div
           className={`hidden md:block border-b border-white/10 transition-all duration-300 ${
@@ -99,7 +103,7 @@ export function Header() {
             />
           </Link>
 
-          <nav className="hidden lg:flex items-center gap-1">
+          <nav className="hidden xl:flex items-center gap-0.5">
             {PRIMARY_NAV.map((item) => (
               <DesktopNavItem
                 key={item.label}
@@ -110,7 +114,7 @@ export function Header() {
             ))}
           </nav>
 
-          <div className="hidden lg:flex items-center gap-4">
+          <div className="hidden xl:flex items-center gap-3">
             <a
               href={PHONE_HREF}
               className="whitespace-nowrap text-sm font-semibold tracking-wide text-white hover:text-[var(--color-gold-light)] transition-colors"
@@ -119,13 +123,32 @@ export function Header() {
             </a>
             <Link
               href={QUOTE_HREF}
-              className="group relative inline-flex shrink-0 items-center gap-2 overflow-hidden whitespace-nowrap rounded-full border border-white/15 bg-gradient-to-r from-[var(--color-pool)] to-[var(--color-pool-deep)] px-5 py-2.5 text-xs font-bold uppercase tracking-[0.18em] text-white shadow-[0_8px_24px_-6px_rgba(0,124,182,0.65)] transition-all hover:shadow-[0_12px_32px_-8px_rgba(79,195,224,0.8)] hover:-translate-y-0.5"
+              className="group relative inline-flex shrink-0 items-center gap-2 overflow-hidden whitespace-nowrap rounded-full border border-white/15 bg-gradient-to-r from-[var(--color-pool)] to-[var(--color-pool-deep)] px-4 py-2.5 text-[11px] font-bold uppercase tracking-[0.16em] text-white shadow-[0_8px_24px_-6px_rgba(0,124,182,0.65)] transition-all hover:shadow-[0_12px_32px_-8px_rgba(79,195,224,0.8)] hover:-translate-y-0.5"
             >
               <span className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/25 to-transparent transition-transform duration-700 group-hover:translate-x-full" />
-              <span className="relative">Request Quote</span>
+              <span className="relative">Get Free Estimate</span>
               <svg className="relative h-3 w-3 transition-transform group-hover:translate-x-0.5" viewBox="0 0 24 24" fill="none">
                 <path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
+            </Link>
+          </div>
+
+          {/* Tablet-only quick CTA + phone, before the hamburger */}
+          <div className="hidden md:flex xl:hidden items-center gap-2">
+            <a
+              href={PHONE_HREF}
+              aria-label={`Call ${PHONE_DISPLAY}`}
+              className="grid h-10 w-10 place-items-center rounded-full border border-white/20 text-white transition-colors hover:border-[var(--color-gold-light)] hover:text-[var(--color-gold-light)]"
+            >
+              <svg viewBox="0 0 24 24" fill="none" className="h-4 w-4">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
+            </a>
+            <Link
+              href={QUOTE_HREF}
+              className="inline-flex shrink-0 items-center gap-2 whitespace-nowrap rounded-full bg-gradient-to-r from-[var(--color-pool)] to-[var(--color-pool-deep)] px-4 py-2 text-[11px] font-bold uppercase tracking-[0.16em] text-white shadow-[0_8px_24px_-6px_rgba(0,124,182,0.65)]"
+            >
+              Free Estimate
             </Link>
           </div>
 
@@ -134,7 +157,7 @@ export function Header() {
             aria-label="Open menu"
             aria-expanded={mobileOpen}
             onClick={() => setMobileOpen(true)}
-            className="lg:hidden flex h-11 w-11 items-center justify-center rounded-sm border border-white/20 text-white"
+            className="xl:hidden flex h-11 w-11 shrink-0 items-center justify-center rounded-sm border border-white/20 text-white"
           >
             <HamburgerIcon />
           </button>
@@ -160,7 +183,7 @@ function DesktopNavItem({
     <div className="relative" onMouseEnter={onOpen}>
       <Link
         href={item.href}
-        className={`relative inline-flex items-center gap-1 whitespace-nowrap px-3 py-6 text-[11px] font-semibold uppercase tracking-[0.16em] text-white/90 transition-colors hover:text-[var(--color-gold-light)] ${
+        className={`relative inline-flex items-center gap-1 whitespace-nowrap px-2.5 py-6 text-[11px] font-semibold uppercase tracking-[0.14em] text-white/90 transition-colors hover:text-[var(--color-gold-light)] ${
           isOpen ? "text-[var(--color-gold-light)]" : ""
         }`}
       >
@@ -197,12 +220,26 @@ function DesktopNavItem({
             transition={{ duration: 0.18, ease: "easeOut" }}
             className="absolute left-1/2 top-full -translate-x-1/2 pt-1"
           >
-            <div className="relative min-w-[820px] overflow-hidden rounded-2xl bg-[var(--color-navy-deep)] shadow-[0_30px_80px_-20px_rgba(0,0,0,0.6)] ring-1 ring-white/10">
+            <div
+              className={`relative overflow-hidden rounded-2xl bg-[var(--color-navy-deep)] shadow-[0_30px_80px_-20px_rgba(0,0,0,0.6)] ring-1 ring-white/10 ${
+                (item.columns?.length ?? 0) > 1 ? "min-w-[820px]" : "min-w-[260px]"
+              }`}
+            >
               {/* Soft cyan glow */}
               <span className="pointer-events-none absolute -left-24 -top-24 h-64 w-64 rounded-full bg-[var(--color-pool)]/15 blur-[100px]" />
               <span className="pointer-events-none absolute -right-24 bottom-0 h-56 w-56 rounded-full bg-[var(--color-gold-light)]/8 blur-[100px]" />
 
-              <div className="relative grid grid-cols-4 gap-x-4 p-8">
+              <div
+                className={`relative grid gap-x-4 p-8 ${
+                  (item.columns?.length ?? 1) >= 4
+                    ? "grid-cols-4"
+                    : (item.columns?.length ?? 1) === 3
+                    ? "grid-cols-3"
+                    : (item.columns?.length ?? 1) === 2
+                    ? "grid-cols-2"
+                    : "grid-cols-1"
+                }`}
+              >
                 {item.columns!.map((col, i) => (
                   <div key={i}>
                     {col.heading && (
@@ -390,7 +427,7 @@ function MobileOverlay({
               onClick={onClose}
               className="block rounded-sm bg-[var(--color-gold)] py-3 text-center text-sm font-bold uppercase tracking-[0.2em] text-[var(--color-navy-deep)]"
             >
-              Request Quote
+              Get Free Estimate
             </Link>
           </div>
         </motion.div>

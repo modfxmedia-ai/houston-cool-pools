@@ -5,12 +5,12 @@ import Link from "next/link";
 import { motion } from "motion/react";
 
 const PHOTOS = [
-  "/images/gallery/_mg_0033.jpg",
-  "/images/gallery/_mg_0078.jpg",
-  "/images/gallery/_mg_0210.jpg",
-  "/images/gallery/_mg_0300.jpg",
-  "/images/gallery/_mg_0611.jpg",
-  "/images/gallery/_mg_0701.jpg",
+  "/images/gallery/featured-grand-pool-spa.jpg",
+  "/images/gallery/featured-luxury-spa.jpg",
+  "/images/gallery/featured-evening-pool.jpg",
+  "/images/gallery/featured-modern-geometric.jpg",
+  "/images/gallery/featured-spa-overflow.jpg",
+  "/images/gallery/featured-grand-vista.jpg",
 ];
 
 export function GalleryPreview() {

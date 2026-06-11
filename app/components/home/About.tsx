@@ -12,7 +12,7 @@ const fadeUp = {
 };
 
 const GALLERY = [
-  { src: "/images/gallery/_mg_0033.jpg", alt: "Pool with elegant decking" },
+  { src: "/images/gallery/featured-spillover-deckjets.jpg", alt: "Backyard pool with deck jets, slide, and tanning ledge" },
   { src: "/images/gallery/_mg_0078.jpg", alt: "Modern pool with water features" },
   { src: "/images/gallery/img_1011.jpg", alt: "Backyard pool retreat at twilight" },
   { src: "/images/gallery/_mg_0611.jpg", alt: "Custom gunite pool with spa" },
@@ -126,19 +126,19 @@ export function About() {
 
           <div className="mt-9 flex flex-wrap items-center gap-5">
             <Link
-              href="/whychoosehcp"
+              href="/contact"
               className="group inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-[var(--color-pool)] to-[var(--color-pool-deep)] px-6 py-3 text-xs font-bold uppercase tracking-[0.2em] text-white shadow-[0_10px_28px_-8px_rgba(0,124,182,0.6)] transition-all hover:-translate-y-0.5 hover:shadow-[0_14px_34px_-10px_rgba(79,195,224,0.7)]"
             >
-              Why Choose Us
+              Get Your Free Estimate
               <svg className="h-3 w-3 transition-transform group-hover:translate-x-0.5" viewBox="0 0 24 24" fill="none">
                 <path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
             </Link>
             <Link
-              href="/galleries"
+              href="/whychoosehcp"
               className="group inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.22em] text-[var(--color-navy-deep)] transition-colors hover:text-[var(--color-pool)]"
             >
-              View Gallery
+              Why Choose HCP
               <span className="h-px w-8 bg-current transition-all group-hover:w-12" />
             </Link>
           </div>

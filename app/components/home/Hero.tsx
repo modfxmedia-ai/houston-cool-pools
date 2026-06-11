@@ -3,6 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import {
+  AnimatePresence,
   motion,
   useMotionValue,
   useTransform,
@@ -13,6 +14,18 @@ import { useEffect, useRef, useState } from "react";
 import { QUOTE_HREF, PHONE_DISPLAY, PHONE_HREF } from "../../../lib/navigation";
 
 const ease = [0.22, 1, 0.36, 1] as const;
+
+/* Bright, sunny backyard lifestyle photos that auto-rotate behind the hero. */
+const HERO_SLIDES = [
+  { src: "/images/gallery/andersontarr_4.jpg", alt: "Sunny Houston backyard pool" },
+  { src: "/images/gallery/drexel1.jpg", alt: "Family-friendly custom pool retreat" },
+  { src: "/images/gallery/hb1.jpg", alt: "Bright resort-style backyard pool" },
+  { src: "/images/gallery/nc2.jpg", alt: "Relaxed poolside lifestyle" },
+  { src: "/images/gallery/_mg_0285.jpg", alt: "Custom pool with water features" },
+  { src: "/images/gallery/breth_1_2.jpg", alt: "Backyard pool oasis on a sunny day" },
+] as const;
+
+const SLIDE_INTERVAL_MS = 5500;
 
 /* -------------------- HERO -------------------- */
 
@@ -28,23 +41,13 @@ export function Hero() {
 function HeroVisual() {
   return (
     <section className="relative min-h-[100svh] w-full overflow-hidden bg-[var(--color-navy-deep)] text-white sm:h-[100svh] sm:min-h-[720px] lg:min-h-[760px]">
-      {/* HD luxury pool video background */}
-      <video
-        className="absolute inset-0 h-full w-full object-cover"
-        autoPlay
-        muted
-        loop
-        playsInline
-        preload="auto"
-        poster="/images/gallery/_mg_0210.jpg"
-      >
-        <source src="/videos/pool-hero.mp4" type="video/mp4" />
-      </video>
+      {/* Bright sunny backyard lifestyle slideshow */}
+      <HeroSlideshow />
 
-      {/* Color & vignette overlays */}
-      <div className="absolute inset-0 bg-gradient-to-r from-[var(--color-navy-deep)]/95 via-[var(--color-navy-deep)]/55 to-[var(--color-navy-deep)]/20" />
-      <div className="absolute inset-0 bg-gradient-to-t from-[var(--color-navy-deep)] via-transparent to-[var(--color-navy-deep)]/50" />
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_25%_50%,transparent_0%,rgba(0,27,36,0.65)_92%)]" />
+      {/* Color & vignette overlays — tuned lighter so the sunny photos read through */}
+      <div className="absolute inset-0 bg-gradient-to-r from-[var(--color-navy-deep)]/85 via-[var(--color-navy-deep)]/35 to-[var(--color-navy-deep)]/5" />
+      <div className="absolute inset-0 bg-gradient-to-t from-[var(--color-navy-deep)] via-transparent to-transparent" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_25%_55%,transparent_0%,rgba(0,27,36,0.45)_92%)]" />
 
       {/* Pulsing cyan glows */}
       <motion.div
@@ -141,7 +144,7 @@ function HeroVisual() {
               href={QUOTE_HREF}
               className="group relative inline-flex items-center gap-3 overflow-hidden rounded-full bg-[var(--color-pool)] px-8 py-4 text-[11px] font-bold uppercase tracking-[0.28em] text-white shadow-[0_12px_40px_-12px_rgba(0,124,182,0.85)] transition-all hover:shadow-[0_18px_55px_-12px_rgba(79,195,224,1)]"
             >
-              <span className="relative z-10">Schedule Your Free Pool Consultation</span>
+              <span className="relative z-10">Get Your Free Estimate</span>
               <span className="relative z-10 grid h-7 w-7 place-items-center rounded-full bg-white/15 transition-transform group-hover:translate-x-1">
                 <svg className="h-3 w-3" viewBox="0 0 16 16" fill="none">
                   <path
@@ -242,6 +245,45 @@ const lineReveal = {
   hidden: { opacity: 0, y: 30 },
   show: { opacity: 1, y: 0, transition: { duration: 0.9, ease } },
 } as const;
+
+/* -------------------- HERO SLIDESHOW -------------------- */
+
+function HeroSlideshow() {
+  const [index, setIndex] = useState(0);
+
+  useEffect(() => {
+    if (HERO_SLIDES.length <= 1) return;
+    const id = setInterval(
+      () => setIndex((i) => (i + 1) % HERO_SLIDES.length),
+      SLIDE_INTERVAL_MS,
+    );
+    return () => clearInterval(id);
+  }, []);
+
+  return (
+    <div className="absolute inset-0 overflow-hidden">
+      <AnimatePresence initial={false}>
+        <motion.div
+          key={index}
+          initial={{ opacity: 0, scale: 1.06 }}
+          animate={{ opacity: 1, scale: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ opacity: { duration: 1.4, ease }, scale: { duration: 7, ease: "easeOut" } }}
+          className="absolute inset-0"
+        >
+          <Image
+            src={HERO_SLIDES[index].src}
+            alt={HERO_SLIDES[index].alt}
+            fill
+            priority={index === 0}
+            sizes="100vw"
+            className="object-cover"
+          />
+        </motion.div>
+      </AnimatePresence>
+    </div>
+  );
+}
 
 /* -------------------- POOL COLLAGE -------------------- */
 
@@ -413,30 +455,6 @@ function PoolCollage({ compact = false }: { compact?: boolean } = {}) {
           ))}
         </div>
       </div>
-
-      {/* Floating "1,200+ pools" chip */}
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 1.8, duration: 0.7, ease }}
-        className="pointer-events-auto absolute bottom-24 left-8 z-40 hidden lg:left-16 lg:block"
-      >
-        <motion.div
-          animate={{ y: [0, -8, 0] }}
-          transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
-          className="flex items-center gap-2.5 rounded-full border border-white/15 bg-[var(--color-navy-deep)]/85 px-3.5 py-2 backdrop-blur-xl shadow-[0_12px_30px_-8px_rgba(0,124,182,0.7)]"
-        >
-          <span className="grid h-7 w-7 place-items-center rounded-full bg-gradient-to-br from-[var(--color-gold-light)] to-[var(--color-pool)] text-[10px] font-black text-[var(--color-navy-deep)]">
-            ★
-          </span>
-          <div className="leading-tight">
-            <p className="text-[9px] font-bold uppercase tracking-[0.2em] text-[var(--color-gold-light)]">
-              30 Years
-            </p>
-            <p className="text-xs font-semibold text-white">1,200+ Pools Built</p>
-          </div>
-        </motion.div>
-      </motion.div>
     </>
   );
 }

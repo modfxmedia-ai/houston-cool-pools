@@ -14,18 +14,37 @@ type Video = {
 };
 
 const FEATURED: Video = {
-  id: "5mntkenhJSE",
-  title: "Swimming Pool Water Color — Wet Edge Finishes",
-  category: "Pool Design",
+  id: "jMgjSEhaS70",
+  title: "Never Pay More Than Your Quote — Our 100% On-Budget Guarantee",
+  category: "On-Budget Guarantee",
 };
 
 const VIDEOS: Video[] = [
-  { id: "nsbj2SLf7tA", title: "Captain Brad's Coastal", category: "Community" },
-  { id: "NjxokH4iPCE", title: "Kings Blu Jam Cafe", category: "Community" },
-  { id: "TQN1QHbG9GM", title: "Mandi Cocina Mexicana", category: "Community" },
-  { id: "W52OTihpfS8", title: "The Marquis 2 Bar", category: "Community" },
-  { id: "f9MaBiBnaQ0", title: "Step Inside the Kitchen", category: "Community" },
-  { id: "bvkHny6R6hk", title: "Paws for Heroes", category: "Community" },
+  {
+    id: "CntmSdpO0QQ",
+    title: "How Long Does It Take to Build a Swimming Pool?",
+    category: "Construction Timeline",
+  },
+  {
+    id: "Z6jU28FnpJg",
+    title: "Your Pool Construction Is Almost Complete!",
+    category: "Construction Timeline",
+  },
+  {
+    id: "GVYgeCQmIcM",
+    title: "Lyons Financial for Houston Cool Pools",
+    category: "Financing",
+  },
+  {
+    id: "TIm9Qa9teQg",
+    title: "Can You Pay Off a Pool Loan Early? Fees & Financing Explained",
+    category: "Financing",
+  },
+  {
+    id: "b0ZzAqaxDOc",
+    title: "Vinyl, Fiberglass or Gunite — What's the Difference?",
+    category: "Pool Education",
+  },
 ];
 
 export function VideoShowcase() {
@@ -50,11 +69,13 @@ export function VideoShowcase() {
             <span className="h-px w-8 bg-[var(--color-pool)]/60" />
           </p>
           <h2 className="font-[family-name:var(--font-display)] mt-5 text-4xl leading-[1.05] tracking-tight md:text-5xl lg:text-[3.5rem]">
-            Pools, People &{" "}
-            <span className="italic text-[var(--color-gold-light)]">Houston Stories</span>
+            Process, Value &{" "}
+            <span className="italic text-[var(--color-gold-light)]">Financing</span>
           </h2>
           <p className="mt-5 text-base leading-relaxed text-white/65">
-            From pool finishes to the local businesses and causes we love — a quick look at the world of Houston Cool Pools.
+            From our 100% on-budget guarantee to construction timelines and pool
+            financing — see how Houston Cool Pools delivers your dream pool with
+            no surprises.
           </p>
         </motion.div>
 

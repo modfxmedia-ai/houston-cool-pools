@@ -9,27 +9,40 @@ export type NavGroup = {
 
 export const PRIMARY_NAV: NavGroup[] = [
   { label: "Home", href: "/" },
-  { label: "Why Choose HCP", href: "/whychoosehcp" },
-  { label: "Galleries", href: "/gallery" },
   {
-    label: "Pool Information",
+    label: "About Us",
+    href: "/about",
+    columns: [
+      {
+        heading: "Get To Know Us",
+        links: [
+          { label: "Meet The Team", href: "/about/team" },
+        ],
+      },
+    ],
+  },
+  { label: "Why Choose HCP", href: "/whychoosehcp" },
+  { label: "Pool Gallery", href: "/gallery" },
+  {
+    label: "Pools & Pricing",
     href: "/pool-information",
     columns: [
       {
-        heading: "Getting Started",
+        heading: "Plan Your Pool",
         links: [
+          { label: "Pool Pricing & Packages", href: "/pricing-45k-55k" },
+          { label: "Financing Options", href: "/poolfinancing" },
           { label: "Choose The Right Builder", href: "/how-to-choose-a-pool-builder" },
           { label: "Pool Specifications", href: "/pool-specifications" },
-          { label: "Pool Pricing", href: "/pricing-45k-55k" },
-          { label: "Financing Available", href: "/poolfinancing" },
           { label: "Custom Home Builder", href: "/custom-home-toc" },
         ],
       },
       {
         heading: "Design & Build",
         links: [
-          { label: "Pool Features", href: "/custom-pool-features-1" },
-          { label: "Pool Sequence", href: "/construction-sequence-1" },
+          { label: "Pool Types & Styles", href: "/pool-types" },
+          { label: "Custom Pool Features", href: "/custom-pool-features-1" },
+          { label: "Construction Sequence", href: "/construction-sequence-1" },
           { label: "Pool Remodel", href: "/pool-remodel" },
           { label: "Pool Articles", href: "/swimming-pool-articles" },
         ],
@@ -46,15 +59,15 @@ export const PRIMARY_NAV: NavGroup[] = [
         ],
       },
       {
-        heading: "Owners",
+        heading: "Pool Owners",
         links: [
-          { label: "Your Pool and Severe Weather", href: "/severe-weather" },
-          { label: "Testimonials & Reviews", href: "/customer-reviews-testimonials" },
+          { label: "Severe Weather Guide", href: "/severe-weather" },
+          { label: "Reviews & Testimonials", href: "/customer-reviews-testimonials" },
         ],
       },
     ],
   },
-  { label: "Contact", href: "/contact" },
+  { label: "Get a Free Quote", href: "/contact" },
 ];
 
 export const PHONE_DISPLAY = "(281) 645-6631";
