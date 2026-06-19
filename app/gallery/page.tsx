@@ -9,6 +9,7 @@ import {
 } from "../../lib/navigation";
 import { GalleryHero } from "../components/gallery/GalleryHero";
 import { GalleryFilterGrid } from "../components/gallery/GalleryFilterGrid";
+import { GalleryCollections } from "../components/gallery/GalleryCollections";
 
 export const metadata: Metadata = buildPageMetadata("/gallery");
 
@@ -22,6 +23,8 @@ export default function GalleryPage() {
       <main className="relative bg-white">
         <GalleryFilterGrid />
       </main>
+
+      <GalleryCollections />
 
       {/* ----- Closing CTA ----- */}
       <section className="relative overflow-hidden bg-[var(--color-navy-deep)] py-20 text-white md:py-24">

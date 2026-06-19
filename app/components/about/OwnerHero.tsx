@@ -37,7 +37,7 @@ export function OwnerHero({ owner }: { owner: TeamMember }) {
   return (
     <section
       ref={ref}
-      className="relative overflow-hidden bg-[var(--color-navy-deep)] pt-32 text-white md:pt-40"
+      className="relative overflow-hidden bg-[var(--color-navy-deep)] pt-36 text-white md:pt-44 lg:pt-48"
     >
       {/* ─── Background ambience ─── */}
       <div className="absolute inset-0">

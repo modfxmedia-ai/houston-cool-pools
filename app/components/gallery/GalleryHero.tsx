@@ -18,7 +18,7 @@ const ease = [0.22, 1, 0.36, 1] as const;
  */
 export function GalleryHero({ poolCount }: { poolCount: number }) {
   return (
-    <section className="relative isolate overflow-hidden bg-[var(--color-navy-deep)] pt-32 text-white md:pt-40">
+    <section className="relative isolate overflow-hidden bg-[var(--color-navy-deep)] pt-36 text-white md:pt-44 lg:pt-48">
       {/* Background image */}
       <div className="absolute inset-0 -z-10">
         <Image

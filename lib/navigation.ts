@@ -24,7 +24,7 @@ export const PRIMARY_NAV: NavGroup[] = [
   { label: "Why Choose HCP", href: "/whychoosehcp" },
   { label: "Pool Gallery", href: "/gallery" },
   {
-    label: "Pools & Pricing",
+    label: "Pool Information",
     href: "/pool-information",
     columns: [
       {

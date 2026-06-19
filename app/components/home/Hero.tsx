@@ -40,7 +40,7 @@ export function Hero() {
 
 function HeroVisual() {
   return (
-    <section className="relative min-h-[100svh] w-full overflow-hidden bg-[var(--color-navy-deep)] text-white sm:h-[100svh] sm:min-h-[720px] lg:min-h-[760px]">
+    <section className="relative min-h-[100svh] w-full overflow-hidden bg-[var(--color-navy-deep)] text-white sm:min-h-[720px] lg:min-h-[760px]">
       {/* Bright sunny backyard lifestyle slideshow */}
       <HeroSlideshow />
 
