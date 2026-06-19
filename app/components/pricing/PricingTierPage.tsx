@@ -26,11 +26,10 @@ export type PricingTierProps = {
 /** The real pricing pages from the live site, used by the sticky pills + side-rail navigation. */
 const PRICING_PAGES: { label: string; range: string; href: string }[] = [
   { label: "$65k–$75k", range: "$65k – $75k", href: "/pricing-45k-55k" },
-  { label: "$75k–$85k", range: "$75k – $85k", href: "/pricing-level-1" },
-  { label: "$85k–$95k", range: "$85k – $95k", href: "/pricing-level-2" },
-  { label: "$95k–$105k", range: "$95k – $105k", href: "/pricing-level-3" },
-  { label: "$105k–$115k", range: "$105k – $115k", href: "/pricing-level-4" },
-  { label: "$115k+", range: "$115k+", href: "/pricing-level-5" },
+  { label: "$75k–$85k", range: "$75k – $85k", href: "/pricing-55k-65k" },
+  { label: "$85k–$95k", range: "$85k – $95k", href: "/pricing-65k-75k" },
+  { label: "$95k–$105k", range: "$95k – $105k", href: "/pricing-75k-85k" },
+  { label: "$105k–$125k+", range: "$105k – $125k+", href: "/pricing-85k-105k" },
 ];
 
 const STATS: { value: number; suffix?: string; label: string }[] = [
