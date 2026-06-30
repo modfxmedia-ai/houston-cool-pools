@@ -1,0 +1,52 @@
+import type { Metadata } from "next";
+import { TypHero } from "../_components/TypHero";
+import { TypTimeline } from "../_components/TypTimeline";
+import { TypGallery } from "../_components/TypExtras";
+import { Testimonials } from "../_components/Testimonials";
+import { MeetOwner } from "../_components/MeetOwner";
+import { LpFooter } from "../_components/LpFooter";
+
+export const metadata: Metadata = {
+  title: "Thank You. We'll Be In Touch | Houston Cool Pools",
+  description:
+    "Thanks for requesting your free pool quote. A Houston Cool Pools team member will reach out within one business day to schedule your free in-home consultation.",
+  alternates: { canonical: "/free-pool-quote/thank-you" },
+  robots: { index: false, follow: false },
+  openGraph: {
+    title: "Thank You | Houston Cool Pools",
+    description:
+      "Your free pool quote request has been received. We'll be in touch within one business day.",
+    url: "https://houstoncoolpools.com/free-pool-quote/thank-you",
+    siteName: "Houston Cool Pools",
+    type: "website",
+    images: [
+      {
+        url: "/images/gallery/featured-grand-pool-spa.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Houston Cool Pools",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Thank You | Houston Cool Pools",
+    description: "Your free pool quote request has been received.",
+    images: ["/images/gallery/featured-grand-pool-spa.jpg"],
+  },
+};
+
+export default function ThankYouPage() {
+  return (
+    <>
+      <main>
+        <TypHero />
+        <TypTimeline />
+        <TypGallery />
+        <MeetOwner compact />
+        <Testimonials />
+      </main>
+      <LpFooter />
+    </>
+  );
+}

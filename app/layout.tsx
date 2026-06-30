@@ -5,6 +5,7 @@ import { BUSINESS, SITE_URL, localBusinessJsonLd } from "../lib/business";
 import { Header } from "./components/Header";
 import { TextUsTab } from "./components/TextUsTab";
 import { Footer } from "./components/Footer";
+import { ChromeGate } from "./components/ChromeGate";
 
 const outfit = Outfit({
   variable: "--font-display",
@@ -48,10 +49,14 @@ export default function RootLayout({
           // eslint-disable-next-line react/no-danger
           dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessJsonLd()) }}
         />
-        <Header />
-        <TextUsTab />
+        <ChromeGate>
+          <Header />
+          <TextUsTab />
+        </ChromeGate>
         {children}
-        <Footer />
+        <ChromeGate>
+          <Footer />
+        </ChromeGate>
       </body>
     </html>
   );
