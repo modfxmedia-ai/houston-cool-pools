@@ -17,12 +17,10 @@ const ease = [0.22, 1, 0.36, 1] as const;
 
 /* Bright, sunny backyard lifestyle photos that auto-rotate behind the hero. */
 const HERO_SLIDES = [
-  { src: "/images/gallery/andersontarr_4.jpg", alt: "Sunny Houston backyard pool" },
-  { src: "/images/gallery/drexel1.jpg", alt: "Family-friendly custom pool retreat" },
-  { src: "/images/gallery/hb1.jpg", alt: "Bright resort-style backyard pool" },
-  { src: "/images/gallery/nc2.jpg", alt: "Relaxed poolside lifestyle" },
-  { src: "/images/gallery/_mg_0285.jpg", alt: "Custom pool with water features" },
-  { src: "/images/gallery/breth_1_2.jpg", alt: "Backyard pool oasis on a sunny day" },
+  { src: "/images/hero/family-1.jpg", alt: "Family enjoying a Houston backyard pool" },
+  { src: "/images/hero/family-2.jpg", alt: "Sunny poolside family moments" },
+  { src: "/images/hero/family-3.jpg", alt: "Kids playing in a custom Houston pool" },
+  { src: "/images/hero/family-4.jpg", alt: "Family relaxing in a resort-style backyard pool" },
 ] as const;
 
 const SLIDE_INTERVAL_MS = 5500;
@@ -295,16 +293,16 @@ const COLLAGE_IMAGES = [
     href: "/gallery",
   },
   {
-    src: "/images/gallery/_mg_0108.jpg",
-    alt: "Modern infinity-edge pool",
-    badge: "Infinity Edge",
-    href: "/pool-specifications",
+    src: "/images/hero/family-3.jpg",
+    alt: "Family enjoying their Houston backyard pool",
+    badge: "Family Retreat",
+    href: "/gallery",
   },
   {
-    src: "/images/gallery/_mg_0285.jpg",
-    alt: "Backyard pool with water features",
-    badge: "Water Features",
-    href: "/custom-pool-features-1",
+    src: "/images/gallery/featured-spillover-deckjets.jpg",
+    alt: "Pool with arcing deck jets and spa spillover",
+    badge: "Deck Jets & Spillovers",
+    href: "/features-2",
   },
 ] as const;
 

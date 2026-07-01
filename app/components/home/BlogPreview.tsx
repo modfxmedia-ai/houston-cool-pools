@@ -3,6 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { motion } from "motion/react";
+import { ARTICLES } from "../../../lib/articles";
 
 const ease = [0.22, 1, 0.36, 1] as const;
 
@@ -16,38 +17,15 @@ type Post = {
   date: string;
 };
 
-const POSTS: Post[] = [
-  {
-    title: "Choosing the right pool size for your backyard",
-    excerpt:
-      "Space, intended use, budget and maintenance — the four factors that determine the perfect footprint.",
-    href: "/choosing-the-right-pool-size-for-your-backyard",
-    tag: "Pool Design",
-    readTime: "6 min",
-    date: "Mar 14, 2026",
-    img: "/images/gallery/hb1.jpg",
-  },
-  {
-    title: "Modern pool design trends to know in 2026",
-    excerpt:
-      "Infinity edges, geometric forms, natural materials and quietly powerful smart-tech integration.",
-    href: "/modern-pool-design-trends-you-need-to-know",
-    tag: "Trends",
-    readTime: "5 min",
-    date: "Feb 22, 2026",
-    img: "/images/gallery/nc2.jpg",
-  },
-  {
-    title: "10 steps to building your dream pool",
-    excerpt:
-      "Our free PDF walks you through every stage — from first consultation through final fill.",
-    href: "/swimming-pool-articles",
-    tag: "Free Guide",
-    readTime: "PDF",
-    date: "Jan 09, 2026",
-    img: "/images/gallery/nc3.jpg",
-  },
-];
+const POSTS: Post[] = ARTICLES.slice(0, 3).map((a) => ({
+  title: a.title,
+  excerpt: a.excerpt,
+  href: `/swimming-pool-articles/${a.slug}`,
+  tag: a.tag,
+  readTime: a.readTime,
+  date: a.date,
+  img: a.card.src,
+}));
 
 export function BlogPreview() {
   return (

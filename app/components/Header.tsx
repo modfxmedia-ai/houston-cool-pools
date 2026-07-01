@@ -265,6 +265,42 @@ function DesktopNavItem({
                   </div>
                 ))}
               </div>
+
+              {item.cta && (
+                <div className="relative border-t border-white/10 bg-black/20 px-8 py-4">
+                  <Link
+                    href={item.cta.href}
+                    className="group flex items-center justify-between gap-4 rounded-xl bg-gradient-to-r from-[var(--color-pool)] to-[var(--color-pool-deep)] px-5 py-3 text-[12px] font-bold uppercase tracking-[0.16em] text-white shadow-[0_8px_24px_-6px_rgba(0,124,182,0.55)] transition-all hover:shadow-[0_12px_32px_-8px_rgba(79,195,224,0.75)] hover:-translate-y-0.5"
+                  >
+                    <span className="inline-flex items-center gap-2.5">
+                      <span className="grid h-6 w-6 place-items-center rounded-full bg-white/15">
+                        <svg viewBox="0 0 24 24" fill="none" className="h-3 w-3">
+                          <path
+                            d="M8 2v3M16 2v3M3.5 9h17M5 5h14a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2Z"
+                            stroke="currentColor"
+                            strokeWidth="2"
+                            strokeLinecap="round"
+                          />
+                        </svg>
+                      </span>
+                      {item.cta.label}
+                    </span>
+                    <svg
+                      className="h-3 w-3 transition-transform group-hover:translate-x-0.5"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                    >
+                      <path
+                        d="M5 12h14M13 6l6 6-6 6"
+                        stroke="currentColor"
+                        strokeWidth="2.5"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                    </svg>
+                  </Link>
+                </div>
+              )}
             </div>
           </motion.div>
         )}
@@ -391,6 +427,40 @@ function MobileOverlay({
                                 </ul>
                               </div>
                             ))}
+                            {item.cta && (
+                              <Link
+                                href={item.cta.href}
+                                onClick={onClose}
+                                className="mt-2 flex items-center justify-between gap-3 rounded-xl bg-gradient-to-r from-[var(--color-pool)] to-[var(--color-pool-deep)] px-4 py-3 text-[12px] font-bold uppercase tracking-[0.16em] text-white shadow-[0_8px_24px_-6px_rgba(0,124,182,0.55)]"
+                              >
+                                <span className="inline-flex items-center gap-2.5">
+                                  <span className="grid h-6 w-6 place-items-center rounded-full bg-white/15">
+                                    <svg viewBox="0 0 24 24" fill="none" className="h-3 w-3">
+                                      <path
+                                        d="M8 2v3M16 2v3M3.5 9h17M5 5h14a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2Z"
+                                        stroke="currentColor"
+                                        strokeWidth="2"
+                                        strokeLinecap="round"
+                                      />
+                                    </svg>
+                                  </span>
+                                  {item.cta.label}
+                                </span>
+                                <svg
+                                  className="h-3 w-3"
+                                  viewBox="0 0 24 24"
+                                  fill="none"
+                                >
+                                  <path
+                                    d="M5 12h14M13 6l6 6-6 6"
+                                    stroke="currentColor"
+                                    strokeWidth="2.5"
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                  />
+                                </svg>
+                              </Link>
+                            )}
                           </div>
                         </motion.div>
                       )}

@@ -18,6 +18,7 @@ const QUICK_LINKS = [
   { label: "Financing", href: "/poolfinancing" },
   { label: "Why Choose Us", href: "/whychoosehcp" },
   { label: "Galleries", href: "/gallery" },
+  { label: "Areas We Serve", href: "/areas-we-serve" },
   { label: "Contact", href: "/contact" },
 ];
 
@@ -188,6 +189,13 @@ export function Footer() {
                 ModFXMedia
               </span>
             </a>
+            <span aria-hidden className="h-3 w-px bg-white/15" />
+            <Link
+              href="/site-map"
+              className="uppercase tracking-[0.22em] transition-colors hover:text-[var(--color-gold-light)]"
+            >
+              Site Map
+            </Link>
             <span aria-hidden className="h-3 w-px bg-white/15" />
             <Link
               href="/privacynotice"

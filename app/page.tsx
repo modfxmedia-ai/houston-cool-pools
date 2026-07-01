@@ -2,11 +2,13 @@ import type { Metadata } from "next";
 import { buildPageMetadata } from "../lib/business";
 import { Hero } from "./components/home/Hero";
 import { About } from "./components/home/About";
+import { OwnerIntro } from "./components/home/OwnerIntro";
 import { Services } from "./components/home/Services";
 import { VideoShowcase } from "./components/home/VideoShowcase";
 import { Testimonials } from "./components/home/Testimonials";
 import { BlogPreview } from "./components/home/BlogPreview";
-import { FinalCta } from "./components/home/FinalCta";
+import { BookingForm } from "./components/home/BookingForm";
+import { MapLocation } from "./components/home/MapLocation";
 
 export const metadata: Metadata = buildPageMetadata("/");
 
@@ -16,10 +18,12 @@ export default function Home() {
       <Hero />
       <About />
       <Services />
+      <OwnerIntro />
       <VideoShowcase />
       <Testimonials />
       <BlogPreview />
-      <FinalCta />
+      <BookingForm />
+      <MapLocation />
     </>
   );
 }

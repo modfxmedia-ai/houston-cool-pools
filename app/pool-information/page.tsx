@@ -86,7 +86,7 @@ const RESOURCES: Resource[] = [
     icon: "pricing",
   },
   {
-    title: "Pool Sequence",
+    title: "Pool Construction Sequence",
     href: "/construction-sequence-1",
     description: "Step-by-step walkthrough of how we build your pool.",
     icon: "sequence",

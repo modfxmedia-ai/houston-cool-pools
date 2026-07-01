@@ -5,6 +5,13 @@ export type NavGroup = {
   href: string;
   /** When set, renders as a mega dropdown. Items are scraped from the live pool-information.html page. */
   columns?: { heading?: string; links: NavLink[] }[];
+  /** Optional prominent CTA rendered at the bottom of the dropdown menu (desktop & mobile). */
+  cta?: NavLink;
+};
+
+const BOOK_APPOINTMENT: NavLink = {
+  label: "Book Appointment",
+  href: "/#book-appointment",
 };
 
 export const PRIMARY_NAV: NavGroup[] = [
@@ -20,6 +27,7 @@ export const PRIMARY_NAV: NavGroup[] = [
         ],
       },
     ],
+    cta: BOOK_APPOINTMENT,
   },
   { label: "Why Choose HCP", href: "/whychoosehcp" },
   { label: "Pool Gallery", href: "/gallery" },
@@ -42,7 +50,7 @@ export const PRIMARY_NAV: NavGroup[] = [
         links: [
           { label: "Pool Types & Styles", href: "/pool-types" },
           { label: "Custom Pool Features", href: "/custom-pool-features-1" },
-          { label: "Construction Sequence", href: "/construction-sequence-1" },
+          { label: "Pool Construction Sequence", href: "/construction-sequence-1" },
           { label: "Pool Remodel", href: "/pool-remodel" },
           { label: "Pool Articles", href: "/swimming-pool-articles" },
         ],
@@ -66,6 +74,7 @@ export const PRIMARY_NAV: NavGroup[] = [
         ],
       },
     ],
+    cta: BOOK_APPOINTMENT,
   },
   { label: "Get a Free Quote", href: "/contact" },
 ];
