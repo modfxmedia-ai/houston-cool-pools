@@ -2,13 +2,13 @@ import type { Metadata } from "next";
 import { buildPageMetadata } from "../../lib/business";
 import { SitemapClient } from "../components/sitemap/SitemapClient";
 
-const SLUG = "site-map";
+const SLUG = "sitemap";
 const CANONICAL = `https://houstoncoolpools.com/${SLUG}`;
 
 const base = buildPageMetadata(`/${SLUG}`);
 export const metadata: Metadata = {
   ...base,
-  title: "Site Map — Houston Cool Pools",
+  title: "Sitemap — Houston Cool Pools",
   description:
     "Every page on the Houston Cool Pools website, grouped by topic — pool design, pricing, galleries, service, FAQs, pool school and more.",
   alternates: { canonical: CANONICAL },

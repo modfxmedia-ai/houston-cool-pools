@@ -171,6 +171,69 @@ export function Footer() {
         </motion.div>
       </motion.div>
 
+      {/* Certifications & accreditations */}
+      <motion.div
+        initial={{ opacity: 0, y: 16 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.3 }}
+        transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+        className="relative mx-auto max-w-7xl border-t border-white/[0.06] px-6 py-8 sm:px-8 lg:px-10"
+      >
+        <p className="mb-5 text-center text-[10px] font-semibold uppercase tracking-[0.28em] text-white/40">
+          Certified · Accredited · Trusted
+        </p>
+        <ul className="flex flex-wrap items-center justify-center gap-x-10 gap-y-6 sm:gap-x-14">
+          {[
+            {
+              src: "/images/certifications/logo_BBB_white.png",
+              alt: "BBB Accredited Business",
+              w: 110,
+              h: 44,
+              href: "http://www.bbb.org/houston/business-reviews/swimming-pool-contractors-dealers-design/houston-cool-pools-in-houston-tx-16001322/",
+            },
+            {
+              src: "/images/certifications/apsp.png",
+              alt: "APSP Member — Association of Pool & Spa Professionals",
+              w: 96,
+              h: 44,
+              href: "https://apsp.org/",
+            },
+            {
+              src: "/images/certifications/angies.png",
+              alt: "Angi (Angie's List) Reviewed",
+              w: 110,
+              h: 44,
+              href: "https://www.angieslist.com/companylist/us/tx/houston/houston-cool-pools-reviews-7638586.htm",
+            },
+            {
+              src: "/images/certifications/footer_houzz_logo.png",
+              alt: "Featured on Houzz",
+              w: 96,
+              h: 44,
+              href: "http://www.houzz.com/pro/houstoncoolpools/houston-cool-pools",
+            },
+          ].map((cert) => (
+            <li key={cert.src}>
+              <a
+                href={cert.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={cert.alt}
+                className="block opacity-80 transition-opacity hover:opacity-100 focus-visible:opacity-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-gold-light)]/60 focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--color-navy-deep)] rounded-md"
+              >
+                <Image
+                  src={cert.src}
+                  alt={cert.alt}
+                  width={cert.w}
+                  height={cert.h}
+                  className="h-10 w-auto object-contain sm:h-11"
+                />
+              </a>
+            </li>
+          ))}
+        </ul>
+      </motion.div>
+
       {/* Bottom bar */}
       <div className="relative border-t border-white/[0.06]">
         <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-3 px-6 py-4 text-[11px] text-white/45 sm:flex-row">
@@ -191,10 +254,10 @@ export function Footer() {
             </a>
             <span aria-hidden className="h-3 w-px bg-white/15" />
             <Link
-              href="/site-map"
+              href="/sitemap"
               className="uppercase tracking-[0.22em] transition-colors hover:text-[var(--color-gold-light)]"
             >
-              Site Map
+              Sitemap
             </Link>
             <span aria-hidden className="h-3 w-px bg-white/15" />
             <Link

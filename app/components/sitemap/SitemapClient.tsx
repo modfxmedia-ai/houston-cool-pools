@@ -3,6 +3,8 @@
 import Link from "next/link";
 import { motion } from "motion/react";
 import { InfoHero } from "../info/InfoHero";
+import { SERVICES } from "../../../data/pseo/services";
+import { LOCATIONS } from "../../../data/pseo/locations";
 
 const ease = [0.22, 1, 0.36, 1] as const;
 
@@ -148,21 +150,24 @@ const GALLERIES: { heading: string; links: SectionLink[] }[] = [
   },
 ];
 
+const PSEO_LIVE = LOCATIONS.filter((l) => l.live);
+const PSEO_TOTAL_PAGES = SERVICES.length * PSEO_LIVE.length;
+
 const STATS = [
-  { value: "80+", label: "Pages" },
+  { value: `${PSEO_TOTAL_PAGES.toLocaleString()}+`, label: "Local pages" },
+  { value: `${SERVICES.length}`, label: "Services" },
+  { value: `${PSEO_LIVE.length}`, label: "Cities served" },
   { value: "20", label: "Galleries" },
-  { value: "13", label: "FAQ pages" },
-  { value: "10", label: "Glossary pages" },
 ];
 
 export function SitemapClient() {
   return (
     <main className="bg-white text-[var(--color-navy-deep)]">
       <InfoHero
-        eyebrow="Site Map"
+        eyebrow="Sitemap"
         title="Every page on Houston Cool Pools"
         subtitle="A complete, human-friendly index of the site — grouped by topic so you can find pricing, galleries, FAQs, pool school and everything in between in one place."
-        crumbs={[{ label: "Home", href: "/" }, { label: "Site Map" }]}
+        crumbs={[{ label: "Home", href: "/" }, { label: "Sitemap" }]}
       />
 
       {/* Stats bar */}
@@ -294,6 +299,86 @@ export function SitemapClient() {
             <PillCluster title="FAQs" eyebrow={`${FAQS.length} pages`} links={FAQS} accent="pool" compact />
             <PillCluster title="Glossary" eyebrow={`${GLOSSARY.length} pages`} links={GLOSSARY} accent="gold" compact />
             <PillCluster title="Features Library" eyebrow={`${FEATURES.length} pages`} links={FEATURES} accent="pool" compact />
+          </div>
+        </div>
+      </section>
+
+      {/* Local service pages — pSEO combos ({service} × {city}) */}
+      <section className="relative bg-[#f7f6f2] py-20 md:py-24">
+        <div className="mx-auto max-w-6xl px-6">
+          <div className="mx-auto max-w-3xl text-center">
+            <p className="text-[10.5px] font-bold uppercase tracking-[0.28em] text-[var(--color-pool-deep)]">
+              Local Service Pages
+            </p>
+            <h2 className="mt-3 font-display text-3xl font-extrabold tracking-tight sm:text-4xl">
+              {PSEO_TOTAL_PAGES.toLocaleString()} location-specific pages
+            </h2>
+            <p className="mt-4 text-[15.5px] leading-relaxed text-black/65">
+              Every service we offer, in every city we serve — {SERVICES.length} services × {PSEO_LIVE.length} cities.
+              Tap a service to reveal all city pages, or start with{" "}
+              <Link href="/areas-we-serve" className="font-semibold text-[var(--color-pool-deep)] underline underline-offset-4 hover:text-[var(--color-pool)]">
+                Areas We Serve
+              </Link>{" "}
+              for a city-first view.
+            </p>
+          </div>
+
+          <div className="mt-12 grid gap-4 md:grid-cols-2">
+            {SERVICES.map((service, i) => (
+              <motion.details
+                key={service.slug}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-80px" }}
+                transition={{ duration: 0.5, delay: (i % 8) * 0.04, ease }}
+                className="group relative overflow-hidden rounded-2xl border border-black/[0.08] bg-white shadow-[0_14px_40px_-28px_rgba(0,27,36,0.35)]"
+              >
+                <div
+                  className={`pointer-events-none absolute inset-x-0 top-0 h-[3px] ${
+                    i % 2 === 0
+                      ? "bg-gradient-to-r from-[var(--color-pool)] to-[var(--color-pool-deep)]"
+                      : "bg-gradient-to-r from-[var(--color-gold-light)] to-[var(--color-gold)]"
+                  }`}
+                />
+                <summary className="flex cursor-pointer list-none items-center justify-between gap-4 px-6 py-5 marker:hidden [&::-webkit-details-marker]:hidden">
+                  <div className="min-w-0">
+                    <p className="truncate font-display text-[17px] font-extrabold tracking-tight sm:text-lg">
+                      {service.shortName}
+                    </p>
+                    <p className="mt-1 text-[11.5px] font-semibold uppercase tracking-[0.2em] text-black/50">
+                      {PSEO_LIVE.length} cities
+                    </p>
+                  </div>
+                  <span
+                    aria-hidden
+                    className="grid h-8 w-8 shrink-0 place-items-center rounded-full border border-black/10 bg-white text-[var(--color-pool-deep)] transition-transform group-open:rotate-45"
+                  >
+                    <svg viewBox="0 0 24 24" fill="none" className="h-3.5 w-3.5">
+                      <path
+                        d="M12 5v14M5 12h14"
+                        stroke="currentColor"
+                        strokeWidth="2.4"
+                        strokeLinecap="round"
+                      />
+                    </svg>
+                  </span>
+                </summary>
+                <div className="border-t border-black/[0.06] px-6 py-5">
+                  <ul className="flex flex-wrap gap-1.5">
+                    {PSEO_LIVE.map((loc) => (
+                      <li key={`${service.slug}-${loc.slug}`}>
+                        <Link
+                          href={`/${service.slug}-${loc.slug}-tx`}
+                          className="inline-flex items-center rounded-full border border-black/10 bg-white px-2.5 py-1 text-[11.5px] font-semibold text-[var(--color-navy-deep)] transition hover:border-[var(--color-pool)]/40 hover:bg-[var(--color-pool)]/10 hover:text-[var(--color-pool-deep)]"
+                        >
+                          {loc.cityName}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </motion.details>
+            ))}
           </div>
         </div>
       </section>
