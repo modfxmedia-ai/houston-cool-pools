@@ -200,7 +200,7 @@ export function Hero() {
         className="absolute inset-0 -z-20"
       >
         <Image
-          src="/images/gallery/featured-grand-pool-spa.jpg"
+          src="/images/free-pool-quote/hero-v2.jpg"
           alt="Houston resort-style backyard pool"
           fill
           priority

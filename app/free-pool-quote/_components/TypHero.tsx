@@ -110,10 +110,7 @@ export function TypHero() {
         transition={{ duration: 0.7, delay: 0.4, ease }}
         className="mt-8 font-display text-4xl font-extrabold leading-tight sm:text-6xl"
       >
-        You&apos;re on the list!
-        <span className="mt-1 block text-[#00b4d8]">
-          We&apos;ll be in touch soon.
-        </span>
+        <span className="text-[#00b4d8]">We&apos;ll be in touch soon.</span>
       </motion.h1>
 
       <motion.p

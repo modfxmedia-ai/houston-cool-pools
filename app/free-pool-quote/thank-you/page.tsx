@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { TypHero } from "../_components/TypHero";
+import { TypVideo } from "../_components/TypVideo";
 import { TypTimeline } from "../_components/TypTimeline";
 import { TypGallery } from "../_components/TypExtras";
 import { Testimonials } from "../_components/Testimonials";
@@ -41,6 +42,7 @@ export default function ThankYouPage() {
     <>
       <main>
         <TypHero />
+        <TypVideo />
         <TypTimeline />
         <TypGallery />
         <MeetOwner compact />
