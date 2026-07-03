@@ -212,7 +212,7 @@ export function ArticlesIndex() {
 
           {filtered.length === 0 && (
             <p className="mt-16 text-center text-slate-500">
-              No articles in this category yet — check back soon.
+              No articles in this category yet - check back soon.
             </p>
           )}
         </div>
@@ -273,10 +273,6 @@ function FeaturedCard({ article }: { article: Article }) {
           priority
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/10 to-transparent lg:bg-gradient-to-r" />
-        <span className="absolute left-5 top-5 inline-flex items-center gap-2 rounded-full border border-white/25 bg-white/15 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.22em] text-white backdrop-blur">
-          <span className="h-1.5 w-1.5 rounded-full bg-[var(--color-gold-light)]" />
-          {article.category}
-        </span>
       </Link>
 
       <div className="flex flex-col justify-center gap-5 p-8 md:p-10 lg:p-12">
@@ -344,9 +340,6 @@ function ArticleCard({ article }: { article: Article }) {
             sizes="(max-width: 1024px) 100vw, 400px"
             className="object-cover transition duration-700 group-hover:scale-[1.05]"
           />
-          <span className="absolute left-4 top-4 inline-flex items-center gap-2 rounded-full border border-white/25 bg-black/40 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.22em] text-white backdrop-blur">
-            {article.category}
-          </span>
         </div>
         <div className="flex h-full flex-col gap-3 p-6">
           <div className="flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-500">

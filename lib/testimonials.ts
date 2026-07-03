@@ -35,7 +35,7 @@ export const TESTIMONIALS: Testimonial[] = [
     name: "Osmund W.",
     rating: 5,
     quote:
-      "Houston Cool Pools is an excellent company for anyone looking to construct a pool. The owner Mike Lopez is exceptional — professional, polite, knowledgeable. I shopped 5 other contractors and his price was one of the best for what you get, and his finished product is beautiful. Great job to Mike and his team — we love our pool!",
+      "Houston Cool Pools is an excellent company for anyone looking to construct a pool. The owner Mike Lopez is exceptional - professional, polite, knowledgeable. I shopped 5 other contractors and his price was one of the best for what you get, and his finished product is beautiful. Great job to Mike and his team - we love our pool!",
   },
   {
     name: "B.D.L.",

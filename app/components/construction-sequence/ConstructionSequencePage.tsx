@@ -133,7 +133,7 @@ export function ConstructionSequencePage({
             className="mt-6 max-w-3xl text-base text-white/75 sm:text-lg"
           >
             A step-by-step walkthrough of how Houston Cool Pools builds your
-            custom backyard pool — from the first stake in the ground to the
+            custom backyard pool - from the first stake in the ground to the
             first splash.
           </motion.p>
 

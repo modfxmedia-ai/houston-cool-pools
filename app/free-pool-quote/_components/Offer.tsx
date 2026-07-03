@@ -155,7 +155,7 @@ export function Offer() {
               <div className="min-w-0">
                 <div className="font-display text-3xl font-extrabold leading-none">
                   <span className="bg-gradient-to-br from-[#00b4d8] to-[#0ea5e9] bg-clip-text text-transparent">
-                    1,200+
+                    1,600+
                   </span>
                 </div>
                 <div className="mt-1 text-[11px] font-semibold uppercase tracking-[0.18em] text-[#0a1628]">

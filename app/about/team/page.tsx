@@ -4,7 +4,6 @@ import { buildPageMetadata } from "../../../lib/business";
 import { TEAM } from "../../../lib/team";
 import { PHONE_DISPLAY, PHONE_HREF, QUOTE_HREF } from "../../../lib/navigation";
 import { TeamBioBlock } from "../../components/about/TeamBioBlock";
-import { TeamStickyNav } from "../../components/about/TeamStickyNav";
 
 export const metadata: Metadata = buildPageMetadata("/about/team");
 
@@ -38,13 +37,10 @@ export default function TeamPage() {
             <span aria-hidden className="h-1 w-1 rounded-full bg-[var(--color-pool)]" />
             <span>90+ years combined experience</span>
             <span aria-hidden className="h-1 w-1 rounded-full bg-[var(--color-pool)]" />
-            <span>One mission — fun, on-budget pools</span>
+            <span>One mission - fun, on-budget pools</span>
           </p>
         </div>
       </section>
-
-      {/* ─── Sticky jump nav ─── */}
-      <TeamStickyNav />
 
       {/* ─── Bio blocks ─── */}
       <main className="relative bg-[#fafbfc]">
@@ -61,7 +57,7 @@ export default function TeamPage() {
             Want to talk pools?
           </h2>
           <p className="mx-auto mt-5 max-w-2xl text-base text-white/70 md:text-lg">
-            Schedule a free in-home consultation with the HCP team and we&apos;ll
+            Schedule a free in-home quote with the HCP team and we&apos;ll
             start sketching your backyard.
           </p>
           <div className="mt-10 flex flex-wrap justify-center gap-4">

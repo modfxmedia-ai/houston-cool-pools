@@ -5,9 +5,10 @@ import { PHONE_DISPLAY, PHONE_HREF, QUOTE_HREF } from "../../lib/navigation";
 import { WhyChooseHero } from "../components/why-choose/WhyChooseHero";
 import { WhyChooseStory } from "../components/why-choose/WhyChooseStory";
 import { WhyChoosePillars } from "../components/why-choose/WhyChoosePillars";
-import { WhyChooseProcess } from "../components/why-choose/WhyChooseProcess";
 import { WhyChooseExtras } from "../components/why-choose/WhyChooseExtras";
 import { WhyChooseForm } from "../components/why-choose/WhyChooseForm";
+import { Financing } from "../components/home/Financing";
+import { Testimonials } from "../components/home/Testimonials";
 
 export const metadata: Metadata = buildPageMetadata("/whychoosehcp");
 
@@ -17,8 +18,9 @@ export default function WhyChooseHcpPage() {
       <WhyChooseHero />
       <WhyChooseStory />
       <WhyChoosePillars />
-      <WhyChooseProcess />
       <WhyChooseExtras />
+      <Testimonials />
+      <Financing />
       <WhyChooseForm />
 
       {/* ----- Closing CTA ----- */}
@@ -34,7 +36,7 @@ export default function WhyChooseHcpPage() {
           </h2>
           <p className="mx-auto mt-6 max-w-2xl text-base text-white/70 md:text-lg">
             Cutting-edge technology, 25+ years of experience, and excellent customer
-            service — all backed by our 100% on-budget guarantee. Let&apos;s build your
+            service - all backed by our 100% on-budget guarantee. Let&apos;s build your
             backyard retreat.
           </p>
           <div className="mt-10 flex flex-wrap justify-center gap-4">

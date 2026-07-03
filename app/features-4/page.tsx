@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { FeaturePage } from "../components/features/FeaturePage";
 
-const TITLE = "Pool Sun Shelf, Beach Entry & Fast Lane — Houston Cool Pools";
+const TITLE = "Pool Sun Shelf, Beach Entry & Fast Lane - Houston Cool Pools";
 const DESCRIPTION =
   "Sun shelves, beach entries and Fast Lane swim systems for your custom pool. Houston Cool Pools serving Cypress, Spring, Tomball, The Heights, and Katy.";
 const CANONICAL = "https://houstoncoolpools.com/features-4.html";
@@ -55,7 +55,7 @@ const SECTIONS = [
   {
     title: "Fast Lane",
     body:
-      "Add a Fast Lane swim system to enjoy resistance swimming and aquatic exercise in your own backyard — no matter the size of your pool.",
+      "Add a Fast Lane swim system to enjoy resistance swimming and aquatic exercise in your own backyard - no matter the size of your pool.",
   },
 ];
 
@@ -69,7 +69,7 @@ export default function Features4Page() {
       />
       <FeaturePage
         heading="Sun Shelf, Beach Entry & Fast Lane"
-        intro="Lounge on a tanning ledge, wade in island-style, or swim against the current — all in your custom pool."
+        intro="Lounge on a tanning ledge, wade in island-style, or swim against the current - all in your custom pool."
         activeHref="/features-4"
         heroImage="/images/features/features-4/hero.jpg"
         sectionHeading="Sun Shelf · Beach Entry · Fast Lane"

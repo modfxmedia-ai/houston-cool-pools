@@ -24,13 +24,27 @@ export const PRIMARY_NAV: NavGroup[] = [
         heading: "Get To Know Us",
         links: [
           { label: "Meet The Team", href: "/about/team" },
+          { label: "Why Choose HCP", href: "/whychoosehcp" },
+          { label: "Reviews & Testimonials", href: "/customer-reviews-testimonials" },
         ],
       },
     ],
     cta: BOOK_APPOINTMENT,
   },
-  { label: "Why Choose HCP", href: "/whychoosehcp" },
-  { label: "Pool Gallery", href: "/gallery" },
+  { label: "Pool Gallery", href: "/gallery",
+    columns: [
+      {
+        heading: "Explore",
+        links: [
+          { label: "Pricing", href: "/pricing-65k-75k" },
+          { label: "Pool Types & Styles", href: "/pool-types" },
+          { label: "Custom Pool Features", href: "/custom-pool-features-1" },
+          { label: "Pool Remodel", href: "/pool-remodel" },
+        ],
+      },
+    ],
+    cta: BOOK_APPOINTMENT,
+  },
   {
     label: "Pool Information",
     href: "/pool-information",
@@ -38,7 +52,7 @@ export const PRIMARY_NAV: NavGroup[] = [
       {
         heading: "Plan Your Pool",
         links: [
-          { label: "Pool Pricing & Packages", href: "/pricing-45k-55k" },
+          { label: "Pool Pricing & Packages", href: "/pricing-65k-75k" },
           { label: "Financing Options", href: "/poolfinancing" },
           { label: "Choose The Right Builder", href: "/how-to-choose-a-pool-builder" },
           { label: "Pool Specifications", href: "/pool-specifications" },
@@ -46,23 +60,10 @@ export const PRIMARY_NAV: NavGroup[] = [
         ],
       },
       {
-        heading: "Design & Build",
-        links: [
-          { label: "Pool Types & Styles", href: "/pool-types" },
-          { label: "Custom Pool Features", href: "/custom-pool-features-1" },
-          { label: "Pool Construction Sequence", href: "/construction-sequence-1" },
-          { label: "Pool Remodel", href: "/pool-remodel" },
-          { label: "Pool Articles", href: "/swimming-pool-articles" },
-        ],
-      },
-      {
         heading: "Learn",
         links: [
           { label: "Pool School", href: "/pool-school-1" },
           { label: "FAQs", href: "/faqs1" },
-          { label: "Pool Terms", href: "/pooldefinitions" },
-          { label: "Pool Glossary", href: "/glossary1" },
-          { label: "Equipment Manuals", href: "/pool-equipment-manuals" },
           { label: "Product Brochures", href: "/product-brochures" },
         ],
       },
@@ -70,13 +71,11 @@ export const PRIMARY_NAV: NavGroup[] = [
         heading: "Pool Owners",
         links: [
           { label: "Severe Weather Guide", href: "/severe-weather" },
-          { label: "Reviews & Testimonials", href: "/customer-reviews-testimonials" },
         ],
       },
     ],
     cta: BOOK_APPOINTMENT,
   },
-  { label: "Get a Free Quote", href: "/contact" },
 ];
 
 export const PHONE_DISPLAY = "(281) 645-6631";

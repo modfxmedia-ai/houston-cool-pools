@@ -101,7 +101,7 @@ export function Faq() {
             transition={{ duration: 0.7, ease, delay: 0.15 }}
             className="mx-auto mt-5 max-w-xl text-base leading-relaxed text-[#94a3b8]"
           >
-            Everything you need to know before your free in-home consultation.
+            Everything you need to know before your free in-home quote.
           </motion.p>
         </div>
 

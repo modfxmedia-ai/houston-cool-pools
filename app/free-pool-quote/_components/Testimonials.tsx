@@ -5,7 +5,7 @@ import { LP_TESTIMONIALS } from "../_lib/data";
 
 const ease = [0.22, 1, 0.36, 1] as const;
 
-// Per-card metadata (avatar color + "posted" date) — Google review look.
+// Per-card metadata (avatar color + "posted" date) - Google review look.
 const AVATAR_PALETTE = [
   "from-[#4285F4] to-[#1a73e8]", // blue
   "from-[#EA4335] to-[#c5221f]", // red
@@ -122,7 +122,7 @@ export function Testimonials() {
           ))}
         </div>
 
-        {/* CTA — "see more on Google" */}
+        {/* CTA - "see more on Google" */}
         <motion.div
           initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}

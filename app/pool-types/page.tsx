@@ -31,7 +31,7 @@ export default function PoolTypesPage() {
           </h1>
           <p className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-white/70 md:text-lg">
             From clean modern geometrics to free-form naturalistic pools and full
-            outdoor environments — explore the styles Houston Cool Pools has built
+            outdoor environments - explore the styles Houston Cool Pools has built
             across greater Houston.
           </p>
 
@@ -76,7 +76,7 @@ export default function PoolTypesPage() {
             <span className="italic text-[var(--color-gold-light)]">custom designed</span>
           </h2>
           <p className="mx-auto mt-6 max-w-2xl text-base text-white/70 md:text-lg">
-            Tell us your style, your space, and your budget — we&apos;ll design a
+            Tell us your style, your space, and your budget - we&apos;ll design a
             pool that fits all three with our 100% on-budget guarantee.
           </p>
           <div className="mt-10 flex flex-wrap justify-center gap-4">

@@ -43,7 +43,7 @@ export function QuoteForm() {
       />
 
       <div className="relative z-10 mx-auto grid max-w-7xl gap-10 px-4 sm:gap-12 sm:px-8 lg:grid-cols-[1fr_1.05fr] lg:items-start lg:gap-16 lg:px-16 xl:px-20">
-        {/* Left column — info */}
+        {/* Left column - info */}
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -62,7 +62,7 @@ export function QuoteForm() {
           </h2>
           <p className="mt-4 text-base leading-relaxed text-slate-600">
             Fill out the form and we&apos;ll reach out within one business day
-            to schedule your free in-home consultation.
+            to schedule your free in-home quote.
           </p>
 
           <ul className="mt-7 grid gap-2 text-sm text-slate-700 sm:grid-cols-2">
@@ -92,19 +92,6 @@ export function QuoteForm() {
                 {LP_CONTACT.phoneDisplay}
               </a>
             </p>
-            <p className="flex items-center gap-2 text-slate-700">
-              <span className="inline-flex h-7 w-7 flex-none items-center justify-center rounded-full bg-[#00b4d8]/15 text-[#00b4d8]">
-                <svg viewBox="0 0 24 24" className="h-3.5 w-3.5 fill-current" aria-hidden>
-                  <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z" />
-                </svg>
-              </span>
-              <a
-                href={LP_CONTACT.emailHref}
-                className="hover:text-[#00b4d8]"
-              >
-                {LP_CONTACT.email}
-              </a>
-            </p>
             <p className="flex items-start gap-2 text-slate-700">
               <span className="mt-0.5 inline-flex h-7 w-7 flex-none items-center justify-center rounded-full bg-[#00b4d8]/15 text-[#00b4d8]">
                 <svg viewBox="0 0 24 24" className="h-3.5 w-3.5 fill-current" aria-hidden>
@@ -119,7 +106,7 @@ export function QuoteForm() {
           </div>
         </motion.div>
 
-        {/* Right column — embedded LeadConnector form (same one as popup) */}
+        {/* Right column - embedded LeadConnector form (same one as popup) */}
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}

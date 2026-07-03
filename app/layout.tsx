@@ -3,7 +3,6 @@ import { Outfit, Montserrat } from "next/font/google";
 import "./globals.css";
 import { BUSINESS, SITE_URL, localBusinessJsonLd } from "../lib/business";
 import { Header } from "./components/Header";
-import { TextUsTab } from "./components/TextUsTab";
 import { BookNowBanner } from "./components/BookNowBanner";
 import { Footer } from "./components/Footer";
 import { ChromeGate } from "./components/ChromeGate";
@@ -52,7 +51,6 @@ export default function RootLayout({
         />
         <ChromeGate>
           <Header />
-          <TextUsTab />
         </ChromeGate>
         {children}
         <ChromeGate>

@@ -20,14 +20,13 @@ const SECTIONS: Section[] = [
   {
     heading: "Start Here",
     eyebrow: "Discover",
-    intro: "The essentials — who we are, what we build, and how to get in touch.",
+    intro: "The essentials - who we are, what we build, and how to get in touch.",
     links: [
       { label: "Home", href: "/" },
       { label: "About Us", href: "/about" },
       { label: "Meet The Team", href: "/about/team" },
       { label: "Why Choose HCP", href: "/whychoosehcp" },
       { label: "Contact / Free Quote", href: "/contact" },
-      { label: "Free Pool Quote Form", href: "/free-pool-quote" },
       { label: "Pool Gallery", href: "/gallery" },
       { label: "Reviews & Testimonials", href: "/customer-reviews-testimonials" },
     ],
@@ -38,7 +37,7 @@ const SECTIONS: Section[] = [
     intro: "Understand pricing, financing, and how to pick the right pool team for your backyard.",
     links: [
       { label: "Pool Information Hub", href: "/pool-information" },
-      { label: "Pool Pricing & Packages", href: "/pricing-45k-55k" },
+      { label: "Pool Pricing & Packages", href: "/pricing-85k-95k" },
       { label: "Financing Options", href: "/poolfinancing" },
       { label: "Choose The Right Builder", href: "/how-to-choose-a-pool-builder" },
       { label: "Pool Specifications", href: "/pool-specifications" },
@@ -55,13 +54,13 @@ const SECTIONS: Section[] = [
       { label: "Pool Construction Sequence", href: "/construction-sequence-1" },
       { label: "Pool Remodel", href: "/pool-remodel" },
       { label: "Pool Service", href: "/pool-service" },
-      { label: "Features — Pool Decking", href: "/features-pool-decking" },
+      { label: "Features - Pool Decking", href: "/features-pool-decking" },
     ],
   },
   {
     heading: "Learn & Reference",
     eyebrow: "Pool School",
-    intro: "Long-form learning — articles, FAQs, glossaries, equipment manuals and brochures.",
+    intro: "Long-form learning - articles, FAQs, glossaries, equipment manuals and brochures.",
     links: [
       { label: "Swimming Pool Articles", href: "/swimming-pool-articles" },
       { label: "Pool School", href: "/pool-school-1" },
@@ -75,11 +74,11 @@ const SECTIONS: Section[] = [
 ];
 
 const PRICING_TIERS: SectionLink[] = [
-  { label: "$45k – $55k", href: "/pricing-45k-55k" },
-  { label: "$55k – $65k", href: "/pricing-55k-65k" },
-  { label: "$65k – $75k", href: "/pricing-65k-75k" },
-  { label: "$75k – $85k", href: "/pricing-75k-85k" },
-  { label: "$85k – $105k", href: "/pricing-85k-105k" },
+  { label: "$45k – $55k", href: "/pricing-85k-95k" },
+  { label: "$55k – $65k", href: "/pricing-75k-85k" },
+  { label: "$65k – $75k", href: "/pricing-85k-95k" },
+  { label: "$75k – $85k", href: "/pricing-95k-105k" },
+  { label: "$85k – $105k", href: "/pricing-105k-125k" },
 ];
 
 const CONSTRUCTION_STEPS: SectionLink[] = Array.from({ length: 6 }, (_, i) => ({
@@ -166,7 +165,7 @@ export function SitemapClient() {
       <InfoHero
         eyebrow="Sitemap"
         title="Every page on Houston Cool Pools"
-        subtitle="A complete, human-friendly index of the site — grouped by topic so you can find pricing, galleries, FAQs, pool school and everything in between in one place."
+        subtitle="A complete, human-friendly index of the site - grouped by topic so you can find pricing, galleries, FAQs, pool school and everything in between in one place."
         crumbs={[{ label: "Home", href: "/" }, { label: "Sitemap" }]}
       />
 
@@ -251,7 +250,7 @@ export function SitemapClient() {
               Every gallery, one click away
             </h2>
             <p className="mt-4 text-[15.5px] leading-relaxed text-black/65">
-              Browse our full library of pool, deck, and outdoor-living photography — organized by style.
+              Browse our full library of pool, deck, and outdoor-living photography - organized by style.
             </p>
           </div>
 
@@ -303,7 +302,7 @@ export function SitemapClient() {
         </div>
       </section>
 
-      {/* Local service pages — pSEO combos ({service} × {city}) */}
+      {/* Local service pages - pSEO combos ({service} × {city}) */}
       <section className="relative bg-[#f7f6f2] py-20 md:py-24">
         <div className="mx-auto max-w-6xl px-6">
           <div className="mx-auto max-w-3xl text-center">
@@ -314,7 +313,7 @@ export function SitemapClient() {
               {PSEO_TOTAL_PAGES.toLocaleString()} location-specific pages
             </h2>
             <p className="mt-4 text-[15.5px] leading-relaxed text-black/65">
-              Every service we offer, in every city we serve — {SERVICES.length} services × {PSEO_LIVE.length} cities.
+              Every service we offer, in every city we serve - {SERVICES.length} services × {PSEO_LIVE.length} cities.
               Tap a service to reveal all city pages, or start with{" "}
               <Link href="/areas-we-serve" className="font-semibold text-[var(--color-pool-deep)] underline underline-offset-4 hover:text-[var(--color-pool)]">
                 Areas We Serve
@@ -397,7 +396,7 @@ export function SitemapClient() {
             <code className="rounded-md bg-white/10 px-2 py-1 text-[13px] text-white">
               /sitemap.xml
             </code>{" "}
-            — used by Google, Bing, and other crawlers.
+            - used by Google, Bing, and other crawlers.
           </p>
           <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
             <a

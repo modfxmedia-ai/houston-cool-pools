@@ -17,7 +17,7 @@ const QUALIFICATIONS = [
 
 const STATS = [
   { value: "28+", label: "Years" },
-  { value: "1,200+", label: "Pools" },
+  { value: "1,600+", label: "Pools" },
   { value: "A+", label: "BBB Rated", star: true },
 ];
 
@@ -59,7 +59,7 @@ export function MeetOwner({ compact = false }: { compact?: boolean }) {
       />
 
       <div className="relative mx-auto grid max-w-7xl items-center gap-10 px-4 sm:gap-12 sm:px-8 lg:grid-cols-[1.05fr_1.15fr] lg:gap-16 lg:px-16 xl:px-20">
-        {/* LEFT — photo card with floating badges */}
+        {/* LEFT - photo card with floating badges */}
         <motion.div
           initial={{ opacity: 0, x: -40 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -108,7 +108,7 @@ export function MeetOwner({ compact = false }: { compact?: boolean }) {
             </div>
           </div>
 
-          {/* Top-right floating: 1,200+ POOLS BUILT */}
+          {/* Top-right floating: 1,600+ POOLS BUILT */}
           <motion.div
             initial={{ opacity: 0, y: -10, scale: 0.9 }}
             whileInView={{ opacity: 1, y: 0, scale: 1 }}
@@ -131,7 +131,7 @@ export function MeetOwner({ compact = false }: { compact?: boolean }) {
             </div>
             <div>
               <div className="font-display text-base font-extrabold leading-none text-[#0a1628] sm:text-lg">
-                1,200+
+                1,600+
               </div>
               <div className="mt-0.5 text-[9px] font-bold uppercase tracking-[0.18em] text-slate-500">
                 Pools Built
@@ -168,7 +168,7 @@ export function MeetOwner({ compact = false }: { compact?: boolean }) {
           </motion.div>
         </motion.div>
 
-        {/* RIGHT — copy + qualifications + stats + CTAs */}
+        {/* RIGHT - copy + qualifications + stats + CTAs */}
         <motion.div
           initial={{ opacity: 0, x: 40 }}
           whileInView={{ opacity: 1, x: 0 }}

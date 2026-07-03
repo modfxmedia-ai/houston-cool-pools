@@ -63,7 +63,7 @@ export function CustomHomeTocClient() {
       <InfoHero
         eyebrow="Builder Network"
         title="Custom Home Builder Associations"
-        subtitle="The Houston-area custom home builders we've worked side-by-side with — pool-first coordination from foundation through final punch list."
+        subtitle="The Houston-area custom home builders we've worked side-by-side with - pool-first coordination from foundation through final punch list."
         crumbs={[
           { label: "Home", href: "/" },
           { label: "Pool Information", href: "/pool-information" },
@@ -82,7 +82,7 @@ export function CustomHomeTocClient() {
             </h2>
             <p className="mt-4 text-[16px] leading-relaxed text-slate-600">
               When your builder and pool company collaborate from day one, the whole project
-              runs smoother — from siting the pool to routing utilities to matching materials.
+              runs smoother - from siting the pool to routing utilities to matching materials.
               These are the partners we work with regularly.
             </p>
           </div>

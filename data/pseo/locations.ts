@@ -2,7 +2,7 @@
  * Programmatic SEO location catalog for the greater Houston metro.
  *
  * Tiers:
- *  - 1: Core service area — highest priority. `live: true` for launch.
+ *  - 1: Core service area - highest priority. `live: true` for launch.
  *  - 2: Adjacent cities with GSC evidence (real impressions/queries in the last 16 mo).
  *  - 3: Adjacent cities within realistic drive-time service radius, no direct GSC
  *       evidence yet, staged behind `live: true` for a later batch.
@@ -11,27 +11,27 @@
  */
 
 export type PseoLocation = {
-  /** URL-safe slug — combines with service slug */
+  /** URL-safe slug - combines with service slug */
   slug: string;
   /** Full city / neighborhood name for headings */
   cityName: string;
-  /** Two-letter state — always TX for this project */
+  /** Two-letter state - always TX for this project */
   state: "TX";
-  /** County — used in local-relevance content when defensible */
+  /** County - used in local-relevance content when defensible */
   county: string;
   tier: 1 | 2 | 3;
   /** Enable/disable output for this location. Staged rollout is boolean-flip only. */
   live: boolean;
   /** 3-4 nearby location slugs for internal linking */
   nearbyLocations: string[];
-  /** Short defensible descriptor — used in intro paragraphs. Never invents facts. */
+  /** Short defensible descriptor - used in intro paragraphs. Never invents facts. */
   descriptor: string;
   /** Optional neighborhood or landmark shorthand for local-relevance block */
   landmarkNote?: string;
 };
 
 export const LOCATIONS: PseoLocation[] = [
-  // ─── TIER 1 — CORE SERVICE AREA (live at launch) ───────────────────────────
+  // ─── TIER 1 - CORE SERVICE AREA (live at launch) ───────────────────────────
   {
     slug: "houston",
     cityName: "Houston",
@@ -65,7 +65,7 @@ export const LOCATIONS: PseoLocation[] = [
     live: true,
     nearbyLocations: ["tomball", "the-woodlands", "kingwood", "houston", "cypress"],
     descriptor:
-      "Spring runs from established neighborhoods near I-45 out to newer master-planned communities — pool projects here vary widely in scale.",
+      "Spring runs from established neighborhoods near I-45 out to newer master-planned communities - pool projects here vary widely in scale.",
     landmarkNote: "North Houston, along the I-45 corridor",
   },
   {
@@ -105,7 +105,7 @@ export const LOCATIONS: PseoLocation[] = [
     landmarkNote: "West of Houston, along I-10",
   },
 
-  // ─── TIER 2 — GSC-EVIDENCED, staged live=false pending QA ─────────────────
+  // ─── TIER 2 - GSC-EVIDENCED, staged live=false pending QA ─────────────────
   {
     slug: "conroe",
     cityName: "Conroe",
@@ -163,7 +163,7 @@ export const LOCATIONS: PseoLocation[] = [
     live: true,
     nearbyLocations: ["friendswood", "clear-lake", "pearland", "houston"],
     descriptor:
-      "League City's coastal proximity means we pay closer attention to material choices — coping, decking, and equipment enclosures that hold up in salt-air humidity.",
+      "League City's coastal proximity means we pay closer attention to material choices - coping, decking, and equipment enclosures that hold up in salt-air humidity.",
     landmarkNote: "Southeast of Houston, along I-45",
   },
   {
@@ -175,7 +175,7 @@ export const LOCATIONS: PseoLocation[] = [
     live: true,
     nearbyLocations: ["friendswood", "league-city", "pearland", "houston"],
     descriptor:
-      "Clear Lake backyards range from waterfront lots to inland subdivisions — both benefit from thoughtful drainage planning around a new pool.",
+      "Clear Lake backyards range from waterfront lots to inland subdivisions - both benefit from thoughtful drainage planning around a new pool.",
     landmarkNote: "Southeast Houston, near NASA",
   },
   {
@@ -187,7 +187,7 @@ export const LOCATIONS: PseoLocation[] = [
     live: true,
     nearbyLocations: ["houston", "deer-park", "pasadena"],
     descriptor:
-      "Baytown projects sit at the eastern edge of our service area — most are new gunite builds on established residential lots.",
+      "Baytown projects sit at the eastern edge of our service area - most are new gunite builds on established residential lots.",
     landmarkNote: "East Houston, near the Ship Channel",
   },
   {
@@ -227,7 +227,7 @@ export const LOCATIONS: PseoLocation[] = [
     landmarkNote: "Memorial-area village community",
   },
 
-  // ─── TIER 3 — Drive-time reachable, no direct GSC signal yet ──────────────
+  // ─── TIER 3 - Drive-time reachable, no direct GSC signal yet ──────────────
   {
     slug: "sugar-land",
     cityName: "Sugar Land",
@@ -237,7 +237,7 @@ export const LOCATIONS: PseoLocation[] = [
     live: true,
     nearbyLocations: ["missouri-city", "richmond", "stafford", "houston"],
     descriptor:
-      "Sugar Land's master-planned neighborhoods have varied HOA design requirements — worth reviewing before finalizing pool plans.",
+      "Sugar Land's master-planned neighborhoods have varied HOA design requirements - worth reviewing before finalizing pool plans.",
     landmarkNote: "Southwest Houston, along US-59",
   },
   {
@@ -249,7 +249,7 @@ export const LOCATIONS: PseoLocation[] = [
     live: true,
     nearbyLocations: ["friendswood", "manvel", "missouri-city", "houston"],
     descriptor:
-      "Pearland's rapid growth means we build on both mature lots and brand-new construction — the two need very different site preparation.",
+      "Pearland's rapid growth means we build on both mature lots and brand-new construction - the two need very different site preparation.",
     landmarkNote: "South Houston, along TX-288",
   },
   {
@@ -273,7 +273,7 @@ export const LOCATIONS: PseoLocation[] = [
     live: true,
     nearbyLocations: ["katy", "richmond", "houston"],
     descriptor:
-      "Fulshear is one of the fastest-growing suburbs west of Houston — plenty of new-build lots with room for a full custom gunite design.",
+      "Fulshear is one of the fastest-growing suburbs west of Houston - plenty of new-build lots with room for a full custom gunite design.",
     landmarkNote: "West Fort Bend, past Katy",
   },
   {
@@ -357,7 +357,7 @@ export const LOCATIONS: PseoLocation[] = [
     live: true,
     nearbyLocations: ["bunker-hill-village", "hedwig-village", "piney-point-village", "houston"],
     descriptor:
-      "Memorial's wooded lots and mature landscaping shape a lot of the design decisions — sun exposure and equipment access are always part of the conversation.",
+      "Memorial's wooded lots and mature landscaping shape a lot of the design decisions - sun exposure and equipment access are always part of the conversation.",
     landmarkNote: "West Houston, along Memorial Drive",
   },
   {
@@ -441,7 +441,7 @@ export const LOCATIONS: PseoLocation[] = [
     live: true,
     nearbyLocations: ["memorial", "bunker-hill-village", "piney-point-village", "houston"],
     descriptor:
-      "Hedwig Village lots are private, wooded, and generous — the kind of setting where custom gunite pools really get to breathe.",
+      "Hedwig Village lots are private, wooded, and generous - the kind of setting where custom gunite pools really get to breathe.",
     landmarkNote: "Memorial-area village community",
   },
   {
@@ -465,7 +465,7 @@ export const LOCATIONS: PseoLocation[] = [
     live: true,
     nearbyLocations: ["conroe", "the-woodlands", "magnolia"],
     descriptor:
-      "Willis and the Lake Conroe area are at the far northern edge of our regular service radius — mostly acreage-scale projects.",
+      "Willis and the Lake Conroe area are at the far northern edge of our regular service radius - mostly acreage-scale projects.",
     landmarkNote: "North of Conroe, near Lake Conroe",
   },
   {
@@ -517,7 +517,7 @@ export const LOCATIONS: PseoLocation[] = [
     landmarkNote: "North Houston, near Champions",
   },
 
-  // ─── TIER 3 — additional Houston-metro cities and neighborhoods ────────────
+  // ─── TIER 3 - additional Houston-metro cities and neighborhoods ────────────
   {
     slug: "cinco-ranch",
     cityName: "Cinco Ranch",
@@ -563,7 +563,7 @@ export const LOCATIONS: PseoLocation[] = [
     live: true,
     nearbyLocations: ["bellaire", "west-university", "houston", "the-heights"],
     descriptor:
-      "Meyerland's mature neighborhoods have existing pools ready for renovation and lots that support thoughtful new construction — drainage planning matters here more than in most of the metro.",
+      "Meyerland's mature neighborhoods have existing pools ready for renovation and lots that support thoughtful new construction - drainage planning matters here more than in most of the metro.",
     landmarkNote: "Southwest Houston, inside the 610 Loop area",
   },
   {
@@ -587,7 +587,7 @@ export const LOCATIONS: PseoLocation[] = [
     live: true,
     nearbyLocations: ["the-heights", "river-oaks", "houston", "bellaire"],
     descriptor:
-      "Montrose is dense and lot sizes are narrow — plunge pools, cocktail pools, and compact courtyard designs are where most projects land.",
+      "Montrose is dense and lot sizes are narrow - plunge pools, cocktail pools, and compact courtyard designs are where most projects land.",
     landmarkNote: "Inner-loop Houston, south of the Heights",
   },
   {
@@ -623,7 +623,7 @@ export const LOCATIONS: PseoLocation[] = [
     live: true,
     nearbyLocations: ["memorial", "the-heights", "houston", "hedwig-village"],
     descriptor:
-      "Spring Branch covers a broad swath of west Houston with a mix of established lots and infill construction — both are common pool-project sites.",
+      "Spring Branch covers a broad swath of west Houston with a mix of established lots and infill construction - both are common pool-project sites.",
     landmarkNote: "West Houston, along the I-10 corridor",
   },
   {

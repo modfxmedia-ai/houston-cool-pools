@@ -175,7 +175,7 @@ export function QuoteModal() {
                   {/* trust mini-row */}
                   <div className="mt-4 flex flex-wrap gap-x-4 gap-y-1.5 text-[10px] font-semibold uppercase tracking-[0.18em] text-white/55">
                     {[
-                      "1,200+ Pools Built",
+                      "1,600+ Pools Built",
                       "Since 1996",
                       "100% On-Budget",
                     ].map((t) => (

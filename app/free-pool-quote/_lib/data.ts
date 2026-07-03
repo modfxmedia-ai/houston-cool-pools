@@ -11,8 +11,6 @@ export const LP_CONTACT = {
   phoneDisplay: "(281) 645-6631",
   phoneHref: "tel:+12816456631",
   smsHref: "sms:+12816456631",
-  email: "info@houstoncoolpools.com",
-  emailHref: "mailto:info@houstoncoolpools.com",
   address: "21902 Highway 249, Houston, TX 77070",
   hours: "Mon-Fri 8AM-6PM · Sat 9AM-4PM · Sun by Appointment",
   facebook: "https://www.facebook.com/HoustonCoolPools/",
@@ -20,7 +18,7 @@ export const LP_CONTACT = {
 } as const;
 
 export const LP_OFFER_CHECKLIST = [
-  "Free in-home consultation",
+  "Free in-home quote",
   "Custom pool design concepts",
   "Transparent pricing, no surprises",
   "100% on-budget guarantee",
@@ -37,7 +35,7 @@ export const LP_TRUST_BADGES = [
 
 export const LP_HERO_STATS = [
   { value: "1996", label: "Established", suffix: "" },
-  { value: "1,200+", label: "Pools Built", suffix: "" },
+  { value: "1,600+", label: "Pools Built", suffix: "" },
   { value: "100%", label: "On-Budget", suffix: "" },
   { value: "A+", label: "BBB Rating", suffix: "" },
 ] as const;
@@ -215,7 +213,7 @@ export const LP_TIMELINE = [
   },
   {
     title: "We call you to schedule",
-    body: "A Houston Cool Pools team member will call to set up your free in-home consultation.",
+    body: "A Houston Cool Pools team member will call to set up your free in-home quote.",
   },
   {
     title: "Mike's team comes to you",
@@ -237,19 +235,19 @@ export const LP_TYP_GALLERY = [
 export const LP_FAQS = [
   {
     q: "How much does a custom pool cost in Houston?",
-    a: "Most custom gunite pools we build in the Houston area land between $55,000 and $105,000+ depending on size, finishes, and outdoor features. Your free in-home consultation includes a transparent, line-itemed quote so you know exactly what you're investing in.",
+    a: "Most custom gunite pools we build in the Houston area land between $55,000 and $105,000+ depending on size, finishes, and outdoor features. Your free in-home quote includes a transparent, line-itemed quote so you know exactly what you're investing in.",
   },
   {
     q: "How long does it take to build a pool?",
     a: "From contract to swim, most projects take 10 to 14 weeks. Permitting, weather, and any add-ons like outdoor kitchens or fire features can shift the timeline. We give you a realistic schedule up front and keep you updated every step.",
   },
   {
-    q: "What's included in the free in-home consultation?",
+    q: "What's included in the free in-home quote?",
     a: "A Houston Cool Pools designer comes to your backyard, listens to how you'll actually use the space, and walks you through pool styles, finishes, and add-ons. You leave with a custom design concept, transparent pricing, and zero pressure to decide on the spot.",
   },
   {
     q: "Do you offer financing?",
-    a: "Yes. We work with several pool-financing partners offering competitive rates and flexible terms. We can connect you with a lender during your consultation so you have real monthly numbers alongside your design.",
+    a: "Yes. We work with several pool-financing partners offering competitive rates and flexible terms. We can connect you with a lender during your quote so you have real monthly numbers alongside your design.",
   },
   {
     q: "What is the 100% on-budget guarantee?",

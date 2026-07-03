@@ -2,7 +2,7 @@
  * Real-search-phrase lookup extracted from the last 16 months of Google Search
  * Console data (see /gsc-report/Queries.csv).
  *
- * We surface actual query strings — not guesses — into H1s, meta descriptions,
+ * We surface actual query strings - not guesses - into H1s, meta descriptions,
  * and FAQ questions on the pSEO pages. Every entry below traces back to a row
  * in the GSC export with `impressions > 0`.
  *

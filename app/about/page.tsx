@@ -11,6 +11,7 @@ import { OwnerHero } from "../components/about/OwnerHero";
 import { OwnerStory } from "../components/about/OwnerStory";
 import { OwnerQuote } from "../components/about/OwnerQuote";
 import { OwnerLifestyle } from "../components/about/OwnerLifestyle";
+import { OwnerReviews } from "../components/about/OwnerReviews";
 
 export const metadata: Metadata = buildPageMetadata("/about");
 
@@ -18,7 +19,7 @@ export default function AboutPage() {
   return (
     <>
       <OwnerHero owner={MIKE_LOPEZ} />
-      <OwnerStory owner={MIKE_LOPEZ} />
+      <OwnerStory owner={MIKE_LOPEZ} interlude={<OwnerReviews />} interludeAfter={0} />
       <OwnerQuote owner={MIKE_LOPEZ} />
       <OwnerLifestyle owner={MIKE_LOPEZ} />
 
@@ -38,7 +39,7 @@ export default function AboutPage() {
           </h2>
           <p className="mx-auto mt-6 max-w-2xl text-base text-white/70 md:text-lg">
             Mike and the Houston Cool Pools team would love to hear about your space.
-            Free consultation, transparent pricing, and our 100% on-budget guarantee.
+            Free quote, transparent pricing, and our 100% on-budget guarantee.
           </p>
           <div className="mt-10 flex flex-wrap justify-center gap-4">
             <Link

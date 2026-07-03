@@ -36,7 +36,7 @@ export function PoolSchoolClient() {
       <InfoHero
         eyebrow="Video Tutorials"
         title="Pool School"
-        subtitle="Everything a new pool owner needs to know — from water testing to filter cleaning to storm shutdown — taught by our service team, on demand."
+        subtitle="Everything a new pool owner needs to know - from water testing to filter cleaning to storm shutdown - taught by our service team, on demand."
         crumbs={[
           { label: "Home", href: "/" },
           { label: "Pool Information", href: "/pool-information" },

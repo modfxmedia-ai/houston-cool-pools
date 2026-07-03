@@ -44,7 +44,7 @@ export default function GalleryPage() {
             for your backyard
           </h2>
           <p className="mx-auto mt-6 max-w-2xl text-base text-white/70 md:text-lg">
-            Tell us about your space and budget — we&apos;ll design a pool that fits
+            Tell us about your space and budget - we&apos;ll design a pool that fits
             both, with our 100% on-budget guarantee.
           </p>
           <div className="mt-10 flex flex-wrap justify-center gap-4">

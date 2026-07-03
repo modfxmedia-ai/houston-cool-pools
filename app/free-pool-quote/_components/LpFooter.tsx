@@ -39,12 +39,6 @@ export function LpFooter() {
           >
             {LP_CONTACT.phoneDisplay}
           </a>
-          <a
-            href={LP_CONTACT.emailHref}
-            className="transition hover:text-[#00b4d8]"
-          >
-            {LP_CONTACT.email}
-          </a>
           <p className="max-w-xs text-[12.5px]">{LP_CONTACT.address}</p>
         </div>
 

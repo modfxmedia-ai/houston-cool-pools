@@ -48,7 +48,7 @@ export function TypVideo() {
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-sm text-[#cbd5e1] sm:text-base">
             Watch how our on-budget promise keeps surprises off your final bill
-            — from the first quote to the last splash.
+            - from the first quote to the last splash.
           </p>
         </motion.div>
 

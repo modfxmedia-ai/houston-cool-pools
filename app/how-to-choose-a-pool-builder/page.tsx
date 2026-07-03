@@ -8,9 +8,9 @@ const CANONICAL = `https://houstoncoolpools.com/${SLUG}.html`;
 const base = buildPageMetadata(`/${SLUG}`);
 export const metadata: Metadata = {
   ...base,
-  title: "How To Choose The Right Pool Builder — 15 Questions",
+  title: "How To Choose The Right Pool Builder - 15 Questions",
   description:
-    "The 15 questions every Houston homeowner should ask before hiring a swimming pool builder — a builder-transparent guide to protect yourself before signing any contracts.",
+    "The 15 questions every Houston homeowner should ask before hiring a swimming pool builder - a builder-transparent guide to protect yourself before signing any contracts.",
   alternates: { canonical: CANONICAL },
   openGraph: { ...base.openGraph, url: CANONICAL },
 };

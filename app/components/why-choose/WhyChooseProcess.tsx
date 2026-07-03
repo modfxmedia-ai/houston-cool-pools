@@ -87,7 +87,7 @@ export function WhyChooseProcess() {
             )}
           </motion.div>
 
-          {/* Showcase cards — stacked, compact, clickable like the live "click here" links */}
+          {/* Showcase cards - stacked, compact, clickable like the live "click here" links */}
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-1">
             {SHOWCASE_IMAGES.map((img, i) => {
               const inner = (

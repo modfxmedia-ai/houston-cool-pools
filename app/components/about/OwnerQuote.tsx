@@ -57,7 +57,7 @@ export function OwnerQuote({ owner }: { owner: TeamMember }) {
           transition={{ duration: 0.6, delay: 0.55, ease }}
           className="mt-6 text-[11px] font-bold uppercase tracking-[0.32em] text-white/60"
         >
-          — {owner.name}, {owner.title}
+          - {owner.name}, {owner.title}
         </motion.p>
       </div>
     </section>

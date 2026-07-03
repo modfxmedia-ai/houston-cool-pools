@@ -8,9 +8,9 @@ const CANONICAL = `https://houstoncoolpools.com/${SLUG}.html`;
 const base = buildPageMetadata(`/${SLUG}`);
 export const metadata: Metadata = {
   ...base,
-  title: "Glossary of Pool Terms — P–R | Houston Cool Pools",
+  title: "Glossary of Pool Terms - P–R | Houston Cool Pools",
   description:
-    "Glossary of pool and spa industry terms P through R — pH, plaster, prime, pressure gauge, pump, pump basket, reagent and more.",
+    "Glossary of pool and spa industry terms P through R - pH, plaster, prime, pressure gauge, pump, pump basket, reagent and more.",
   alternates: { canonical: CANONICAL },
   openGraph: { ...base.openGraph, url: CANONICAL },
 };
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "DefinedTermSet",
-  name: "Glossary of Pool Terms — P–R",
+  name: "Glossary of Pool Terms - P–R",
   url: CANONICAL,
 };
 
@@ -45,7 +45,7 @@ export default function Page() {
           },
           {
             term: "Prime",
-            body: "Process you sometimes have to use to make a pump run as intended — full of water, no air bubbles, and not dry. A dry run can burn your pump out.",
+            body: "Process you sometimes have to use to make a pump run as intended - full of water, no air bubbles, and not dry. A dry run can burn your pump out.",
           },
           { term: "PSI", body: "Pounds per square inch. A measure of pressure." },
           {

@@ -12,7 +12,7 @@ const STATS: ReadonlyArray<{
   display?: string;
 }> = [
   { value: 28, suffix: "+", label: "Years in Business" },
-  { value: 1200, suffix: "+", label: "Pools Built" },
+  { value: 1600, suffix: "+", label: "Pools Built" },
   { value: 100, suffix: "%", label: "On-Budget" },
   { value: 0, suffix: "", label: "BBB Rating", display: "A+" },
 ];

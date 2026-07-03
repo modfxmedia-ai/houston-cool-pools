@@ -162,7 +162,7 @@ export function MapSection() {
 
             <p className="mt-3 text-sm leading-relaxed text-[#94a3b8]">
               Our showroom is in Northwest Houston. Stop by, or we&apos;ll
-              come to your backyard for a free in-home consultation.
+              come to your backyard for a free in-home quote.
             </p>
 
             {/* Address card */}

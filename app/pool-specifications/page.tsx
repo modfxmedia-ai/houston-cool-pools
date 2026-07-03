@@ -6,7 +6,7 @@ import { PoolCtaBanner } from "../components/PoolCtaBanner";
 
 const TITLE = "Detailed Pool Specifications in Houston, TX";
 const DESCRIPTION =
-  "See the detailed standard pool construction specifications from Houston Cool Pools. Steel, gunite, electrical, equipment and finishes — all laid out clearly.";
+  "See the detailed standard pool construction specifications from Houston Cool Pools. Steel, gunite, electrical, equipment and finishes - all laid out clearly.";
 const CANONICAL = "https://houstoncoolpools.com/pool-specifications.html";
 
 export const metadata: Metadata = {
@@ -61,14 +61,14 @@ const SPEC_CATEGORIES: { heading: string; icon: string; items: string[] }[] = [
     ],
   },
   {
-    heading: "Equipment — Part of Base Pool",
+    heading: "Equipment - Part of Base Pool",
     icon: "equipment",
     items: [
       "Pentair 420 sq. ft. Clean & Clear Plus Cartridge Filter",
       "Cyclone Centrifugal Pre Filter",
       "Pentair Intelliflow Variable Speed Energy Efficient Pump",
       "Pentair Pool Cleaner",
-      "1 LED Pool Light — premium LED multicolored with light shows or 2 Glow Bright Lights",
+      "1 LED Pool Light - premium LED multicolored with light shows or 2 Glow Bright Lights",
       "Pentair Remote System with Smart Phone Control",
       "Pool maintenance equipment included: Test kit, pole, brush, net, vacuum hose, vacuum head, thermometer",
       "4+ in. poured gunite equipment slab with steel rebar",
@@ -79,8 +79,8 @@ const SPEC_CATEGORIES: { heading: string; icon: string; items: string[] }[] = [
     heading: "Finishes",
     icon: "finishes",
     items: [
-      "Standard Coping — Travertine / Flagstone / Brick",
-      "6 inch standard waterline tile selection included — 100's to choose from",
+      "Standard Coping - Travertine / Flagstone / Brick",
+      "6 inch standard waterline tile selection included - 100's to choose from",
       "3 entrance steps (Step width: 1st 18 in., 2nd 18 in., 3rd 14 in.)",
       "Double coat of white marble plaster with silicone additive",
     ],
@@ -89,7 +89,7 @@ const SPEC_CATEGORIES: { heading: string; icon: string; items: string[] }[] = [
     heading: "Pool School & Maintenance",
     icon: "school",
     items: [
-      "Training on how to use your pool equipment and maintain your chemicals — given by our certified Pentair Rep",
+      "Training on how to use your pool equipment and maintain your chemicals - given by our certified Pentair Rep",
       "1 month of maintenance provided to ensure proper startup",
     ],
   },

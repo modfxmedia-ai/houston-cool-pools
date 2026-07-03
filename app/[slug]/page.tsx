@@ -5,7 +5,7 @@ import { getKeywordsFor } from "../../data/pseo/keywords";
 import { BUSINESS, SITE_URL } from "../../lib/business";
 import { PseoPageClient } from "../components/pseo/PseoPageClient";
 
-// SSG only — unknown slugs 404 instantly rather than being generated on demand.
+// SSG only - unknown slugs 404 instantly rather than being generated on demand.
 export const dynamicParams = false;
 
 type Params = { slug: string };
@@ -41,7 +41,7 @@ export async function generateMetadata({
       locale: "en_US",
       images: [
         {
-          url: `${SITE_URL}/images/hero/family-1.jpg`,
+          url: `${SITE_URL}/images/hero/slide-1.png`,
           width: 1200,
           height: 630,
           alt: `${service.name} in ${location.cityName}, TX`,
@@ -52,7 +52,7 @@ export async function generateMetadata({
       card: "summary_large_image",
       title,
       description,
-      images: [`${SITE_URL}/images/hero/family-1.jpg`],
+      images: [`${SITE_URL}/images/hero/slide-1.png`],
     },
   };
 }
@@ -99,7 +99,7 @@ export default async function Page({ params }: { params: Promise<Params> }) {
           },
         },
       },
-      // Service — specific to this combo
+      // Service - specific to this combo
       {
         "@type": "Service",
         "@id": `${url}#service`,
@@ -133,7 +133,7 @@ export default async function Page({ params }: { params: Promise<Params> }) {
           },
         ],
       },
-      // FAQPage — mirrors the FAQs rendered in the client component
+      // FAQPage - mirrors the FAQs rendered in the client component
       {
         "@type": "FAQPage",
         "@id": `${url}#faq`,
@@ -159,7 +159,7 @@ export default async function Page({ params }: { params: Promise<Params> }) {
   );
 }
 
-// Mirror of the FAQ list the client renders — kept here so the JSON-LD stays
+// Mirror of the FAQ list the client renders - kept here so the JSON-LD stays
 // in sync with what's actually shown on-page.
 function buildFaqSchema(
   service: { slug: string; shortName: string },
@@ -172,11 +172,11 @@ function buildFaqSchema(
       q: costQuery
         ? `${cap(costQuery.query)}${costQuery.query.endsWith("?") ? "" : "?"}`
         : `How much does a custom pool cost in ${location.cityName}, TX?`,
-      a: `Custom gunite pools cover a wide price range depending on size, depth, features, decking, and finishes. Rather than quote a number here, we publish our tiered pricing pages so you can see what different budgets typically buy — from starter builds to larger resort-style pools. Financing is available for qualified homeowners.`,
+      a: `Custom gunite pools cover a wide price range depending on size, depth, features, decking, and finishes. Rather than quote a number here, we publish our tiered pricing pages so you can see what different budgets typically buy - from starter builds to larger resort-style pools. Financing is available for qualified homeowners.`,
     },
     {
       q: `How long does a ${service.shortName.toLowerCase()} project take in ${location.cityName}?`,
-      a: `Custom gunite pool projects generally run 8-16 weeks from ground-breaking to first swim, depending on scope, weather, and inspection scheduling. Remodels vary more — a straight interior resurface is a much shorter project than a structural addition.`,
+      a: `Custom gunite pool projects generally run 8-16 weeks from ground-breaking to first swim, depending on scope, weather, and inspection scheduling. Remodels vary more - a straight interior resurface is a much shorter project than a structural addition.`,
     },
   ];
 
@@ -188,7 +188,7 @@ function buildFaqSchema(
   } else if (service.slug === "pool-service-maintenance") {
     list.push({
       q: `Do you offer weekly pool service in ${location.cityName}?`,
-      a: `We support homeowners with equipment consultation, chemistry guidance, and maintenance planning for Houston's climate.`,
+      a: `We support homeowners with equipment quote, chemistry guidance, and maintenance planning for Houston's climate.`,
     });
   } else if (service.slug === "pool-design-construction") {
     list.push({
@@ -204,7 +204,7 @@ function buildFaqSchema(
 
   list.push({
     q: `Do you actually service ${location.cityName}, TX?`,
-    a: `Yes — Houston Cool Pools serves ${location.cityName} and the surrounding ${location.county} area from our office on Highway 249 in northwest Houston. Reach us at (281) 645-6631 or through our free-quote form.`,
+    a: `Yes - Houston Cool Pools serves ${location.cityName} and the surrounding ${location.county} area from our office on Highway 249 in northwest Houston. Reach us at (281) 645-6631 or through our free-quote form.`,
   });
 
   if (!costQuery) {

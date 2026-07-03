@@ -60,7 +60,7 @@ export function PoolInfoHero() {
           transition={{ duration: 0.7, delay: 0.2, ease }}
           className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-white/75 md:text-lg"
         >
-          Everything you need to know — from choosing the right builder to financing your
+          Everything you need to know - from choosing the right builder to financing your
           dream pool.
         </motion.p>
       </div>

@@ -8,7 +8,7 @@ const CANONICAL = `https://houstoncoolpools.com/${SLUG}.html`;
 const base = buildPageMetadata(`/${SLUG}`);
 export const metadata: Metadata = {
   ...base,
-  title: "Severe Weather Pool Care — Hurricane & Freeze Guide | Houston Cool Pools",
+  title: "Severe Weather Pool Care - Hurricane & Freeze Guide | Houston Cool Pools",
   description:
     "Houston pool owner\u2019s guide to protecting your pool and equipment during hurricanes, tropical storms, and hard freezes.",
   alternates: { canonical: CANONICAL },

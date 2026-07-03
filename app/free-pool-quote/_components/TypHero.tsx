@@ -120,8 +120,8 @@ export function TypHero() {
         className="mt-6 max-w-2xl text-base text-[#cbd5e1] sm:text-lg"
       >
         Thank you! A member of our team will reach out within one business day
-        to schedule your free in-home pool consultation. If you need to reach
-        us sooner, call or text us directly.
+        to schedule your free in-home pool quote. If you need to reach
+        us sooner, give us a call directly.
       </motion.p>
 
       <motion.div
@@ -135,12 +135,6 @@ export function TypHero() {
           className="inline-flex items-center justify-center rounded-full bg-[#00b4d8] px-7 py-3.5 text-sm font-semibold text-[#0a1628] transition hover:bg-white"
         >
           📞 Call {LP_CONTACT.phoneDisplay}
-        </a>
-        <a
-          href={LP_CONTACT.smsHref}
-          className="inline-flex items-center justify-center rounded-full border border-white/20 px-7 py-3.5 text-sm font-semibold text-white transition hover:border-[#00b4d8] hover:text-[#00b4d8]"
-        >
-          💬 Text Us
         </a>
       </motion.div>
     </section>

@@ -18,19 +18,19 @@ type Service = {
 
 const SERVICES: Service[] = [
   {
-    title: "Pricing",
-    desc: "Transparent pool pricing with packages from $45K to $55K and up.",
-    href: "/pricing-45k-55k",
-    image: "/images/gallery/_mg_0300.jpg",
+    title: "Pool Designs",
+    desc: "Custom-designed pools tailored to your backyard, lifestyle, and budget.",
+    href: "/pool-types",
+    image: "/images/gallery/drexel1.jpg",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" className="h-5 w-5">
-        <path d="M12 1v22M17 5H9.5a3.5 3.5 0 100 7h5a3.5 3.5 0 110 7H6" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+        <path d="M3 21h18M4 21V9l8-6 8 6v12M9 21v-6h6v6" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
       </svg>
     ),
   },
   {
-    title: "Features",
-    desc: "Waterfalls, spas, fire bowls, bubblers and dozens of custom features.",
+    title: "Custom Features",
+    desc: "Waterfalls, spas, tanning ledges, fire bowls, lighting, and more.",
     href: "/custom-pool-features-1",
     image: "/images/gallery/_mg_0701.jpg",
     icon: (
@@ -40,42 +40,19 @@ const SERVICES: Service[] = [
     ),
   },
   {
-    title: "Financing",
-    desc: "Flexible pool financing options to fit any budget.",
-    href: "/poolfinancing",
-    image: "/images/gallery/andersontarr_4.jpg",
+    title: "Pricing",
+    desc: "Transparent pricing from $65K and up.",
+    href: "/pricing-85k-95k",
+    image: "/images/gallery/_mg_0300.jpg",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" className="h-5 w-5">
-        <rect x="2" y="6" width="20" height="14" rx="2" stroke="currentColor" strokeWidth="1.8" />
-        <path d="M2 10h20M6 16h4" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+        <path d="M12 1v22M17 5H9.5a3.5 3.5 0 100 7h5a3.5 3.5 0 110 7H6" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
       </svg>
     ),
   },
   {
-    title: "Why Choose Us",
-    desc: "30 years building Houston's most beautiful custom gunite pools.",
-    href: "/whychoosehcp",
-    image: "/images/gallery/drexel1.jpg",
-    icon: (
-      <svg viewBox="0 0 24 24" fill="none" className="h-5 w-5">
-        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" stroke="currentColor" strokeWidth="1.8" strokeLinejoin="round" />
-      </svg>
-    ),
-  },
-  {
-    title: "Pool Service",
-    desc: "Professional pool service and maintenance — now offered to our customers.",
-    href: "/contact",
-    image: "/images/gallery/breth_1_2.jpg",
-    icon: (
-      <svg viewBox="0 0 24 24" fill="none" className="h-5 w-5">
-        <path d="M14.7 6.3a4 4 0 00-5.4 5.4l-6 6 2 2 6-6a4 4 0 005.4-5.4l-2.4 2.4-2-2 2.4-2.4z" stroke="currentColor" strokeWidth="1.8" strokeLinejoin="round" />
-      </svg>
-    ),
-  },
-  {
-    title: "Pool Remodel",
-    desc: "Transform your old pool into a backyard paradise with a custom remodel.",
+    title: "Pool Remodeling",
+    desc: "Transform outdated pools into modern backyard retreats.",
     href: "/pool-remodel",
     image: "/images/gallery/merlin3.jpg",
     icon: (
@@ -119,7 +96,7 @@ export function Services() {
             whileInView="show"
             viewport={{ once: true, amount: 0.1 }}
             variants={{ show: { transition: { staggerChildren: 0.07 } } }}
-            className="relative grid gap-4 sm:grid-cols-2 sm:gap-5 lg:grid-cols-3"
+            className="relative grid gap-4 sm:grid-cols-2 sm:gap-5 lg:grid-cols-4"
           >
             {SERVICES.map((s, i) => (
               <ServiceCard key={s.title} service={s} index={i} />
@@ -153,7 +130,7 @@ function ServiceCard({ service, index }: { service: Service; index: number }) {
           className="object-cover transition-transform duration-[1400ms] ease-out group-hover:scale-[1.08]"
         />
 
-        {/* Gradient veil — heavy at bottom for legibility */}
+        {/* Gradient veil - heavy at bottom for legibility */}
         <span className="absolute inset-0 bg-gradient-to-t from-[var(--color-navy-deep)] via-[var(--color-navy-deep)]/55 to-[var(--color-navy-deep)]/10" />
         {/* Hover cyan tint */}
         <span className="absolute inset-0 bg-[var(--color-pool)]/0 transition-colors duration-500 group-hover:bg-[var(--color-pool)]/15" />

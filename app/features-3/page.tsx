@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { FeaturePage } from "../components/features/FeaturePage";
 
-const TITLE = "Pool Bubblers & Gushers — Houston Cool Pools";
+const TITLE = "Pool Bubblers & Gushers - Houston Cool Pools";
 const DESCRIPTION =
   "Energy-efficient bubblers add eye-catching style and soothing sound to sun shelves, steps and beach entries. Custom pool features from Houston Cool Pools.";
 const CANONICAL = "https://houstoncoolpools.com/features-3.html";

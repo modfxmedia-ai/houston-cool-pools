@@ -10,7 +10,7 @@ import { LpFooter } from "../_components/LpFooter";
 export const metadata: Metadata = {
   title: "Thank You. We'll Be In Touch | Houston Cool Pools",
   description:
-    "Thanks for requesting your free pool quote. A Houston Cool Pools team member will reach out within one business day to schedule your free in-home consultation.",
+    "Thanks for requesting your free pool quote. A Houston Cool Pools team member will reach out within one business day to schedule your free in-home quote.",
   alternates: { canonical: "/free-pool-quote/thank-you" },
   robots: { index: false, follow: false },
   openGraph: {

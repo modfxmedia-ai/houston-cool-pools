@@ -8,9 +8,9 @@ const CANONICAL = `https://houstoncoolpools.com/${SLUG}.html`;
 const base = buildPageMetadata(`/${SLUG}`);
 export const metadata: Metadata = {
   ...base,
-  title: "Glossary of Pool Terms — D–E | Houston Cool Pools",
+  title: "Glossary of Pool Terms - D–E | Houston Cool Pools",
   description:
-    "Glossary of pool and spa industry terms starting with D and E — deck, DE filter, diverter valve, dry acid and more.",
+    "Glossary of pool and spa industry terms starting with D and E - deck, DE filter, diverter valve, dry acid and more.",
   alternates: { canonical: CANONICAL },
   openGraph: { ...base.openGraph, url: CANONICAL },
 };
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "DefinedTermSet",
-  name: "Glossary of Pool Terms — D–E",
+  name: "Glossary of Pool Terms - D–E",
   url: CANONICAL,
 };
 

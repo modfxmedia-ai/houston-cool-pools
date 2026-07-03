@@ -20,7 +20,7 @@ const HOURS = [
 ];
 
 /**
- * Redesigned "Free Home Consultation" form from the live contact page, paired
+ * Redesigned "Free Home Quote" form from the live contact page, paired
  * with a contact-details rail, hours, and an interactive map. The form opens a
  * pre-filled email to the business (no backend required) and shows an inline
  * confirmation state.
@@ -47,7 +47,7 @@ export function ContactFormSection() {
           >
             {/* Map card */}
             <div className="group relative overflow-hidden rounded-3xl border border-slate-200/80 bg-white shadow-[0_24px_60px_-30px_rgba(0,55,73,0.4)]">
-              <div className="relative aspect-[16/10] w-full">
+              <div className="relative aspect-[16/9] w-full">
                 <iframe
                   title={`${BUSINESS.name} location map`}
                   src={MAP_EMBED}
@@ -57,7 +57,7 @@ export function ContactFormSection() {
                   className="absolute inset-0 h-full w-full"
                 />
               </div>
-              <div className="flex flex-wrap items-center justify-between gap-3 border-t border-slate-100 bg-white px-6 py-5">
+              <div className="flex flex-wrap items-center justify-between gap-3 border-t border-slate-100 bg-white px-5 py-4">
                 <div>
                   <p className="text-[10px] font-bold uppercase tracking-[0.22em] text-slate-400">
                     Showroom
@@ -92,24 +92,13 @@ export function ContactFormSection() {
             </div>
 
             {/* Contact details */}
-            <div className="grid gap-4 sm:grid-cols-2">
+            <div className="grid gap-4">
               <InfoTile
                 eyebrow="Call Us"
                 value={PHONE_DISPLAY}
                 href={PHONE_HREF}
                 icon={
                   <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.13.96.36 1.9.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0122 16.92z" />
-                }
-              />
-              <InfoTile
-                eyebrow="Email Us"
-                value={BUSINESS.email}
-                href={`mailto:${BUSINESS.email}`}
-                icon={
-                  <>
-                    <rect x="3" y="5" width="18" height="14" rx="2" />
-                    <path d="M3 7l9 6 9-6" />
-                  </>
                 }
               />
             </div>

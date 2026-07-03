@@ -38,9 +38,9 @@ export default function Page() {
         intro="Pergolas, pavilions and outdoor kitchens that complete your backyard retreat."
         images={images}
         prevHref="/pool-deck-4"
-        prevLabel="Pool Deck Designs — Page 4"
+        prevLabel="Pool Deck Designs - Page 4"
         nextHref="/outdoor-structures-gallery-2"
-        nextLabel="Outdoor Structures — Page 2"
+        nextLabel="Outdoor Structures - Page 2"
       />
     </>
   );

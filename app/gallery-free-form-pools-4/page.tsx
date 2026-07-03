@@ -3,7 +3,7 @@ import { GalleryCategoryPage } from "../components/gallery/GalleryCategoryPage";
 import { getGalleryImages, galleryJsonLd } from "../../lib/gallery-pages";
 
 const SLUG = "gallery-free-form-pools-4";
-const TITLE = "Free Form Pool Gallery — Page 4 | Houston Cool Pools";
+const TITLE = "Free Form Pool Gallery - Page 4 | Houston Cool Pools";
 const DESCRIPTION =
   "More free form pool designs and photos from Houston Cool Pools. Custom gunite pool builder serving Houston, Tomball, Cypress and Spring TX.";
 const CANONICAL = `https://houstoncoolpools.com/${SLUG}.html`;
@@ -29,18 +29,18 @@ export default function Page() {
         type="application/ld+json"
         // eslint-disable-next-line react/no-danger
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(galleryJsonLd("Free Form Pool Gallery — Page 4", SLUG)),
+          __html: JSON.stringify(galleryJsonLd("Free Form Pool Gallery - Page 4", SLUG)),
         }}
       />
       <GalleryCategoryPage
         category="Free Form Pools"
-        heading="Free Form Pools — Page 4"
+        heading="Free Form Pools - Page 4"
         intro="Organic, lagoon-style pools with curved lines that flow naturally into your Houston backyard."
         images={images}
         prevHref="/gallery-free-form-pools-3"
-        prevLabel="Free Form Pools — Page 3"
+        prevLabel="Free Form Pools - Page 3"
         nextHref="/gallery-free-form-pools-5"
-        nextLabel="Free Form Pools — Page 5"
+        nextLabel="Free Form Pools - Page 5"
       />
     </>
   );

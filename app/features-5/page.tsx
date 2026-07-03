@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { FeaturePage } from "../components/features/FeaturePage";
 
-const TITLE = "Pool Rock Waterfalls & Grottos — Houston Cool Pools";
+const TITLE = "Pool Rock Waterfalls & Grottos - Houston Cool Pools";
 const DESCRIPTION =
   "Rock waterfalls and grottos add natural beauty and the soothing sound of falling water to your pool. Custom pool features from Houston Cool Pools.";
 const CANONICAL = "https://houstoncoolpools.com/features-5.html";
@@ -43,7 +43,7 @@ const IMAGES = [
 const SECTIONS = [
   {
     body:
-      "In recent years Rock Formations and Waterfalls have become very popular in pool design. They are a beautiful addition to the look of your pool and add an incredible sound to your pool. Rock Waterfalls can add a wonderful natural visual element to your backyard oasis! A truly unique addition to your pool — a Grotto! Grottos can incorporate a waterfall. They can range from simple seats to hidden pools and gathering areas. Sometimes instead of a waterfall (or in addition to it) the top of a grotto can incorporate another water feature such as a slide.",
+      "In recent years Rock Formations and Waterfalls have become very popular in pool design. They are a beautiful addition to the look of your pool and add an incredible sound to your pool. Rock Waterfalls can add a wonderful natural visual element to your backyard oasis! A truly unique addition to your pool - a Grotto! Grottos can incorporate a waterfall. They can range from simple seats to hidden pools and gathering areas. Sometimes instead of a waterfall (or in addition to it) the top of a grotto can incorporate another water feature such as a slide.",
   },
 ];
 

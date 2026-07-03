@@ -8,9 +8,9 @@ const CANONICAL = `https://houstoncoolpools.com/${SLUG}.html`;
 const base = buildPageMetadata(`/${SLUG}`);
 export const metadata: Metadata = {
   ...base,
-  title: "Glossary of Pool Terms — C | Houston Cool Pools",
+  title: "Glossary of Pool Terms - C | Houston Cool Pools",
   description:
-    "Glossary of pool and spa industry terms starting with C — calcium, cantilever edge, cartridge filter, chlorine, coping, cyanuric acid and more.",
+    "Glossary of pool and spa industry terms starting with C - calcium, cantilever edge, cartridge filter, chlorine, coping, cyanuric acid and more.",
   alternates: { canonical: CANONICAL },
   openGraph: { ...base.openGraph, url: CANONICAL },
 };
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "DefinedTermSet",
-  name: "Glossary of Pool Terms — C",
+  name: "Glossary of Pool Terms - C",
   url: CANONICAL,
 };
 
@@ -37,7 +37,7 @@ export default function Page() {
         terms={[
           {
             term: "Calcium Carbonate",
-            body: "Calcium scale — forms crystals and can hinder circulation and cause rough deposits on surfaces.",
+            body: "Calcium scale - forms crystals and can hinder circulation and cause rough deposits on surfaces.",
           },
           { term: "Calcium Hardness", body: "Amount of minerals in pool water." },
           { term: "Calcium Hypochlorite", body: "A form of chlorine shock." },

@@ -38,7 +38,7 @@ export default function Page() {
         intro="Organic, lagoon-style pools with curved lines that flow naturally into your Houston backyard."
         images={images}
         nextHref="/gallery-free-form-pools-2"
-        nextLabel="Free Form Pools — Page 2"
+        nextLabel="Free Form Pools - Page 2"
       />
     </>
   );

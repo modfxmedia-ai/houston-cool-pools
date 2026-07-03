@@ -6,13 +6,13 @@ import { LP_CONTACT } from "../_lib/data";
 const ease = [0.22, 1, 0.36, 1] as const;
 
 const PERKS = [
-  "Free in-home consultation",
+  "Free in-home quote",
   "Custom design concepts",
   "100% on-budget guarantee",
 ] as const;
 
 /**
- * OfferCard — animated "Today's Offer" panel rendered on the right side of
+ * OfferCard - animated "Today's Offer" panel rendered on the right side of
  * the hero. Combines motion graphics: rotating dashed ring around a glowing
  * FREE disc, struck-through "Was $500", stamped FREE badge, staggered
  * checklist with check-in animation, and an animated progress / urgency
@@ -194,7 +194,7 @@ export function OfferCard() {
         {/* Progress / urgency */}
         <div className="mt-6 rounded-xl border border-white/5 bg-white/[0.03] p-3">
           <div className="flex items-center justify-between text-[10px] font-semibold uppercase tracking-[0.18em]">
-            <span className="text-white/80">2026 Build Slots</span>
+            <span className="text-white/80">New Build Slots</span>
             <span className="text-[#00b4d8]">82% Booked</span>
           </div>
           <div className="mt-2 h-1.5 overflow-hidden rounded-full bg-white/10">

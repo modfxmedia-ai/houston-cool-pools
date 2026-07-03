@@ -3,7 +3,7 @@ import { GalleryCategoryPage } from "../components/gallery/GalleryCategoryPage";
 import { getGalleryImages, galleryJsonLd } from "../../lib/gallery-pages";
 
 const SLUG = "fireplace-firepits-gallery-3";
-const TITLE = "Fire Pit & Fireplace Gallery — Page 3 | Houston Cool Pools";
+const TITLE = "Fire Pit & Fireplace Gallery - Page 3 | Houston Cool Pools";
 const DESCRIPTION =
   "More fire pit and fireplace designs for pools from Houston Cool Pools. Custom gunite pool builder serving Houston, Tomball, Cypress and Spring TX.";
 const CANONICAL = `https://houstoncoolpools.com/${SLUG}.html`;
@@ -29,16 +29,16 @@ export default function Page() {
         type="application/ld+json"
         // eslint-disable-next-line react/no-danger
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(galleryJsonLd("Fire Pit & Fireplace Gallery — Page 3", SLUG)),
+          __html: JSON.stringify(galleryJsonLd("Fire Pit & Fireplace Gallery - Page 3", SLUG)),
         }}
       />
       <GalleryCategoryPage
         category="Fireplaces & Fire Pits"
-        heading="Fireplaces & Fire Pits — Page 3"
+        heading="Fireplaces & Fire Pits - Page 3"
         intro="Custom fireplaces and fire pits that extend your poolside evenings year-round."
         images={images}
         prevHref="/fireplace-firepits-gallery-2"
-        prevLabel="Fireplaces & Fire Pits — Page 2"
+        prevLabel="Fireplaces & Fire Pits - Page 2"
         nextHref="/pool-deck-1"
         nextLabel="Pool Deck Designs"
       />

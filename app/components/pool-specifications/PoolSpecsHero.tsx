@@ -81,7 +81,7 @@ export function PoolSpecsHero() {
           transition={{ duration: 0.7, delay: 0.2, ease }}
           className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-white/75 md:text-lg"
         >
-          Steel, gunite, electrical, equipment and finishes — exactly what goes into
+          Steel, gunite, electrical, equipment and finishes - exactly what goes into
           every pool we build, laid out clearly.
         </motion.p>
       </div>

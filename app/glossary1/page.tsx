@@ -8,9 +8,9 @@ const CANONICAL = `https://houstoncoolpools.com/${SLUG}.html`;
 const base = buildPageMetadata(`/${SLUG}`);
 export const metadata: Metadata = {
   ...base,
-  title: "Glossary of Pool Terms — A | Houston Cool Pools",
+  title: "Glossary of Pool Terms - A | Houston Cool Pools",
   description:
-    "Glossary of pool and spa industry terms starting with A — acid, air relief valve, algae, algaecide, alkalinity, automatic controller, automatic pool cleaner and more.",
+    "Glossary of pool and spa industry terms starting with A - acid, air relief valve, algae, algaecide, alkalinity, automatic controller, automatic pool cleaner and more.",
   alternates: { canonical: CANONICAL },
   openGraph: { ...base.openGraph, url: CANONICAL },
 };
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "DefinedTermSet",
-  name: "Glossary of Pool Terms — A",
+  name: "Glossary of Pool Terms - A",
   url: CANONICAL,
 };
 
@@ -37,7 +37,7 @@ export default function Page() {
         terms={[
           {
             term: "Acid",
-            body: "1) Level of pH in your pool water — how corrosive it is. 2) Liquid you put in your pool to make water-chemistry corrections.",
+            body: "1) Level of pH in your pool water - how corrosive it is. 2) Liquid you put in your pool to make water-chemistry corrections.",
           },
           {
             term: "Air Relief Valve",
@@ -57,11 +57,11 @@ export default function Page() {
           },
           {
             term: "Alkalinity",
-            body: "Sometimes called Total Alkalinity — the proper level helps pH balance and prevents extremes in pH that can cause many problems in chemistry.",
+            body: "Sometimes called Total Alkalinity - the proper level helps pH balance and prevents extremes in pH that can cause many problems in chemistry.",
           },
           {
             term: "Alkalinity Increaser",
-            body: "Increases the total-alkalinity reading. Sodium bicarbonate — baking soda.",
+            body: "Increases the total-alkalinity reading. Sodium bicarbonate - baking soda.",
           },
           {
             term: "Automatic Controller",
@@ -69,7 +69,7 @@ export default function Page() {
           },
           {
             term: "Automatic Pool Cleaner",
-            body: "Device that automatically vacuums pools — for example, the Pentair Legend Cleaner.",
+            body: "Device that automatically vacuums pools - for example, the Pentair Legend Cleaner.",
           },
         ]}
       />

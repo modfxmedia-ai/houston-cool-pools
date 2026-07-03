@@ -8,7 +8,7 @@ const CANONICAL = `https://houstoncoolpools.com/${SLUG}.html`;
 const base = buildPageMetadata(`/${SLUG}`);
 export const metadata: Metadata = {
   ...base,
-  title: "Custom Home Builder Associations — Houston Cool Pools",
+  title: "Custom Home Builder Associations - Houston Cool Pools",
   description:
     "Houston Cool Pools partners with leading Houston-area custom home builders including Ridgewater Homes, Mazzarino Construction, Robert Sanders, Timeline Construction and Nautilus Real Estate.",
   alternates: { canonical: CANONICAL },

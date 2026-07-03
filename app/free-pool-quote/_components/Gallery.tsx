@@ -45,7 +45,7 @@ export function Gallery() {
             transition={{ duration: 0.7, ease }}
             className="mt-3 font-display text-3xl font-extrabold text-[#0a1628] sm:text-5xl"
           >
-            1,200+ pools built across{" "}
+            1,600+ pools built across{" "}
             <span className="text-[#00b4d8]">Houston</span>
           </motion.h2>
           <motion.p

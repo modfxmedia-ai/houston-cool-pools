@@ -41,7 +41,7 @@ export const GALLERY_TIERS: GalleryTier[] = [
     label: "$75K – $85K",
     tagline: "Signature starter pools",
     description:
-      "Beautifully crafted gunite pools designed to elevate any backyard — clean lines, premium plaster finishes, and the build quality Houston Cool Pools is known for.",
+      "Beautifully crafted gunite pools designed to elevate any backyard - clean lines, premium plaster finishes, and the build quality Houston Cool Pools is known for.",
     highlights: [
       "Gunite construction",
       "Premium plaster finish",
@@ -108,7 +108,7 @@ export const GALLERY_TIERS: GalleryTier[] = [
     label: "$120K – $200K",
     tagline: "Premier outdoor environments",
     description:
-      "Full backyard transformations — pool, spa, outdoor kitchen, fire features, and custom hardscape designed as one cohesive luxury environment.",
+      "Full backyard transformations - pool, spa, outdoor kitchen, fire features, and custom hardscape designed as one cohesive luxury environment.",
     highlights: [
       "Negative-edge & infinity options",
       "Outdoor kitchen integration",

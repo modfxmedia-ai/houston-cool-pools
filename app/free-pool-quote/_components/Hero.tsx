@@ -239,7 +239,7 @@ export function Hero() {
               <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#00b4d8] opacity-75" />
               <span className="relative inline-flex h-2 w-2 rounded-full bg-[#00b4d8]" />
             </span>
-            Now Booking 2026 Builds
+            Now Accepting New Builds
             <svg
               viewBox="0 0 20 20"
               className="-mr-0.5 h-3 w-3 fill-current transition group-hover:translate-x-0.5"
@@ -290,7 +290,7 @@ export function Hero() {
           >
             Houston&apos;s most trusted custom gunite pool builder since{" "}
             <span className="font-semibold text-white">1996</span>.{" "}
-            <span className="font-semibold text-white">1,200+ pools built</span>
+            <span className="font-semibold text-white">1,600+ pools built</span>
             , 100% on-budget guarantee.
           </motion.p>
 
@@ -375,7 +375,7 @@ export function Hero() {
           />
           <div className="relative grid grid-cols-2 gap-4 rounded-2xl border border-white/10 bg-[#0a1628]/85 p-5 backdrop-blur-md sm:grid-cols-4 sm:gap-6 sm:p-7">
             <StatBlock value={1996} label="Established" type="year" />
-            <StatBlock value={1200} suffix="+" label="Pools Built" />
+            <StatBlock value={1600} suffix="+" label="Pools Built" />
             <StatBlock value={100} suffix="%" label="On-Budget" />
             <StatBlock display="A+" label="BBB Rating" />
           </div>

@@ -94,6 +94,36 @@ export function OwnerHero({ owner }: { owner: TeamMember }) {
             <span>Houston Cool Pools</span>
           </motion.p>
 
+          {/* 5-star rating badge */}
+          <motion.div
+            initial={{ opacity: 0, y: 12 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.28, ease }}
+            className="mt-5 inline-flex items-center gap-3 rounded-full border border-[var(--color-gold-light)]/25 bg-white/[0.04] px-4 py-2 backdrop-blur-sm"
+          >
+            <span
+              className="flex items-center gap-1"
+              aria-label="5 out of 5 star rating from verified customers"
+            >
+              {Array.from({ length: 5 }).map((_, i) => (
+                <motion.svg
+                  key={i}
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  className="h-4 w-4 text-yellow-400 drop-shadow-[0_0_8px_rgba(250,204,21,0.5)]"
+                  initial={{ opacity: 0, scale: 0.5, rotate: -30 }}
+                  animate={{ opacity: 1, scale: 1, rotate: 0 }}
+                  transition={{ duration: 0.5, delay: 0.35 + i * 0.08, ease }}
+                >
+                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                </motion.svg>
+              ))}
+            </span>
+            <span className="text-[11px] font-bold uppercase tracking-[0.22em] text-white/85">
+              5.0 &middot; Verified reviews
+            </span>
+          </motion.div>
+
           <motion.p
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
@@ -105,32 +135,6 @@ export function OwnerHero({ owner }: { owner: TeamMember }) {
             pool industry, a relentless eye for craft, and a soft spot for lazy
             rivers and Texas summer nights.
           </motion.p>
-
-          {/* Inline stat strip — single horizontal bar, vertical dividers */}
-          <motion.div
-            initial={{ opacity: 0, y: 24 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.45, ease }}
-            className="mt-10 overflow-hidden rounded-2xl border border-white/10 bg-white/[0.04] backdrop-blur"
-          >
-            <dl className="grid grid-cols-2 divide-white/10 sm:grid-cols-4 sm:divide-x">
-              {(owner.facts ?? []).map((f, i) => (
-                <div
-                  key={f.label}
-                  className={`p-4 sm:p-5 ${
-                    i < 2 ? "border-b border-white/10 sm:border-b-0" : ""
-                  }`}
-                >
-                  <dt className="text-[10px] font-semibold uppercase tracking-[0.22em] text-white/55">
-                    {f.label}
-                  </dt>
-                  <dd className="font-[family-name:var(--font-display)] mt-2 text-2xl leading-none text-white md:text-[1.7rem]">
-                    {f.value}
-                  </dd>
-                </div>
-              ))}
-            </dl>
-          </motion.div>
 
           <motion.div
             initial={{ opacity: 0, y: 16 }}
@@ -233,29 +237,6 @@ export function OwnerHero({ owner }: { owner: TeamMember }) {
               {/* Soft inner highlight */}
               <span className="pointer-events-none absolute inset-0 rounded-[2rem] ring-1 ring-inset ring-white/5" />
             </div>
-
-            {/* Floating quote chip — wide-desktop only to avoid colliding
-                with the headline at md/lg widths */}
-            <motion.div
-              initial={{ opacity: 0, y: 20, x: -10 }}
-              animate={{ opacity: 1, y: 0, x: 0 }}
-              transition={{ duration: 0.8, delay: 1, ease }}
-              className="pointer-events-none absolute -left-10 bottom-16 hidden max-w-[200px] rounded-2xl bg-white/95 p-4 text-[var(--color-navy-deep)] shadow-2xl ring-1 ring-black/5 backdrop-blur xl:block"
-            >
-              <svg
-                viewBox="0 0 24 24"
-                fill="currentColor"
-                className="h-4 w-4 text-[var(--color-pool)]"
-              >
-                <path d="M0 19V12C0 6.5 4 2 9 1v3c-3 1-5 4-5 7h4v8H0zm14 0V12c0-5.5 4-10 9-11v3c-3 1-5 4-5 7h4v8h-8z" />
-              </svg>
-              <p className="mt-2 text-sm font-medium leading-snug">
-                It is what it is.
-              </p>
-              <p className="mt-1 text-[10px] uppercase tracking-[0.22em] text-[var(--color-navy-deep)]/55">
-                — Mike&apos;s motto
-              </p>
-            </motion.div>
 
             {/* Decorative rotating ring */}
             <motion.div

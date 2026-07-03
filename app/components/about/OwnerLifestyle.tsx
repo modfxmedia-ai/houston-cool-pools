@@ -44,7 +44,7 @@ export function OwnerLifestyle({ owner }: { owner: TeamMember }) {
             <span className="italic text-[var(--color-pool)]">The great outdoors.</span>
           </h2>
           <p className="mt-5 text-base leading-relaxed text-[var(--color-navy-deep)]/70 md:text-lg">
-            When Mike isn&apos;t designing pools, you&apos;ll find him at one — grilling
+            When Mike isn&apos;t designing pools, you&apos;ll find him at one - grilling
             with the family, traveling to the next ballpark, or out on the bay.
           </p>
         </motion.div>

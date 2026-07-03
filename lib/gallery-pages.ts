@@ -224,7 +224,7 @@ export function getGalleryImages(slug: string, altPrefix: string): GalleryImage[
   if (!entry) return [];
   return entry.names.map((name, i) => ({
     src: `${HOST}/${entry.folder}_files/vlb_images1/${encodeURIComponent(name)}`,
-    alt: `${altPrefix} by Houston Cool Pools — photo ${i + 1}`,
+    alt: `${altPrefix} by Houston Cool Pools - photo ${i + 1}`,
   }));
 }
 

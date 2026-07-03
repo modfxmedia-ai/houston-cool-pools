@@ -8,9 +8,9 @@ const CANONICAL = `https://houstoncoolpools.com/${SLUG}.html`;
 const base = buildPageMetadata(`/${SLUG}`);
 export const metadata: Metadata = {
   ...base,
-  title: "Glossary of Pool Terms — F–G | Houston Cool Pools",
+  title: "Glossary of Pool Terms - F–G | Houston Cool Pools",
   description:
-    "Glossary of pool and spa industry terms starting with F and G — float valve, gas heater, gate valve, grid, gunite and more.",
+    "Glossary of pool and spa industry terms starting with F and G - float valve, gas heater, gate valve, grid, gunite and more.",
   alternates: { canonical: CANONICAL },
   openGraph: { ...base.openGraph, url: CANONICAL },
 };
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "DefinedTermSet",
-  name: "Glossary of Pool Terms — F–G",
+  name: "Glossary of Pool Terms - F–G",
   url: CANONICAL,
 };
 

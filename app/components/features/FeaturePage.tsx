@@ -9,7 +9,7 @@ import { PHONE_DISPLAY, PHONE_HREF } from "../../../lib/navigation";
 const ease = [0.22, 1, 0.36, 1] as const;
 
 /**
- * Horizontal pill nav — one pill per destination page so a single pill
+ * Horizontal pill nav - one pill per destination page so a single pill
  * highlights as active (no duplicate-page pills).
  */
 export const FEATURE_NAV: { label: string; href: string }[] = [
@@ -401,7 +401,7 @@ export function FeaturePage({
             </motion.div>
           ) : null}
 
-          {/* Gallery — featured-first mosaic */}
+          {/* Gallery - featured-first mosaic */}
           <motion.div
             initial="hidden"
             whileInView="show"

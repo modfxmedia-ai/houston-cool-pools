@@ -8,8 +8,6 @@ import {
   PRIMARY_NAV,
   PHONE_DISPLAY,
   PHONE_HREF,
-  EMAIL_DISPLAY,
-  EMAIL_HREF,
   QUOTE_HREF,
   type NavGroup,
 } from "../../lib/navigation";
@@ -45,43 +43,8 @@ export function Header() {
             : "border-white/10 bg-gradient-to-b from-[var(--color-navy-deep)]/90 via-[var(--color-navy-deep)]/75 to-[var(--color-navy-deep)]/60 backdrop-blur-md"
         }`}
       >
-        {/* Promo banner — collapses once the user scrolls past the hero */}
+        {/* Promo banner - collapses once the user scrolls past the hero */}
         <PromoBanner collapsed={scrolled} />
-
-        {/* Top utility bar — desktop only */}
-        <div
-          className={`hidden md:block border-b border-white/10 transition-all duration-300 ${
-            solid ? "max-h-0 overflow-hidden opacity-0" : "max-h-12 opacity-100"
-          }`}
-        >
-          <div className="mx-auto flex max-w-7xl items-center justify-end gap-6 px-6 py-2 text-xs tracking-wider text-white/80">
-            <a
-              href={EMAIL_HREF}
-              className="hover:text-[var(--color-gold-light)] transition-colors"
-            >
-              {EMAIL_DISPLAY}
-            </a>
-            <span className="text-white/20">|</span>
-            <a
-              href={PHONE_HREF}
-              className="hover:text-[var(--color-gold-light)] transition-colors"
-            >
-              {PHONE_DISPLAY}
-            </a>
-            <span className="text-white/20">|</span>
-            <a
-              href="https://www.facebook.com/HoustonCoolPools/"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Follow us on Facebook"
-              className="grid h-6 w-6 place-items-center rounded-full text-white/80 transition-colors hover:bg-[var(--color-gold-light)]/10 hover:text-[var(--color-gold-light)]"
-            >
-              <svg viewBox="0 0 24 24" className="h-3.5 w-3.5" fill="currentColor" aria-hidden>
-                <path d="M22 12a10 10 0 1 0-11.56 9.88v-6.99H7.9V12h2.54V9.8c0-2.51 1.49-3.89 3.78-3.89 1.09 0 2.24.19 2.24.19v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.77l-.44 2.89h-2.33v6.99A10 10 0 0 0 22 12z" />
-              </svg>
-            </a>
-          </div>
-        </div>
 
         {/* Main nav row */}
         <div
@@ -91,7 +54,7 @@ export function Header() {
           <Link
             href="/"
             className="relative flex shrink-0 items-center py-3"
-            aria-label="Houston Cool Pools — Home"
+            aria-label="Houston Cool Pools - Home"
           >
             <Image
               src="/images/logo.png"
@@ -485,12 +448,6 @@ function MobileOverlay({
               className="block text-center text-lg font-semibold tracking-wide text-[var(--color-gold-light)]"
             >
               {PHONE_DISPLAY}
-            </a>
-            <a
-              href={EMAIL_HREF}
-              className="block text-center text-sm text-white/70"
-            >
-              {EMAIL_DISPLAY}
             </a>
             <Link
               href={QUOTE_HREF}

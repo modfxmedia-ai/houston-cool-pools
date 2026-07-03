@@ -8,9 +8,9 @@ const CANONICAL = `https://houstoncoolpools.com/${SLUG}.html`;
 const base = buildPageMetadata(`/${SLUG}`);
 export const metadata: Metadata = {
   ...base,
-  title: "Pool Definitions — Terms Every Pool Owner Should Know",
+  title: "Pool Definitions - Terms Every Pool Owner Should Know",
   description:
-    "A concise glossary of essential pool construction and equipment terms — beam, coping, gunite, plaster, tile and more.",
+    "A concise glossary of essential pool construction and equipment terms - beam, coping, gunite, plaster, tile and more.",
   alternates: { canonical: CANONICAL },
   openGraph: { ...base.openGraph, url: CANONICAL },
 };

@@ -8,7 +8,7 @@ const CANONICAL = `https://houstoncoolpools.com/${SLUG}.html`;
 const base = buildPageMetadata(`/${SLUG}`);
 export const metadata: Metadata = {
   ...base,
-  title: "Customer Reviews & Testimonials — Houston Cool Pools",
+  title: "Customer Reviews & Testimonials - Houston Cool Pools",
   description:
     "Read real 5-star reviews from Houston Cool Pools customers across Cypress, Spring, Tomball, Katy and the greater Houston area.",
   alternates: { canonical: CANONICAL },

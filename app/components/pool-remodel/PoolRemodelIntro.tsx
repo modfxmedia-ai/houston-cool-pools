@@ -1,142 +1,152 @@
 "use client";
 
-import Image from "next/image";
 import { motion } from "motion/react";
+import { BeforeAfterSlider } from "./BeforeAfterSlider";
 
 const ease = [0.22, 1, 0.36, 1] as const;
 
 export type ReasonGroup = { heading: string; items: string[] };
 
+const GROUP_ICONS: Record<string, React.ReactNode> = {
+  "Why Choose Houston Cool Pools?": (
+    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+  ),
+  "Peace of Mind": (
+    <>
+      <path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6l8-3z" />
+      <path d="M9 12l2 2 4-4" />
+    </>
+  ),
+  "We Got You Covered!": (
+    <>
+      <rect x="4" y="7" width="16" height="12" rx="2" />
+      <path d="M8 7V5a4 4 0 018 0v2" />
+    </>
+  ),
+};
+
+/**
+ * Redesigned intro. Three feature cards laid out as a horizontal row on
+ * desktop (one per reason group) with a wide feature photo above. The old
+ * sticky sidebar image + stacked cards layout is gone.
+ */
 export function PoolRemodelIntro({ reasonGroups }: { reasonGroups: ReasonGroup[] }) {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-b from-white to-slate-50 px-6 py-20 md:px-10 md:py-28">
-      {/* soft decorative blobs */}
+    <section className="relative overflow-hidden bg-gradient-to-b from-white to-slate-50 px-6 py-20 md:px-10 md:py-24">
+      {/* Soft decorative blobs */}
       <div
         aria-hidden
         className="pointer-events-none absolute -left-32 top-20 h-80 w-80 rounded-full bg-[var(--color-pool)]/5 blur-3xl"
       />
       <div
         aria-hidden
-        className="pointer-events-none absolute -right-24 bottom-10 h-72 w-72 rounded-full bg-[var(--color-gold-light)]/5 blur-3xl"
+        className="pointer-events-none absolute -right-24 bottom-10 h-72 w-72 rounded-full bg-[var(--color-gold-light)]/6 blur-3xl"
       />
 
-      <div className="relative mx-auto grid max-w-6xl items-start gap-12 lg:grid-cols-[0.85fr_1.15fr] lg:gap-16">
-        {/* Left column — tall sticky image */}
+      <div className="relative mx-auto max-w-6xl">
+        {/* ----- Section eyebrow + heading ----- */}
         <motion.div
-          initial={{ opacity: 0, scale: 0.96 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          viewport={{ once: true, amount: 0.2 }}
-          transition={{ duration: 0.8, ease }}
-          className="group relative lg:sticky lg:top-28"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.6, ease }}
+          className="mx-auto max-w-3xl text-center"
         >
-          {/* gradient frame glow */}
-          <div
-            aria-hidden
-            className="absolute -inset-3 -z-10 rounded-[2rem] bg-gradient-to-br from-[var(--color-pool)]/25 via-transparent to-[var(--color-gold-light)]/20 opacity-0 blur-2xl transition-opacity duration-500 group-hover:opacity-100"
-          />
-          <div className="relative overflow-hidden rounded-[1.75rem] border border-white/60 shadow-[0_30px_70px_-30px_rgba(0,55,73,0.45)] ring-1 ring-slate-200/70">
-            <Image
-              src="/images/pool-remodel/pool-remodel-body.jpg"
-              alt="Houston Cool Pools pool remodel and renovation projects"
-              width={558}
-              height={1455}
-              sizes="(max-width: 1024px) 100vw, 460px"
-              className="h-auto w-full object-cover transition-transform duration-[1400ms] group-hover:scale-[1.04]"
-            />
-            <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[var(--color-navy-deep)]/35 via-transparent to-transparent" />
-
-            {/* floating badge */}
-            <motion.div
-              initial={{ opacity: 0, y: 16 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.6 }}
-              transition={{ duration: 0.6, delay: 0.3, ease }}
-              className="absolute bottom-5 left-5 right-5 flex items-center gap-3 rounded-2xl border border-white/20 bg-[var(--color-navy-deep)]/70 px-4 py-3 text-white backdrop-blur-md"
-            >
-              <span className="grid h-9 w-9 shrink-0 place-items-center rounded-xl bg-[var(--color-pool)]/30 text-[var(--color-gold-light)]">
-                <svg viewBox="0 0 24 24" fill="none" className="h-4 w-4">
-                  <path d="M12 3l2.5 6.5L21 10l-5 4.5L17.5 21 12 17l-5.5 4L8 14.5 3 10l6.5-.5L12 3z" stroke="currentColor" strokeWidth="1.6" strokeLinejoin="round" />
-                </svg>
-              </span>
-              <p className="text-xs font-semibold leading-snug tracking-wide">
-                Real Houston Cool Pools renovation in progress
-              </p>
-            </motion.div>
-          </div>
+          <p className="text-[11px] font-bold uppercase tracking-[0.32em] text-[var(--color-pool)]">
+            Reimagine your backyard
+          </p>
+          <h2 className="font-[family-name:var(--font-display)] mt-4 text-3xl leading-tight text-[var(--color-navy-deep)] md:text-4xl">
+            A pool renovation, done the{" "}
+            <span className="italic text-[var(--color-pool)]">Houston Cool Pools</span> way.
+          </h2>
+          <p className="mt-4 text-base leading-relaxed text-slate-600 md:text-lg">
+            Drag the slider to see what a full renovation can do. A simple
+            re-plaster, face-lift, or complete remodel can save you time and money
+            while adding to the beauty of your backyard.
+          </p>
         </motion.div>
 
-        {/* Right column — text + cards */}
-        <div>
-          <motion.div
-            initial={{ opacity: 0, y: 24 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.3 }}
-            transition={{ duration: 0.7, ease }}
-          >
-            <p className="inline-flex items-center gap-3 text-[11px] font-bold uppercase tracking-[0.3em] text-[var(--color-pool)]">
-              <span className="h-px w-8 bg-[var(--color-pool)]/50" />
-              Reimagine Your Backyard
-            </p>
-            <p className="mt-6 text-base leading-relaxed text-slate-600 md:text-lg">
-              If so - you might be interested in a pool remodel or renovation. A simple
-              re-plaster, face-lift or complete renovation can save you time and money while
-              adding to the beauty of your backyard. Pools and sunshine are some of the great
-              things about Texas. In a few months you could be dipping your feet in your
-              newly remodeled pool, and sipping your favorite drink. What sounds better than
-              that? If you are looking for ideas and resources to create your dream backyard,
-              you have come to the right place.
-            </p>
-          </motion.div>
+        {/* ----- Interactive before/after slider ----- */}
+        <motion.div
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.8, ease }}
+          className="mx-auto mt-10 max-w-3xl md:mt-12"
+        >
+          <BeforeAfterSlider
+            beforeSrc="/images/pool-remodel/before.png"
+            afterSrc="/images/pool-remodel/after.png"
+            beforeAlt="Backyard pool before Houston Cool Pools renovation"
+            afterAlt="Backyard pool after Houston Cool Pools renovation"
+            initial={50}
+          />
+        </motion.div>
 
-          <motion.div
-            initial="hidden"
-            whileInView="show"
-            viewport={{ once: true, amount: 0.15 }}
-            variants={{ show: { transition: { staggerChildren: 0.12, delayChildren: 0.1 } } }}
-            className="mt-10 space-y-5"
-          >
-            {reasonGroups.map((group, gi) => (
-              <motion.div
-                key={group.heading}
-                variants={{
-                  hidden: { opacity: 0, y: 28 },
-                  show: { opacity: 1, y: 0, transition: { duration: 0.6, ease } },
-                }}
-                whileHover={{ y: -4 }}
-                className="group relative overflow-hidden rounded-[1.5rem] border border-slate-200/80 bg-white/80 p-7 shadow-[0_10px_30px_-18px_rgba(0,55,73,0.3)] backdrop-blur-sm transition-all hover:border-[var(--color-pool)]/40 hover:shadow-[0_30px_60px_-30px_rgba(0,124,182,0.55)]"
-              >
-                {/* corner gradient wash */}
-                <span
-                  aria-hidden
-                  className="pointer-events-none absolute -right-16 -top-16 h-40 w-40 rounded-full bg-gradient-to-br from-[var(--color-pool)]/10 to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100"
-                />
-                <div className="flex items-center gap-4">
-                  <span className="grid h-11 w-11 shrink-0 place-items-center rounded-2xl bg-gradient-to-br from-[var(--color-pool)] to-[var(--color-pool-deep)] font-[family-name:var(--font-display)] text-lg font-bold text-white shadow-[0_10px_24px_-10px_rgba(0,124,182,0.8)]">
-                    {String(gi + 1).padStart(2, "0")}
-                  </span>
-                  <h3 className="font-[family-name:var(--font-display)] text-xl text-[var(--color-navy-deep)]">
-                    {group.heading}
-                  </h3>
-                </div>
-                <ul className="mt-5 space-y-3">
-                  {group.items.map((item) => (
-                    <li
-                      key={item}
-                      className="flex items-start gap-3 text-sm leading-relaxed text-slate-600"
+        {/* ----- Feature-card grid (one per reason group) ----- */}
+        <motion.ul
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, amount: 0.15 }}
+          variants={{ show: { transition: { staggerChildren: 0.1, delayChildren: 0.15 } } }}
+          className="mt-12 grid gap-5 md:grid-cols-3 md:gap-6"
+        >
+          {reasonGroups.map((group) => (
+            <motion.li
+              key={group.heading}
+              variants={{
+                hidden: { opacity: 0, y: 24 },
+                show: { opacity: 1, y: 0, transition: { duration: 0.6, ease } },
+              }}
+              className="group relative flex h-full flex-col overflow-hidden rounded-2xl border border-slate-200/80 bg-white p-6 shadow-[0_18px_50px_-30px_rgba(0,55,73,0.4)] transition-all hover:-translate-y-0.5 hover:border-[var(--color-pool)]/30 hover:shadow-[0_28px_60px_-28px_rgba(0,124,182,0.4)] md:p-7"
+            >
+              <span
+                aria-hidden
+                className="absolute inset-x-0 top-0 h-0.5 bg-gradient-to-r from-[var(--color-pool)] via-[var(--color-gold-light)] to-[var(--color-gold)] opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+              />
+              <span className="grid h-11 w-11 place-items-center rounded-2xl bg-gradient-to-br from-[var(--color-pool)] to-[var(--color-pool-deep)] text-white shadow-md">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="1.8"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className="h-5 w-5"
+                >
+                  {GROUP_ICONS[group.heading] ?? (
+                    <path d="M5 13l4 4L19 7" />
+                  )}
+                </svg>
+              </span>
+              <h3 className="mt-5 font-[family-name:var(--font-display)] text-xl font-extrabold leading-tight text-[var(--color-navy-deep)]">
+                {group.heading}
+              </h3>
+              <ul className="mt-4 space-y-2.5">
+                {group.items.map((item) => (
+                  <li key={item} className="flex items-start gap-2.5 text-[13.5px] leading-snug text-slate-700">
+                    <svg
+                      aria-hidden
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      className="mt-0.5 h-4 w-4 flex-none text-[var(--color-pool)]"
                     >
-                      <span className="mt-0.5 grid h-5 w-5 shrink-0 place-items-center rounded-full bg-[var(--color-pool)]/12 text-[var(--color-pool)] ring-1 ring-[var(--color-pool)]/20">
-                        <svg viewBox="0 0 24 24" fill="none" className="h-3 w-3">
-                          <path d="M20 6L9 17l-5-5" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
-                        </svg>
-                      </span>
-                      <span>{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              </motion.div>
-            ))}
-          </motion.div>
-        </div>
+                      <circle cx="12" cy="12" r="10" fill="currentColor" opacity="0.15" />
+                      <path
+                        d="M8 12.5l2.5 2.5L16 9"
+                        stroke="currentColor"
+                        strokeWidth="2.2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                    </svg>
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </motion.li>
+          ))}
+        </motion.ul>
       </div>
     </section>
   );

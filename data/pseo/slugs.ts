@@ -36,7 +36,7 @@ export function getComboBySlug(slug: string): PseoCombo | undefined {
 }
 
 /**
- * Rotating intro paragraph templates — 5 variants selected by combo slug hash so
+ * Rotating intro paragraph templates - 5 variants selected by combo slug hash so
  * the same combo always renders the same variant. Prevents "swap-the-city"
  * duplicate-content patterns across pages.
  */

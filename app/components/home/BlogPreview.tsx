@@ -115,11 +115,6 @@ function ArticleCard({ post, index }: { post: Post; index: number }) {
           <span className="absolute left-3 top-3 grid h-9 w-9 place-items-center rounded-full bg-white/90 font-[family-name:var(--font-display)] text-[13px] font-bold text-[var(--color-navy-deep)] shadow-sm backdrop-blur">
             0{index}
           </span>
-
-          {/* Tag pill */}
-          <span className="absolute right-3 top-3 inline-flex items-center gap-1.5 rounded-full bg-white/95 px-3 py-1.5 text-[10px] font-bold uppercase tracking-[0.2em] text-[var(--color-navy-deep)] shadow-sm backdrop-blur">
-            {post.tag}
-          </span>
         </div>
 
         {/* Body */}

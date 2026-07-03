@@ -66,7 +66,7 @@ export const SEQUENCE_PAGES: SequencePage[] = [
       {
         title: "Re-Bar",
         body: [
-          "Reinforcement bar (Re-Bar — 3/8″ diameter steel) is tied to form a mesh framework on the floor and walls of your pool on 8″ centers throughout. Re-Bar runs the bottom of the pool, up the sides around the skimmer, and into the bond beam (also called the box beam). For added strength, the bond beam uses larger 1/2″ diameter Re-Bar.",
+          "Reinforcement bar (Re-Bar - 3/8″ diameter steel) is tied to form a mesh framework on the floor and walls of your pool on 8″ centers throughout. Re-Bar runs the bottom of the pool, up the sides around the skimmer, and into the bond beam (also called the box beam). For added strength, the bond beam uses larger 1/2″ diameter Re-Bar.",
           "Spacers ensure the Re-Bar is suspended above the ground and off the dirt walls. This allows gunite to flow evenly under, around, and above the bars. Although weak in appearance on its own, Re-Bar becomes the structural strength of your pool once combined with gunite. Small tie wire merely holds the bars in place until the gunite is applied.",
         ],
         image: {
@@ -85,7 +85,7 @@ export const SEQUENCE_PAGES: SequencePage[] = [
         title: "Stub-Out",
         body: [
           "Plumbing and electrical stub-out is performed. 'Stub-out' means the major components of the plumbing and electrical parts are installed inside the wall and through the Re-Bar (they will be finished at a later date). Non-corrosive schedule 40 PVC plumbing pipes with schedule 40 fittings are used throughout your pool.",
-          "Our plumber places the pipes and sets the latest state-of-the-art equipment per your plan. Electric wiring runs from your electric panel to the equipment, then out to all lighting fixtures. Your protection is our number one quality measure — all wiring, conduit, and grounding devices meet or exceed National Electric Code standards, and the latest ground fault interrupter devices are installed for protection against electrical fault.",
+          "Our plumber places the pipes and sets the latest state-of-the-art equipment per your plan. Electric wiring runs from your electric panel to the equipment, then out to all lighting fixtures. Your protection is our number one quality measure - all wiring, conduit, and grounding devices meet or exceed National Electric Code standards, and the latest ground fault interrupter devices are installed for protection against electrical fault.",
         ],
         image: {
           src: "/images/construction-sequence/stub-out.gif",
@@ -95,7 +95,7 @@ export const SEQUENCE_PAGES: SequencePage[] = [
       {
         title: "Gunite",
         body: [
-          "Gunite is pneumatically applied — a spraying process that creates the pool shell (the base flooring, wall areas, and bond beam). By strict specification, gunite is applied to both sides of the Re-Bar to suspend the bars within the walls and floor and form a solid, monolithic structure.",
+          "Gunite is pneumatically applied - a spraying process that creates the pool shell (the base flooring, wall areas, and bond beam). By strict specification, gunite is applied to both sides of the Re-Bar to suspend the bars within the walls and floor and form a solid, monolithic structure.",
           "Water curing is critical. The entire pool shell must be hosed or sprayed with water three times daily for seven to ten days. This slows the curing process and is a preventative measure that minimizes shrinkage cracks caused by premature curing.",
         ],
         image: {
@@ -114,7 +114,7 @@ export const SEQUENCE_PAGES: SequencePage[] = [
         title: "Coping",
         body: [
           "Several types of coping can be used, all 12″ in width. You can choose from our standard Bull Nosed or Safety Grip brick, or upgrade to Flagstone, Marble, or Slate.",
-          "Any changes to the style or selection of coping materials may carry additional costs and must be finalized before installation — no changes to the coping can be made after installation is complete.",
+          "Any changes to the style or selection of coping materials may carry additional costs and must be finalized before installation - no changes to the coping can be made after installation is complete.",
         ],
         image: {
           src: "/images/construction-sequence/coping.gif",
@@ -152,7 +152,7 @@ export const SEQUENCE_PAGES: SequencePage[] = [
       {
         title: "Clean Up",
         body: [
-          "Construction debris will be cleaned away from both the interior and the exterior of the swimming pool at this time. If the exterior fence was taken down, it will be put back up — municipalities require pool safety barriers to deter children from entering the pool.",
+          "Construction debris will be cleaned away from both the interior and the exterior of the swimming pool at this time. If the exterior fence was taken down, it will be put back up - municipalities require pool safety barriers to deter children from entering the pool.",
         ],
       },
     ],
@@ -166,7 +166,7 @@ export const SEQUENCE_PAGES: SequencePage[] = [
         title: "Plaster Surface",
         body: [
           "The pool surface is applied at this stage. Plaster is mixed on site and applied in two coats, then hand-troweled to a non-slip, waterproof surface. Immediately after plaster is complete we begin filling the pool and/or spa.",
-          "You can help by having your garden hose available for the fill. Run water until the level reaches the center of the waterline tile (the perimeter tile at the top edge of the pool) or to the center of the skimmer, then shut off. Do not turn the water off during the fill — stopping mid-fill causes a bathtub-like ring that will stain your plaster.",
+          "You can help by having your garden hose available for the fill. Run water until the level reaches the center of the waterline tile (the perimeter tile at the top edge of the pool) or to the center of the skimmer, then shut off. Do not turn the water off during the fill - stopping mid-fill causes a bathtub-like ring that will stain your plaster.",
         ],
         image: {
           src: "/images/construction-sequence/plaster.gif",
@@ -187,7 +187,7 @@ export const SEQUENCE_PAGES: SequencePage[] = [
       {
         title: "Clean Up",
         body: [
-          "Construction debris is cleaned away from both the interior and the exterior of the swimming pool. If the exterior fence was taken down, it will be put back up — municipalities require pool safety barriers to deter children from entering the pool.",
+          "Construction debris is cleaned away from both the interior and the exterior of the swimming pool. If the exterior fence was taken down, it will be put back up - municipalities require pool safety barriers to deter children from entering the pool.",
         ],
         image: {
           src: "/images/construction-sequence/clean-up.jpg",

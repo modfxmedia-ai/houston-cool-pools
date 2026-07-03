@@ -50,7 +50,7 @@ export const ARTICLES: Article[] = [
     slug: "custom-water-features-that-transform-a-backyard-pool",
     title: "Custom Water Features That Transform a Backyard Pool",
     excerpt:
-      "Sheer descents, bubblers, deck jets, waterfalls — a builder's guide to the water features that turn a nice pool into a showstopper.",
+      "Sheer descents, bubblers, deck jets, waterfalls - a builder's guide to the water features that turn a nice pool into a showstopper.",
     category: "Custom Features",
     tag: "Custom Features",
     readTime: "7 min",
@@ -82,18 +82,18 @@ export const ARTICLES: Article[] = [
     body: [
       {
         type: "p",
-        text: "There's a moment — usually the second the pump turns on for the very first time — when a pool goes from being a rectangle of blue water to being an experience. Almost every time, that shift is powered by the water features you chose during design.",
+        text: "There's a moment - usually the second the pump turns on for the very first time - when a pool goes from being a rectangle of blue water to being an experience. Almost every time, that shift is powered by the water features you chose during design.",
       },
       {
         type: "p",
-        text: "After nearly three decades of building custom pools across Cypress, Spring, Tomball, The Heights and Katy, these are the five water features our clients love most — and how we use them to elevate a backyard.",
+        text: "After nearly three decades of building custom pools across Cypress, Spring, Tomball, The Heights and Katy, these are the five water features our clients love most - and how we use them to elevate a backyard.",
       },
       { type: "h2", text: "1. Sheer descents" },
       {
         type: "image",
         src: "/images/features/custom-pool-features-1/hero.jpg",
         alt: "Sheer descent waterfall on a stacked-stone wall",
-        caption: "A clean glass-like curtain of water — one of our most requested features.",
+        caption: "A clean glass-like curtain of water - one of our most requested features.",
       },
       {
         type: "p",
@@ -109,7 +109,7 @@ export const ARTICLES: Article[] = [
       { type: "h2", text: "2. Deck jets & bubblers" },
       {
         type: "p",
-        text: "Deck jets arc a thin stream of water from the decking into the pool — a subtle but stunning way to add movement without dominating the design. Bubblers sit at the pool floor (usually on a sun shelf) and gently boil water upward, so kids can play in them while adults enjoy the visual.",
+        text: "Deck jets arc a thin stream of water from the decking into the pool - a subtle but stunning way to add movement without dominating the design. Bubblers sit at the pool floor (usually on a sun shelf) and gently boil water upward, so kids can play in them while adults enjoy the visual.",
       },
       {
         type: "list",
@@ -122,7 +122,7 @@ export const ARTICLES: Article[] = [
       { type: "h2", text: "3. Scuppers & spillways" },
       {
         type: "p",
-        text: "Scuppers are decorative water-releasing features built into a raised wall or spa. Spillways are the wider, quieter cousin — most often used to move water from a raised spa down into the pool, creating a continuous ambient sound.",
+        text: "Scuppers are decorative water-releasing features built into a raised wall or spa. Spillways are the wider, quieter cousin - most often used to move water from a raised spa down into the pool, creating a continuous ambient sound.",
       },
       { type: "h2", text: "4. Waterfalls & grottos" },
       {
@@ -132,11 +132,11 @@ export const ARTICLES: Article[] = [
       { type: "h2", text: "5. Fire + water combos" },
       {
         type: "p",
-        text: "Fire bowls on raised columns, fire pits framed by scuppers, gas torches lining an outdoor kitchen — combining fire and water is the fastest way to make a backyard feel like an intentional destination instead of just a pool.",
+        text: "Fire bowls on raised columns, fire pits framed by scuppers, gas torches lining an outdoor kitchen - combining fire and water is the fastest way to make a backyard feel like an intentional destination instead of just a pool.",
       },
       {
         type: "quote",
-        text: "The features are what make a pool yours. We start every design conversation with 'how do you want to use this space?' — the water features fall out of that answer.",
+        text: "The features are what make a pool yours. We start every design conversation with 'how do you want to use this space?' - the water features fall out of that answer.",
         cite: "Mike Lopez, Owner",
       },
       { type: "h2", text: "Where to start" },
@@ -185,7 +185,7 @@ export const ARTICLES: Article[] = [
     body: [
       {
         type: "p",
-        text: "Houston pools work hard. Between the heat, the sun, our seasonal storms and the mineral content of our local water, even a beautifully-built pool starts showing its age around the 12–15-year mark. The question is whether you need a light touch-up — or a full remodel.",
+        text: "Houston pools work hard. Between the heat, the sun, our seasonal storms and the mineral content of our local water, even a beautifully-built pool starts showing its age around the 12–15-year mark. The question is whether you need a light touch-up - or a full remodel.",
       },
       {
         type: "p",
@@ -206,7 +206,7 @@ export const ARTICLES: Article[] = [
       { type: "h2", text: "2. Tile & coping look 'dated'" },
       {
         type: "p",
-        text: "Small square glass tile in bright turquoise, dark grouted coping, mid-90s waterline patterns — these date a pool faster than anything else. The good news: replacing tile and coping is one of the highest-ROI remodel moves and can usually be done without touching the pool shell.",
+        text: "Small square glass tile in bright turquoise, dark grouted coping, mid-90s waterline patterns - these date a pool faster than anything else. The good news: replacing tile and coping is one of the highest-ROI remodel moves and can usually be done without touching the pool shell.",
       },
       { type: "h2", text: "3. Equipment is past 10 years old" },
       {
@@ -220,12 +220,12 @@ export const ARTICLES: Article[] = [
       },
       {
         type: "p",
-        text: "A remodel is the right time to bundle equipment upgrades — the labor is already on-site, and modern equipment usually pays for itself in a few Houston summers.",
+        text: "A remodel is the right time to bundle equipment upgrades - the labor is already on-site, and modern equipment usually pays for itself in a few Houston summers.",
       },
       { type: "h2", text: "4. You've outgrown the design" },
       {
         type: "p",
-        text: "Maybe the kids are older and the shallow-end play area is wasted, or you're finally ready for the spa you didn't build the first time around. Design-driven remodels are our favorite — adding a sun shelf, a raised spa with spillway, sheer descents, or even converting a simple rectangle into a curved lagoon-style pool.",
+        text: "Maybe the kids are older and the shallow-end play area is wasted, or you're finally ready for the spa you didn't build the first time around. Design-driven remodels are our favorite - adding a sun shelf, a raised spa with spillway, sheer descents, or even converting a simple rectangle into a curved lagoon-style pool.",
       },
       { type: "h2", text: "5. The backyard around the pool has changed" },
       {
@@ -234,7 +234,7 @@ export const ARTICLES: Article[] = [
       },
       {
         type: "quote",
-        text: "Nine out of ten remodels we do end up being a bigger transformation than the homeowner expected — because once you upgrade one part, everything around it looks tired by comparison.",
+        text: "Nine out of ten remodels we do end up being a bigger transformation than the homeowner expected - because once you upgrade one part, everything around it looks tired by comparison.",
         cite: "Mike Lopez, Owner",
       },
       { type: "h2", text: "What does a Houston pool remodel actually include?" },
@@ -244,7 +244,7 @@ export const ARTICLES: Article[] = [
       },
       {
         type: "p",
-        text: "For a quote on your specific pool, we're happy to come out for a no-cost walkthrough — we'll photograph the pool, talk through options and pricing tiers, and send you a written estimate the same week.",
+        text: "For a quote on your specific pool, we're happy to come out for a no-cost walkthrough - we'll photograph the pool, talk through options and pricing tiers, and send you a written estimate the same week.",
       },
     ],
   },
@@ -252,7 +252,7 @@ export const ARTICLES: Article[] = [
     slug: "the-houston-pool-owners-weekly-maintenance-playbook",
     title: "The Houston Pool Owner's Weekly Maintenance Playbook",
     excerpt:
-      "A no-fluff weekly checklist that actually works in Houston's heat, humidity and storm season — plus when to call a pro.",
+      "A no-fluff weekly checklist that actually works in Houston's heat, humidity and storm season - plus when to call a pro.",
     category: "Pool Service",
     tag: "Pool Service",
     readTime: "5 min",
@@ -287,9 +287,9 @@ export const ARTICLES: Article[] = [
       },
       {
         type: "p",
-        text: "Here's the exact weekly routine we recommend to Houston Cool Pools clients — it takes about 45 minutes and keeps a pool truly ready to swim.",
+        text: "Here's the exact weekly routine we recommend to Houston Cool Pools clients - it takes about 45 minutes and keeps a pool truly ready to swim.",
       },
-      { type: "h2", text: "Day 1 — Test the water" },
+      { type: "h2", text: "Day 1 - Test the water" },
       {
         type: "list",
         items: [
@@ -302,9 +302,9 @@ export const ARTICLES: Article[] = [
       },
       {
         type: "p",
-        text: "Use a good test kit (Taylor K-2006 is our gold standard) or drop a sample at your local pool store. Adjust chemistry before you clean — the products work better once levels are in range.",
+        text: "Use a good test kit (Taylor K-2006 is our gold standard) or drop a sample at your local pool store. Adjust chemistry before you clean - the products work better once levels are in range.",
       },
-      { type: "h2", text: "Day 2 — Skim, brush and vacuum" },
+      { type: "h2", text: "Day 2 - Skim, brush and vacuum" },
       {
         type: "p",
         text: "Skim leaves and pollen off the surface, brush the walls and steps (especially in shaded corners where algae likes to start), then vacuum the floor or run your robot. Empty the skimmer and pump baskets while you're at it.",
@@ -312,11 +312,11 @@ export const ARTICLES: Article[] = [
       {
         type: "callout",
         title: "Prefer to hand it off?",
-        body: "Our weekly pool service crews handle chemistry, cleaning, equipment checks and reporting — no more juggling test kits and skimmer poles.",
+        body: "Our weekly pool service crews handle chemistry, cleaning, equipment checks and reporting - no more juggling test kits and skimmer poles.",
         href: "/pool-service",
         cta: "See pool service plans",
       },
-      { type: "h2", text: "Day 3 — Check equipment & flow" },
+      { type: "h2", text: "Day 3 - Check equipment & flow" },
       {
         type: "p",
         text: "Look at the pressure gauge on your filter. If it's more than 8–10 PSI above the 'clean' baseline, it's time to backwash (DE/sand) or hose off the cartridges. Peek at the pump for leaks, drips or odd noises.",
@@ -325,10 +325,10 @@ export const ARTICLES: Article[] = [
       {
         type: "list",
         items: [
-          "Do NOT drain the pool before a storm — water pressure holds the shell in place against saturated ground.",
+          "Do NOT drain the pool before a storm - water pressure holds the shell in place against saturated ground.",
           "Turn off equipment at the breaker and cover the pump before heavy rain.",
           "After the storm, remove debris, shock the pool, and run the filter for 24 hours straight.",
-          "Test chemistry again — heavy rain will drop chlorine and dilute stabilizer.",
+          "Test chemistry again - heavy rain will drop chlorine and dilute stabilizer.",
         ],
       },
       {
@@ -361,7 +361,7 @@ export const ARTICLES: Article[] = [
           "Shock at night, not in the sun.",
           "Add chemicals to water, not water to chemicals.",
           "Run the pump long enough to turn the pool over once a day (usually 8–10 hours in summer).",
-          "Keep the water level in the middle of the skimmer opening — no higher, no lower.",
+          "Keep the water level in the middle of the skimmer opening - no higher, no lower.",
         ],
       },
     ],

@@ -16,7 +16,7 @@ const QUESTIONS: QA[] = [
   {
     q: "Where is your place of business? Do you have a showroom?",
     paragraphs: [
-      "This industry is famous (or infamous) for what is known as the \u201cone-poler\u201d — a couple of guys working out of their pick-up truck, trying to build pools. Anybody who lives in an RV, motel, or apartment and works out of the back of a pick-up truck can leave town in the blink of an eye with all of your money. Check to see if the builder owns their own home, or is just renting. A pool builder with strong ties to the community isn\u2019t likely to leave town quickly.",
+      "This industry is famous (or infamous) for what is known as the \u201cone-poler\u201d - a couple of guys working out of their pick-up truck, trying to build pools. Anybody who lives in an RV, motel, or apartment and works out of the back of a pick-up truck can leave town in the blink of an eye with all of your money. Check to see if the builder owns their own home, or is just renting. A pool builder with strong ties to the community isn\u2019t likely to leave town quickly.",
       "Look for a pool builder who has a showroom or long-term lease in a commercial building. A showroom lets you view the builder\u2019s products, see their operations, and meet some of their employees before you sign a contract. This shows that they\u2019re serious about their business, and not likely to disappear. This type of builder is also more likely to have the financial resources to take care of things if there is a problem with your pool.",
     ],
   },
@@ -25,13 +25,13 @@ const QUESTIONS: QA[] = [
     paragraphs: [
       "Shady pool builders don\u2019t like this question, because it\u2019s too easy to check out. It\u2019s sadly common in this industry for someone to build some pools, run into financial trouble, go bankrupt, and leave a bunch of unfinished pools in people\u2019s back yards. A few months later they open a NEW company with a new name, and start all over again.",
       "They may change towns in an attempt to put their bad reputation behind them. But sometimes they\u2019ll open that new business right next to the ashes of the last one, hoping most people won\u2019t notice that they abandoned their previous clients.",
-      "By the way \u2014 when a pool builder goes out of business, your pool warranty disappears. So why risk your home and financial investment? The rule of thumb is that if a pool builder has been in business less than three years, forget them. Or, to be really safe, only deal with pool builders who have been in business for ten years or more.",
+      "By the way - when a pool builder goes out of business, your pool warranty disappears. So why risk your home and financial investment? The rule of thumb is that if a pool builder has been in business less than three years, forget them. Or, to be really safe, only deal with pool builders who have been in business for ten years or more.",
     ],
   },
   {
     q: "Have you, your partners, the owners, or the officers ever declared bankruptcy or gone out of business?",
     paragraphs: [
-      "This should be an easy question to answer. Those who have not will respond with a resounding \u201cNo.\u201d Those who have are well aware that \u2014 thanks to the internet \u2014 their secrets are not safe. So they\u2019ll either have to admit it and give you a sad story about why it wasn\u2019t their fault, or you simply won\u2019t hear from them again.",
+      "This should be an easy question to answer. Those who have not will respond with a resounding \u201cNo.\u201d Those who have are well aware that - thanks to the internet - their secrets are not safe. So they\u2019ll either have to admit it and give you a sad story about why it wasn\u2019t their fault, or you simply won\u2019t hear from them again.",
       "Note: \u201cWhose fault it was\u201d really doesn\u2019t amount to a hill of beans when you\u2019re stuck with an unfinished pool and no warranty.",
     ],
   },
@@ -43,7 +43,7 @@ export function HowToChooseClient() {
       <InfoHero
         eyebrow="Pool Buyer's Guide"
         title="How To Choose The Right Pool Builder"
-        subtitle="Ask these 15 questions to protect yourself from an unpleasant pool-building experience — a builder-transparent guide to help you separate the competent and trustworthy from all the rest."
+        subtitle="Ask these 15 questions to protect yourself from an unpleasant pool-building experience - a builder-transparent guide to help you separate the competent and trustworthy from all the rest."
         crumbs={[
           { label: "Home", href: "/" },
           { label: "Pool Information", href: "/pool-information" },
@@ -66,7 +66,7 @@ export function HowToChooseClient() {
             <p className="mt-4 text-[16px] leading-[1.8] text-slate-700">
               At Houston Cool Pools, we want you to know as much as you can about buying a pool
               before you sign any contracts. We want you to be delighted with your pool and your
-              pool-buying experience — no matter who you buy it from. That&rsquo;s why we
+              pool-buying experience - no matter who you buy it from. That&rsquo;s why we
               offer you this helpful guide.
             </p>
             <p className="mt-4 text-[16px] leading-[1.8] text-slate-700">

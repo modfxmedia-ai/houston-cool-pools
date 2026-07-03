@@ -35,12 +35,12 @@ export default function Page() {
       <GalleryCategoryPage
         category="Geometric Pools"
         heading="Geometric Pools"
-        intro="Clean lines and modern symmetry — sharp, architectural pool designs built for Houston homes."
+        intro="Clean lines and modern symmetry - sharp, architectural pool designs built for Houston homes."
         images={images}
         prevHref="/gallery-free-form-pools-5"
-        prevLabel="Free Form Pools — Page 5"
+        prevLabel="Free Form Pools - Page 5"
         nextHref="/geometric-pools-2"
-        nextLabel="Geometric Pools — Page 2"
+        nextLabel="Geometric Pools - Page 2"
       />
     </>
   );

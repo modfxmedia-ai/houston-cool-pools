@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import { Fragment, type ReactNode } from "react";
 import { motion } from "motion/react";
 import type { TeamMember } from "../../../lib/team";
 
@@ -9,8 +10,18 @@ const ease = [0.22, 1, 0.36, 1] as const;
 /**
  * Long-form bio rendered as a 2-column "story + photo" grid that
  * alternates direction every paragraph. Each block animates in on view.
+ * Optionally accepts an `interlude` node that renders between chapters
+ * (defaults to after the first chapter).
  */
-export function OwnerStory({ owner }: { owner: TeamMember }) {
+export function OwnerStory({
+  owner,
+  interlude,
+  interludeAfter = 0,
+}: {
+  owner: TeamMember;
+  interlude?: ReactNode;
+  interludeAfter?: number;
+}) {
   return (
     <section className="relative bg-white py-20 md:py-28">
       <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[var(--color-pool)]/30 to-transparent" />
@@ -35,16 +46,14 @@ export function OwnerStory({ owner }: { owner: TeamMember }) {
         <div className="mt-16 space-y-20 md:mt-20 md:space-y-24">
           {owner.bio.map((block, i) => {
             const photos = owner.photos ?? [];
-            const photo = photos.length
-              ? photos[i % photos.length]
-              : null;
+            const photo = block.image ?? (photos.length ? photos[i % photos.length] : null);
             const flipped = i % 2 === 1;
             const isPortrait = photo?.orientation === "portrait";
             return (
-              <div
-                key={block.heading}
-                className={`grid items-center gap-10 md:grid-cols-2 md:gap-14 ${
-                  flipped ? "md:[&>:first-child]:order-2" : ""
+              <Fragment key={block.heading}>
+                <div
+                  className={`grid items-center gap-10 md:grid-cols-2 md:gap-14 ${
+                    flipped ? "md:[&>:first-child]:order-2" : ""
                 }`}
               >
                 <motion.div
@@ -53,10 +62,7 @@ export function OwnerStory({ owner }: { owner: TeamMember }) {
                   viewport={{ once: true, amount: 0.3 }}
                   transition={{ duration: 0.8, ease }}
                 >
-                  <p className="text-[11px] font-bold uppercase tracking-[0.32em] text-[var(--color-pool)]">
-                    Chapter {String(i + 1).padStart(2, "0")}
-                  </p>
-                  <h3 className="font-[family-name:var(--font-display)] mt-3 text-3xl leading-tight text-[var(--color-navy-deep)] md:text-4xl">
+                  <h3 className="font-[family-name:var(--font-display)] text-3xl leading-tight text-[var(--color-navy-deep)] md:text-4xl">
                     {block.heading}
                   </h3>
                   <p className="mt-5 text-base leading-relaxed text-[var(--color-navy-deep)]/75 md:text-lg">
@@ -99,7 +105,9 @@ export function OwnerStory({ owner }: { owner: TeamMember }) {
                     }`}
                   />
                 </motion.div>
-              </div>
+                </div>
+                {interlude && i === interludeAfter ? interlude : null}
+              </Fragment>
             );
           })}
         </div>

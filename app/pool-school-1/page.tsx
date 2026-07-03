@@ -8,7 +8,7 @@ const CANONICAL = `https://houstoncoolpools.com/${SLUG}.html`;
 const base = buildPageMetadata(`/${SLUG}`);
 export const metadata: Metadata = {
   ...base,
-  title: "Pool School — Video Tutorials by Houston Cool Pools",
+  title: "Pool School - Video Tutorials by Houston Cool Pools",
   description:
     "Free video tutorials from Houston Cool Pools covering water testing, equipment shutdown, filter cleaning, chlorinators, ozone systems, and more.",
   alternates: { canonical: CANONICAL },

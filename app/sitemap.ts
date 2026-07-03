@@ -11,7 +11,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority,
   }));
 
-  // Programmatic SEO combos (service × location) — live-only.
+  // Programmatic SEO combos (service × location) - live-only.
   const pseo = getLiveCombos().map((c) => ({
     url: `${BASE_URL}/${c.slug}`,
     lastModified: new Date(),

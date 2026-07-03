@@ -6,7 +6,6 @@ import { PoolTypes } from "./_components/PoolTypes";
 import { WhyChoose } from "./_components/WhyChoose";
 import { Testimonials } from "./_components/Testimonials";
 import { MeetOwner } from "./_components/MeetOwner";
-import { MapSection } from "./_components/MapSection";
 import { Faq } from "./_components/Faq";
 import { QuoteForm } from "./_components/QuoteForm";
 import { LpFooter } from "./_components/LpFooter";
@@ -25,7 +24,6 @@ export default function FreePoolQuotePage() {
         <MeetOwner />
         <Faq />
         <QuoteForm />
-        <MapSection />
       </main>
       <LpFooter />
     </>

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { FeaturePage } from "../components/features/FeaturePage";
 
-const TITLE = "Pool Scuppers, Spa Spillways & Bubblers — Houston Cool Pools";
+const TITLE = "Pool Scuppers, Spa Spillways & Bubblers - Houston Cool Pools";
 const DESCRIPTION =
   "Scuppers and spa spillways add lively streams of water to your pool design. Custom pool features from Houston Cool Pools serving Cypress, Spring, Tomball, and Katy.";
 const CANONICAL = "https://houstoncoolpools.com/features-2.html";

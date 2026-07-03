@@ -25,7 +25,7 @@ export function TopBar() {
               <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75" />
               <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-400" />
             </span>
-            Now Booking 2026 Builds
+            Now Accepting New Builds
           </span>
         </div>
 

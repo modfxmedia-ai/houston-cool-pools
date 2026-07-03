@@ -7,13 +7,10 @@ import {
   PRIMARY_NAV,
   PHONE_DISPLAY,
   PHONE_HREF,
-  EMAIL_DISPLAY,
-  EMAIL_HREF,
-  SMS_HREF,
 } from "../../lib/navigation";
 
 const QUICK_LINKS = [
-  { label: "Pricing", href: "/pricing-45k-55k" },
+  { label: "Pricing", href: "/pricing-85k-95k" },
   { label: "Features", href: "/custom-pool-features-1" },
   { label: "Financing", href: "/poolfinancing" },
   { label: "Why Choose Us", href: "/whychoosehcp" },
@@ -106,27 +103,11 @@ export function Footer() {
             >
               {PHONE_DISPLAY}
             </a>
-            <span aria-hidden className="hidden h-3 w-px bg-white/15 sm:block" />
-            <a
-              href={EMAIL_HREF}
-              className="text-white/70 transition-colors hover:text-white"
-            >
-              {EMAIL_DISPLAY}
-            </a>
           </div>
           <p className="mt-1.5 text-[12px] text-white/45">Greater Houston Area, Texas</p>
 
           {/* CTAs */}
           <div className="mt-5 flex flex-wrap items-center gap-2.5">
-            <a
-              href={SMS_HREF}
-              className="group inline-flex items-center gap-1.5 rounded-full bg-[var(--color-gold)] px-4 py-2 text-[10px] font-bold uppercase tracking-[0.22em] text-[var(--color-navy-deep)] transition-all hover:bg-[var(--color-gold-light)]"
-            >
-              Text Us
-              <svg viewBox="0 0 24 24" className="h-2.5 w-2.5 transition-transform group-hover:translate-x-0.5" fill="none">
-                <path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
-              </svg>
-            </a>
             <a
               href="https://www.facebook.com/HoustonCoolPools/"
               target="_blank"
@@ -193,7 +174,7 @@ export function Footer() {
             },
             {
               src: "/images/certifications/apsp.png",
-              alt: "APSP Member — Association of Pool & Spa Professionals",
+              alt: "APSP Member - Association of Pool & Spa Professionals",
               w: 96,
               h: 44,
               href: "https://apsp.org/",

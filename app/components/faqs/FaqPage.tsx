@@ -142,7 +142,7 @@ export function FaqPage({ faq, index, total, prev, next }: FaqPageProps) {
             transition={{ duration: 0.6, delay: 0.4, ease }}
             className="mt-6 max-w-2xl text-base text-white/70 md:text-lg"
           >
-            Real answers about building your custom gunite pool — from layout and
+            Real answers about building your custom gunite pool - from layout and
             excavation through start-up. Serving Houston, Tomball, Cypress and
             Spring, TX.
           </motion.p>

@@ -121,7 +121,7 @@ export function EquipmentManualsClient() {
       <InfoHero
         eyebrow="Owner's Manuals"
         title="Pool Equipment Manuals"
-        subtitle={`${total} downloadable manuals for the equipment installed on your Houston Cool Pools build — cleaners, pumps, filters, heaters, lighting, sanitation, water features and more.`}
+        subtitle={`${total} downloadable manuals for the equipment installed on your Houston Cool Pools build - cleaners, pumps, filters, heaters, lighting, sanitation, water features and more.`}
         crumbs={[
           { label: "Home", href: "/" },
           { label: "Pool Information", href: "/pool-information" },
@@ -145,7 +145,7 @@ export function EquipmentManualsClient() {
               </svg>
               <input
                 type="search"
-                placeholder="Search manuals — IntelliFlo, MasterTemp, IntelliChlor…"
+                placeholder="Search manuals - IntelliFlo, MasterTemp, IntelliChlor…"
                 value={query}
                 onChange={(e) => setQuery(e.target.value)}
                 className="w-full rounded-full border border-slate-200 bg-white py-3.5 pl-11 pr-4 text-[14.5px] text-slate-700 shadow-[0_10px_40px_-24px_rgba(0,27,36,0.2)] placeholder:text-slate-400 focus:border-[var(--color-pool)] focus:outline-none focus:ring-4 focus:ring-[var(--color-pool)]/10"

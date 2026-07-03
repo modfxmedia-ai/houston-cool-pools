@@ -7,7 +7,7 @@ import { PHONE_DISPLAY, PHONE_HREF } from "../../../lib/navigation";
 
 const ease = [0.22, 1, 0.36, 1] as const;
 
-// Fields mirror the live "Free Home Consultation" HubSpot form on
+// Fields mirror the live "Free Home Quote" HubSpot form on
 // houstoncoolpools.com (contact.html and whychoosehcp.html share the same form).
 const HELP_OPTIONS = [
   "New Pool Construction",
@@ -29,7 +29,7 @@ const inputClass =
   "w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm text-slate-900 outline-none transition-colors placeholder:text-slate-400 focus:border-[var(--color-pool)] focus:ring-2 focus:ring-[var(--color-pool)]/20";
 
 /**
- * The cloned "Free Home Consultation" form card. Self-contained: holds its own
+ * The cloned "Free Home Quote" form card. Self-contained: holds its own
  * state, builds a pre-filled mailto, and shows an inline success state. Shared
  * between the contact page and the why-choose page.
  */
@@ -50,7 +50,7 @@ export function ConsultationForm({ className }: { className?: string }) {
   const [submitted, setSubmitted] = useState(false);
 
   const mailtoHref = useMemo(() => {
-    const subject = `Free Home Consultation Request — ${form.help}`;
+    const subject = `Free Pool Quote Request - ${form.help}`;
     const body = [
       `First Name: ${form.firstName}`,
       `Last Name: ${form.lastName}`,
@@ -93,14 +93,14 @@ export function ConsultationForm({ className }: { className?: string }) {
 
       <div className="relative">
         <p className="text-[11px] font-bold uppercase tracking-[0.28em] text-[var(--color-pool)]">
-          Free Home Consultation
+          Free Pool Quote
         </p>
         <h2 className="font-[family-name:var(--font-display)] mt-3 text-3xl leading-tight text-[var(--color-navy)] md:text-4xl">
-          Tell us about your backyard
+          Contact us for a free Pool Quote
         </h2>
         <p className="mt-3 text-base text-slate-600">
-          Fill out the form and we&apos;ll reach out to schedule your free,
-          no-pressure consultation — usually within one business day.
+          Fill out the form and we&apos;ll reach out with your free, no-pressure
+          pool quote - usually within one business day.
         </p>
       </div>
 
@@ -299,7 +299,7 @@ export function ConsultationForm({ className }: { className?: string }) {
             type="submit"
             className="group mt-2 inline-flex items-center justify-center gap-3 rounded-full bg-gradient-to-r from-[var(--color-pool)] to-[var(--color-pool-deep)] px-8 py-4 text-xs font-bold uppercase tracking-[0.22em] text-white shadow-[0_18px_40px_-12px_rgba(0,124,182,0.6)] transition-all hover:-translate-y-0.5"
           >
-            Request My Free Consultation
+            Request My Free Pool Quote
             <svg
               viewBox="0 0 24 24"
               fill="none"

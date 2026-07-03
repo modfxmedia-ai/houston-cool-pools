@@ -38,9 +38,9 @@ export default function Page() {
         intro="Travertine, flagstone and custom decking that frames every Houston Cool Pool."
         images={images}
         prevHref="/fireplace-firepits-gallery-3"
-        prevLabel="Fireplaces & Fire Pits — Page 3"
+        prevLabel="Fireplaces & Fire Pits - Page 3"
         nextHref="/pool-deck-2"
-        nextLabel="Pool Deck Designs — Page 2"
+        nextLabel="Pool Deck Designs - Page 2"
       />
     </>
   );

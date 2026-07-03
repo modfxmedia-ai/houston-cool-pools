@@ -14,7 +14,7 @@ const HURRICANE: Step[] = [
     body: "An empty pool can float out of the ground from the pressure of groundwater rising around it. Even for hurricanes, keep your pool full.",
   },
   {
-    title: "Lower the water 1–2 feet — only if flooding is expected",
+    title: "Lower the water 1–2 feet - only if flooding is expected",
     body: "If heavy flooding is forecast, lower the water level about a foot below the skimmer to give room for rainfall without overflowing across your deck and yard.",
   },
   {
@@ -23,7 +23,7 @@ const HURRICANE: Step[] = [
   },
   {
     title: "Add extra chlorine before the storm",
-    body: "Super-chlorinate (shock) the pool the day before the storm to help handle the extra organic material — leaves, debris, and runoff — that will land in the water.",
+    body: "Super-chlorinate (shock) the pool the day before the storm to help handle the extra organic material - leaves, debris, and runoff - that will land in the water.",
   },
   {
     title: "Remove and store loose items",
@@ -31,10 +31,10 @@ const HURRICANE: Step[] = [
   },
   {
     title: "Do NOT cover the pool",
-    body: "A cover will be shredded by the wind and debris — and worse, its anchors can tear out and damage your deck and coping.",
+    body: "A cover will be shredded by the wind and debris - and worse, its anchors can tear out and damage your deck and coping.",
   },
   {
-    title: "After the storm — clean before you restart",
+    title: "After the storm - clean before you restart",
     body: "Remove large debris with a leaf net first. Never run the pump with heavy debris in the skimmers or main drain. Vacuum, brush, and shock before returning to normal operation.",
   },
 ];
@@ -50,7 +50,7 @@ const FREEZE: Step[] = [
   },
   {
     title: "Open all valves on the equipment pad",
-    body: "Set every valve to a partially-open position so water can flow through all lines — suction and return, spa and pool.",
+    body: "Set every valve to a partially-open position so water can flow through all lines - suction and return, spa and pool.",
   },
   {
     title: "Balance chemistry 24 hours before the freeze",
@@ -61,7 +61,7 @@ const FREEZE: Step[] = [
     body: "Wrap exposed above-ground plumbing with foam pipe insulation or towels. Do not cover the heater exhaust or pump vents.",
   },
   {
-    title: "If you lose power — drain the pump",
+    title: "If you lose power - drain the pump",
     body: "If the pump stops for more than a few hours below freezing, remove the pump drain plugs to release trapped water and prevent the housing from cracking.",
   },
 ];

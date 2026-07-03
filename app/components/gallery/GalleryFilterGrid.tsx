@@ -127,7 +127,7 @@ export function GalleryFilterGrid() {
                   className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
                 />
 
-                {/* Tier badge — top-right */}
+                {/* Tier badge - top-right */}
                 <span className="absolute right-3 top-3 rounded-full bg-white/95 px-2.5 py-1 text-[9px] font-bold uppercase tracking-[0.18em] text-[var(--color-navy-deep)] shadow">
                   {pool.tierLabel}
                 </span>
@@ -148,7 +148,7 @@ export function GalleryFilterGrid() {
                 {/* Hover ring */}
                 <span className="pointer-events-none absolute inset-0 rounded-2xl ring-1 ring-inset ring-[var(--color-pool)]/0 transition-all duration-300 group-hover:ring-[var(--color-pool)]/50" />
 
-                {/* Zoom icon — desktop only */}
+                {/* Zoom icon - desktop only */}
                 <span className="absolute right-3 bottom-3 hidden h-9 w-9 translate-y-2 items-center justify-center rounded-full bg-[var(--color-pool)]/95 text-white opacity-0 backdrop-blur transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100 md:flex">
                   <svg viewBox="0 0 24 24" fill="none" className="h-4 w-4">
                     <path

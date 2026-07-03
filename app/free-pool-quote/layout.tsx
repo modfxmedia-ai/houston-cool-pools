@@ -6,13 +6,13 @@ import { MobileStickyCTA } from "./_components/MobileStickyCTA";
 export const metadata: Metadata = {
   title: "Get a Free Pool Quote | Houston Cool Pools",
   description:
-    "Claim your free custom pool quote from Houston's most trusted gunite pool builder since 1996. 1,200+ pools built. 100% on-budget guarantee.",
+    "Claim your free custom pool quote from Houston's most trusted gunite pool builder since 1996. 1,600+ pools built. 100% on-budget guarantee.",
   alternates: { canonical: "/free-pool-quote" },
   robots: { index: false, follow: false },
   openGraph: {
     title: "Get a Free Pool Quote | Houston Cool Pools",
     description:
-      "Free in-home consultation from Houston's most trusted custom gunite pool builder. 1,200+ pools built since 1996. 100% on-budget guarantee.",
+      "Free in-home quote from Houston's most trusted custom gunite pool builder. 1,600+ pools built since 1996. 100% on-budget guarantee.",
     url: "https://houstoncoolpools.com/free-pool-quote",
     siteName: "Houston Cool Pools",
     type: "website",
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Get a Free Pool Quote | Houston Cool Pools",
     description:
-      "Free in-home consultation. 1,200+ pools built since 1996. 100% on-budget guarantee.",
+      "Free in-home quote. 1,600+ pools built since 1996. 100% on-budget guarantee.",
     images: ["/images/gallery/featured-grand-pool-spa.jpg"],
   },
 };

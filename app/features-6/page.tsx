@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { FeaturePage } from "../components/features/FeaturePage";
 
-const TITLE = "Pool Tables & Barstools — Houston Cool Pools";
+const TITLE = "Pool Tables & Barstools - Houston Cool Pools";
 const DESCRIPTION =
   "In-pool tables, benches and barstools extend your entertainment opportunities. Custom pool features from Houston Cool Pools serving Cypress, Spring, Tomball, and Katy.";
 const CANONICAL = "https://houstoncoolpools.com/features-6.html";

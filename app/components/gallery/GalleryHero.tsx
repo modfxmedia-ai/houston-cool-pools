@@ -73,10 +73,10 @@ export function GalleryHero({ poolCount }: { poolCount: number }) {
           className="mx-auto mt-6 max-w-xl text-base leading-relaxed text-white/75 md:text-lg"
         >
           Browse {poolCount}+ Houston backyards we&apos;ve built. Filter by price tier
-          to find the pool that fits your space — and your investment.
+          to find the pool that fits your space - and your investment.
         </motion.p>
 
-        {/* Inline stats — single row, no card stack */}
+        {/* Inline stats - single row, no card stack */}
         <motion.div
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}

@@ -52,7 +52,7 @@ export function FinalCta() {
             <span className="italic text-[var(--color-gold-light)]">dream pool?</span>
           </h2>
           <p className="mt-5 text-base leading-relaxed text-white/65">
-            Visit our showroom, give us a call, or request your free in-home consultation —
+            Visit our showroom, give us a call, or request your free in-home quote -
             we&apos;re here to design the backyard you&apos;ve been imagining.
           </p>
         </motion.div>
@@ -249,7 +249,7 @@ export function FinalCta() {
                 Start Today
               </p>
               <h3 className="font-[family-name:var(--font-display)] mt-2 text-2xl leading-tight text-white md:text-3xl">
-                Schedule your free in-home consultation
+                Schedule your free in-home quote
               </h3>
             </div>
             <div className="flex flex-wrap gap-3">

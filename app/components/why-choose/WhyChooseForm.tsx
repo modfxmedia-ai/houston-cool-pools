@@ -7,7 +7,7 @@ import { PHONE_DISPLAY, PHONE_HREF } from "../../../lib/navigation";
 const ease = [0.22, 1, 0.36, 1] as const;
 
 const POINTS = [
-  "100% on-budget guarantee — no surprise change orders",
+  "100% on-budget guarantee - no surprise change orders",
   "25+ years building pools across the Houston area",
   "Real-time project updates, start to finish",
   "One dedicated team from design through dive-in",
@@ -38,7 +38,7 @@ export function WhyChooseForm() {
               <span className="italic text-[var(--color-pool)]">yourself</span>
             </h2>
             <p className="mt-5 max-w-md text-base leading-relaxed text-slate-600 md:text-lg">
-              Request your free home consultation and we&apos;ll show you exactly how our
+              Request your free home quote and we&apos;ll show you exactly how our
               process keeps your build on time, on budget, and stress-free.
             </p>
 
@@ -96,7 +96,7 @@ export function WhyChooseForm() {
             </div>
           </motion.div>
 
-          {/* Shared consultation form */}
+          {/* Shared quote form */}
           <ConsultationForm />
         </div>
       </div>

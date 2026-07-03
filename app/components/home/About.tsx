@@ -36,7 +36,7 @@ export function About() {
           className="relative mb-14 sm:mb-0"
         >
           <div className="grid h-[420px] grid-cols-6 grid-rows-6 gap-2 sm:h-[560px] sm:gap-3 md:h-[680px]">
-            <MosaicImage src={GALLERY[0].src} alt={GALLERY[0].alt} className="col-span-4 row-span-4" delay={0} priority />
+            <MosaicImage src={GALLERY[0].src} alt={GALLERY[0].alt} className="col-span-4 row-span-4" delay={0} priority objectPosition="25% 40%" />
             <MosaicImage src={GALLERY[1].src} alt={GALLERY[1].alt} className="col-span-2 row-span-2" delay={0.1} />
             <MosaicImage src={GALLERY[2].src} alt={GALLERY[2].alt} className="col-span-2 row-span-2" delay={0.18} />
             <MosaicImage src={GALLERY[3].src} alt={GALLERY[3].alt} className="col-span-2 row-span-2" delay={0.26} />
@@ -67,7 +67,7 @@ export function About() {
             </div>
           </motion.div>
 
-          {/* Floating pool count badge — top right */}
+          {/* Floating pool count badge - top right */}
           <motion.div
             initial={{ opacity: 0, y: -20, scale: 0.9 }}
             whileInView={{ opacity: 1, y: 0, scale: 1 }}
@@ -81,7 +81,7 @@ export function About() {
               </svg>
             </span>
             <div className="leading-tight">
-              <p className="text-sm font-bold text-[var(--color-navy-deep)]">1,200+</p>
+              <p className="text-sm font-bold text-[var(--color-navy-deep)]">1,600+</p>
               <p className="text-[9px] font-semibold uppercase tracking-[0.18em] text-[var(--color-pool)]">
                 Pools Built
               </p>
@@ -134,13 +134,6 @@ export function About() {
                 <path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
             </Link>
-            <Link
-              href="/whychoosehcp"
-              className="group inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.22em] text-[var(--color-navy-deep)] transition-colors hover:text-[var(--color-pool)]"
-            >
-              Why Choose HCP
-              <span className="h-px w-8 bg-current transition-all group-hover:w-12" />
-            </Link>
           </div>
         </motion.div>
       </div>
@@ -154,12 +147,14 @@ function MosaicImage({
   className,
   delay,
   priority,
+  objectPosition,
 }: {
   src: string;
   alt: string;
   className: string;
   delay: number;
   priority?: boolean;
+  objectPosition?: string;
 }) {
   return (
     <motion.div
@@ -175,6 +170,7 @@ function MosaicImage({
         fill
         sizes="(min-width: 1024px) 35vw, (min-width: 768px) 50vw, 100vw"
         priority={priority}
+        style={objectPosition ? { objectPosition } : undefined}
         className="object-cover transition-transform duration-[1.4s] ease-out group-hover:scale-110"
       />
       <span className="absolute inset-0 bg-gradient-to-t from-[var(--color-navy-deep)]/30 via-transparent to-transparent opacity-60 transition-opacity duration-500 group-hover:opacity-20" />

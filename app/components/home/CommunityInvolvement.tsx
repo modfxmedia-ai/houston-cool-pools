@@ -88,7 +88,7 @@ export function CommunityInvolvement() {
               <span className="italic text-[var(--color-pool)]">Houston home</span>
             </h2>
             <p className="mt-6 text-base leading-relaxed text-[var(--color-navy-deep)]/70">
-              Houston Cool Pools is the greater Houston area&apos;s premier pool builder —
+              Houston Cool Pools is the greater Houston area&apos;s premier pool builder -
               proudly serving Cypress, Spring, Tomball, The Heights and Katy. Beyond
               designing world-class pools, we&apos;re invested in the neighborhoods we
               build in, supporting local charities, schools, and community groups across

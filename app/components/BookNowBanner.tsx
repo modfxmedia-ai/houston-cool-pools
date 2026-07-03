@@ -10,6 +10,10 @@ const ease = [0.22, 1, 0.36, 1] as const;
 
 const SHOW_AFTER_PX = 480;
 
+// Routes where the sticky "free quote" banner should never appear - typically
+// pages that already surface the quote form prominently.
+const HIDDEN_PATHS = ["/contact"];
+
 export function BookNowBanner() {
   const pathname = usePathname() ?? "";
   const [visible, setVisible] = useState(false);
@@ -42,11 +46,12 @@ export function BookNowBanner() {
     }
   }
 
-  // On the homepage the form is on the same page — scroll to it.
-  // Everywhere else deep-link to the homepage anchor.
-  const bookHref = pathname === "/" ? "#book-appointment" : "/#book-appointment";
+  // Route the CTA to the dedicated contact page so users land on the full
+  // free-quote form.
+  const bookHref = "/contact";
 
-  const show = visible && !dismissed;
+  const hiddenRoute = HIDDEN_PATHS.some((p) => pathname === p || pathname.startsWith(`${p}/`));
+  const show = visible && !dismissed && !hiddenRoute;
 
   return (
     <AnimatePresence>
@@ -103,7 +108,7 @@ export function BookNowBanner() {
                 {/* Copy */}
                 <div className="min-w-0 flex-1">
                   <p className="text-[9.5px] font-bold uppercase tracking-[0.22em] text-[var(--color-gold-light)] sm:text-[10.5px] sm:tracking-[0.24em]">
-                    Free consultation
+                    Free quote
                   </p>
                   <p className="mt-0.5 truncate font-display text-[14.5px] font-extrabold leading-tight text-white sm:text-[17px]">
                     Ready to build your dream pool?

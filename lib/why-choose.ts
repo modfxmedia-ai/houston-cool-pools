@@ -16,7 +16,7 @@ export const WHY_CHOOSE_HERO = {
   eyebrow: "Why Choose HCP",
   title: "Why Choose Houston Cool Pools",
   intro:
-    "Houston Cool Pools is the greater Houston area's premier pool builder — proudly serving Houston, Cypress, Spring, Tomball, The Heights, and Katy with cutting-edge technology, 25+ years of experience, and excellent customer service.",
+    "Houston Cool Pools is the greater Houston area's premier pool builder - proudly serving Houston, Cypress, Spring, Tomball, The Heights, and Katy with cutting-edge technology, 25+ years of experience, and excellent customer service.",
 } as const;
 
 export const STORY = {
@@ -29,14 +29,13 @@ export const PROCESS_VIDEO = {
 } as const;
 
 export const PROCESS_BANNER =
-  "Peace of Mind in our Process: Cutting Edge Technology — 25+ Years experience — Excellent Customer Service.";
+  "Peace of Mind in our Process: Cutting Edge Technology - 25+ Years experience - Excellent Customer Service.";
 
 /** Animated headline counters ("motion graphs"). */
 export const HEADLINE_STATS: { value: number; suffix?: string; prefix?: string; label: string }[] = [
   { value: 25, suffix: "+", label: "Years in Business" },
   { value: 2, prefix: "$", suffix: "M", label: "GL Insurance" },
   { value: 100, suffix: "%", label: "On-Budget Guarantee" },
-  { value: 20, suffix: " yr", label: "Plaster Lifespan" },
 ];
 
 export const SHOWCASE_IMAGES = [
@@ -61,7 +60,7 @@ export const PILLARS: Pillar[] = [
     stat: { value: 25, suffix: "+", label: "Years in Business" },
     items: [
       "Over 25+ Years in Business",
-      "A+ Rated with the BBB — 2018 Gold Star Certificate",
+      "A+ Rated with the BBB - 2018 Gold Star Certificate",
       "Angie’s List Super Service Award Winner",
       "$2 Million in GL Insurance",
     ],
@@ -73,10 +72,10 @@ export const PILLARS: Pillar[] = [
     items: [
       "Variable Speed Pumps are Standard with all Pool and Spa Combos",
       "LED Pool and Spa Light(s) are Standard",
-      "Newest Sanitation Systems — optional UV / Ozone / Salt",
+      "Newest Sanitation Systems - optional UV / Ozone / Salt",
       "Official Vendor & Installer of A & A In-Floor Cleaning Systems",
-      "Remote Control Systems — controlled with Smart Phone",
-      "Official Vendor and Installer of Endless Pools — Fast Lane Swim System",
+      "Remote Control Systems - controlled with Smart Phone",
+      "Official Vendor and Installer of Endless Pools - Fast Lane Swim System",
       "All pools have a Cyclone Pre-Filtration System",
     ],
   },
@@ -90,7 +89,7 @@ export const PILLARS: Pillar[] = [
       "3 Yr. Full Warranty on all Pentair Equipment",
       "2 Year warranty on A & A Pool Equipment",
       "1 Year warranty on all workmanship and material",
-      "Quartz Pebble Plaster — Standard 10–15 yr warranty / 20 yr lifespan",
+      "Quartz Pebble Plaster - Standard 10–15 yr warranty / 20 yr lifespan",
       "All Pools come with a Freeze Protection System",
       "All Pools come with an Auto Fill and an Overflow Drain",
       "All Pools come with Vacation Mode Plumbing System",
@@ -116,7 +115,7 @@ export const PILLARS: Pillar[] = [
     items: [
       "Customer Project Guide",
       "Pool Maintenance Guide",
-      "Scheduled — Daily Updates",
+      "Scheduled - Daily Updates",
       "Full Equipment Labeling",
       "Professional Pool School",
     ],

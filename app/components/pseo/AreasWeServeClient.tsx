@@ -29,7 +29,7 @@ export function AreasWeServeClient() {
       <InfoHero
         eyebrow="Areas We Serve"
         title="Custom pools across the greater Houston metro"
-        subtitle={`Houston Cool Pools has been designing and constructing custom gunite pools across the Houston area since 1996. Every city listed below is somewhere we've built — click through for service-specific pages for your area.`}
+        subtitle={`Houston Cool Pools has been designing and constructing custom gunite pools across the Houston area since 1996. Every city listed below is somewhere we've built - click through for service-specific pages for your area.`}
         crumbs={[{ label: "Home", href: "/" }, { label: "Areas We Serve" }]}
       />
 
@@ -72,7 +72,7 @@ export function AreasWeServeClient() {
               Four core services, tailored to every area
             </h2>
             <p className="mt-4 text-[15.5px] leading-relaxed text-black/65">
-              Each service has its own dedicated page for every city we serve. Pick a service, then choose a location — or scroll down for the full location index.
+              Each service has its own dedicated page for every city we serve. Pick a service, then choose a location - or scroll down for the full location index.
             </p>
           </div>
 
@@ -216,14 +216,14 @@ export function AreasWeServeClient() {
               Don&rsquo;t see your city?
             </p>
             <h2 className="mt-2 font-display text-2xl font-extrabold leading-tight tracking-tight sm:text-[28px]">
-              We probably still serve it &mdash; ask us.
+              We probably still serve it - ask us.
             </h2>
             <p className="mt-3 max-w-2xl text-[14.5px] leading-relaxed text-white/85">
-              We build across the greater Houston metro. If your neighborhood isn&rsquo;t listed above, call or send us a note &mdash; we&rsquo;ll tell you honestly whether we&rsquo;re a good fit for the project and the location.
+              We build across the greater Houston metro. If your neighborhood isn&rsquo;t listed above, call or send us a note - we&rsquo;ll tell you honestly whether we&rsquo;re a good fit for the project and the location.
             </p>
             <div className="mt-6 flex flex-wrap gap-3">
               <Link
-                href="/free-pool-quote"
+                href="/contact"
                 className="inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 text-[12px] font-bold uppercase tracking-[0.2em] text-[var(--color-navy-deep)] shadow-[0_16px_40px_-14px_rgba(0,0,0,0.5)] transition hover:-translate-y-0.5 hover:bg-[var(--color-gold-light)]"
               >
                 Get a Free Estimate

@@ -3,7 +3,7 @@ import { GalleryCategoryPage } from "../components/gallery/GalleryCategoryPage";
 import { getGalleryImages, galleryJsonLd } from "../../lib/gallery-pages";
 
 const SLUG = "pool-deck-2";
-const TITLE = "Pool Deck Gallery — Page 2 | Houston Cool Pools";
+const TITLE = "Pool Deck Gallery - Page 2 | Houston Cool Pools";
 const DESCRIPTION =
   "More pool deck and coping designs from Houston Cool Pools in Houston TX. Custom gunite pool builder serving Houston, Tomball, Cypress and Spring TX.";
 const CANONICAL = `https://houstoncoolpools.com/${SLUG}.html`;
@@ -29,18 +29,18 @@ export default function Page() {
         type="application/ld+json"
         // eslint-disable-next-line react/no-danger
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(galleryJsonLd("Pool Deck Gallery — Page 2", SLUG)),
+          __html: JSON.stringify(galleryJsonLd("Pool Deck Gallery - Page 2", SLUG)),
         }}
       />
       <GalleryCategoryPage
         category="Pool Deck Designs"
-        heading="Pool Deck Designs — Page 2"
+        heading="Pool Deck Designs - Page 2"
         intro="Travertine, flagstone and custom decking that frames every Houston Cool Pool."
         images={images}
         prevHref="/pool-deck-1"
         prevLabel="Pool Deck Designs"
         nextHref="/pool-deck-3"
-        nextLabel="Pool Deck Designs — Page 3"
+        nextLabel="Pool Deck Designs - Page 3"
       />
     </>
   );

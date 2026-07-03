@@ -29,7 +29,7 @@ export const POOL_TYPES: PoolTypeCategory[] = [
     label: "Modern Geometric",
     tagline: "Clean lines, architectural elegance",
     description:
-      "Rectangular and contemporary pools that complement modern Houston homes — straight edges, glass tile, and minimalist sun shelves designed to read as a backyard centerpiece.",
+      "Rectangular and contemporary pools that complement modern Houston homes - straight edges, glass tile, and minimalist sun shelves designed to read as a backyard centerpiece.",
     features: [
       "Rectangular & geometric shapes",
       "Glass-tile waterlines",
@@ -69,7 +69,7 @@ export const POOL_TYPES: PoolTypeCategory[] = [
     label: "Pool & Spa Combos",
     tagline: "Integrated spas with spillover features",
     description:
-      "Raised spas designed as the architectural focal point — overflowing into the pool with sheer-descent or weir spillways and matched tile detailing.",
+      "Raised spas designed as the architectural focal point - overflowing into the pool with sheer-descent or weir spillways and matched tile detailing.",
     features: [
       "Raised spa with spillover",
       "Custom tile detailing",
@@ -89,7 +89,7 @@ export const POOL_TYPES: PoolTypeCategory[] = [
     label: "Resort Style & Tanning Ledges",
     tagline: "Sun shelves, beach entries & umbrella sleeves",
     description:
-      "Resort-inspired pools with shallow tanning ledges, walk-in beach entries, and integrated umbrella sleeves — built for relaxed afternoons in the Houston sun.",
+      "Resort-inspired pools with shallow tanning ledges, walk-in beach entries, and integrated umbrella sleeves - built for relaxed afternoons in the Houston sun.",
     features: [
       "Tanning ledges with umbrella sleeves",
       "Walk-in beach entries",
@@ -110,7 +110,7 @@ export const POOL_TYPES: PoolTypeCategory[] = [
     label: "Complete Outdoor Environments",
     tagline: "Pool, kitchen, fire & hardscape as one design",
     description:
-      "Full backyard transformations where the pool is just one piece of a unified outdoor environment — outdoor kitchens, fireplaces, fire bowls, and custom hardscape designed together.",
+      "Full backyard transformations where the pool is just one piece of a unified outdoor environment - outdoor kitchens, fireplaces, fire bowls, and custom hardscape designed together.",
     features: [
       "Outdoor kitchen integration",
       "Fire bowls & fireplaces",
@@ -131,7 +131,7 @@ export const POOL_TYPES: PoolTypeCategory[] = [
     label: "Estate & Vanishing Edge",
     tagline: "Negative-edge views, premier custom builds",
     description:
-      "Estate-scale signature builds — vanishing edges that drop into the view, multi-level pools, and premium tile and stone finishes for the most demanding Houston homeowners.",
+      "Estate-scale signature builds - vanishing edges that drop into the view, multi-level pools, and premium tile and stone finishes for the most demanding Houston homeowners.",
     features: [
       "Vanishing & negative-edge designs",
       "Multi-level pool & spa",

@@ -8,9 +8,9 @@ const CANONICAL = `https://houstoncoolpools.com/${SLUG}`;
 const base = buildPageMetadata(`/${SLUG}`);
 export const metadata: Metadata = {
   ...base,
-  title: "Sitemap — Houston Cool Pools",
+  title: "Sitemap - Houston Cool Pools",
   description:
-    "Every page on the Houston Cool Pools website, grouped by topic — pool design, pricing, galleries, service, FAQs, pool school and more.",
+    "Every page on the Houston Cool Pools website, grouped by topic - pool design, pricing, galleries, service, FAQs, pool school and more.",
   alternates: { canonical: CANONICAL },
   openGraph: { ...base.openGraph, url: CANONICAL },
 };

@@ -14,28 +14,28 @@ const ease = [0.22, 1, 0.36, 1] as const;
 
 const INTRO_VARIANTS = [
   (s: PseoService, l: PseoLocation) =>
-    `Houston Cool Pools has been building custom gunite pools across the greater Houston area since 1996, and ${l.cityName} is one of the communities we serve regularly. Homeowners here come to us for ${s.intentPhrase} because the process is genuinely custom — every project starts with a look at your specific yard, not a pull from a shape catalog. That matters a lot when the goal is a pool that fits how you actually live.`,
+    `Houston Cool Pools has been building custom gunite pools across the greater Houston area since 1996, and ${l.cityName} is one of the communities we serve regularly. Homeowners here come to us for ${s.intentPhrase} because the process is genuinely custom - every project starts with a look at your specific yard, not a pull from a shape catalog. That matters a lot when the goal is a pool that fits how you actually live.`,
   (s: PseoService, l: PseoLocation) =>
-    `If you're weighing ${s.intentPhrase} in ${l.cityName}, TX, the biggest thing to understand is that a well-built gunite pool is a real construction project — and the choices you make in the first few weeks shape what you live with for decades. We've been designing and building pools across the Houston metro since 1996, and the ${l.cityName} projects we take on get the same custom design attention we give any inner-loop or master-planned build.`,
+    `If you're weighing ${s.intentPhrase} in ${l.cityName}, TX, the biggest thing to understand is that a well-built gunite pool is a real construction project - and the choices you make in the first few weeks shape what you live with for decades. We've been designing and building pools across the Houston metro since 1996, and the ${l.cityName} projects we take on get the same custom design attention we give any inner-loop or master-planned build.`,
   (s: PseoService, l: PseoLocation) =>
-    `${l.cityName} homeowners have a lot of pool companies to choose from — that's a good thing for you, and it means the way a builder actually approaches ${s.intentPhrase} matters more than a glossy website. Houston Cool Pools has been at this since 1996, and we run every ${l.cityName} project on the same principle: design that fits your specific yard, gunite construction done in the right sequence, and a homeowner who knows what's happening in their backyard every week.`,
+    `${l.cityName} homeowners have a lot of pool companies to choose from - that's a good thing for you, and it means the way a builder actually approaches ${s.intentPhrase} matters more than a glossy website. Houston Cool Pools has been at this since 1996, and we run every ${l.cityName} project on the same principle: design that fits your specific yard, gunite construction done in the right sequence, and a homeowner who knows what's happening in their backyard every week.`,
   (s: PseoService, l: PseoLocation) =>
-    `A pool in ${l.cityName} isn't just a pool — it's a long-term feature of your home, your entertaining space, and (honestly) your utility bill. When we take on ${s.intentPhrase} for a ${l.cityName} homeowner, we treat the design phase seriously, we self-perform the construction schedule, and we back the structural work with a real warranty. Houston Cool Pools has been building custom gunite pools since 1996.`,
+    `A pool in ${l.cityName} isn't just a pool - it's a long-term feature of your home, your entertaining space, and (honestly) your utility bill. When we take on ${s.intentPhrase} for a ${l.cityName} homeowner, we treat the design phase seriously, we self-perform the construction schedule, and we back the structural work with a real warranty. Houston Cool Pools has been building custom gunite pools since 1996.`,
   (s: PseoService, l: PseoLocation) =>
-    `Serving ${l.cityName} since our founding in 1996, Houston Cool Pools focuses on one thing: custom gunite pools designed and built for the specific yard they're going into. Our ${s.intentPhrase} work in ${l.cityName} follows the same process we use across the Houston metro — an in-home consultation, real design drawings, and a coordinated construction schedule that keeps you informed every week.`,
+    `Serving ${l.cityName} since our founding in 1996, Houston Cool Pools focuses on one thing: custom gunite pools designed and built for the specific yard they're going into. Our ${s.intentPhrase} work in ${l.cityName} follows the same process we use across the Houston metro - an in-home quote, real design drawings, and a coordinated construction schedule that keeps you informed every week.`,
 ];
 
 const LOCAL_RELEVANCE_VARIANTS = [
   (l: PseoLocation) =>
     `${l.cityName} sits in ${l.county}, ${l.landmarkNote ? `${l.landmarkNote.toLowerCase()},` : ""} and the pool projects we do here are shaped by ${l.descriptor.charAt(0).toLowerCase()}${l.descriptor.slice(1)}`,
   (l: PseoLocation) =>
-    `${l.descriptor} That ${l.cityName} setting matters at the design stage — lot dimensions, drainage patterns, and surrounding structures all shape what the pool can be.`,
+    `${l.descriptor} That ${l.cityName} setting matters at the design stage - lot dimensions, drainage patterns, and surrounding structures all shape what the pool can be.`,
   (l: PseoLocation) =>
     `Working in ${l.cityName} (${l.county}) means considering the specifics: ${l.descriptor.charAt(0).toLowerCase()}${l.descriptor.slice(1)} We factor those realities into design and construction so the finished pool actually fits its site.`,
 ];
 
 const CLIMATE_NOTE =
-  "Anywhere along the Gulf Coast, pool builds also need to account for humidity, seasonal rain, and the clay soils that show up across parts of the Houston area. Those don't stop a build — they just inform the site prep, drainage design, and how the shell is engineered.";
+  "Anywhere along the Gulf Coast, pool builds also need to account for humidity, seasonal rain, and the clay soils that show up across parts of the Houston area. Those don't stop a build - they just inform the site prep, drainage design, and how the shell is engineered.";
 
 type FaqPair = { q: string; a: string };
 
@@ -54,25 +54,25 @@ function buildFaqs(
     q: costQuery
       ? `${capitalize(costQuery.query)}${costQuery.query.endsWith("?") ? "" : "?"}`
       : `How much does a custom pool cost in ${location.cityName}, TX?`,
-    a: `Custom gunite pools cover a wide price range depending on size, depth, features, decking, and finishes. Rather than quote a number here, we publish our tiered pricing pages so you can see what different budgets typically buy — from starter builds to larger resort-style pools. Financing is available for qualified homeowners.`,
+    a: `Custom gunite pools cover a wide price range depending on size, depth, features, decking, and finishes. Rather than quote a number here, we publish our tiered pricing pages so you can see what different budgets typically buy - from starter builds to larger resort-style pools. Financing is available for qualified homeowners.`,
   });
 
   // 2. Timeline
   faqs.push({
     q: `How long does a ${service.shortName.toLowerCase()} project take in ${location.cityName}?`,
-    a: `Custom gunite pool projects generally run 8-16 weeks from ground-breaking to first swim, depending on scope, weather, and inspection scheduling. Remodels vary more — a straight interior resurface is a much shorter project than a structural addition. We give you a scheduled timeline before we break ground and update you at every phase.`,
+    a: `Custom gunite pool projects generally run 8-16 weeks from ground-breaking to first swim, depending on scope, weather, and inspection scheduling. Remodels vary more - a straight interior resurface is a much shorter project than a structural addition. We give you a scheduled timeline before we break ground and update you at every phase.`,
   });
 
   // 3. Service-specific question
   if (service.slug === "pool-remodeling") {
     faqs.push({
       q: `What's included in a pool remodel?`,
-      a: `A remodel usually starts with interior resurfacing and can layer in tile, coping, decking, equipment upgrades, and structural additions like a spa spillover or sun shelf. You can do everything at once or stage it across seasons — we help homeowners scope what makes sense.`,
+      a: `A remodel usually starts with interior resurfacing and can layer in tile, coping, decking, equipment upgrades, and structural additions like a spa spillover or sun shelf. You can do everything at once or stage it across seasons - we help homeowners scope what makes sense.`,
     });
   } else if (service.slug === "pool-service-maintenance") {
     faqs.push({
       q: `Do you offer weekly pool service in ${location.cityName}?`,
-      a: `We support homeowners with equipment consultation, chemistry guidance, and maintenance planning. For weekly cleaning cadence and chemical care, we can walk you through what your specific pool needs given Houston's climate.`,
+      a: `We support homeowners with equipment quote, chemistry guidance, and maintenance planning. For weekly cleaning cadence and chemical care, we can walk you through what your specific pool needs given Houston's climate.`,
     });
   } else if (service.slug === "pool-design-construction") {
     faqs.push({
@@ -82,14 +82,14 @@ function buildFaqs(
   } else {
     faqs.push({
       q: `Do you build fully custom pool designs or work from a catalog?`,
-      a: `Every ${location.cityName} project is designed for the specific yard. We don't have a shape catalog — we start with your lot, your goals, and your budget, and build the design from there.`,
+      a: `Every ${location.cityName} project is designed for the specific yard. We don't have a shape catalog - we start with your lot, your goals, and your budget, and build the design from there.`,
     });
   }
 
   // 4. Area / service radius
   faqs.push({
     q: `Do you actually service ${location.cityName}, TX?`,
-    a: `Yes — Houston Cool Pools serves ${location.cityName} and the surrounding ${location.county} area from our office on Highway 249 in northwest Houston. Reach us at (281) 645-6631 or through our free-quote form.`,
+    a: `Yes - Houston Cool Pools serves ${location.cityName} and the surrounding ${location.county} area from our office on Highway 249 in northwest Houston. Reach us at (281) 645-6631 or through our free-quote form.`,
   });
 
   // 5. Financing (if not already asked)
@@ -174,7 +174,7 @@ export function PseoPageClient({
       <section className="relative isolate overflow-hidden bg-[var(--color-navy-deep)] pt-32 text-white md:pt-40 lg:pt-44">
         <div className="absolute inset-0 -z-10">
           <Image
-            src="/images/hero/family-1.jpg"
+            src="/images/hero/slide-1.png"
             alt={`${service.name} in ${location.cityName}, TX`}
             fill
             priority
@@ -245,7 +245,7 @@ export function PseoPageClient({
             className="mt-6 max-w-3xl text-[17px] leading-relaxed text-white/80 sm:text-[18px]"
           >
             Custom gunite pools designed and constructed for {location.cityName} homeowners.
-            Free in-home consultation, financing available, established 1996.
+            Free in-home quote, financing available, established 1996.
           </motion.p>
 
           <motion.div
@@ -255,7 +255,7 @@ export function PseoPageClient({
             className="mt-8 flex flex-wrap items-center gap-3"
           >
             <Link
-              href="/free-pool-quote"
+              href="/contact"
               className="group inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-[var(--color-pool)] via-[var(--color-gold-light)] to-[var(--color-gold)] px-6 py-3 text-[12px] font-bold uppercase tracking-[0.22em] text-[var(--color-navy-deep)] shadow-[0_20px_50px_-20px_rgba(79,195,224,0.6)] transition hover:brightness-110"
             >
               Get Your Free Estimate
@@ -344,7 +344,7 @@ export function PseoPageClient({
               How the work actually runs
             </p>
             <h2 className="mt-3 font-display text-3xl font-extrabold tracking-tight sm:text-4xl">
-              {service.name} — the practical detail
+              {service.name} - the practical detail
             </h2>
             <p className="mt-6 text-[16px] leading-relaxed text-black/75 sm:text-[17px]">
               {service.deepDive}
@@ -392,7 +392,7 @@ export function PseoPageClient({
               Frequently asked
             </p>
             <h2 className="mt-3 font-display text-3xl font-extrabold tracking-tight sm:text-4xl">
-              {service.shortName} in {location.cityName} — common questions
+              {service.shortName} in {location.cityName} - common questions
             </h2>
             {topKeyword && (
               <p className="mt-4 text-[13px] italic text-black/45">
@@ -553,14 +553,14 @@ export function PseoPageClient({
                   Ready to talk about your {location.cityName} pool?
                 </h2>
                 <p className="mt-3 text-[14.5px] leading-relaxed text-white/80">
-                  Free in-home consultation, no pressure — just a walk-through of your
+                  Free in-home quote, no pressure - just a walk-through of your
                   yard and the pool that could live there.
                 </p>
               </div>
 
               <div className="flex w-full flex-col gap-3 sm:w-auto sm:flex-row">
                 <Link
-                  href="/free-pool-quote"
+                  href="/contact"
                   className="group inline-flex items-center justify-center gap-2 rounded-full bg-white px-6 py-3.5 text-[12px] font-bold uppercase tracking-[0.2em] text-[var(--color-navy-deep)] shadow-[0_16px_40px_-14px_rgba(0,0,0,0.5)] transition hover:-translate-y-0.5 hover:bg-[var(--color-gold-light)]"
                 >
                   Get Your Free Estimate

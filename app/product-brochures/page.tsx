@@ -8,9 +8,9 @@ const CANONICAL = `https://houstoncoolpools.com/${SLUG}.html`;
 const base = buildPageMetadata(`/${SLUG}`);
 export const metadata: Metadata = {
   ...base,
-  title: "Product Brochures & Information — Houston Cool Pools",
+  title: "Product Brochures & Information - Houston Cool Pools",
   description:
-    "Manufacturer brochures and product specs for the equipment we install — Pentair, A&A Manufacturing, WaterCo, WetEdge and more.",
+    "Manufacturer brochures and product specs for the equipment we install - Pentair, A&A Manufacturing, WaterCo, WetEdge and more.",
   alternates: { canonical: CANONICAL },
   openGraph: { ...base.openGraph, url: CANONICAL },
 };

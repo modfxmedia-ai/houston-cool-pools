@@ -17,10 +17,9 @@ const ease = [0.22, 1, 0.36, 1] as const;
 
 /* Bright, sunny backyard lifestyle photos that auto-rotate behind the hero. */
 const HERO_SLIDES = [
-  { src: "/images/hero/family-1.jpg", alt: "Family enjoying a Houston backyard pool" },
-  { src: "/images/hero/family-2.jpg", alt: "Sunny poolside family moments" },
-  { src: "/images/hero/family-3.jpg", alt: "Kids playing in a custom Houston pool" },
-  { src: "/images/hero/family-4.jpg", alt: "Family relaxing in a resort-style backyard pool" },
+  { src: "/images/hero/slide-1.png", alt: "Family enjoying a Houston backyard pool" },
+  { src: "/images/hero/slide-1b.png", alt: "Sunny poolside family moments" },
+  { src: "/images/hero/slide-1c.png", alt: "Kids playing in a custom Houston pool" },
 ] as const;
 
 const SLIDE_INTERVAL_MS = 5500;
@@ -42,7 +41,7 @@ function HeroVisual() {
       {/* Bright sunny backyard lifestyle slideshow */}
       <HeroSlideshow />
 
-      {/* Color & vignette overlays — tuned lighter so the sunny photos read through */}
+      {/* Color & vignette overlays - tuned lighter so the sunny photos read through */}
       <div className="absolute inset-0 bg-gradient-to-r from-[var(--color-navy-deep)]/85 via-[var(--color-navy-deep)]/35 to-[var(--color-navy-deep)]/5" />
       <div className="absolute inset-0 bg-gradient-to-t from-[var(--color-navy-deep)] via-transparent to-transparent" />
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_25%_55%,transparent_0%,rgba(0,27,36,0.45)_92%)]" />
@@ -62,7 +61,7 @@ function HeroVisual() {
       {/* Floating bubble particles */}
       <Bubbles />
 
-      {/* Ripple rings — bottom left decorative */}
+      {/* Ripple rings - bottom left decorative */}
       <RippleRings className="absolute -bottom-24 -left-24 h-[420px] w-[420px] opacity-40" />
 
       {/* Main content */}
@@ -78,7 +77,7 @@ function HeroVisual() {
               <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[var(--color-pool)] opacity-75" />
               <span className="relative inline-flex h-2 w-2 rounded-full bg-[var(--color-pool)]" />
             </span>
-            Now Booking 2026 Builds
+            Now Accepting New Builds
           </motion.div>
 
           <motion.h1
@@ -128,7 +127,7 @@ function HeroVisual() {
             transition={{ delay: 1.0, duration: 0.7, ease }}
             className="mt-6 max-w-xl text-sm leading-relaxed text-white/75 sm:mt-8 sm:text-base md:text-lg"
           >
-            Houston&apos;s most trusted custom gunite pool builder since 1996 —
+            Houston&apos;s most trusted custom gunite pool builder since 1996 -
             crafting backyard retreats with a 100% commitment to quality construction.
           </motion.p>
 
@@ -180,14 +179,14 @@ function HeroVisual() {
             </a>
           </motion.div>
 
-          {/* Mobile collage — shown beneath the hero copy on small screens */}
+          {/* Mobile collage - shown beneath the hero copy on small screens */}
           <div className="relative mx-auto mt-14 h-[300px] w-full max-w-[360px] sm:mt-16 sm:h-[340px] sm:max-w-[420px] lg:hidden">
             <PoolCollage compact />
           </div>
         </div>
       </div>
 
-      {/* Floating pool gallery collage — anchored to the right edge of the content container */}
+      {/* Floating pool gallery collage - anchored to the right edge of the content container */}
       <div className="pointer-events-none absolute inset-0 z-10 hidden lg:block">
         <div className="relative mx-auto h-full max-w-7xl px-6 sm:px-10 lg:px-16">
           <PoolCollage />
@@ -217,7 +216,7 @@ function HeroVisual() {
         </svg>
       </div>
 
-      {/* Scroll cue — bottom center */}
+      {/* Scroll cue - bottom center */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -293,7 +292,7 @@ const COLLAGE_IMAGES = [
     href: "/gallery",
   },
   {
-    src: "/images/hero/family-3.jpg",
+    src: "/images/hero/family-retreat.png",
     alt: "Family enjoying their Houston backyard pool",
     badge: "Family Retreat",
     href: "/gallery",
@@ -436,7 +435,7 @@ function PoolCollage({ compact = false }: { compact?: boolean } = {}) {
           );
         })}
 
-        {/* Slot indicator dots — under the stage */}
+        {/* Slot indicator dots - under the stage */}
         <div className="absolute -bottom-10 left-1/2 flex -translate-x-1/2 items-center gap-2">
           {COLLAGE_IMAGES.map((_, i) => (
             <button
@@ -545,7 +544,7 @@ const STATS: Stat[] = [
   },
   {
     label: "Pools Built",
-    value: 1200,
+    value: 1600,
     suffix: "+",
     caption: "Across greater Houston",
     icon: (
@@ -606,7 +605,7 @@ function StatsBand() {
           </div>
           <div className="flex flex-col items-start gap-3 md:items-end">
             <p className="text-xs text-white/55 md:text-right">
-              Award-winning custom pools — on time, on budget, built to last.
+              Award-winning custom pools - on time, on budget, built to last.
             </p>
             <ul className="flex flex-wrap items-center gap-2">
               {["BBB A+ Rated", "Genesis 3 Member", "APSP Member", "Houstonia Award"].map((a) => (

@@ -80,7 +80,7 @@ export function TeamBioBlock({
               {/* Bottom gradient + name */}
               <span className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[var(--color-navy-deep)]/85 via-[var(--color-navy-deep)]/10 to-transparent" />
 
-              {/* Years badge — top-right */}
+              {/* Years badge - top-right */}
               <span className="absolute right-4 top-4 inline-flex items-center gap-2 rounded-full bg-white/95 px-3 py-1.5 text-[10px] font-bold uppercase tracking-[0.22em] text-[var(--color-navy-deep)] shadow">
                 <span className="grid h-4 w-4 place-items-center rounded-full bg-gradient-to-br from-[var(--color-pool)] to-[var(--color-pool-deep)] text-[8px] text-white">
                   ★
@@ -117,7 +117,7 @@ export function TeamBioBlock({
           transition={{ duration: 0.8, delay: 0.1, ease }}
         >
           <p className="text-[11px] font-bold uppercase tracking-[0.32em] text-[var(--color-pool)]">
-            {String(index + 1).padStart(2, "0")} — Meet
+            {String(index + 1).padStart(2, "0")} - Meet
           </p>
           <h2 className="font-[family-name:var(--font-display)] mt-3 text-4xl leading-tight tracking-tight text-[var(--color-navy-deep)] md:text-5xl">
             {member.name}

@@ -14,7 +14,7 @@ import {
 const ease = [0.22, 1, 0.36, 1] as const;
 
 /**
- * Gallery collections — power the sticky top nav and the fixed right-side rail
+ * Gallery collections - power the sticky top nav and the fixed right-side rail
  * so visitors can jump between collections (mirrors the pricing pages). `match`
  * is compared against the page's `category` prop to flag the active collection;
  * `slugs` lists every page in that collection for the rail's page dots.
@@ -97,7 +97,7 @@ export type GalleryCategoryPageProps = {
   eyebrow?: string;
   /** Breadcrumb + heading category label, e.g. "Free Form Pools". */
   category: string;
-  /** Page H1 (may include "— Page N"). */
+  /** Page H1 (may include "- Page N"). */
   heading: string;
   /** Short lead-in under the H1. */
   intro?: string;
@@ -542,7 +542,7 @@ export function GalleryCategoryPage({
           </h2>
           <p className="mx-auto mt-6 max-w-2xl text-base text-white/70 md:text-lg">
             Every Houston Cool Pool is custom designed for your backyard and
-            budget — with our 100% on-budget guarantee.
+            budget - with our 100% on-budget guarantee.
           </p>
           <div className="mt-10 flex flex-wrap justify-center gap-4">
             <Link

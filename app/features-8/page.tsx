@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { FeaturePage } from "../components/features/FeaturePage";
 
-const TITLE = "Pool Slides — Houston Cool Pools";
+const TITLE = "Pool Slides - Houston Cool Pools";
 const DESCRIPTION =
   "Pool slides guarantee a memorable experience for the whole family. Custom pool features from Houston Cool Pools serving Cypress, Spring, Tomball, and Katy.";
 const CANONICAL = "https://houstoncoolpools.com/features-8.html";
@@ -44,7 +44,7 @@ const IMAGES = [
 const SECTIONS = [
   {
     body:
-      "Pool Slides — they have taken our pool enjoyment to another level for decades! What fun! Different configurations are available and proper installation is a must but if you are looking for a pool feature that will guarantee a memorable experience, look no further than a pool slide.",
+      "Pool Slides - they have taken our pool enjoyment to another level for decades! What fun! Different configurations are available and proper installation is a must but if you are looking for a pool feature that will guarantee a memorable experience, look no further than a pool slide.",
   },
 ];
 

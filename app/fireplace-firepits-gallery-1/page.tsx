@@ -38,9 +38,9 @@ export default function Page() {
         intro="Custom fireplaces and fire pits that extend your poolside evenings year-round."
         images={images}
         prevHref="/geometric-pools-6"
-        prevLabel="Geometric Pools — Page 6"
+        prevLabel="Geometric Pools - Page 6"
         nextHref="/fireplace-firepits-gallery-2"
-        nextLabel="Fireplaces & Fire Pits — Page 2"
+        nextLabel="Fireplaces & Fire Pits - Page 2"
       />
     </>
   );

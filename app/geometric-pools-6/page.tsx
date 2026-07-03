@@ -3,7 +3,7 @@ import { GalleryCategoryPage } from "../components/gallery/GalleryCategoryPage";
 import { getGalleryImages, galleryJsonLd } from "../../lib/gallery-pages";
 
 const SLUG = "geometric-pools-6";
-const TITLE = "Geometric Pool Gallery — Page 6 | Houston Cool Pools";
+const TITLE = "Geometric Pool Gallery - Page 6 | Houston Cool Pools";
 const DESCRIPTION =
   "More geometric pool designs and photos from Houston Cool Pools. Custom gunite pool builder serving Houston, Tomball, Cypress and Spring TX.";
 const CANONICAL = `https://houstoncoolpools.com/${SLUG}.html`;
@@ -29,16 +29,16 @@ export default function Page() {
         type="application/ld+json"
         // eslint-disable-next-line react/no-danger
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(galleryJsonLd("Geometric Pool Gallery — Page 6", SLUG)),
+          __html: JSON.stringify(galleryJsonLd("Geometric Pool Gallery - Page 6", SLUG)),
         }}
       />
       <GalleryCategoryPage
         category="Geometric Pools"
-        heading="Geometric Pools — Page 6"
-        intro="Clean lines and modern symmetry — sharp, architectural pool designs built for Houston homes."
+        heading="Geometric Pools - Page 6"
+        intro="Clean lines and modern symmetry - sharp, architectural pool designs built for Houston homes."
         images={images}
         prevHref="/geometric-pools-5"
-        prevLabel="Geometric Pools — Page 5"
+        prevLabel="Geometric Pools - Page 5"
         nextHref="/fireplace-firepits-gallery-1"
         nextLabel="Fireplaces & Fire Pits"
       />

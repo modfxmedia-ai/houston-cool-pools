@@ -13,25 +13,32 @@ type Lender = {
   href: string;
   cta?: string;
   contact?: { line: string; note?: string }[];
-  featured?: boolean;
+  /** Optional YouTube video ID to embed inside the card. */
+  videoId?: string;
+  /** Website hostname used for a Google-favicon logo (fallback). */
+  domain?: string;
+  /** Local logo path — overrides the favicon when provided. */
+  logo?: string;
 };
 
 const LENDERS: Lender[] = [
   {
     name: "HFS Financial",
-    tag: "Preferred Partner",
-    featured: true,
+    tag: "Lending Partner",
+    domain: "hfsfinancial.net",
     blurb:
-      "HFS has one-of-a-kind loan programs and world-class service — 1,500+ five-star reviews and platform loans that need NO equity. All loans fund 100% direct-to-consumer. Soft credit check to present you with full loan options.",
+      "HFS has one-of-a-kind loan programs and world-class service - 1,500+ five-star reviews and platform loans that need NO equity. All loans fund 100% direct-to-consumer. Soft credit check to present you with full loan options.",
     cta: "Check My Rates",
     href: "https://www.hfsfinancial.net/promo/HoustonCoolPoolsTX/",
     contact: [
-      { line: "Whether you want to finance the pool, deck, landscaping and more — HFS is your trusted partner for the best loan and customer service in the home improvement industry." },
+      { line: "Whether you want to finance the pool, deck, landscaping and more - HFS is your trusted partner for the best loan and customer service in the home improvement industry." },
     ],
   },
   {
     name: "Lyon Financial",
-    tag: "Broker",
+    tag: "Lending Partner",
+    domain: "lyonfinancial.net",
+    videoId: "GVYgeCQmIcM",
     blurb:
       "Long-time Houston Cool Pools lending partner specializing in swimming-pool loans with fast pre-qualification and competitive rates.",
     cta: "Apply with Lyon",
@@ -40,9 +47,11 @@ const LENDERS: Lender[] = [
   },
   {
     name: "Central Bank",
-    tag: "Broker",
+    tag: "Lending Partner",
+    domain: "cbhou.com",
+    logo: "/images/financing-logos/central-bank.png",
     blurb:
-      "Whether you plan to put in a pool, remodel your home, or use the equity in your home for another reason — Ana Torrez at Central Bank is here to help.",
+      "Whether you plan to put in a pool, remodel your home, or use the equity in your home for another reason - Ana Torrez at Central Bank is here to help.",
     cta: "Apply Now",
     href: "https://www.cbhou.com/Pool-Loans/Home/Apply-Now",
     contact: [
@@ -53,7 +62,8 @@ const LENDERS: Lender[] = [
   },
   {
     name: "LightStream Financial",
-    tag: "Broker",
+    tag: "Lending Partner",
+    domain: "lightstream.com",
     blurb:
       "Online lending from LightStream with no fees, low fixed rates and same-day funding on approved loans.",
     cta: "Visit LightStream",
@@ -62,16 +72,19 @@ const LENDERS: Lender[] = [
   },
   {
     name: "Viking Capital",
-    tag: "Broker",
+    tag: "Lending Partner",
+    domain: "poolloan.net",
     blurb:
-      "Free loan consultation, soft credit pull (does not hurt your credit), high approval rates and fast funding — with veteran and military-family discounts and 5-star rated customer service.",
-    cta: "Get a Free Consultation",
+      "Free loan quote, soft credit pull (does not hurt your credit), high approval rates and fast funding - with veteran and military-family discounts and 5-star rated customer service.",
+    cta: "Get a Free Quote",
     href: "https://poolloan.net/houston-cool-pools/",
   },
   {
     name: "Texas Pool Financing",
-    tag: "Broker",
-    blurb: "Vince Gutierrez Mortgages — local Texas-based pool financing broker.",
+    tag: "Lending Partner",
+    domain: "vincegutierrezmortgages.com",
+    logo: "/images/financing-logos/vince-gutierrez-mortgages.png",
+    blurb: "Vince Gutierrez Mortgages - local Texas-based pool financing broker.",
     cta: "Learn More",
     href: "https://www.VinceGutierrezMortgages.com",
     contact: [{ line: "281-597-9234" }],
@@ -84,7 +97,7 @@ export function PoolFinancingClient() {
       <InfoHero
         eyebrow="Financing Options"
         title="Pool Financing"
-        subtitle="Trusted lending partners who make it easy to fund your new Houston pool, spa or remodel — from soft-credit pre-qualification to same-day funding."
+        subtitle="Trusted lending partners who make it easy to fund your new Houston pool, spa or remodel - from soft-credit pre-qualification to same-day funding."
         crumbs={[
           { label: "Home", href: "/" },
           { label: "Pool Information", href: "/pool-information" },
@@ -111,72 +124,162 @@ export function PoolFinancingClient() {
             </p>
           </motion.div>
 
-          <div className="mt-14 grid gap-6 md:grid-cols-2">
-            {LENDERS.map((l, i) => (
-              <motion.a
-                key={l.name}
-                href={l.href}
-                target="_blank"
-                rel="noreferrer noopener"
-                initial={{ opacity: 0, y: 22 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.3 }}
-                transition={{ duration: 0.55, delay: i * 0.05, ease }}
-                className={`group relative flex h-full flex-col overflow-hidden rounded-3xl border p-7 transition duration-300 hover:-translate-y-1 hover:shadow-[0_20px_60px_-30px_rgba(0,27,36,0.35)] md:p-8 ${
-                  l.featured
-                    ? "border-[var(--color-pool)]/40 bg-gradient-to-br from-[var(--color-navy-deep)] to-[#022b3a] text-white md:col-span-2"
-                    : "border-slate-200/80 bg-white text-slate-700 hover:border-[var(--color-pool)]/50"
-                }`}
-              >
-                {l.featured && (
-                  <span
-                    aria-hidden
-                    className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-[var(--color-gold)] via-[var(--color-gold-light)] to-[var(--color-gold)]"
-                  />
-                )}
-                <div className="flex items-center gap-3">
-                  <span
-                    className={`rounded-full px-3 py-1 text-[10px] font-bold uppercase tracking-[0.2em] ${
-                      l.featured
-                        ? "bg-[var(--color-gold)] text-[var(--color-navy-deep)]"
-                        : "bg-[var(--color-pool)]/10 text-[var(--color-pool)]"
-                    }`}
+          {(() => {
+            const featured = LENDERS.find((l) => l.videoId);
+            const others = LENDERS.filter((l) => !l.videoId);
+            return (
+              <>
+                {/* ----- Featured lender (with video) — spans full width ----- */}
+                {featured ? (
+                  <motion.article
+                    initial={{ opacity: 0, y: 22 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, amount: 0.2 }}
+                    transition={{ duration: 0.6, ease }}
+                    className="group relative mt-12 grid gap-8 overflow-hidden rounded-3xl border border-slate-200/80 bg-white p-6 shadow-[0_18px_50px_-24px_rgba(0,55,73,0.4)] transition-all hover:shadow-[0_28px_60px_-28px_rgba(0,124,182,0.35)] md:mt-14 md:grid-cols-[1fr_1fr] md:items-center md:gap-10 md:p-8"
                   >
-                    {l.tag}
-                  </span>
+                    <span
+                      aria-hidden
+                      className="absolute inset-x-0 top-0 h-0.5 bg-gradient-to-r from-[var(--color-pool)] via-[var(--color-gold-light)] to-[var(--color-gold)]"
+                    />
+
+                    {/* Video */}
+                    <div className="relative overflow-hidden rounded-2xl border border-slate-200 bg-black shadow-[0_18px_40px_-20px_rgba(0,55,73,0.45)]">
+                      <div className="relative aspect-video w-full">
+                        <iframe
+                          title={`${featured.name} pool financing overview`}
+                          src={`https://www.youtube-nocookie.com/embed/${featured.videoId}?rel=0&modestbranding=1&iv_load_policy=3`}
+                          loading="lazy"
+                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                          referrerPolicy="strict-origin-when-cross-origin"
+                          allowFullScreen
+                          className="absolute inset-0 h-full w-full border-0"
+                        />
+                      </div>
+                    </div>
+
+                    {/* Copy */}
+                    <div className="min-w-0">
+                      <div className="flex items-center gap-3">
+                        {featured.logo || featured.domain ? (
+                          /* eslint-disable-next-line @next/next/no-img-element */
+                          <img
+                            src={
+                              featured.logo ??
+                              `https://www.google.com/s2/favicons?sz=256&domain=${featured.domain}`
+                            }
+                            alt={`${featured.name} logo`}
+                            width={72}
+                            height={72}
+                            className="h-16 w-16 shrink-0 rounded-2xl bg-white p-2.5 ring-1 ring-slate-200 shadow-md sm:h-[72px] sm:w-[72px] object-contain"
+                            loading="lazy"
+                          />
+                        ) : null}
+                        <span className="rounded-full bg-[var(--color-pool)]/10 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.2em] text-[var(--color-pool)]">
+                          {featured.tag}
+                        </span>
+                      </div>
+                      <h3 className="mt-4 font-display text-2xl font-extrabold tracking-tight text-[var(--color-navy-deep)] md:text-3xl">
+                        {featured.name}
+                      </h3>
+                      <p className="mt-3 text-[15px] leading-relaxed text-slate-600">
+                        {featured.blurb}
+                      </p>
+                      {featured.contact && featured.contact.length > 0 ? (
+                        <ul className="mt-4 space-y-1 text-[13px] text-slate-500">
+                          {featured.contact.map((c, j) => (
+                            <li key={j}>{c.line}</li>
+                          ))}
+                        </ul>
+                      ) : null}
+                      <a
+                        href={featured.href}
+                        target="_blank"
+                        rel="noreferrer noopener"
+                        className="mt-6 inline-flex items-center gap-2 rounded-full bg-[var(--color-navy-deep)] px-6 py-3 text-[11.5px] font-bold uppercase tracking-[0.18em] text-white transition hover:-translate-y-0.5 hover:bg-[var(--color-pool-deep)]"
+                      >
+                        {featured.cta ?? "Learn More"}
+                        <svg viewBox="0 0 24 24" fill="none" className="h-3 w-3 transition-transform group-hover:translate-x-0.5">
+                          <path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" />
+                        </svg>
+                      </a>
+                    </div>
+                  </motion.article>
+                ) : null}
+
+                {/* ----- Other partners — compact 3-column grid, uniform heights ----- */}
+                <div className="mt-6 grid gap-5 sm:grid-cols-2 md:mt-8 lg:grid-cols-3">
+                  {others.map((l, i) => (
+                    <motion.article
+                      key={l.name}
+                      initial={{ opacity: 0, y: 20 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true, amount: 0.2 }}
+                      transition={{ duration: 0.5, delay: i * 0.05, ease }}
+                      className="group relative flex h-full flex-col overflow-hidden rounded-2xl border border-slate-200/80 bg-white p-6 text-slate-700 shadow-[0_14px_40px_-24px_rgba(0,55,73,0.4)] transition-all hover:-translate-y-0.5 hover:border-[var(--color-pool)]/40 hover:shadow-[0_22px_50px_-24px_rgba(0,124,182,0.4)]"
+                    >
+                      <span
+                        aria-hidden
+                        className="absolute inset-x-0 top-0 h-0.5 bg-gradient-to-r from-[var(--color-pool)] via-[var(--color-gold-light)] to-[var(--color-gold)] opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+                      />
+
+                      {/* Large logo band */}
+                      <div className="flex items-center gap-3">
+                        {l.logo || l.domain ? (
+                          /* eslint-disable-next-line @next/next/no-img-element */
+                          <img
+                            src={
+                              l.logo ??
+                              `https://www.google.com/s2/favicons?sz=256&domain=${l.domain}`
+                            }
+                            alt={`${l.name} logo`}
+                            width={64}
+                            height={64}
+                            className="h-16 w-16 shrink-0 rounded-xl bg-white p-2 ring-1 ring-slate-200 shadow-sm object-contain"
+                            loading="lazy"
+                          />
+                        ) : null}
+                        <span className="rounded-full bg-[var(--color-pool)]/10 px-2.5 py-1 text-[9.5px] font-bold uppercase tracking-[0.18em] text-[var(--color-pool)]">
+                          {l.tag}
+                        </span>
+                      </div>
+
+                      <h3 className="mt-3 font-display text-lg font-extrabold leading-tight tracking-tight text-[var(--color-navy-deep)]">
+                        {l.name}
+                      </h3>
+
+                      <p className="mt-2 text-[13.5px] leading-relaxed text-slate-600">
+                        {l.blurb}
+                      </p>
+
+                      {l.contact && l.contact.length > 0 && (
+                        <ul className="mt-3 space-y-0.5 text-[12.5px] leading-snug text-slate-500">
+                          {l.contact.map((c, j) => (
+                            <li key={j}>{c.line}</li>
+                          ))}
+                        </ul>
+                      )}
+
+                      {/* Spacer pushes CTA to the bottom for uniform card heights */}
+                      <div className="flex-1" />
+
+                      <a
+                        href={l.href}
+                        target="_blank"
+                        rel="noreferrer noopener"
+                        className="mt-4 inline-flex items-center gap-1.5 self-start rounded-full bg-[var(--color-navy-deep)] px-4 py-2 text-[10.5px] font-bold uppercase tracking-[0.16em] text-white transition group-hover:bg-[var(--color-pool-deep)]"
+                      >
+                        {l.cta ?? "Learn More"}
+                        <svg viewBox="0 0 24 24" fill="none" className="h-3 w-3 transition-transform group-hover:translate-x-0.5">
+                          <path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" />
+                        </svg>
+                      </a>
+                    </motion.article>
+                  ))}
                 </div>
-                <h3
-                  className={`mt-4 font-display text-2xl font-extrabold tracking-tight ${
-                    l.featured ? "text-white" : "text-[var(--color-navy-deep)]"
-                  }`}
-                >
-                  {l.name}
-                </h3>
-                <p className={`mt-3 flex-1 text-[15px] leading-relaxed ${l.featured ? "text-white/80" : "text-slate-600"}`}>
-                  {l.blurb}
-                </p>
-                {l.contact && l.contact.length > 0 && (
-                  <ul className={`mt-5 space-y-1 border-t pt-4 text-[13px] ${l.featured ? "border-white/15 text-white/70" : "border-slate-200 text-slate-500"}`}>
-                    {l.contact.map((c, j) => (
-                      <li key={j}>{c.line}</li>
-                    ))}
-                  </ul>
-                )}
-                <span
-                  className={`mt-6 inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-[11.5px] font-bold uppercase tracking-[0.18em] transition ${
-                    l.featured
-                      ? "bg-[var(--color-gold)] text-[var(--color-navy-deep)] group-hover:brightness-110"
-                      : "bg-[var(--color-navy-deep)] text-white group-hover:bg-[var(--color-pool-deep)]"
-                  }`}
-                >
-                  {l.cta ?? "Learn More"}
-                  <svg viewBox="0 0 24 24" fill="none" className="h-3 w-3 transition-transform group-hover:translate-x-0.5">
-                    <path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" />
-                  </svg>
-                </span>
-              </motion.a>
-            ))}
-          </div>
+              </>
+            );
+          })()}
         </div>
       </section>
 

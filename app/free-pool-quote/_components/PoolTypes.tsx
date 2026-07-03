@@ -109,7 +109,7 @@ export function PoolTypes() {
                 Not sure which fits?
               </p>
               <p className="mt-2 font-display text-xl font-bold text-white sm:text-2xl">
-                Let&apos;s design it together. Free consultation, zero
+                Let&apos;s design it together. Free quote, zero
                 pressure.
               </p>
             </div>

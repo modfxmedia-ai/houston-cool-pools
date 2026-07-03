@@ -24,11 +24,9 @@ const HOURS = [
   { day: "Sunday", hours: "Closed" },
 ];
 
-const SERVICE_AREAS = ["Houston", "Cypress", "Spring", "Tomball", "The Heights", "Katy"];
-
 export function MapLocation() {
   return (
-    <section className="relative overflow-hidden bg-white py-14 md:py-20">
+    <section className="relative overflow-hidden bg-white py-8 md:py-12">
       <span
         aria-hidden
         className="pointer-events-none absolute -left-40 top-1/4 h-[420px] w-[420px] rounded-full bg-[var(--color-pool)]/8 blur-3xl"
@@ -52,7 +50,7 @@ export function MapLocation() {
             Visit us
           </span>
           <h2 className="mt-4 font-display text-[clamp(1.75rem,3.6vw,2.5rem)] font-extrabold leading-[1.08] tracking-tight text-[var(--color-navy-deep)]">
-            Come by the office &mdash; we&rsquo;d love to meet you.
+            Come by the office - we&rsquo;d love to meet you.
           </h2>
           <p className="mx-auto mt-3 max-w-xl text-[14.5px] leading-relaxed text-slate-600">
             Our showroom is right on Highway 249, minutes from the Willowbrook area
@@ -60,22 +58,22 @@ export function MapLocation() {
           </p>
         </motion.div>
 
-        <div className="grid gap-6 lg:grid-cols-[minmax(0,1fr)_minmax(0,0.7fr)] lg:items-stretch">
+        <div className="grid gap-6 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.2fr)] lg:items-start">
           {/* ---------- MAP ---------- */}
           <motion.div
             initial={{ opacity: 0, y: 24 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 0.8, ease }}
-            className="relative lg:h-full"
+            className="relative"
           >
             {/* Offset shadow plate */}
             <span
               aria-hidden
               className="absolute inset-0 -translate-x-3 translate-y-3 rounded-[28px] bg-gradient-to-br from-[var(--color-pool)] via-[var(--color-pool-deep)] to-[var(--color-navy-deep)] opacity-90"
             />
-            <div className="relative flex h-full flex-col overflow-hidden rounded-[28px] bg-white p-2 shadow-[0_30px_80px_-30px_rgba(0,27,36,0.4)]">
-              <div className="relative aspect-[16/10] w-full flex-1 overflow-hidden rounded-[20px] bg-slate-100 sm:aspect-[16/9] lg:aspect-auto lg:min-h-[400px]">
+            <div className="relative flex flex-col overflow-hidden rounded-[28px] bg-white p-2 shadow-[0_30px_80px_-30px_rgba(0,27,36,0.4)]">
+              <div className="relative aspect-[21/9] w-full overflow-hidden rounded-[20px] bg-slate-100 lg:aspect-[16/10]">
                 <iframe
                   title="Houston Cool Pools office location"
                   src={EMBED_URL}
@@ -86,7 +84,7 @@ export function MapLocation() {
                 />
               </div>
 
-              {/* Directions button — anchored bottom-right of the map */}
+              {/* Directions button - anchored bottom-right of the map */}
               <a
                 href={DIRECTIONS_URL}
                 target="_blank"
@@ -129,7 +127,7 @@ export function MapLocation() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 0.8, ease, delay: 0.1 }}
-            className="relative flex flex-col justify-between gap-6 rounded-[28px] border border-slate-200/80 bg-[#f7f6f2] p-7 shadow-[0_20px_60px_-30px_rgba(0,27,36,0.25)] md:p-8"
+            className="relative flex flex-col gap-5 rounded-[28px] border border-slate-200/80 bg-[#f7f6f2] p-6 shadow-[0_20px_60px_-30px_rgba(0,27,36,0.25)] md:p-7"
           >
             <span
               aria-hidden
@@ -200,7 +198,7 @@ export function MapLocation() {
             </div>
 
             {/* Contact links */}
-            <div className="grid gap-3 sm:grid-cols-2">
+            <div className="grid gap-3">
               <a
                 href="tel:+12816456631"
                 className="group flex items-center gap-3 rounded-2xl border border-slate-200/80 bg-white p-3 transition hover:border-[var(--color-pool)]/40"
@@ -225,47 +223,6 @@ export function MapLocation() {
                   </p>
                 </div>
               </a>
-              <a
-                href="mailto:info@houstoncoolpools.com"
-                className="group flex items-center gap-3 rounded-2xl border border-slate-200/80 bg-white p-3 transition hover:border-[var(--color-pool)]/40"
-              >
-                <span className="grid h-9 w-9 place-items-center rounded-xl bg-[var(--color-pool)]/10 text-[var(--color-pool-deep)]">
-                  <svg viewBox="0 0 24 24" fill="none" className="h-4 w-4">
-                    <path
-                      d="M3 8l9 6 9-6M5 5h14a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2Z"
-                      stroke="currentColor"
-                      strokeWidth="1.8"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                  </svg>
-                </span>
-                <div className="min-w-0">
-                  <p className="text-[9.5px] font-bold uppercase tracking-[0.18em] text-slate-400">
-                    Email
-                  </p>
-                  <p className="truncate font-display text-[12.5px] font-bold text-[var(--color-navy-deep)] group-hover:text-[var(--color-pool)]">
-                    info@houstoncoolpools.com
-                  </p>
-                </div>
-              </a>
-            </div>
-
-            {/* Service areas */}
-            <div>
-              <p className="text-[10.5px] font-bold uppercase tracking-[0.22em] text-[var(--color-pool)]">
-                Proudly serving
-              </p>
-              <div className="mt-3 flex flex-wrap gap-1.5">
-                {SERVICE_AREAS.map((c) => (
-                  <span
-                    key={c}
-                    className="inline-flex items-center rounded-full border border-slate-200 bg-white px-3 py-1 text-[11.5px] font-semibold text-slate-600"
-                  >
-                    {c}
-                  </span>
-                ))}
-              </div>
             </div>
           </motion.div>
         </div>
@@ -299,17 +256,17 @@ export function MapLocation() {
                 Start today
               </p>
               <h3 className="mt-2 font-display text-2xl font-extrabold leading-tight tracking-tight text-white sm:text-[28px]">
-                Schedule your free in-home consultation
+                Schedule your free in-home quote
               </h3>
               <p className="mt-2 text-[14px] leading-relaxed text-white/80">
-                No pressure, no obligation — just a friendly walk-through of your
+                No pressure, no obligation - just a friendly walk-through of your
                 backyard and the pool that could live there.
               </p>
             </div>
 
             <div className="flex w-full flex-col gap-3 sm:w-auto sm:flex-row sm:items-center">
               <a
-                href="/free-pool-quote"
+                href="/contact"
                 className="group inline-flex items-center justify-center gap-2 rounded-full bg-white px-6 py-3.5 text-[12px] font-bold uppercase tracking-[0.2em] text-[var(--color-navy-deep)] shadow-[0_16px_40px_-14px_rgba(0,0,0,0.5)] transition hover:-translate-y-0.5 hover:bg-[var(--color-gold-light)]"
               >
                 Get Your Free Estimate

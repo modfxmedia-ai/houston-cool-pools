@@ -18,7 +18,7 @@ const data = getSequencePage(SLUG)!;
 const webPageJsonLd = {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  name: "Pool Construction Sequence — Permits & Stake-Out",
+  name: "Pool Construction Sequence - Permits & Stake-Out",
   url: CANONICAL,
   isPartOf: {
     "@type": "WebSite",

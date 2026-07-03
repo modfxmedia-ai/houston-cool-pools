@@ -233,7 +233,7 @@ export function ArticlePost({ article, related }: ArticlePostProps) {
         />
 
         <div className="relative mx-auto max-w-7xl px-6 md:px-10">
-          {/* Floating featured image card — overlaps the hero wave */}
+          {/* Floating featured image card - overlaps the hero wave */}
           <motion.figure
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -292,7 +292,7 @@ export function ArticlePost({ article, related }: ArticlePostProps) {
                     </h4>
                     <p className="mt-1 text-sm text-slate-500">{article.author.role}</p>
                     <p className="mt-3 max-w-xl text-[15px] leading-relaxed text-slate-600">
-                      Every article on this site is written from the field — from real builds,
+                      Every article on this site is written from the field - from real builds,
                       real remodels, and real service calls with Houston homeowners. If
                       you&apos;re thinking about a project, we&apos;d love to talk it through.
                     </p>
@@ -592,7 +592,7 @@ export function ArticlePost({ article, related }: ArticlePostProps) {
           </h2>
           <p className="max-w-2xl text-[16px] leading-relaxed text-white/75">
             Whether you&apos;re dreaming about a custom build, planning a remodel, or trying to
-            keep an existing pool sparkling — we&apos;re happy to walk you through it.
+            keep an existing pool sparkling - we&apos;re happy to walk you through it.
           </p>
           <div className="mt-2 flex flex-wrap items-center justify-center gap-4">
             <Link

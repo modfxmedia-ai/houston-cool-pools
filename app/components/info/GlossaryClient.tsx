@@ -37,12 +37,12 @@ export function GlossaryClient({ letter, letterLabel, pageIndex, terms }: Glossa
     <>
       <InfoHero
         eyebrow={`Glossary • Letter ${letterLabel}`}
-        title={`Pool Glossary — ${letterLabel}`}
-        subtitle="An A–Z reference of pool and spa industry terms — chemistry, equipment, construction, water features. Written in plain English by a real Houston pool builder."
+        title={`Pool Glossary - ${letterLabel}`}
+        subtitle="An A–Z reference of pool and spa industry terms - chemistry, equipment, construction, water features. Written in plain English by a real Houston pool builder."
         crumbs={[
           { label: "Home", href: "/" },
           { label: "Pool Information", href: "/pool-information" },
-          { label: `Glossary — ${letterLabel}` },
+          { label: `Glossary - ${letterLabel}` },
         ]}
       />
 
