@@ -10,8 +10,8 @@ export type NavGroup = {
 };
 
 const BOOK_APPOINTMENT: NavLink = {
-  label: "Book Appointment",
-  href: "/#book-appointment",
+  label: "Get Free Estimate",
+  href: "/contact",
 };
 
 export const PRIMARY_NAV: NavGroup[] = [
