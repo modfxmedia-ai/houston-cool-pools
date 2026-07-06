@@ -65,7 +65,7 @@ function HeroVisual() {
       <RippleRings className="absolute -bottom-24 -left-24 h-[420px] w-[420px] opacity-40" />
 
       {/* Main content */}
-      <div className="relative z-10 mx-auto flex h-full max-w-7xl items-center px-5 pt-28 pb-32 sm:px-10 sm:pt-36 sm:pb-36 md:pt-40 lg:px-16 lg:pt-48 lg:pb-40">
+      <div className="relative z-10 mx-auto flex h-full max-w-7xl items-center px-5 pt-40 pb-32 sm:px-10 sm:pt-36 sm:pb-36 md:pt-40 lg:px-16 lg:pt-48 lg:pb-40">
         <div className="max-w-3xl">
           <motion.div
             initial={{ opacity: 0, y: 16 }}

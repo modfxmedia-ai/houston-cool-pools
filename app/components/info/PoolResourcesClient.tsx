@@ -217,7 +217,7 @@ export function PoolResourcesClient() {
 
             <nav
               aria-label="Resource sections"
-              className="flex flex-wrap items-center justify-center gap-1.5 md:gap-2"
+              className="flex flex-nowrap items-center justify-center gap-1 md:flex-wrap md:gap-2"
             >
               {SECTIONS.map((s) => {
                 const isActive = activeSection === s.id;
@@ -226,7 +226,7 @@ export function PoolResourcesClient() {
                     key={s.id}
                     href={`#${s.id}`}
                     aria-current={isActive ? "location" : undefined}
-                    className={`group inline-flex shrink-0 items-center gap-1.5 rounded-full px-3.5 py-2 text-[11px] font-bold uppercase tracking-[0.1em] transition-all md:px-4 md:py-2 md:text-[12px] ${
+                    className={`group inline-flex shrink-0 items-center gap-1 rounded-full px-2.5 py-1.5 text-[10px] font-bold uppercase tracking-[0.08em] transition-all md:gap-1.5 md:px-4 md:py-2 md:text-[12px] md:tracking-[0.1em] ${
                       isActive
                         ? "bg-gradient-to-r from-[var(--color-pool)] to-[var(--color-pool-deep)] text-white shadow-[0_10px_22px_-10px_rgba(0,124,182,0.75)]"
                         : "border border-slate-200 bg-white text-[var(--color-navy-deep)] hover:-translate-y-0.5 hover:border-[var(--color-pool)] hover:bg-[var(--color-pool)]/5 hover:text-[var(--color-pool-deep)]"
