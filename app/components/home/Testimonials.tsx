@@ -179,19 +179,24 @@ export function Testimonials() {
 
         {/* ----- Bottom controls ----- */}
         <div className="mt-10 flex flex-col items-center gap-6">
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-1">
             {TESTIMONIALS.map((_, i) => (
               <button
                 key={i}
                 type="button"
                 onClick={() => setIndex(i)}
                 aria-label={`Show review ${i + 1}`}
-                className={`h-1.5 rounded-full transition-all ${
-                  i === index
-                    ? "w-10 bg-[var(--color-pool)]"
-                    : "w-1.5 bg-[var(--color-navy-deep)]/15 hover:bg-[var(--color-navy-deep)]/30"
-                }`}
-              />
+                className="group flex h-10 w-8 items-center justify-center"
+              >
+                <span
+                  aria-hidden
+                  className={`h-1.5 rounded-full transition-all ${
+                    i === index
+                      ? "w-10 bg-[var(--color-pool)]"
+                      : "w-1.5 bg-[var(--color-navy-deep)]/15 group-hover:bg-[var(--color-navy-deep)]/30"
+                  }`}
+                />
+              </button>
             ))}
           </div>
 

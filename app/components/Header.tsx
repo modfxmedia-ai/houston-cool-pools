@@ -315,7 +315,7 @@ function MobileOverlay({
               hidden: {},
               visible: { transition: { staggerChildren: 0.04, delayChildren: 0.1 } },
             }}
-            className="flex-1 overflow-y-auto px-2 py-4"
+            className="flex-1 overflow-y-auto px-4 py-4"
           >
             {PRIMARY_NAV.map((item) => (
               <motion.div
@@ -364,7 +364,7 @@ function MobileOverlay({
                             <Link
                               href={item.href}
                               onClick={onClose}
-                              className="mb-3 block text-xs font-bold uppercase tracking-[0.2em] text-[var(--color-gold)]"
+                              className="mb-2 block py-2 text-xs font-bold uppercase tracking-[0.2em] text-[var(--color-gold)]"
                             >
                               Overview
                             </Link>
@@ -375,13 +375,13 @@ function MobileOverlay({
                                     {col.heading}
                                   </p>
                                 )}
-                                <ul className="space-y-2">
+                                <ul>
                                   {col.links.map((link) => (
                                     <li key={link.href}>
                                       <Link
                                         href={link.href}
                                         onClick={onClose}
-                                        className="block text-sm text-white/85 hover:text-[var(--color-gold-light)]"
+                                        className="block py-2 text-sm text-white/85 hover:text-[var(--color-gold-light)]"
                                       >
                                         {link.label}
                                       </Link>

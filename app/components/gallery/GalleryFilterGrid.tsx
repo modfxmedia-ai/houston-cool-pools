@@ -127,11 +127,6 @@ export function GalleryFilterGrid() {
                   className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
                 />
 
-                {/* Tier badge - top-right */}
-                <span className="absolute right-3 top-3 rounded-full bg-white/95 px-2.5 py-1 text-[9px] font-bold uppercase tracking-[0.18em] text-[var(--color-navy-deep)] shadow">
-                  {pool.tierLabel}
-                </span>
-
                 {/* Hover ring */}
                 <span className="pointer-events-none absolute inset-0 rounded-2xl ring-1 ring-inset ring-[var(--color-pool)]/0 transition-all duration-300 group-hover:ring-[var(--color-pool)]/50" />
 

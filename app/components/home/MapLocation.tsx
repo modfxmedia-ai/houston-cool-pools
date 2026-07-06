@@ -72,8 +72,8 @@ export function MapLocation() {
               aria-hidden
               className="absolute inset-0 -translate-x-3 translate-y-3 rounded-[28px] bg-gradient-to-br from-[var(--color-pool)] via-[var(--color-pool-deep)] to-[var(--color-navy-deep)] opacity-90"
             />
-            <div className="relative flex flex-col overflow-hidden rounded-[28px] bg-white p-2 shadow-[0_30px_80px_-30px_rgba(0,27,36,0.4)]">
-              <div className="relative aspect-[21/9] w-full overflow-hidden rounded-[20px] bg-slate-100 lg:aspect-[16/10]">
+            <div className="relative flex flex-col overflow-hidden rounded-[24px] bg-white p-2 shadow-[0_30px_80px_-30px_rgba(0,27,36,0.4)] md:rounded-[28px]">
+              <div className="relative aspect-[4/3] w-full overflow-hidden rounded-[20px] bg-slate-100 sm:aspect-[21/9] lg:aspect-[16/10]">
                 <iframe
                   title="Houston Cool Pools office location"
                   src={EMBED_URL}

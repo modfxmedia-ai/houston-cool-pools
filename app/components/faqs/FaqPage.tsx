@@ -204,59 +204,61 @@ export function FaqPage({ faq, index, total, prev, next }: FaqPageProps) {
       {/* ===== Stepper motion graph ===== */}
       <section className="bg-white pt-12 md:pt-16">
         <div className="mx-auto max-w-6xl px-6 md:px-10">
-          <div className="relative">
-            {/* track */}
-            <div className="absolute left-0 right-0 top-[11px] h-[3px] rounded-full bg-slate-200" />
-            {/* animated fill */}
-            <motion.div
-              initial={{ scaleX: 0 }}
-              whileInView={{ scaleX: journey }}
-              viewport={{ once: true }}
-              transition={{ duration: 1, ease }}
-              style={{ originX: 0 }}
-              className="absolute left-0 right-0 top-[11px] h-[3px] rounded-full bg-gradient-to-r from-[var(--color-pool)] to-[var(--color-pool-deep)]"
-            />
-            <ol className="relative flex justify-between">
-              {FAQS.map((f, i) => {
-                const isActive = i === index;
-                const isDone = i < index;
-                return (
-                  <li key={f.slug} className="flex flex-col items-center">
-                    <Link
-                      href={`/${f.slug}`}
-                      aria-current={isActive ? "step" : undefined}
-                      title={f.question}
-                      className="group flex flex-col items-center"
-                    >
-                      <motion.span
-                        initial={{ scale: 0 }}
-                        whileInView={{ scale: 1 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.4, delay: i * 0.03, ease }}
-                        className={`flex h-[23px] w-[23px] items-center justify-center rounded-full border-2 text-[10px] font-bold transition-colors ${
-                          isActive
-                            ? "border-[var(--color-pool-deep)] bg-[var(--color-pool-deep)] text-white shadow-[0_8px_20px_-6px_rgba(0,124,182,0.8)]"
-                            : isDone
-                              ? "border-[var(--color-pool)] bg-[var(--color-pool)] text-white"
-                              : "border-slate-300 bg-white text-slate-400 group-hover:border-[var(--color-pool)]"
-                        }`}
+          <div className="overflow-x-auto pb-2 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+            <div className="relative min-w-[560px] md:min-w-0">
+              {/* track */}
+              <div className="absolute left-0 right-0 top-[11px] h-[3px] rounded-full bg-slate-200" />
+              {/* animated fill */}
+              <motion.div
+                initial={{ scaleX: 0 }}
+                whileInView={{ scaleX: journey }}
+                viewport={{ once: true }}
+                transition={{ duration: 1, ease }}
+                style={{ originX: 0 }}
+                className="absolute left-0 right-0 top-[11px] h-[3px] rounded-full bg-gradient-to-r from-[var(--color-pool)] to-[var(--color-pool-deep)]"
+              />
+              <ol className="relative flex justify-between">
+                {FAQS.map((f, i) => {
+                  const isActive = i === index;
+                  const isDone = i < index;
+                  return (
+                    <li key={f.slug} className="flex flex-col items-center">
+                      <Link
+                        href={`/${f.slug}`}
+                        aria-current={isActive ? "step" : undefined}
+                        title={f.question}
+                        className="group flex flex-col items-center"
                       >
-                        {i + 1}
-                      </motion.span>
-                      <span
-                        className={`mt-2.5 hidden max-w-[88px] text-center text-[11px] font-bold uppercase leading-tight tracking-[0.04em] md:block ${
-                          isActive
-                            ? "text-[var(--color-pool-deep)]"
-                            : "text-[var(--color-navy)]"
-                        }`}
-                      >
-                        {f.section}
-                      </span>
-                    </Link>
-                  </li>
-                );
-              })}
-            </ol>
+                        <motion.span
+                          initial={{ scale: 0 }}
+                          whileInView={{ scale: 1 }}
+                          viewport={{ once: true }}
+                          transition={{ duration: 0.4, delay: i * 0.03, ease }}
+                          className={`flex h-[23px] w-[23px] items-center justify-center rounded-full border-2 text-[10px] font-bold transition-colors ${
+                            isActive
+                              ? "border-[var(--color-pool-deep)] bg-[var(--color-pool-deep)] text-white shadow-[0_8px_20px_-6px_rgba(0,124,182,0.8)]"
+                              : isDone
+                                ? "border-[var(--color-pool)] bg-[var(--color-pool)] text-white"
+                                : "border-slate-300 bg-white text-slate-400 group-hover:border-[var(--color-pool)]"
+                          }`}
+                        >
+                          {i + 1}
+                        </motion.span>
+                        <span
+                          className={`mt-2.5 hidden max-w-[88px] text-center text-[11px] font-bold uppercase leading-tight tracking-[0.04em] md:block ${
+                            isActive
+                              ? "text-[var(--color-pool-deep)]"
+                              : "text-[var(--color-navy)]"
+                          }`}
+                        >
+                          {f.section}
+                        </span>
+                      </Link>
+                    </li>
+                  );
+                })}
+              </ol>
+            </div>
           </div>
         </div>
       </section>
