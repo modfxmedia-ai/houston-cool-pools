@@ -132,19 +132,6 @@ export function GalleryFilterGrid() {
                   {pool.tierLabel}
                 </span>
 
-                {/* Bottom gradient + caption */}
-                <span className="pointer-events-none absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-[var(--color-navy-deep)]/85 via-[var(--color-navy-deep)]/30 to-transparent" />
-                <div className="absolute inset-x-0 bottom-0 p-4 text-white">
-                  <p className="font-[family-name:var(--font-display)] text-sm leading-tight md:text-base">
-                    {pool.title}
-                  </p>
-                  {pool.caption ? (
-                    <p className="mt-0.5 truncate text-[11px] text-white/75 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-                      {pool.caption}
-                    </p>
-                  ) : null}
-                </div>
-
                 {/* Hover ring */}
                 <span className="pointer-events-none absolute inset-0 rounded-2xl ring-1 ring-inset ring-[var(--color-pool)]/0 transition-all duration-300 group-hover:ring-[var(--color-pool)]/50" />
 
