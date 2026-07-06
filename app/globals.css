@@ -28,7 +28,7 @@
 
 html {
   font-size: 18px;
-  overflow-x: hidden;
+  overflow-x: clip;
 }
 
 body {
@@ -38,7 +38,7 @@ body {
   font-size: 18px;
   line-height: 1.65;
   font-weight: 400;
-  overflow-x: hidden;
+  overflow-x: clip;
 }
 
 h1, h2, h3, h4, h5, h6 {

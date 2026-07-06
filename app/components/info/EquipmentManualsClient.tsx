@@ -4,103 +4,12 @@ import { useMemo, useState } from "react";
 import { motion } from "motion/react";
 import { InfoHero } from "./InfoHero";
 import { PoolCtaBanner } from "../PoolCtaBanner";
+import {
+  EQUIPMENT_MANUAL_CATEGORIES as CATEGORIES,
+  EQUIPMENT_MANUAL_PDF_BASE as PDF_BASE,
+} from "../../../lib/pool-resources";
 
 const ease = [0.22, 1, 0.36, 1] as const;
-
-const PDF_BASE = "https://houstoncoolpools.com/pdf/";
-
-type Manual = { name: string; file: string };
-type Category = { title: string; manuals: Manual[] };
-
-const CATEGORIES: Category[] = [
-  {
-    title: "Cleaning Systems",
-    manuals: [
-      { name: "Disposable Sand Silt Bag", file: "DisposableSandSiltBagIG.pdf" },
-      { name: "Kreepy Krauly Platinum OM", file: "KreepyKraulyPlatinumOM.pdf" },
-      { name: "Pentair Suction Side Cleaner", file: "Rebel_Warrior_Tucson_Eng_OM_20181025_062540.pdf" },
-      { name: "Paramount Owners Manual", file: "ParamountOwnersManual.pdf" },
-      { name: "Prowler 820-830 EOM", file: "Prowler820-830EOM.pdf" },
-      { name: "Racer Eng OM", file: "RacerEngOM.pdf" },
-      { name: "Pentair Prowler 920 Cleaner", file: "prowler920-warriorse-manual-english.pdf" },
-    ],
-  },
-  {
-    title: "Heater / Chiller",
-    manuals: [
-      { name: "MasterTemp Heater", file: "Mastertemp-Heater.pdf" },
-      { name: "UltraTemp Heat Pump", file: "ultratemp-heat-pump-installation-and-users-guide-en-fr-sp.pdf" },
-      { name: "Glacier Pool Chiller", file: "newer-glacier-pool-chiller-manual.pdf" },
-    ],
-  },
-  {
-    title: "Pool Control System",
-    manuals: [
-      { name: "Pentair IntelliConnect Control & Monitoring", file: "IntelliConnect_20180402_082936.pdf" },
-      { name: "EasyTouch ICPUG", file: "EasyTouchICPUG.pdf" },
-      { name: "EasyTouch QSG", file: "EasyTouchICPUG.pdf" },
-      { name: "IntelliBrite Controller", file: "IntelliBrite-Controller.pdf" },
-    ],
-  },
-  {
-    title: "Pool Filters",
-    manuals: [
-      { name: "Clean & Clear Cartridge Filter OM", file: "DisposableSandSiltBagIG.pdf" },
-      { name: "Triton II Sand Filter OM", file: "DisposableSandSiltBagIG.pdf" },
-    ],
-  },
-  {
-    title: "Pool Lighting",
-    manuals: [
-      { name: "Amerlite White Halogen OM", file: "Amerlite-White-Halogen-OM.pdf" },
-      { name: "GloBrite Color LED Eng OM", file: "GloBriteColorLEDEngOM.pdf" },
-      { name: "IntelliBrite Controller", file: "IntelliBrite-Controller.pdf" },
-      { name: "IntelliBrite LED Pool Light OM", file: "IntelliBrite-LED-Pool-Light-OM.pdf" },
-      { name: "IntelliBrite LED Spa Light OM", file: "IntelliBrite-LED-Spa-Light-OM.pdf" },
-      { name: "IntelliBrite White LED Pool & Spa", file: "Intellibrite-White-LED-Pool-and-Spa.pdf" },
-      { name: "Pentair MicroBrite Light", file: "AMP-30-1310.pdf" },
-    ],
-  },
-  {
-    title: "Pool Pumps",
-    manuals: [
-      { name: "BoostRite Booster Pump OM", file: "BoostRiteBoosterPumpOM.pdf" },
-      { name: "IntelliFlo VS+SVRS", file: "IntelliFloSVRSOM.pdf" },
-      { name: "IntelliFlo VS OM", file: "IntelliFloVSOM.pdf" },
-      { name: "IntelliFlo XF / IntelliPro XF Variable Speed", file: "IntelliFloXFIntelliProXFVariableSpeedUG.pdf" },
-      { name: "WhisperFlo XF OM", file: "Whisperflo-XF-OM.pdf" },
-      { name: "WhisperFlo OM", file: "WhisperFloOM.pdf" },
-    ],
-  },
-  {
-    title: "Sanitation Systems",
-    manuals: [
-      { name: "Clear O3 Ozone Manual", file: "ClearO3OzoneManual.pdf" },
-      { name: "IntelliChlor Quick Start Guide OM", file: "IntelliChlor-Quick-Start-GuideOM.pdf" },
-      { name: "IntelliChlor Electronic Chlorine Generator", file: "IntelliChlor-Quick-Start-GuideOM.pdf" },
-      { name: "Rainbow 320 Chlorine Feeder", file: "Rainbow320ChlorineFeeder.pdf" },
-      { name: "Ultra UV Manual", file: "bioshield-uv-sanitizer-manual-english.pdf" },
-      { name: "Pentair Bioshield UV System", file: "bioshield-uv-sanitizer-manual-english.pdf" },
-    ],
-  },
-  {
-    title: "Water Features",
-    manuals: [
-      { name: "Color Cascade Bubbler", file: "Color-Cascade-Bubbler.pdf" },
-      { name: "Deck Jet II", file: "Deck-Jet-II.pdf" },
-      { name: "Laminar Deck Jets", file: "Laminar-Deck-Jets.pdf" },
-      { name: "Magic Falls Water Effects", file: "MagicFallsWaterEffects.pdf" },
-    ],
-  },
-  {
-    title: "Miscellaneous",
-    manuals: [
-      { name: "Paramount Twirly Byrd", file: "Paramount_Twirlybyrd.pdf" },
-      { name: "Pentair IntelliValve Actuator", file: "IntelliValve%20OM_20151223_081419.pdf" },
-      { name: "Valve OM", file: "ValveOM.pdf" },
-    ],
-  },
-];
 
 export function EquipmentManualsClient() {
   const [query, setQuery] = useState("");

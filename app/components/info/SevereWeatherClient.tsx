@@ -3,68 +3,15 @@
 import { motion } from "motion/react";
 import { InfoHero } from "./InfoHero";
 import { PoolCtaBanner } from "../PoolCtaBanner";
+import {
+  HURRICANE_STEPS as HURRICANE,
+  FREEZE_STEPS as FREEZE,
+  type SevereWeatherStep,
+} from "../../../lib/pool-resources";
 
 const ease = [0.22, 1, 0.36, 1] as const;
 
-type Step = { title: string; body: string };
-
-const HURRICANE: Step[] = [
-  {
-    title: "Do NOT drain your pool",
-    body: "An empty pool can float out of the ground from the pressure of groundwater rising around it. Even for hurricanes, keep your pool full.",
-  },
-  {
-    title: "Lower the water 1–2 feet - only if flooding is expected",
-    body: "If heavy flooding is forecast, lower the water level about a foot below the skimmer to give room for rainfall without overflowing across your deck and yard.",
-  },
-  {
-    title: "Turn off electrical power to pool equipment",
-    body: "At the breaker, shut off power to the pump, heater, salt system, and lights. If flood water reaches the equipment pad, powered equipment can be permanently damaged.",
-  },
-  {
-    title: "Add extra chlorine before the storm",
-    body: "Super-chlorinate (shock) the pool the day before the storm to help handle the extra organic material - leaves, debris, and runoff - that will land in the water.",
-  },
-  {
-    title: "Remove and store loose items",
-    body: "Bring in pool toys, floats, ladders, cleaners, umbrellas, patio furniture, and anything that could become a projectile in high winds.",
-  },
-  {
-    title: "Do NOT cover the pool",
-    body: "A cover will be shredded by the wind and debris - and worse, its anchors can tear out and damage your deck and coping.",
-  },
-  {
-    title: "After the storm - clean before you restart",
-    body: "Remove large debris with a leaf net first. Never run the pump with heavy debris in the skimmers or main drain. Vacuum, brush, and shock before returning to normal operation.",
-  },
-];
-
-const FREEZE: Step[] = [
-  {
-    title: "Run the pump continuously below 32 °F",
-    body: "Moving water resists freezing. When temperatures drop below freezing, run your pool pump 24/7 for the entire cold event.",
-  },
-  {
-    title: "Turn on all water features",
-    body: "Run spa spillovers, waterfalls, deck jets, and bubblers so every line has moving water. Standing water in a plumbing line is what cracks pipes.",
-  },
-  {
-    title: "Open all valves on the equipment pad",
-    body: "Set every valve to a partially-open position so water can flow through all lines - suction and return, spa and pool.",
-  },
-  {
-    title: "Balance chemistry 24 hours before the freeze",
-    body: "Cold water is aggressive. Slightly raise calcium hardness, alkalinity and pH the day before to protect plaster and equipment.",
-  },
-  {
-    title: "Protect the equipment pad",
-    body: "Wrap exposed above-ground plumbing with foam pipe insulation or towels. Do not cover the heater exhaust or pump vents.",
-  },
-  {
-    title: "If you lose power - drain the pump",
-    body: "If the pump stops for more than a few hours below freezing, remove the pump drain plugs to release trapped water and prevent the housing from cracking.",
-  },
-];
+type Step = SevereWeatherStep;
 
 function Checklist({ steps, tone }: { steps: Step[]; tone: "warn" | "cold" }) {
   const accent = tone === "warn"

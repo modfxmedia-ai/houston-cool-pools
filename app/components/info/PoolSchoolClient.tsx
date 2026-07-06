@@ -4,32 +4,12 @@ import { useState } from "react";
 import { motion } from "motion/react";
 import { InfoHero } from "./InfoHero";
 import { PoolCtaBanner } from "../PoolCtaBanner";
+import { POOL_SCHOOL_LESSONS as LESSONS } from "../../../lib/pool-resources";
 
 const ease = [0.22, 1, 0.36, 1] as const;
 
-type Lesson = {
-  title: string;
-  youtubeId: string;
-  blurb: string;
-};
-
-const LESSONS: Lesson[] = [
-  { title: "Water Test for Chemical Balance", youtubeId: "quEPTFAsHL0", blurb: "How to test your pool water and interpret the results." },
-  { title: "Equipment Shut Off", youtubeId: "OgkiqHqy6JU", blurb: "The correct way to shut off pool equipment for maintenance or a storm." },
-  { title: "3 Way Valve Operation", youtubeId: "IWvmB3f44I0", blurb: "How the three-way valve routes water between pool and spa." },
-  { title: "Pool Filter System Overview", youtubeId: "fgQuEYJMVWA", blurb: "A tour of your pool's filtration system and how the pieces work together." },
-  { title: "Pool Suction Cleaner", youtubeId: "_chE1HtOrw0", blurb: "How the suction-side cleaner keeps your pool floor spotless." },
-  { title: "Pool Chlorinator", youtubeId: "F40bGRXjMtI", blurb: "Loading, adjusting and maintaining your chlorine tablet feeder." },
-  { title: "Pump Basket Cleaning", youtubeId: "WDXjGitk2bg", blurb: "Weekly maintenance for your pump basket to keep flow strong." },
-  { title: "Leaf Canister Cleaning", youtubeId: "SPyJIEQregU", blurb: "How to empty and clean your leaf canister for automatic cleaner systems." },
-  { title: "Cyclone Cleaning", youtubeId: "Wgmb7MB6FMM", blurb: "Servicing your cyclone pre-filter to extend cartridge life." },
-  { title: "Filter Cleaning", youtubeId: "C2RBBt1NwbE", blurb: "Deep-clean your cartridge filter properly, once or twice a season." },
-  { title: "Clean In Floor Heads", youtubeId: "EsTMTFUN_Xw", blurb: "Servicing pop-up in-floor cleaning heads." },
-  { title: "Ozone System", youtubeId: "NveIWrsPm-0", blurb: "How your Clear O3 ozone system works alongside chlorine." },
-];
-
 export function PoolSchoolClient() {
-  const [active, setActive] = useState<Lesson>(LESSONS[0]);
+  const [active, setActive] = useState<typeof LESSONS[number]>(LESSONS[0]);
 
   return (
     <>

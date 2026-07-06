@@ -3,69 +3,12 @@
 import { motion } from "motion/react";
 import { InfoHero } from "./InfoHero";
 import { PoolCtaBanner } from "../PoolCtaBanner";
+import {
+  PRODUCT_GROUPS as GROUPS,
+  FEATURED_PRODUCT_PDF as FEATURED_PDF,
+} from "../../../lib/pool-resources";
 
 const ease = [0.22, 1, 0.36, 1] as const;
-
-type Product = { name: string; href: string; brand: string };
-type Group = { title: string; products: Product[] };
-
-const GROUPS: Group[] = [
-  {
-    title: "Skimmers & Drains",
-    products: [
-      { name: "A&A Manufacturing Venturi Powered Skimmers", brand: "A&A Manufacturing", href: "https://aamfg.com/product/quikskim-venturi-powered/" },
-      { name: "A&A Manufacturing AVSC Anti-Vortex Heavy Debris Safety Drains", brand: "A&A Manufacturing", href: "https://aamfg.com/product/avsc-heavy-debris-removal/" },
-    ],
-  },
-  {
-    title: "Pumps & Filters",
-    products: [
-      { name: "Pentair IntelliFlo Variable Speed Pump", brand: "Pentair", href: "https://www.pentair.com/en-us/products/residential/pool-spa-equipment/pool-pumps/intelliflo_variablespeedhighperfomancepump.html" },
-      { name: "Pentair 420 sf Clean & Clear Cartridge Filter", brand: "Pentair", href: "https://www.pentair.com/en-us/products/residential/pool-spa-equipment/pool-filtration/clean_and_clear_pluscartridgefilters.html" },
-      { name: "WaterCo Cyclonic Pre-Filter", brand: "WaterCo", href: "https://waterco.us/pool-spa/centrifugal-filters/multicyclone-16" },
-    ],
-  },
-  {
-    title: "Cleaners & Lighting",
-    products: [
-      { name: "Pentair Rebel Suction Cleaner", brand: "Pentair", href: "https://www.pentair.com/en-us/products/residential/pool-spa-equipment/pool-cleaners/pentair_rebel_suction-sideingroundpoolcleaner.html" },
-      { name: "Pentair GloBrite LED Lights", brand: "Pentair", href: "https://www.pentair.com/en-us/products/residential/pool-spa-equipment/pool-lighting/globrite_pool_andspaledlights.html" },
-    ],
-  },
-  {
-    title: "Sanitation & Ozone",
-    products: [
-      { name: "Pentair 320 In-Line Chlorinator", brand: "Pentair", href: "https://www.pentair.com/en-us/products/residential/pool-spa-equipment/pool-water-treatment/rainbow_automaticchlorineandbrominefeeders.html" },
-      { name: "A&A QuikPure 3 Ozone System", brand: "A&A Manufacturing", href: "https://aamfg.com/product/quikpure-3-ozone-oxidation-system/" },
-      { name: "A&A QuikCirc Circulation / Cleaning System", brand: "A&A Manufacturing", href: "https://www.youtube.com/watch?v=Fh6o_k84TIY" },
-    ],
-  },
-  {
-    title: "Water Management",
-    products: [
-      { name: "Pentair Automated Water Fill", brand: "Pentair", href: "https://www.pentair.com/en-us/products/residential/pool-spa-equipment/pool-white-goods/automatic_water_fillers.html" },
-      { name: "Pentair Overflow System", brand: "Pentair", href: "https://www.pentair.com/en-us/products/residential/pool-spa-equipment/pool-white-goods/gutter_drains.html" },
-    ],
-  },
-  {
-    title: "Heater & Automation",
-    products: [
-      { name: "Pentair MasterTemp 400k Heater", brand: "Pentair", href: "https://www.pentair.com/en-us/products/residential/pool-spa-equipment/pool-heaters/mastertemp_125_highperformanceheater.html" },
-      { name: "Pentair EasyTouch Remote Automation System", brand: "Pentair", href: "https://www.pentair.com/en-us/products/residential/pool-spa-equipment/pool-automation/easytouch_controlsystems.html" },
-    ],
-  },
-  {
-    title: "Interior Finish",
-    products: [
-      { name: "WetEdge Quartz or Pebble Interior Finish", brand: "WetEdge Technologies", href: "https://wetedgetechnologies.com/products" },
-    ],
-  },
-];
-
-const FEATURED_PDF = {
-  label: "Ten Steps to a Perfect Pool",
-  href: "https://houstoncoolpools.com/pdfs/10-Steps-to-the-Perfect-Pool-hcp.pdf",
-};
 
 export function ProductBrochuresClient() {
   return (
