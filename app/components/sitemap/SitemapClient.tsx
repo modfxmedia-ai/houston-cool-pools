@@ -49,7 +49,7 @@ const SECTIONS: Section[] = [
     eyebrow: "Your Pool, Your Way",
     intro: "Explore pool styles, custom features, remodels, and the full build sequence.",
     links: [
-      { label: "Pool Types & Styles", href: "/pool-types" },
+      { label: "Pool Types & Styles", href: "/custom-pool-types" },
       { label: "Custom Pool Features", href: "/custom-pool-features-1" },
       { label: "Pool Construction Sequence", href: "/construction-sequence-1" },
       { label: "Pool Remodel", href: "/pool-remodel" },

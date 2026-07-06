@@ -20,7 +20,7 @@ const SERVICES: Service[] = [
   {
     title: "Pool Designs",
     desc: "Custom-designed pools tailored to your backyard, lifestyle, and budget.",
-    href: "/pool-types",
+    href: "/custom-pool-types",
     image: "/images/gallery/drexel1.jpg",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" className="h-5 w-5">

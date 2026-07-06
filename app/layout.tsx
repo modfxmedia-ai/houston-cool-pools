@@ -5,6 +5,7 @@ import { BUSINESS, SITE_URL, localBusinessJsonLd } from "../lib/business";
 import { Header } from "./components/Header";
 import { BookNowBanner } from "./components/BookNowBanner";
 import { Footer } from "./components/Footer";
+import { TaglineBanner } from "./components/TaglineBanner";
 import { ChromeGate } from "./components/ChromeGate";
 
 const outfit = Outfit({
@@ -54,6 +55,7 @@ export default function RootLayout({
         </ChromeGate>
         {children}
         <ChromeGate>
+          <TaglineBanner />
           <Footer />
           <BookNowBanner />
         </ChromeGate>

@@ -37,7 +37,7 @@ export const PRIMARY_NAV: NavGroup[] = [
         heading: "Explore",
         links: [
           { label: "Pricing", href: "/pricing-65k-75k" },
-          { label: "Pool Types & Styles", href: "/pool-types" },
+          { label: "Pool Types & Styles", href: "/custom-pool-types" },
           { label: "Custom Pool Features", href: "/custom-pool-features-1" },
           { label: "Pool Remodel", href: "/pool-remodel" },
         ],

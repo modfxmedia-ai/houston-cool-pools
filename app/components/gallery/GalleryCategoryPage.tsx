@@ -296,36 +296,77 @@ export function GalleryCategoryPage({
       </section>
 
       {/* ===== Sticky category nav (follows on scroll) ===== */}
-      <div className="sticky top-[64px] z-30 border-b border-slate-200/80 bg-white/85 backdrop-blur-xl md:top-[72px]">
+      <div className="sticky top-[64px] z-30 border-b border-slate-200/80 bg-white/90 backdrop-blur-xl md:top-[72px]">
         {/* scroll progress line */}
         <motion.span
           aria-hidden
           style={{ scaleX: pageProgress }}
           className="absolute inset-x-0 top-0 h-[2px] origin-left bg-gradient-to-r from-[var(--color-pool)] to-[var(--color-pool-deep)]"
         />
-        <div className="mx-auto flex max-w-6xl items-center gap-3 px-6 py-3 md:px-10">
-          <span className="hidden shrink-0 text-[11px] font-bold uppercase tracking-[0.18em] text-slate-400 lg:inline">
-            Browse by:
-          </span>
-          <nav className="flex flex-1 items-center gap-2 overflow-x-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
-            {GALLERY_CATEGORIES.map((c) => {
-              const isActive = c.match === category;
-              return (
-                <Link
-                  key={c.href}
-                  href={c.href}
-                  aria-current={isActive ? "page" : undefined}
-                  className={`inline-flex shrink-0 items-center rounded-full px-4 py-2 text-xs font-bold uppercase tracking-[0.12em] transition-all ${
-                    isActive
-                      ? "bg-gradient-to-r from-[var(--color-pool)] to-[var(--color-pool-deep)] text-white shadow-[0_10px_24px_-10px_rgba(0,124,182,0.8)]"
-                      : "border border-slate-200 bg-white text-slate-600 hover:-translate-y-0.5 hover:border-[var(--color-pool)]/40 hover:text-[var(--color-pool-deep)]"
-                  }`}
-                >
-                  {c.label}
-                </Link>
-              );
-            })}
-          </nav>
+        <div className="mx-auto max-w-6xl px-6 py-3 md:px-10">
+          {/* Row 1: category tabs */}
+          <div className="flex items-center gap-3">
+            <span className="hidden shrink-0 text-[11px] font-bold uppercase tracking-[0.18em] text-slate-400 lg:inline">
+              Browse by:
+            </span>
+            <nav
+              aria-label="Gallery categories"
+              className="flex flex-1 items-center gap-2 overflow-x-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+            >
+              {GALLERY_CATEGORIES.map((c) => {
+                const isActive = c.match === category;
+                return (
+                  <Link
+                    key={c.href}
+                    href={c.href}
+                    aria-current={isActive ? "page" : undefined}
+                    className={`inline-flex shrink-0 items-center rounded-full px-4 py-2 text-xs font-bold uppercase tracking-[0.12em] transition-all ${
+                      isActive
+                        ? "bg-gradient-to-r from-[var(--color-pool)] to-[var(--color-pool-deep)] text-white shadow-[0_10px_24px_-10px_rgba(0,124,182,0.8)]"
+                        : "border border-slate-200 bg-white text-slate-600 hover:-translate-y-0.5 hover:border-[var(--color-pool)]/40 hover:text-[var(--color-pool-deep)]"
+                    }`}
+                  >
+                    {c.label}
+                  </Link>
+                );
+              })}
+            </nav>
+          </div>
+
+          {/* Row 2: page pills for the active collection */}
+          {activeCategory && activeCategory.slugs.length > 1 ? (
+            <div className="mt-2.5 flex items-center gap-3 border-t border-slate-200/60 pt-2.5">
+              <span className="shrink-0 text-[10px] font-bold uppercase tracking-[0.2em] text-slate-400">
+                {activeCategory.label} Galleries
+              </span>
+              <nav
+                aria-label={`${activeCategory.label} pages`}
+                className="flex flex-1 items-center gap-1.5 overflow-x-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+              >
+                {activeCategory.slugs.map((slug, i) => {
+                  const onThisPage = slug === pathname;
+                  return (
+                    <Link
+                      key={slug}
+                      href={slug}
+                      scroll={false}
+                      aria-current={onThisPage ? "page" : undefined}
+                      className={`inline-flex h-7 w-7 shrink-0 items-center justify-center rounded-full text-[11px] font-bold transition-all ${
+                        onThisPage
+                          ? "bg-[var(--color-navy-deep)] text-white shadow-[0_6px_16px_-6px_rgba(0,55,73,0.6)]"
+                          : "border border-slate-200 bg-white text-slate-500 hover:-translate-y-0.5 hover:border-[var(--color-pool)]/50 hover:text-[var(--color-pool-deep)]"
+                      }`}
+                    >
+                      {i + 1}
+                    </Link>
+                  );
+                })}
+                <span className="ml-1 shrink-0 text-[10px] font-semibold text-slate-400">
+                  of {activeCategory.slugs.length}
+                </span>
+              </nav>
+            </div>
+          ) : null}
         </div>
       </div>
 
@@ -376,6 +417,7 @@ export function GalleryCategoryPage({
                           <li key={slug}>
                             <Link
                               href={slug}
+                              scroll={false}
                               aria-current={onThisPage ? "page" : undefined}
                               className="group/sub flex items-center gap-2"
                             >
@@ -478,6 +520,7 @@ export function GalleryCategoryPage({
               {prevHref ? (
                 <Link
                   href={prevHref}
+                  scroll={false}
                   className="group flex items-center gap-4 rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition-all hover:-translate-y-0.5 hover:border-[var(--color-pool)]/40 hover:shadow-lg"
                 >
                   <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[var(--color-navy)]/5 text-[var(--color-navy)] transition-colors group-hover:bg-[var(--color-pool)] group-hover:text-white">
@@ -500,6 +543,7 @@ export function GalleryCategoryPage({
               {nextHref ? (
                 <Link
                   href={nextHref}
+                  scroll={false}
                   className="group flex items-center justify-end gap-4 rounded-2xl border border-slate-200 bg-white p-6 text-right shadow-sm transition-all hover:-translate-y-0.5 hover:border-[var(--color-pool)]/40 hover:shadow-lg"
                 >
                   <span>
