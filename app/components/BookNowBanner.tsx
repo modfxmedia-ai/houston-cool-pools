@@ -10,9 +10,22 @@ const ease = [0.22, 1, 0.36, 1] as const;
 
 const SHOW_AFTER_PX = 480;
 
-// Routes where the sticky "free quote" banner should never appear - typically
-// pages that already surface the quote form prominently.
-const HIDDEN_PATHS = ["/contact"];
+// Routes where the sticky "free quote" banner should never appear — pages
+// that already surface a full quote/contact form on-page (except the
+// homepage, which keeps the banner even though it has BookingForm).
+const HIDDEN_PATHS = [
+  "/contact",
+  "/free-pool-quote",
+  "/pricing-65k-75k",
+  "/pricing-75k-85k",
+  "/pricing-85k-95k",
+  "/pricing-95k-105k",
+  "/pricing-105k-125k",
+  "/how-to-choose-a-pool-builder",
+  "/pool-specifications",
+  "/custom-home-toc",
+  "/poolfinancing",
+];
 
 export function BookNowBanner() {
   const pathname = usePathname() ?? "";

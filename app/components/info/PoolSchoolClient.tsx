@@ -3,7 +3,6 @@
 import { useState } from "react";
 import { motion } from "motion/react";
 import { InfoHero } from "./InfoHero";
-import { PoolCtaBanner } from "../PoolCtaBanner";
 import { POOL_SCHOOL_LESSONS as LESSONS } from "../../../lib/pool-resources";
 
 const ease = [0.22, 1, 0.36, 1] as const;
@@ -120,8 +119,6 @@ export function PoolSchoolClient() {
           </div>
         </div>
       </section>
-
-      <PoolCtaBanner heading="Need hands-on help with your pool? Our service team is one call away." />
     </>
   );
 }

@@ -3,7 +3,6 @@
 import Link from "next/link";
 import { motion } from "motion/react";
 import { InfoHero } from "./InfoHero";
-import { PoolCtaBanner } from "../PoolCtaBanner";
 
 const ease = [0.22, 1, 0.36, 1] as const;
 
@@ -136,8 +135,6 @@ export function GlossaryClient({ letter, letterLabel, pageIndex, terms }: Glossa
           </div>
         </div>
       </section>
-
-      <PoolCtaBanner heading="Ready to talk pools with someone who speaks your language?" />
     </>
   );
 }

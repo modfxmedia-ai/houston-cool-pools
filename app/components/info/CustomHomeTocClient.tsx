@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion } from "motion/react";
 import { InfoHero } from "./InfoHero";
+import { ContactFormSection } from "../contact/ContactFormSection";
 import { CUSTOM_HOME_BUILDERS } from "../../../lib/custom-home-builders";
 
 const ease = [0.22, 1, 0.36, 1] as const;
@@ -92,6 +93,8 @@ export function CustomHomeTocClient() {
           </div>
         </div>
       </section>
+
+      <ContactFormSection />
     </>
   );
 }

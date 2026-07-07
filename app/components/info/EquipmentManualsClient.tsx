@@ -3,7 +3,6 @@
 import { useMemo, useState } from "react";
 import { motion } from "motion/react";
 import { InfoHero } from "./InfoHero";
-import { PoolCtaBanner } from "../PoolCtaBanner";
 import {
   EQUIPMENT_MANUAL_CATEGORIES as CATEGORIES,
   EQUIPMENT_MANUAL_PDF_BASE as PDF_BASE,
@@ -131,8 +130,6 @@ export function EquipmentManualsClient() {
           </div>
         </div>
       </section>
-
-      <PoolCtaBanner heading="Need help operating your pool equipment? Our service team can walk you through it." />
     </>
   );
 }

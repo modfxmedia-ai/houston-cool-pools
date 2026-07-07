@@ -2,7 +2,6 @@
 
 import { motion } from "motion/react";
 import { InfoHero } from "./InfoHero";
-import { PoolCtaBanner } from "../PoolCtaBanner";
 import {
   HURRICANE_STEPS as HURRICANE,
   FREEZE_STEPS as FREEZE,
@@ -135,8 +134,6 @@ export function SevereWeatherClient() {
           </motion.div>
         </div>
       </section>
-
-      <PoolCtaBanner heading="Questions about protecting your Houston pool? Our team is a call away." />
     </>
   );
 }

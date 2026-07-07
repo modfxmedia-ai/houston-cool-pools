@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { motion } from "motion/react";
 import { InfoHero } from "./InfoHero";
+import { ContactFormSection } from "../contact/ContactFormSection";
 
 const ease = [0.22, 1, 0.36, 1] as const;
 
@@ -140,6 +141,8 @@ export function HowToChooseClient() {
           </div>
         </div>
       </section>
+
+      <ContactFormSection />
     </>
   );
 }

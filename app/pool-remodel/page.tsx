@@ -3,7 +3,6 @@ import { PoolRemodelHero } from "../components/pool-remodel/PoolRemodelHero";
 import { PoolRemodelIntro } from "../components/pool-remodel/PoolRemodelIntro";
 import { RenovationIdeas } from "../components/pool-remodel/RenovationIdeas";
 import { WhatsCovered } from "../components/pool-remodel/WhatsCovered";
-import { PoolCtaBanner } from "../components/PoolCtaBanner";
 
 const TITLE = "Pool Renovation & Remodeling Services in Houston, TX";
 const DESCRIPTION =
@@ -99,7 +98,6 @@ export default function PoolRemodelPage() {
       <PoolRemodelIntro reasonGroups={REASON_GROUPS} />
       <WhatsCovered />
       <RenovationIdeas ideas={RENOVATION_IDEAS} />
-      <PoolCtaBanner heading="Ready to give your pool a fresh new look?" quote />
     </>
   );
 }

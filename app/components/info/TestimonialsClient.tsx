@@ -2,7 +2,6 @@
 
 import { motion } from "motion/react";
 import { InfoHero } from "./InfoHero";
-import { PoolCtaBanner } from "../PoolCtaBanner";
 
 const ease = [0.22, 1, 0.36, 1] as const;
 
@@ -180,8 +179,6 @@ export function TestimonialsClient() {
           </div>
         </div>
       </section>
-
-      <PoolCtaBanner heading="Ready to be our next 5-star review? Let's design your pool." />
     </>
   );
 }

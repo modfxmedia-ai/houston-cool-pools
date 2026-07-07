@@ -2,7 +2,6 @@
 
 import { motion } from "motion/react";
 import { InfoHero } from "./InfoHero";
-import { PoolCtaBanner } from "../PoolCtaBanner";
 import {
   PRODUCT_GROUPS as GROUPS,
   FEATURED_PRODUCT_PDF as FEATURED_PDF,
@@ -113,8 +112,6 @@ export function ProductBrochuresClient() {
           </div>
         </div>
       </section>
-
-      <PoolCtaBanner heading="Ready to design a pool built on premium equipment? Let's talk." />
     </>
   );
 }
