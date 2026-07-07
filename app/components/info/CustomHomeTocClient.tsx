@@ -2,7 +2,6 @@
 
 import { motion } from "motion/react";
 import { InfoHero } from "./InfoHero";
-import { PoolCtaBanner } from "../PoolCtaBanner";
 
 const ease = [0.22, 1, 0.36, 1] as const;
 
@@ -125,8 +124,6 @@ export function CustomHomeTocClient() {
           </div>
         </div>
       </section>
-
-      <PoolCtaBanner heading="Building a new home? Let's design the pool alongside it." />
     </>
   );
 }

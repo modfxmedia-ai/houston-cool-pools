@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useCallback, useEffect, useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
 import { CountUp } from "../why-choose/CountUp";
+import { ContactFormSection } from "../contact/ContactFormSection";
 import { PHONE_DISPLAY, PHONE_HREF } from "../../../lib/navigation";
 import {
   POOL_PRICING_TIERS,
@@ -357,52 +358,8 @@ export function PricingTierPage({ activeHref }: { activeHref: string }) {
       {/* ----- Financing Callout ----- */}
       <FinancingCallout />
 
-      {/* ----- CTA Banner ----- */}
-      <section className="relative isolate overflow-hidden bg-[var(--color-navy-deep)] px-6 py-20 text-white md:px-10">
-        <div className="absolute inset-0 -z-10">
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom,rgba(0,124,182,0.3),transparent_60%)]" />
-          <motion.div
-            aria-hidden
-            className="absolute -bottom-32 left-1/2 h-80 w-[640px] -translate-x-1/2 rounded-full bg-[var(--color-pool)]/15 blur-[150px]"
-            animate={{ opacity: [0.4, 0.75, 0.4] }}
-            transition={{ duration: 9, repeat: Infinity, ease: "easeInOut" }}
-          />
-        </div>
-
-        <motion.div
-          initial={{ opacity: 0, y: 24 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.4 }}
-          transition={{ duration: 0.7, ease }}
-          className="relative mx-auto flex max-w-5xl flex-col items-center gap-8 text-center md:flex-row md:justify-between md:text-left"
-        >
-          <div>
-            <h2 className="font-[family-name:var(--font-display)] text-3xl leading-tight md:text-4xl">
-              Ready to build your dream pool?
-            </h2>
-            <p className="mt-3 text-white/70">
-              Tell us your vision and we&rsquo;ll put together a custom quote.
-            </p>
-          </div>
-          <div className="flex shrink-0 flex-wrap items-center justify-center gap-3">
-            <Link
-              href="/contact"
-              className="group inline-flex items-center gap-3 rounded-full bg-white px-8 py-4 text-xs font-bold uppercase tracking-[0.22em] text-[var(--color-navy-deep)] shadow-lg transition-all hover:-translate-y-0.5 hover:shadow-2xl"
-            >
-              Get Your Free Estimate
-              <svg viewBox="0 0 24 24" fill="none" className="h-3 w-3 transition-transform group-hover:translate-x-1">
-                <path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" />
-              </svg>
-            </Link>
-            <a
-              href={PHONE_HREF}
-              className="inline-flex items-center gap-2 rounded-full border border-white/30 bg-white/5 px-7 py-4 text-xs font-bold uppercase tracking-[0.22em] text-white backdrop-blur transition-colors hover:bg-white/10"
-            >
-              Call {PHONE_DISPLAY}
-            </a>
-          </div>
-        </motion.div>
-      </section>
+      {/* ----- Contact Form ----- */}
+      <ContactFormSection />
 
       {/* ----- Lightbox ----- */}
       <Lightbox

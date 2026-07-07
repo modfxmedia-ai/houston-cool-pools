@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { PoolSpecsHero } from "../components/pool-specifications/PoolSpecsHero";
 import { SpecsGrid } from "../components/pool-specifications/SpecsGrid";
 import { SpecsShowcase } from "../components/pool-specifications/SpecsShowcase";
-import { PoolCtaBanner } from "../components/PoolCtaBanner";
 
 const TITLE = "Detailed Pool Specifications in Houston, TX";
 const DESCRIPTION =
@@ -107,7 +106,6 @@ export default function PoolSpecificationsPage() {
       <PoolSpecsHero />
       <SpecsGrid categories={SPEC_CATEGORIES} />
       <SpecsShowcase />
-      <PoolCtaBanner heading="Have questions about your build?" />
     </>
   );
 }
