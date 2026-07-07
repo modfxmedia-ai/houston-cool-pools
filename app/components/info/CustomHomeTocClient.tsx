@@ -69,6 +69,8 @@ export function CustomHomeTocClient() {
           { label: "Pool Information", href: "/pool-information" },
           { label: "Custom Home Builder" },
         ]}
+        backgroundImage="/images/gallery/hd/estate-premier.jpg"
+        backgroundAlt="Premier custom home pool build by Houston Cool Pools"
       />
 
       <section className="bg-white py-16 md:py-20">

@@ -55,8 +55,8 @@ export function PoolDefinitionsClient() {
           { label: "Home", href: "/" },
           { label: "Pool Information", href: "/pool-information" },
           { label: "Pool Terms" },
-        ]}
-      />
+        ]}        backgroundImage="/images/gallery/hd/estate-twilight.jpg"
+        backgroundAlt="Twilight custom pool estate build by Houston Cool Pools"      />
 
       <section className="bg-white py-16 md:py-20">
         <div className="mx-auto max-w-4xl px-6 md:px-10">

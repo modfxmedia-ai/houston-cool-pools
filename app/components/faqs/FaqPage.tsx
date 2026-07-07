@@ -1,6 +1,7 @@
 "use client";
 
 import { useRef } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { motion, useScroll, useTransform } from "motion/react";
 import { FAQS, type Faq } from "../../../lib/faqs";
@@ -57,6 +58,17 @@ export function FaqPage({ faq, index, total, prev, next }: FaqPageProps) {
         ref={heroRef}
         className="relative isolate overflow-hidden bg-[var(--color-navy-deep)] pt-36 text-white md:pt-44 lg:pt-48"
       >
+        <div className="absolute inset-0">
+          <Image
+            src="/images/gallery/hd/feature-pool-3.jpg"
+            alt=""
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover object-center opacity-40"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-[var(--color-navy-deep)]/85 via-[var(--color-navy-deep)]/72 to-[var(--color-navy-deep)]" />
+        </div>
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(0,124,182,0.32),transparent_62%)]" />
         <motion.div
           style={{ y: orbY }}

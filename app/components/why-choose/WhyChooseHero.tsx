@@ -101,7 +101,7 @@ export function WhyChooseHero() {
           whileInView="show"
           viewport={{ once: true, amount: 0.3 }}
           variants={{ show: { transition: { staggerChildren: 0.1 } } }}
-          className="grid grid-cols-2 gap-4 md:grid-cols-4"
+          className="mx-auto grid max-w-4xl grid-cols-1 justify-center gap-4 sm:grid-cols-3"
         >
           {HEADLINE_STATS.map((s) => (
             <motion.li

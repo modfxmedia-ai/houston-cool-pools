@@ -31,6 +31,8 @@ export function AreasWeServeClient() {
         title="Custom pools across the greater Houston metro"
         subtitle={`Houston Cool Pools has been designing and constructing custom gunite pools across the Houston area since 1996. Every city listed below is somewhere we've built - click through for service-specific pages for your area.`}
         crumbs={[{ label: "Home", href: "/" }, { label: "Areas We Serve" }]}
+        backgroundImage="/images/gallery/hd/clark-estate.jpg"
+        backgroundAlt="Clark estate custom pool build by Houston Cool Pools"
       />
 
       {/* Stats */}

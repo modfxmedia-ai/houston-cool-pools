@@ -60,6 +60,8 @@ export function SevereWeatherClient() {
           { label: "Pool Information", href: "/pool-information" },
           { label: "Severe Weather" },
         ]}
+        backgroundImage="/images/gallery/hd/sunset-pool.jpg"
+        backgroundAlt="Sunset over a Houston Cool Pools backyard build"
       />
 
       <section className="bg-[#f7f6f2] py-16 md:py-20">

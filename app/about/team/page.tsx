@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { buildPageMetadata } from "../../../lib/business";
 import { TEAM } from "../../../lib/team";
@@ -12,6 +13,17 @@ export default function TeamPage() {
     <>
       {/* ─── Hero ─── */}
       <section className="relative overflow-hidden bg-[var(--color-navy-deep)] pt-36 pb-20 text-white md:pt-44 md:pb-24 lg:pt-48">
+        <div className="absolute inset-0">
+          <Image
+            src="/images/gallery/hd/family-2.jpg"
+            alt=""
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover object-center opacity-40"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-[var(--color-navy-deep)]/85 via-[var(--color-navy-deep)]/72 to-[var(--color-navy-deep)]" />
+        </div>
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(0,124,182,0.4),transparent_60%)]" />
         <div className="absolute -left-32 top-1/3 h-[420px] w-[420px] rounded-full bg-[var(--color-pool)]/20 blur-[140px]" />
         <div className="absolute -right-32 bottom-0 h-[420px] w-[420px] rounded-full bg-[var(--color-pool-deep)]/30 blur-[140px]" />

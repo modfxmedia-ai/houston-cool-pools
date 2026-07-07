@@ -167,6 +167,8 @@ export function SitemapClient() {
         title="Every page on Houston Cool Pools"
         subtitle="A complete, human-friendly index of the site - grouped by topic so you can find pricing, galleries, FAQs, pool school and everything in between in one place."
         crumbs={[{ label: "Home", href: "/" }, { label: "Sitemap" }]}
+        backgroundImage="/images/gallery/hd/nc-resort.jpg"
+        backgroundAlt="Resort-style Houston Cool Pools backyard"
       />
 
       {/* Stats bar */}

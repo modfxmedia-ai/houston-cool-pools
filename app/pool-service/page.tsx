@@ -167,7 +167,7 @@ export default function PoolServicePage() {
       <section className="relative overflow-hidden bg-gradient-to-br from-[var(--color-navy-deep)] to-[var(--color-pool)] px-6 py-16 text-white md:px-10">
         <div className="relative mx-auto flex max-w-5xl flex-col items-center gap-8 text-center md:flex-row md:justify-between md:text-left">
           <h2 className="font-[family-name:var(--font-display)] text-3xl leading-tight md:text-4xl">
-            Building our reputation one pool at a time
+            Ready to keep your pool in perfect condition?
           </h2>
           <Link
             href="/contact"

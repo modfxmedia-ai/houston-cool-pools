@@ -103,6 +103,8 @@ export function PoolFinancingClient() {
           { label: "Pool Information", href: "/pool-information" },
           { label: "Financing" },
         ]}
+        backgroundImage="/images/gallery/hd/estate-luxe.jpg"
+        backgroundAlt="Luxury Houston Cool Pools backyard build"
       />
 
       <section className="relative bg-white py-16 md:py-20">
@@ -122,6 +124,58 @@ export function PoolFinancingClient() {
               We have, however, worked with each of them and can attest to their service and
               professionalism.
             </p>
+          </motion.div>
+
+          {/* ----- Financing highlights (intro + 4 bullets) ----- */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.6, ease }}
+            className="relative mx-auto mt-10 max-w-4xl overflow-hidden rounded-3xl bg-gradient-to-br from-[var(--color-navy-deep)] via-[var(--color-pool-deep)] to-[var(--color-navy-deep)] p-6 text-white shadow-[0_28px_70px_-30px_rgba(0,124,182,0.55)] ring-1 ring-[var(--color-pool)]/30 md:mt-12 md:p-9"
+          >
+            <span
+              aria-hidden
+              className="pointer-events-none absolute -right-16 -top-16 h-56 w-56 rounded-full bg-[var(--color-pool)]/30 blur-3xl"
+            />
+            <span
+              aria-hidden
+              className="pointer-events-none absolute -left-14 bottom-0 h-52 w-52 rounded-full bg-[var(--color-gold-light)]/20 blur-3xl"
+            />
+            <span
+              aria-hidden
+              className="absolute inset-x-0 top-0 h-0.5 bg-gradient-to-r from-[var(--color-pool)] via-[var(--color-gold-light)] to-[var(--color-gold)]"
+            />
+            <div className="relative">
+              <p className="inline-flex items-center gap-2 rounded-full border border-[var(--color-gold-light)]/40 bg-[var(--color-gold-light)]/10 px-3 py-1 text-[10.5px] font-bold uppercase tracking-[0.24em] text-[var(--color-gold-light)]">
+                <span className="h-1.5 w-1.5 rounded-full bg-[var(--color-gold-light)]" />
+                Flexible options for qualified homeowners
+              </p>
+              <p className="mt-4 text-[16px] leading-relaxed text-white/85 md:text-[17px]">
+                We work with trusted lending partners to provide flexible financing
+                options for qualified homeowners.
+              </p>
+              <ul className="mt-6 grid gap-3 sm:grid-cols-2">
+                {[
+                  "Low Monthly Payments",
+                  "Fixed Interest Rates",
+                  "Fast Approval Decisions",
+                  "Finance Up to 100%",
+                ].map((b) => (
+                  <li
+                    key={b}
+                    className="flex items-start gap-3 rounded-2xl border border-white/15 bg-white/[0.06] px-4 py-3 text-[14.5px] font-semibold leading-snug text-white backdrop-blur-md"
+                  >
+                    <span className="mt-0.5 grid h-6 w-6 flex-none place-items-center rounded-full bg-[var(--color-pool)] text-white">
+                      <svg viewBox="0 0 24 24" fill="none" className="h-3.5 w-3.5">
+                        <path d="M5 13l4 4L19 7" stroke="currentColor" strokeWidth="2.6" strokeLinecap="round" strokeLinejoin="round" />
+                      </svg>
+                    </span>
+                    {b}
+                  </li>
+                ))}
+              </ul>
+            </div>
           </motion.div>
 
           {(() => {

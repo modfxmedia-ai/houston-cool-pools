@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { motion } from "motion/react";
 import { CountUp } from "../why-choose/CountUp";
@@ -18,7 +19,16 @@ export function PoolInfoHero() {
   return (
     <section className="relative isolate overflow-hidden bg-[var(--color-navy-deep)] pt-36 text-white md:pt-44 lg:pt-48">
       <div className="absolute inset-0 -z-10">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_25%,rgba(0,124,182,0.4),transparent_60%)]" />
+        <Image
+          src="/images/gallery/hd/courtyard-pool.jpg"
+          alt=""
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover object-center opacity-40"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-[var(--color-navy-deep)]/85 via-[var(--color-navy-deep)]/70 to-[var(--color-navy-deep)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_25%,rgba(0,124,182,0.35),transparent_60%)]" />
         <motion.div
           aria-hidden
           className="absolute -left-40 top-1/3 h-[520px] w-[520px] rounded-full bg-[var(--color-pool)]/15 blur-[160px]"

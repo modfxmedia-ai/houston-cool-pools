@@ -11,15 +11,15 @@ import {
   useInView,
 } from "motion/react";
 import { useEffect, useRef, useState } from "react";
-import { QUOTE_HREF, PHONE_DISPLAY, PHONE_HREF } from "../../../lib/navigation";
+import { QUOTE_HREF } from "../../../lib/navigation";
 
 const ease = [0.22, 1, 0.36, 1] as const;
 
 /* Bright, sunny backyard lifestyle photos that auto-rotate behind the hero. */
 const HERO_SLIDES = [
-  { src: "/images/hero/slide-1.png", alt: "Family enjoying a Houston backyard pool" },
-  { src: "/images/hero/slide-1b.png", alt: "Sunny poolside family moments" },
-  { src: "/images/hero/slide-1c.png", alt: "Kids playing in a custom Houston pool" },
+  { src: "/images/hero/slide-1-sunny.png", alt: "Family enjoying a sunny Houston backyard pool" },
+  { src: "/images/hero/slide-2-sunny.png", alt: "Sunny poolside family moments in Houston" },
+  { src: "/images/hero/slide-1c-family.png", alt: "Family relaxing in a custom Houston pool" },
 ] as const;
 
 const SLIDE_INTERVAL_MS = 5500;
@@ -135,14 +135,14 @@ function HeroVisual() {
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1.15, duration: 0.7, ease }}
-            className="mt-10 flex flex-col items-start gap-5 sm:flex-row sm:items-center"
+            className="mt-8 flex flex-col items-start gap-5 sm:flex-row sm:items-center"
           >
             <Link
               href={QUOTE_HREF}
-              className="group relative inline-flex items-center gap-3 overflow-hidden rounded-full bg-[var(--color-pool)] px-8 py-4 text-[11px] font-bold uppercase tracking-[0.28em] text-white shadow-[0_12px_40px_-12px_rgba(0,124,182,0.85)] transition-all hover:shadow-[0_18px_55px_-12px_rgba(79,195,224,1)]"
+              className="group relative inline-flex items-center gap-2.5 overflow-hidden rounded-full bg-[var(--color-pool)] px-6 py-3 text-[10px] font-bold uppercase tracking-[0.26em] text-white shadow-[0_12px_40px_-12px_rgba(0,124,182,0.85)] transition-all hover:shadow-[0_18px_55px_-12px_rgba(79,195,224,1)]"
             >
               <span className="relative z-10">Get Your Free Estimate</span>
-              <span className="relative z-10 grid h-7 w-7 place-items-center rounded-full bg-white/15 transition-transform group-hover:translate-x-1">
+              <span className="relative z-10 grid h-6 w-6 place-items-center rounded-full bg-white/15 transition-transform group-hover:translate-x-1">
                 <svg className="h-3 w-3" viewBox="0 0 16 16" fill="none">
                   <path
                     d="M1 8h13M9 3l5 5-5 5"
@@ -155,28 +155,6 @@ function HeroVisual() {
               </span>
               <span className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/30 to-transparent transition-transform duration-700 group-hover:translate-x-full" />
             </Link>
-
-            <a href={PHONE_HREF} className="group inline-flex items-center gap-3 text-white">
-              <span className="grid h-12 w-12 place-items-center rounded-full border border-white/25 transition-colors group-hover:border-[var(--color-pool)] group-hover:bg-[var(--color-pool)]/10">
-                <svg className="h-4 w-4" viewBox="0 0 24 24" fill="none">
-                  <path
-                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.37 1.9.72 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.35 1.85.59 2.81.72A2 2 0 0 1 22 16.92z"
-                    stroke="currentColor"
-                    strokeWidth="1.6"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
-              </span>
-              <span className="flex flex-col leading-tight">
-                <span className="text-[10px] font-semibold uppercase tracking-[0.28em] text-white/55">
-                  Call Today
-                </span>
-                <span className="font-[family-name:var(--font-display)] text-xl text-white transition-colors group-hover:text-[var(--color-gold-light)]">
-                  {PHONE_DISPLAY}
-                </span>
-              </span>
-            </a>
           </motion.div>
 
           {/* Mobile collage - shown beneath the hero copy on small screens */}
@@ -216,24 +194,6 @@ function HeroVisual() {
         </svg>
       </div>
 
-      {/* Scroll cue - bottom center */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1.8, duration: 0.6 }}
-        className="absolute bottom-10 left-1/2 z-20 hidden -translate-x-1/2 flex-col items-center gap-2 md:flex"
-      >
-        <span className="text-[10px] font-semibold uppercase tracking-[0.36em] text-white/55">
-          Scroll
-        </span>
-        <motion.div
-          animate={{ y: [0, 8, 0] }}
-          transition={{ duration: 1.8, repeat: Infinity, ease: "easeInOut" }}
-          className="flex h-9 w-6 items-start justify-center rounded-full border border-white/40 p-1"
-        >
-          <span className="h-2 w-[2px] rounded-full bg-white/70" />
-        </motion.div>
-      </motion.div>
     </section>
   );
 }

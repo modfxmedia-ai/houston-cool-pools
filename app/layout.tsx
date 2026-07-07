@@ -44,7 +44,7 @@ export default function RootLayout({
       lang="en"
       className={`${outfit.variable} ${montserrat.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">
+      <body className="min-h-full flex flex-col" suppressHydrationWarning>
         <script
           type="application/ld+json"
           // eslint-disable-next-line react/no-danger

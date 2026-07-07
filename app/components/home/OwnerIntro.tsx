@@ -122,29 +122,6 @@ export function OwnerIntro() {
                 </div>
               </div>
             </div>
-
-            {/* Floating years badge - top-right so it doesn't overlap the name/title text at the bottom of the portrait */}
-            <motion.div
-              initial={{ opacity: 0, y: -18, scale: 0.85 }}
-              whileInView={{ opacity: 1, y: 0, scale: 1 }}
-              viewport={{ once: true, amount: 0.5 }}
-              transition={{ duration: 0.7, delay: 0.6, ease }}
-              className="absolute -top-5 right-4 flex items-center gap-3 rounded-2xl bg-[var(--color-navy-deep)] px-4 py-3 shadow-[0_20px_50px_-15px_rgba(0,27,36,0.55)] ring-1 ring-[var(--color-pool)]/30 md:-top-6 md:right-6"
-            >
-              <span className="grid h-10 w-10 place-items-center rounded-xl bg-gradient-to-br from-[var(--color-pool)] to-[var(--color-pool-deep)] text-white">
-                <svg viewBox="0 0 24 24" fill="none" className="h-5 w-5">
-                  <path d="M12 8v4l3 2M12 22a10 10 0 1 1 0-20 10 10 0 0 1 0 20Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                </svg>
-              </span>
-              <div className="leading-tight text-white">
-                <p className="font-display text-[19px] font-extrabold">
-                  20<span className="text-[var(--color-gold-light)]">+</span> yrs
-                </p>
-                <p className="text-[9.5px] font-bold uppercase tracking-[0.2em] text-[var(--color-gold-light)]">
-                  Pool industry
-                </p>
-              </div>
-            </motion.div>
           </motion.div>
 
           {/* ---------- BIO ---------- */}
@@ -175,9 +152,8 @@ export function OwnerIntro() {
               className="mt-5 text-[16px] leading-relaxed text-slate-600"
             >
               For more than 28 years, Mike has been designing and building the kind of
-              backyards Houston families gather around. 20+ years in the pool industry,
-              a relentless eye for craft, and a soft spot for lazy rivers and Texas
-              summer nights.
+              backyards Houston families gather around — a relentless eye for craft,
+              and a soft spot for lazy rivers and Texas summer nights.
             </motion.p>
 
             {/* Signature chips */}

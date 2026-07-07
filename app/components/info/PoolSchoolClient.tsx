@@ -22,6 +22,8 @@ export function PoolSchoolClient() {
           { label: "Pool Information", href: "/pool-information" },
           { label: "Pool School" },
         ]}
+        backgroundImage="/images/gallery/hd/lifestyle-1.jpg"
+        backgroundAlt="Houston Cool Pools lifestyle backyard scene"
       />
 
       <section className="bg-[#f7f6f2] py-16 md:py-20">

@@ -106,6 +106,8 @@ export function TestimonialsClient() {
           { label: "Pool Information", href: "/pool-information" },
           { label: "Customer Reviews" },
         ]}
+        backgroundImage="/images/gallery/hd/family-1.jpg"
+        backgroundAlt="Houston family enjoying their Houston Cool Pools backyard"
       />
 
       <section className="bg-[#f7f6f2] py-16 md:py-20">

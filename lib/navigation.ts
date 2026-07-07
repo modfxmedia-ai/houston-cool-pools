@@ -62,9 +62,7 @@ export const PRIMARY_NAV: NavGroup[] = [
       {
         heading: "Learn",
         links: [
-          { label: "Pool School", href: "/pool-school-1" },
           { label: "FAQs", href: "/faqs1" },
-          { label: "Product Brochures", href: "/product-brochures" },
         ],
       },
       {

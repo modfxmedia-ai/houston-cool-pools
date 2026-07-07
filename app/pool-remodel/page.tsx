@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { PoolRemodelHero } from "../components/pool-remodel/PoolRemodelHero";
 import { PoolRemodelIntro } from "../components/pool-remodel/PoolRemodelIntro";
 import { RenovationIdeas } from "../components/pool-remodel/RenovationIdeas";
+import { WhatsCovered } from "../components/pool-remodel/WhatsCovered";
 import { PoolCtaBanner } from "../components/PoolCtaBanner";
 
 const TITLE = "Pool Renovation & Remodeling Services in Houston, TX";
@@ -71,17 +72,18 @@ const REASON_GROUPS: { heading: string; items: string[] }[] = [
   },
 ];
 
-const RENOVATION_IDEAS: { label: string; icon: string }[] = [
-  { label: "Resurfacing the pool", icon: "resurface" },
-  { label: "Installing new tiles", icon: "tile" },
-  { label: "New coping", icon: "coping" },
-  { label: "Installing LED lighting", icon: "light" },
-  { label: "Adding a spa", icon: "spa" },
-  { label: "Putting in new equipment", icon: "equipment" },
-  { label: "Update decking", icon: "decking" },
-  { label: "Salt chlorination systems", icon: "salt" },
-  { label: "Heat pumps", icon: "heat" },
-  { label: "Adding waterfall features", icon: "waterfall" },
+const RENOVATION_IDEAS: { label: string; icon: string; href?: string }[] = [
+  { label: "Resurfacing the pool", icon: "resurface", href: "https://houstoncoolpools.com/pdf/DisposableSandSiltBagIG.pdf" },
+  { label: "Installing new tiles", icon: "tile", href: "https://houstoncoolpools.com/pdf/DisposableSandSiltBagIG.pdf" },
+  { label: "New coping", icon: "coping", href: "https://houstoncoolpools.com/pdf/Rebel_Warrior_Tucson_Eng_OM_20181025_062540.pdf" },
+  { label: "Installing LED lighting", icon: "light", href: "https://houstoncoolpools.com/pdf/ParamountOwnersManual.pdf" },
+  { label: "Adding a spa", icon: "spa", href: "https://houstoncoolpools.com/pdf/Prowler820-830EOM.pdf" },
+  { label: "Putting in new equipment", icon: "equipment", href: "https://houstoncoolpools.com/pdf/RacerEngOM.pdf" },
+  { label: "Update decking", icon: "decking", href: "https://houstoncoolpools.com/pdf/RacerEngOM.pdf" },
+  { label: "Salt chlorination systems", icon: "salt", href: "https://houstoncoolpools.com/pdf/RacerEngOM.pdf" },
+  { label: "Heat pumps", icon: "heat", href: "https://houstoncoolpools.com/pdf/RacerEngOM.pdf" },
+  { label: "Adding waterfall features", icon: "waterfall", href: "https://houstoncoolpools.com/pdf/RacerEngOM.pdf" },
+  { label: "Automatic pool cleaner", icon: "equipment", href: "https://houstoncoolpools.com/pdf/RacerEngOM.pdf" },
 ];
 
 export default function PoolRemodelPage() {
@@ -95,8 +97,9 @@ export default function PoolRemodelPage() {
 
       <PoolRemodelHero />
       <PoolRemodelIntro reasonGroups={REASON_GROUPS} />
+      <WhatsCovered />
       <RenovationIdeas ideas={RENOVATION_IDEAS} />
-      <PoolCtaBanner heading="Building our reputation one pool at a time" quote />
+      <PoolCtaBanner heading="Ready to give your pool a fresh new look?" quote />
     </>
   );
 }

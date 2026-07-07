@@ -22,6 +22,8 @@ export function ProductBrochuresClient() {
           { label: "Pool Information", href: "/pool-information" },
           { label: "Product Brochures" },
         ]}
+        backgroundImage="/images/gallery/hd/feature-pool-2.jpg"
+        backgroundAlt="Feature-rich Houston Cool Pools build with premium equipment"
       />
 
       <section className="bg-white py-16 md:py-20">

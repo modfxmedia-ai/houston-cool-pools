@@ -44,6 +44,8 @@ export function GlossaryClient({ letter, letterLabel, pageIndex, terms }: Glossa
           { label: "Pool Information", href: "/pool-information" },
           { label: `Glossary - ${letterLabel}` },
         ]}
+        backgroundImage="/images/gallery/hd/modern-geometric.jpg"
+        backgroundAlt="Modern geometric custom pool design"
       />
 
       <section className="bg-white pt-10 pb-16 md:pt-14 md:pb-20">

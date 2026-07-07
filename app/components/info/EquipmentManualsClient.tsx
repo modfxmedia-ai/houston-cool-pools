@@ -36,6 +36,8 @@ export function EquipmentManualsClient() {
           { label: "Pool Information", href: "/pool-information" },
           { label: "Equipment Manuals" },
         ]}
+        backgroundImage="/images/gallery/hd/feature-pool-1.jpg"
+        backgroundAlt="Houston Cool Pools custom pool with feature waterline tile and equipment installed"
       />
 
       <section className="bg-[#f7f6f2] py-16 md:py-20">

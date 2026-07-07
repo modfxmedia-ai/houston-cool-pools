@@ -36,7 +36,7 @@ export function About() {
           className="relative mb-14 sm:mb-0"
         >
           <div className="grid h-[420px] grid-cols-6 grid-rows-6 gap-2 sm:h-[560px] sm:gap-3 md:h-[680px]">
-            <MosaicImage src={GALLERY[0].src} alt={GALLERY[0].alt} className="col-span-4 row-span-4" delay={0} priority objectPosition="25% 40%" />
+            <MosaicImage src={GALLERY[0].src} alt={GALLERY[0].alt} className="col-span-4 row-span-4" delay={0} priority objectPosition="left top" />
             <MosaicImage src={GALLERY[1].src} alt={GALLERY[1].alt} className="col-span-2 row-span-2" delay={0.1} />
             <MosaicImage src={GALLERY[2].src} alt={GALLERY[2].alt} className="col-span-2 row-span-2" delay={0.18} />
             <MosaicImage src={GALLERY[3].src} alt={GALLERY[3].alt} className="col-span-2 row-span-2" delay={0.26} />

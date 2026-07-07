@@ -49,6 +49,8 @@ export function HowToChooseClient() {
           { label: "Pool Information", href: "/pool-information" },
           { label: "Choose The Right Builder" },
         ]}
+        backgroundImage="/images/gallery/hd/heritage-estate.jpg"
+        backgroundAlt="Heritage-style custom pool build"
       />
 
       <section className="bg-[#f7f6f2] py-16 md:py-20">

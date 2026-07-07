@@ -4,7 +4,7 @@ import { motion } from "motion/react";
 
 const ease = [0.22, 1, 0.36, 1] as const;
 
-export type RenovationIdea = { label: string; icon: string };
+export type RenovationIdea = { label: string; icon: string; href?: string };
 
 function IdeaIcon({ icon }: { icon: string }) {
   const paths: Record<string, React.ReactNode> = {
@@ -116,25 +116,57 @@ export function RenovationIdeas({ ideas }: { ideas: RenovationIdea[] }) {
           variants={{ show: { transition: { staggerChildren: 0.07 } } }}
           className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5"
         >
-          {ideas.map((idea, i) => (
-            <motion.li
-              key={idea.label}
-              variants={{
-                hidden: { opacity: 0, y: 26 },
-                show: { opacity: 1, y: 0, transition: { duration: 0.55, ease } },
-              }}
-              whileHover={{ y: -6 }}
-              className="group relative flex flex-col items-center gap-4 overflow-hidden rounded-2xl border border-white/10 bg-white/[0.04] p-7 text-center backdrop-blur-md transition-colors hover:border-[var(--color-pool)]/40 hover:bg-white/[0.07]"
-            >
-              <span className="pointer-events-none absolute right-3 top-2 font-[family-name:var(--font-display)] text-4xl font-bold text-white/5 transition-colors group-hover:text-[var(--color-pool)]/20">
-                {String(i + 1).padStart(2, "0")}
-              </span>
-              <span className="grid h-14 w-14 place-items-center rounded-2xl bg-gradient-to-br from-[var(--color-pool)]/25 to-[var(--color-pool-deep)]/20 text-[var(--color-pool)] ring-1 ring-white/10 transition-transform duration-300 group-hover:scale-110 group-hover:text-[var(--color-gold-light)]">
-                <IdeaIcon icon={idea.icon} />
-              </span>
-              <span className="text-sm font-semibold text-white/85">{idea.label}</span>
-            </motion.li>
-          ))}
+          {ideas.map((idea, i) => {
+            const cardClass =
+              "group relative flex h-full flex-col items-center gap-4 overflow-hidden rounded-2xl border border-white/10 bg-white/[0.04] p-7 text-center backdrop-blur-md transition-colors hover:border-[var(--color-pool)]/40 hover:bg-white/[0.07]";
+            const inner = (
+              <>
+                <span className="pointer-events-none absolute right-3 top-2 font-[family-name:var(--font-display)] text-4xl font-bold text-white/5 transition-colors group-hover:text-[var(--color-pool)]/20">
+                  {String(i + 1).padStart(2, "0")}
+                </span>
+                <span className="grid h-14 w-14 place-items-center rounded-2xl bg-gradient-to-br from-[var(--color-pool)]/25 to-[var(--color-pool-deep)]/20 text-[var(--color-pool)] ring-1 ring-white/10 transition-transform duration-300 group-hover:scale-110 group-hover:text-[var(--color-gold-light)]">
+                  <IdeaIcon icon={idea.icon} />
+                </span>
+                <span className="flex min-h-[2.75rem] items-center justify-center text-sm font-semibold leading-snug text-white/85">
+                  {idea.label}
+                </span>
+                {idea.href ? (
+                  <span className="mt-auto inline-flex items-center gap-1 text-[10px] font-bold uppercase tracking-[0.22em] text-[var(--color-pool)] transition-colors group-hover:text-[var(--color-gold-light)]">
+                    View PDF
+                    <svg viewBox="0 0 24 24" fill="none" className="h-2.5 w-2.5">
+                      <path d="M7 17L17 7M9 7h8v8" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" />
+                    </svg>
+                  </span>
+                ) : null}
+              </>
+            );
+
+            return (
+              <motion.li
+                key={`${idea.label}-${i}`}
+                variants={{
+                  hidden: { opacity: 0, y: 26 },
+                  show: { opacity: 1, y: 0, transition: { duration: 0.55, ease } },
+                }}
+                whileHover={{ y: -6 }}
+                className="h-full"
+              >
+                {idea.href ? (
+                  <a
+                    href={idea.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={`${idea.label} — open PDF in new tab`}
+                    className={cardClass}
+                  >
+                    {inner}
+                  </a>
+                ) : (
+                  <div className={cardClass}>{inner}</div>
+                )}
+              </motion.li>
+            );
+          })}
         </motion.ul>
       </div>
     </section>

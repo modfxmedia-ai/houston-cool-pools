@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { motion } from "motion/react";
 
@@ -12,13 +13,41 @@ export type InfoHeroProps = {
   title: string;
   subtitle?: string;
   crumbs?: InfoHeroCrumb[];
+  /** Optional full-bleed background photo behind the hero copy. */
+  backgroundImage?: string;
+  /** Optional alt text for the background image (defaults to empty for decorative). */
+  backgroundAlt?: string;
 };
 
-export function InfoHero({ eyebrow, title, subtitle, crumbs }: InfoHeroProps) {
+export function InfoHero({
+  eyebrow,
+  title,
+  subtitle,
+  crumbs,
+  backgroundImage,
+  backgroundAlt = "",
+}: InfoHeroProps) {
   return (
     <section className="relative isolate overflow-hidden bg-[var(--color-navy-deep)] pt-32 text-white md:pt-40 lg:pt-44">
-      <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_top,rgba(0,124,182,0.28),transparent_65%)]" />
-      <div className="absolute inset-0 -z-10 bg-gradient-to-b from-transparent via-[var(--color-navy-deep)]/70 to-[var(--color-navy-deep)]" />
+      {backgroundImage ? (
+        <div className="absolute inset-0 -z-10">
+          <Image
+            src={backgroundImage}
+            alt={backgroundAlt}
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover object-center opacity-40"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-[var(--color-navy-deep)]/80 via-[var(--color-navy-deep)]/70 to-[var(--color-navy-deep)]" />
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_20%,rgba(0,124,182,0.32),transparent_60%)]" />
+        </div>
+      ) : (
+        <>
+          <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_top,rgba(0,124,182,0.28),transparent_65%)]" />
+          <div className="absolute inset-0 -z-10 bg-gradient-to-b from-transparent via-[var(--color-navy-deep)]/70 to-[var(--color-navy-deep)]" />
+        </>
+      )}
 
       {/* Ambient orbs */}
       <motion.div

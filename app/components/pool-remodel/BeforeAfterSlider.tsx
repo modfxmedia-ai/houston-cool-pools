@@ -122,12 +122,22 @@ export function BeforeAfterSlider({
         </div>
       </div>
 
-      {/* Corner labels */}
-      <span className="pointer-events-none absolute left-4 top-4 inline-flex items-center gap-1.5 rounded-full bg-black/55 px-3 py-1.5 text-[10px] font-bold uppercase tracking-[0.24em] text-white/95 backdrop-blur-sm ring-1 ring-white/20">
+      {/* Corner labels — each fades out once the slider is fully past its side */}
+      <span
+        aria-hidden={position < 4}
+        className={`pointer-events-none absolute left-4 top-4 inline-flex items-center gap-1.5 rounded-full bg-black/55 px-3 py-1.5 text-[10px] font-bold uppercase tracking-[0.24em] text-white/95 backdrop-blur-sm ring-1 ring-white/20 transition-opacity duration-200 ${
+          position < 4 ? "opacity-0" : "opacity-100"
+        }`}
+      >
         <span className="h-1.5 w-1.5 rounded-full bg-white/70" />
         After
       </span>
-      <span className="pointer-events-none absolute right-4 top-4 inline-flex items-center gap-1.5 rounded-full bg-black/55 px-3 py-1.5 text-[10px] font-bold uppercase tracking-[0.24em] text-white/95 backdrop-blur-sm ring-1 ring-white/20">
+      <span
+        aria-hidden={position > 96}
+        className={`pointer-events-none absolute right-4 top-4 inline-flex items-center gap-1.5 rounded-full bg-black/55 px-3 py-1.5 text-[10px] font-bold uppercase tracking-[0.24em] text-white/95 backdrop-blur-sm ring-1 ring-white/20 transition-opacity duration-200 ${
+          position > 96 ? "opacity-0" : "opacity-100"
+        }`}
+      >
         Before
         <span className="h-1.5 w-1.5 rounded-full bg-[var(--color-gold-light)]" />
       </span>

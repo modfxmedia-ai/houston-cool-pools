@@ -16,6 +16,7 @@ const ease = [0.22, 1, 0.36, 1] as const;
  */
 export function ConsolidatedFeaturesPage() {
   const [activeSlug, setActiveSlug] = useState<string>(POOL_FEATURES[0].slug);
+  const [lightbox, setLightbox] = useState<{ src: string; alt: string } | null>(null);
   const detailRef = useRef<HTMLDivElement>(null);
   const active =
     POOL_FEATURES.find((f) => f.slug === activeSlug) ?? POOL_FEATURES[0];
@@ -60,7 +61,11 @@ export function ConsolidatedFeaturesPage() {
             exit={{ opacity: 0, y: -8 }}
             transition={{ duration: 0.45, ease }}
           >
-            <FeatureBlock feature={active} index={activeIndex} />
+            <FeatureBlock
+              feature={active}
+              index={activeIndex}
+              onExpandImage={(src, alt) => setLightbox({ src, alt })}
+            />
           </motion.div>
         </AnimatePresence>
 
@@ -68,6 +73,7 @@ export function ConsolidatedFeaturesPage() {
       </div>
 
       <ClosingCta />
+      <Lightbox image={lightbox} onClose={() => setLightbox(null)} />
     </main>
   );
 }
@@ -303,7 +309,15 @@ function FeaturePager({
 
 /* -------------------- Feature Block -------------------- */
 
-function FeatureBlock({ feature, index }: { feature: PoolFeature; index: number }) {
+function FeatureBlock({
+  feature,
+  index,
+  onExpandImage,
+}: {
+  feature: PoolFeature;
+  index: number;
+  onExpandImage: (src: string, alt: string) => void;
+}) {
   const flipped = index % 2 === 1;
   return (
     <section
@@ -343,22 +357,35 @@ function FeatureBlock({ feature, index }: { feature: PoolFeature; index: number 
             transition={{ duration: 0.7, ease }}
             className="relative overflow-hidden rounded-[24px] shadow-[0_28px_60px_-24px_rgba(0,55,73,0.4)] ring-1 ring-black/5"
           >
-            <div className="relative aspect-[4/3] w-full">
+            <button
+              type="button"
+              onClick={() => onExpandImage(feature.heroImage, feature.name)}
+              aria-label={`Expand image of ${feature.name}`}
+              className="group relative block aspect-[4/3] w-full cursor-zoom-in overflow-hidden focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-pool)]"
+            >
               <Image
                 src={feature.heroImage}
                 alt={feature.name}
                 fill
                 sizes="(min-width: 1024px) 45vw, 100vw"
-                className="object-cover"
+                className="object-cover transition-transform duration-700 group-hover:scale-105"
               />
               <span
                 aria-hidden
                 className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"
               />
+              <span
+                aria-hidden
+                className="pointer-events-none absolute right-3 top-3 grid h-9 w-9 place-items-center rounded-full bg-black/45 text-white opacity-0 backdrop-blur-sm transition-opacity duration-300 group-hover:opacity-100"
+              >
+                <svg viewBox="0 0 24 24" fill="none" className="h-4 w-4">
+                  <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+              </span>
               <p className="absolute bottom-4 left-5 text-[10.5px] font-bold uppercase tracking-[0.22em] text-white/90">
                 {feature.tagline}
               </p>
-            </div>
+            </button>
           </motion.div>
 
           <motion.div
@@ -431,13 +458,28 @@ function FeatureBlock({ feature, index }: { feature: PoolFeature; index: number 
                 transition={{ duration: 0.5, delay: i * 0.05, ease }}
                 className="group relative aspect-[4/3] overflow-hidden rounded-2xl bg-slate-100 shadow-[0_14px_30px_-20px_rgba(0,55,73,0.4)]"
               >
-                <Image
-                  src={img.src}
-                  alt={img.alt}
-                  fill
-                  sizes="(min-width: 768px) 22vw, 45vw"
-                  className="object-cover transition-transform duration-700 group-hover:scale-105"
-                />
+                <button
+                  type="button"
+                  onClick={() => onExpandImage(img.src, img.alt)}
+                  aria-label={`Expand image: ${img.alt}`}
+                  className="block h-full w-full cursor-zoom-in focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-pool)]"
+                >
+                  <Image
+                    src={img.src}
+                    alt={img.alt}
+                    fill
+                    sizes="(min-width: 768px) 22vw, 45vw"
+                    className="object-cover transition-transform duration-700 group-hover:scale-105"
+                  />
+                  <span
+                    aria-hidden
+                    className="pointer-events-none absolute right-2 top-2 grid h-8 w-8 place-items-center rounded-full bg-black/45 text-white opacity-0 backdrop-blur-sm transition-opacity duration-300 group-hover:opacity-100"
+                  >
+                    <svg viewBox="0 0 24 24" fill="none" className="h-3.5 w-3.5">
+                      <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                    </svg>
+                  </span>
+                </button>
               </motion.figure>
             ))}
           </div>
@@ -570,3 +612,75 @@ function initials(name: string) {
     .map((w) => w[0]?.toUpperCase() ?? "")
     .join("");
 }
+
+/* -------------------- Lightbox -------------------- */
+
+function Lightbox({
+  image,
+  onClose,
+}: {
+  image: { src: string; alt: string } | null;
+  onClose: () => void;
+}) {
+  useEffect(() => {
+    if (!image) return;
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") onClose();
+    };
+    document.addEventListener("keydown", onKey);
+    const prevOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.removeEventListener("keydown", onKey);
+      document.body.style.overflow = prevOverflow;
+    };
+  }, [image, onClose]);
+
+  return (
+    <AnimatePresence>
+      {image ? (
+        <motion.div
+          key="lightbox"
+          role="dialog"
+          aria-modal="true"
+          aria-label={image.alt}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 0.25, ease }}
+          onClick={onClose}
+          className="fixed inset-0 z-[100] flex items-center justify-center bg-black/85 p-4 backdrop-blur-sm md:p-8"
+        >
+          <button
+            type="button"
+            onClick={onClose}
+            aria-label="Close image"
+            className="absolute right-4 top-4 grid h-11 w-11 place-items-center rounded-full bg-white/10 text-white ring-1 ring-white/30 transition-colors hover:bg-white/20 md:right-6 md:top-6"
+          >
+            <svg viewBox="0 0 24 24" fill="none" className="h-5 w-5">
+              <path d="M6 6l12 12M18 6L6 18" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" />
+            </svg>
+          </button>
+          <motion.div
+            initial={{ opacity: 0, scale: 0.92 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0, scale: 0.95 }}
+            transition={{ duration: 0.3, ease }}
+            onClick={(e) => e.stopPropagation()}
+            className="relative h-[85vh] w-full max-w-6xl overflow-hidden rounded-2xl bg-black shadow-2xl"
+          >
+            <Image
+              src={image.src}
+              alt={image.alt}
+              fill
+              sizes="100vw"
+              className="object-contain"
+              priority
+            />
+          </motion.div>
+        </motion.div>
+      ) : null}
+    </AnimatePresence>
+  );
+}
+
