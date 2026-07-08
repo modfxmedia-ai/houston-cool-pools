@@ -17,6 +17,8 @@ export type InfoHeroProps = {
   backgroundImage?: string;
   /** Optional alt text for the background image (defaults to empty for decorative). */
   backgroundAlt?: string;
+  /** Brighten the background photo by reducing image dimming and dark overlay. */
+  brightenBackground?: boolean;
 };
 
 export function InfoHero({
@@ -26,7 +28,12 @@ export function InfoHero({
   crumbs,
   backgroundImage,
   backgroundAlt = "",
+  brightenBackground = false,
 }: InfoHeroProps) {
+  const imageOpacityClass = brightenBackground ? "opacity-80" : "opacity-40";
+  const overlayGradientClass = brightenBackground
+    ? "bg-gradient-to-b from-[var(--color-navy-deep)]/40 via-[var(--color-navy-deep)]/25 to-[var(--color-navy-deep)]/75"
+    : "bg-gradient-to-b from-[var(--color-navy-deep)]/80 via-[var(--color-navy-deep)]/70 to-[var(--color-navy-deep)]";
   return (
     <section className="relative isolate overflow-hidden bg-[var(--color-navy-deep)] pt-32 text-white md:pt-40 lg:pt-44">
       {backgroundImage ? (
@@ -37,9 +44,9 @@ export function InfoHero({
             fill
             priority
             sizes="100vw"
-            className="object-cover object-center opacity-40"
+            className={`object-cover object-center ${imageOpacityClass}`}
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-[var(--color-navy-deep)]/80 via-[var(--color-navy-deep)]/70 to-[var(--color-navy-deep)]" />
+          <div className={`absolute inset-0 ${overlayGradientClass}`} />
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_20%,rgba(0,124,182,0.32),transparent_60%)]" />
         </div>
       ) : (

@@ -105,6 +105,7 @@ export function PoolFinancingClient() {
         ]}
         backgroundImage="/images/gallery/hd/estate-luxe.jpg"
         backgroundAlt="Luxury Houston Cool Pools backyard build"
+        brightenBackground
       />
 
       <section className="relative bg-white py-16 md:py-20">

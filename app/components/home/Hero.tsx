@@ -38,13 +38,18 @@ export function Hero() {
 function HeroVisual() {
   return (
     <section className="relative min-h-[100svh] w-full overflow-hidden bg-[var(--color-navy-deep)] text-white sm:min-h-[720px] lg:min-h-[760px]">
-      {/* Bright sunny backyard lifestyle slideshow */}
-      <HeroSlideshow />
+      {/* Bright sunny backyard lifestyle slideshow - constrained on mobile so
+          landscape photos aren't cropped to a narrow vertical slice; full-bleed
+          from sm+ where the section aspect ratio comfortably fits the images. */}
+      <div className="pointer-events-none absolute inset-x-0 top-0 h-[46vh] min-h-[320px] max-h-[440px] overflow-hidden sm:inset-0 sm:h-auto sm:min-h-0 sm:max-h-none">
+        <HeroSlideshow />
+      </div>
 
       {/* Color & vignette overlays - tuned lighter so the sunny photos read through */}
-      <div className="absolute inset-0 bg-gradient-to-r from-[var(--color-navy-deep)]/85 via-[var(--color-navy-deep)]/35 to-[var(--color-navy-deep)]/5" />
-      <div className="absolute inset-0 bg-gradient-to-t from-[var(--color-navy-deep)] via-transparent to-transparent" />
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_25%_55%,transparent_0%,rgba(0,27,36,0.45)_92%)]" />
+      <div className="absolute inset-x-0 top-0 h-[46vh] min-h-[320px] max-h-[440px] bg-gradient-to-b from-[var(--color-navy-deep)]/55 via-[var(--color-navy-deep)]/25 to-[var(--color-navy-deep)] sm:hidden" />
+      <div className="absolute inset-0 hidden bg-gradient-to-r from-[var(--color-navy-deep)]/85 via-[var(--color-navy-deep)]/35 to-[var(--color-navy-deep)]/5 sm:block" />
+      <div className="absolute inset-0 hidden bg-gradient-to-t from-[var(--color-navy-deep)] via-transparent to-transparent sm:block" />
+      <div className="absolute inset-0 hidden bg-[radial-gradient(ellipse_at_25%_55%,transparent_0%,rgba(0,27,36,0.45)_92%)] sm:block" />
 
       {/* Pulsing cyan glows */}
       <motion.div
@@ -234,7 +239,7 @@ function HeroSlideshow() {
             fill
             priority={index === 0}
             sizes="100vw"
-            className="object-cover"
+            className="object-cover object-[center_35%] sm:object-center"
           />
         </motion.div>
       </AnimatePresence>
