@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
 import {
@@ -14,6 +15,11 @@ import {
 import { PromoBanner } from "./PromoBanner";
 
 export function Header() {
+  const pathname = usePathname();
+  const isHome = pathname === "/";
+  const logoSrc = isHome ? "/images/logo-white.png" : "/images/logo.png";
+  const logoWidth = isHome ? 895 : 343;
+  const logoHeight = isHome ? 275 : 101;
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [openMenu, setOpenMenu] = useState<string | null>(null);
@@ -57,12 +63,17 @@ export function Header() {
             aria-label="Houston Cool Pools - Home"
           >
             <Image
-              src="/images/logo.png"
+              key={logoSrc}
+              src={logoSrc}
               alt="Houston Cool Pools"
-              width={343}
-              height={101}
+              width={logoWidth}
+              height={logoHeight}
               priority
-              className="h-12 w-auto md:h-14"
+              className={
+                isHome
+                  ? "h-14 w-auto md:h-16"
+                  : "h-12 w-auto md:h-14"
+              }
             />
           </Link>
 
@@ -279,6 +290,11 @@ function MobileOverlay({
   open: boolean;
   onClose: () => void;
 }) {
+  const pathname = usePathname();
+  const isHome = pathname === "/";
+  const logoSrc = isHome ? "/images/logo-white.png" : "/images/logo.png";
+  const logoWidth = isHome ? 895 : 150;
+  const logoHeight = isHome ? 275 : 48;
   const [expanded, setExpanded] = useState<string | null>(null);
   return (
     <AnimatePresence>
@@ -292,11 +308,12 @@ function MobileOverlay({
         >
           <div className="flex items-center justify-between border-b border-white/10 px-4 py-3">
             <Image
-              src="/images/logo.png"
+              key={logoSrc}
+              src={logoSrc}
               alt="Houston Cool Pools"
-              width={150}
-              height={48}
-              className="h-10 w-auto"
+              width={logoWidth}
+              height={logoHeight}
+              className={isHome ? "h-12 w-auto" : "h-10 w-auto"}
             />
             <button
               type="button"
