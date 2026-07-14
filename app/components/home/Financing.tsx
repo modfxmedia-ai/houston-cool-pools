@@ -16,7 +16,7 @@ const BULLETS = [
   "Finance Up to 100%",
 ] as const;
 
-/** All lenders shown as equals — no "preferred" tier. */
+/** All lenders shown as equals - no "preferred" tier. */
 const LENDERS: {
   name: string;
   href: string;

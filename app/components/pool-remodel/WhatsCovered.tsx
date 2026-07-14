@@ -75,7 +75,7 @@ const ICON_PATHS: Record<CoveredItem["icon"], React.ReactNode> = {
 const DEFAULT_COVERED: CoveredItem[] = [
   {
     title: "Full in-house showroom",
-    body: "Touch and compare tile, coping, plaster finishes, decking samples, and light fixtures in person — not from a phone screen.",
+    body: "Touch and compare tile, coping, plaster finishes, decking samples, and light fixtures in person - not from a phone screen.",
     icon: "showroom",
   },
   {
@@ -95,7 +95,7 @@ const DEFAULT_COVERED: CoveredItem[] = [
   },
   {
     title: "Patios & pergolas",
-    body: "Extend usable deck space and add shade — flagstone, travertine, or stamped concrete matched to your new coping.",
+    body: "Extend usable deck space and add shade - flagstone, travertine, or stamped concrete matched to your new coping.",
     icon: "shade",
   },
   {
@@ -178,7 +178,7 @@ export function WhatsCovered({
           <p className="mt-4 text-[15px] leading-relaxed text-slate-600 md:text-base">
             A pool remodel touches more than plaster and tile. We coordinate the
             paperwork, the trades, and the outdoor-living additions so your yard
-            comes together as one finished project — not five separate ones you
+            comes together as one finished project - not five separate ones you
             have to chase.
           </p>
 

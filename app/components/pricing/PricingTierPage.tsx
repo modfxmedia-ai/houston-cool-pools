@@ -25,7 +25,7 @@ const STATS: { value: number; suffix?: string; label: string }[] = [
 
 /**
  * Single-page pricing catalog. All 5 tiers live in `lib/pool-pricing.ts` and
- * are swapped in client-side when the user clicks a price-range pill — no
+ * are swapped in client-side when the user clicks a price-range pill - no
  * route reload, no scroll-to-top. Direct visits to /pricing-XX-YY still work
  * (the corresponding tier is initially active) and the URL is kept in sync
  * via history.replaceState as the visitor switches tiers.

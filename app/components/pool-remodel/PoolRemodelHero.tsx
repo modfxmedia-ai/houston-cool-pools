@@ -27,7 +27,7 @@ export function PoolRemodelHero() {
         />
       </div>
 
-      {/* Color & vignette overlays — tuned to keep the photo bright but readable */}
+      {/* Color & vignette overlays - tuned to keep the photo bright but readable */}
       <div className="absolute inset-0 bg-gradient-to-r from-[var(--color-navy-deep)]/85 via-[var(--color-navy-deep)]/40 to-[var(--color-navy-deep)]/10" />
       <div className="absolute inset-0 bg-gradient-to-t from-[var(--color-navy-deep)] via-transparent to-transparent" />
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_25%_55%,transparent_0%,rgba(0,27,36,0.45)_92%)]" />

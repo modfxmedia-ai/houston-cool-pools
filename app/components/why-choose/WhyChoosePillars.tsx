@@ -12,7 +12,7 @@ const ease = [0.22, 1, 0.36, 1] as const;
 /**
  * The three primary pillars from the live page (Stability, Cutting Edge
  * Technology, Peace of Mind). Rendered as a tabs pattern so the section
- * stays compact — only one pillar's content is visible at a time and long
+ * stays compact - only one pillar's content is visible at a time and long
  * bullet lists (like Peace of Mind's 12 items) are laid out in two columns.
  */
 export function WhyChoosePillars() {

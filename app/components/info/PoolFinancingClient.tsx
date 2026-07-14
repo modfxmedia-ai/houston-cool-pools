@@ -17,7 +17,7 @@ type Lender = {
   videoId?: string;
   /** Website hostname used for a Google-favicon logo (fallback). */
   domain?: string;
-  /** Local logo path — overrides the favicon when provided. */
+  /** Local logo path - overrides the favicon when provided. */
   logo?: string;
 };
 
@@ -184,7 +184,7 @@ export function PoolFinancingClient() {
             const others = LENDERS.filter((l) => !l.videoId);
             return (
               <>
-                {/* ----- Featured lender (with video) — spans full width ----- */}
+                {/* ----- Featured lender (with video) - spans full width ----- */}
                 {featured ? (
                   <motion.article
                     initial={{ opacity: 0, y: 22 }}
@@ -262,7 +262,7 @@ export function PoolFinancingClient() {
                   </motion.article>
                 ) : null}
 
-                {/* ----- Other partners — compact 3-column grid, uniform heights ----- */}
+                {/* ----- Other partners - compact 3-column grid, uniform heights ----- */}
                 <div className="mt-6 grid gap-5 sm:grid-cols-2 md:mt-8 lg:grid-cols-3">
                   {others.map((l, i) => (
                     <motion.article

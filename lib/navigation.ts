@@ -34,6 +34,16 @@ export const PRIMARY_NAV: NavGroup[] = [
   { label: "Pool Gallery", href: "/gallery",
     columns: [
       {
+        heading: "Browse by Price",
+        links: [
+          { label: "All Pools", href: "/gallery?tier=all" },
+          { label: "$75K – $85K", href: "/gallery?tier=75k-85k" },
+          { label: "$85K – $120K", href: "/gallery?tier=85k-120k" },
+          { label: "$120K – $200K", href: "/gallery?tier=120k-200k" },
+          { label: "$200K+", href: "/gallery?tier=200k-plus" },
+        ],
+      },
+      {
         heading: "Explore",
         links: [
           { label: "Pricing", href: "/pricing-65k-75k" },

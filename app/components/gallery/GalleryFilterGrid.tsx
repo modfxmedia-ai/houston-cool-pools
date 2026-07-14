@@ -1,7 +1,8 @@
 "use client";
 
 import Image from "next/image";
-import { useEffect, useMemo, useState, useCallback } from "react";
+import { useEffect, useMemo, useState, useCallback, useRef } from "react";
+import { useSearchParams } from "next/navigation";
 import { AnimatePresence, motion } from "motion/react";
 import { GALLERY_TIERS, type GalleryPool } from "../../../lib/gallery";
 
@@ -33,6 +34,59 @@ export function GalleryFilterGrid() {
 
   const [active, setActive] = useState<string>(ALL);
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
+
+  const validTierIds = useMemo(
+    () => new Set<string>([ALL, ...GALLERY_TIERS.map((t) => t.id)]),
+    [],
+  );
+
+  // Reactively read ?tier=... from the URL so nav-dropdown deep links work,
+  // whether the user lands on /gallery fresh or navigates between tiers
+  // client-side while already on the page.
+  const searchParams = useSearchParams();
+  const urlTier = searchParams.get("tier");
+  const skipNextScrollRef = useRef(false);
+
+  useEffect(() => {
+    const next = urlTier && validTierIds.has(urlTier) ? urlTier : ALL;
+    setActive(next);
+
+    // No ?tier=... in the URL (e.g. direct visit to /gallery, brand click,
+    // or the Pool Gallery nav parent link) - keep the hero at the top.
+    if (!urlTier) return;
+
+    // Chip clicks update the URL themselves; we don't want that to jump the
+    // page back up to the filter bar every time.
+    if (skipNextScrollRef.current) {
+      skipNextScrollRef.current = false;
+      return;
+    }
+
+    // Scroll past the hero to the filter bar, accounting for the fixed
+    // header height (top-16 mobile / top-20 desktop → 64 / 80 px).
+    requestAnimationFrame(() => {
+      const el = document.getElementById("gallery-filter-bar");
+      if (!el) return;
+      const headerOffset =
+        typeof window !== "undefined" && window.matchMedia("(min-width: 768px)").matches
+          ? 80
+          : 64;
+      const top = el.getBoundingClientRect().top + window.scrollY - headerOffset;
+      window.scrollTo({ top, behavior: "auto" });
+    });
+  }, [urlTier, validTierIds]);
+
+  // Keep the URL in sync so users can share/deep-link the current filter.
+  // We use replaceState (not push) and set the skip flag so the URL sync
+  // doesn't scroll-jump the page.
+  const applyFilter = useCallback((next: string) => {
+    skipNextScrollRef.current = true;
+    setActive(next);
+    const url = new URL(window.location.href);
+    if (next === ALL) url.searchParams.delete("tier");
+    else url.searchParams.set("tier", next);
+    window.history.replaceState({}, "", url.toString());
+  }, []);
 
   const visible = useMemo(
     () => (active === ALL ? allPools : allPools.filter((p) => p.tierId === active)),
@@ -72,7 +126,10 @@ export function GalleryFilterGrid() {
   return (
     <>
       {/* ─── Sticky filter bar ─── */}
-      <div className="sticky top-16 z-30 border-y border-[var(--color-navy-deep)]/10 bg-white/90 backdrop-blur-xl md:top-20">
+      <div
+        id="gallery-filter-bar"
+        className="sticky top-16 z-30 border-y border-[var(--color-navy-deep)]/10 bg-white/90 backdrop-blur-xl md:top-20"
+      >
         <div className="mx-auto flex max-w-7xl items-center gap-2 overflow-x-auto px-6 py-3 md:px-10">
           <span className="hidden shrink-0 text-[10px] font-bold uppercase tracking-[0.28em] text-[var(--color-navy-deep)]/45 md:inline">
             Filter:
@@ -81,7 +138,7 @@ export function GalleryFilterGrid() {
             label="All Pools"
             count={allPools.length}
             active={active === ALL}
-            onClick={() => setActive(ALL)}
+            onClick={() => applyFilter(ALL)}
           />
           {GALLERY_TIERS.map((t) => (
             <FilterChip
@@ -89,7 +146,7 @@ export function GalleryFilterGrid() {
               label={t.label}
               count={1 + t.pools.length}
               active={active === t.id}
-              onClick={() => setActive(t.id)}
+              onClick={() => applyFilter(t.id)}
             />
           ))}
         </div>

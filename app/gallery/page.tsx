@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { Suspense } from "react";
 import { buildPageMetadata } from "../../lib/business";
 import {
   PHONE_DISPLAY,
@@ -18,7 +19,9 @@ export default function GalleryPage() {
       <GalleryHero />
 
       <main className="relative bg-white">
-        <GalleryFilterGrid />
+        <Suspense fallback={null}>
+          <GalleryFilterGrid />
+        </Suspense>
       </main>
 
       <GalleryCollections />

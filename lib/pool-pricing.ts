@@ -32,7 +32,7 @@ export type PoolPricingTier = {
   images: PricingImage[];
 };
 
-/** Ordered list — matches the visual left-to-right order of the tier switcher. */
+/** Ordered list - matches the visual left-to-right order of the tier switcher. */
 export const POOL_PRICING_TIERS: PoolPricingTier[] = [
   {
     slug: "pricing-65k-75k",

@@ -156,7 +156,7 @@ export function RenovationIdeas({ ideas }: { ideas: RenovationIdea[] }) {
                     href={idea.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    aria-label={`${idea.label} — open PDF in new tab`}
+                    aria-label={`${idea.label} - open PDF in new tab`}
                     className={cardClass}
                   >
                     {inner}

@@ -11,7 +11,7 @@ const ease = [0.22, 1, 0.36, 1] as const;
 
 /**
  * Single-page pool-features catalog. All features live on one route, but only
- * ONE feature is visible at a time. The top grid is a tab strip — clicking a
+ * ONE feature is visible at a time. The top grid is a tab strip - clicking a
  * card swaps the active feature below (no route change, no long scroll).
  */
 export function ConsolidatedFeaturesPage() {
@@ -124,7 +124,7 @@ function Hero() {
           transition={{ duration: 0.7, delay: 0.2, ease }}
           className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-white/75 md:text-lg"
         >
-          Waterfalls, spillways, fire bowls, swim-up bars, custom mosaics — every
+          Waterfalls, spillways, fire bowls, swim-up bars, custom mosaics - every
           option laid out on one page. Pick any feature below to jump to it.
         </motion.p>
       </div>

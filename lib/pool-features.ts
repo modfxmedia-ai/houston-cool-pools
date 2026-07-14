@@ -6,7 +6,7 @@
  * a hero image + gallery pulled from the existing /images/features/* folders,
  * and its own short testimonial marquee.
  *
- * Testimonials below are lightweight, feature-specific placeholders — swap for
+ * Testimonials below are lightweight, feature-specific placeholders - swap for
  * real Google / Angie's List quotes as they come in.
  */
 
@@ -40,7 +40,7 @@ export const POOL_FEATURES: PoolFeature[] = [
     slug: "sheer-descents",
     name: "Sheer Descents",
     tagline: "Falling-water effects that turn a pool into a retreat.",
-    body: "Perhaps no other feature contributes more to the beauty and tranquility of your poolscape than the sight and sound of falling water. Sheer descents integrate mesmerizing water effects in either dramatic or subtle ways — instantly transforming any pool from great to spectacular. Widths range from 8\" to 8' and can be combined for additional effect.",
+    body: "Perhaps no other feature contributes more to the beauty and tranquility of your poolscape than the sight and sound of falling water. Sheer descents integrate mesmerizing water effects in either dramatic or subtle ways - instantly transforming any pool from great to spectacular. Widths range from 8\" to 8' and can be combined for additional effect.",
     variants: [
       { title: "Sheet effect", body: "An almost silent, glass-like sheet of water that projects away from the pool wall." },
       { title: "Arc sheet effect", body: "Propels a smooth arc of water that projects up and away from the wall." },
@@ -64,8 +64,8 @@ export const POOL_FEATURES: PoolFeature[] = [
   {
     slug: "scuppers-spillways",
     name: "Scuppers & Spa Spillways",
-    tagline: "Lively streams of water — an elegant, budget-smart accent.",
-    body: "Most scupper and spillway styles create a natural, lively stream of water. Scuppers can be an attractive alternative to full waterfalls and sheer descents — often slots or spouts in a raised wall that re-enter the pool. Spa spillways connect the spa to the pool with a moving-water feature that stays working whether the spa is on or off.",
+    tagline: "Lively streams of water - an elegant, budget-smart accent.",
+    body: "Most scupper and spillway styles create a natural, lively stream of water. Scuppers can be an attractive alternative to full waterfalls and sheer descents - often slots or spouts in a raised wall that re-enter the pool. Spa spillways connect the spa to the pool with a moving-water feature that stays working whether the spa is on or off.",
     heroImage: "/images/features/features-2/hero.jpg",
     gallery: [
       { src: "/images/features/features-2/01.jpg", alt: "Spa spillway flowing into a custom pool" },
@@ -76,14 +76,14 @@ export const POOL_FEATURES: PoolFeature[] = [
     testimonials: [
       { name: "David & Lisa R.", location: "Katy, TX", quote: "The spa spillway keeps the whole pool moving and sounding great even when we're not using the spa." },
       { name: "Nathan P.", location: "Spring, TX", quote: "We wanted the falling-water look without the waterfall price. Scuppers were the perfect answer." },
-      { name: "Alicia F.", location: "Cypress, TX", quote: "Three little scuppers on the raised wall — small feature, huge impact." },
+      { name: "Alicia F.", location: "Cypress, TX", quote: "Three little scuppers on the raised wall - small feature, huge impact." },
     ],
   },
   {
     slug: "bubblers",
     name: "Bubblers (Gushers)",
     tagline: "Playful, gentle jets that bubble up from shallow ledges.",
-    body: "Bubblers — sometimes called gushers — sit on your sun shelf or tanning ledge and produce a soft, upward eruption of water. They're a favorite for families with small kids, add movement and sound at the entry of the pool, and pair beautifully with LED lighting for evening use.",
+    body: "Bubblers - sometimes called gushers - sit on your sun shelf or tanning ledge and produce a soft, upward eruption of water. They're a favorite for families with small kids, add movement and sound at the entry of the pool, and pair beautifully with LED lighting for evening use.",
     heroImage: "/images/features/features-3/hero.jpg",
     gallery: [
       { src: "/images/features/features-3/01.jpg", alt: "Pool bubbler on a sun shelf" },
@@ -92,7 +92,7 @@ export const POOL_FEATURES: PoolFeature[] = [
     ],
     testimonials: [
       { name: "The Hollis family", location: "Tomball, TX", quote: "The kids will sit on the sun shelf and play in the bubblers for hours. Best decision we made." },
-      { name: "Kayla B.", location: "Houston, TX", quote: "At night the LEDs turn them into little glowing fountains — it's magical." },
+      { name: "Kayla B.", location: "Houston, TX", quote: "At night the LEDs turn them into little glowing fountains - it's magical." },
       { name: "Ross D.", location: "The Woodlands, TX", quote: "Simple feature, gorgeous execution. HCP nailed the placement." },
     ],
   },
@@ -100,7 +100,7 @@ export const POOL_FEATURES: PoolFeature[] = [
     slug: "sun-shelf-beach-entry",
     name: "Sun Shelf & Beach Entry",
     tagline: "A shallow lounge zone at the edge of your pool.",
-    body: "A sun shelf (or Baja shelf) is a broad, shallow platform — usually 6-12 inches deep — that runs along one edge of the pool. It's perfect for lounge chairs, kids, or a place to cool off with a drink in hand. A beach entry extends this idea into a gradual, zero-edge slope that walks into the water like a real beach.",
+    body: "A sun shelf (or Baja shelf) is a broad, shallow platform - usually 6-12 inches deep - that runs along one edge of the pool. It's perfect for lounge chairs, kids, or a place to cool off with a drink in hand. A beach entry extends this idea into a gradual, zero-edge slope that walks into the water like a real beach.",
     heroImage: "/images/features/features-4/hero.jpg",
     gallery: [
       { src: "/images/features/features-4/01.jpg", alt: "Wide sun shelf with in-water lounge chairs" },
@@ -109,15 +109,15 @@ export const POOL_FEATURES: PoolFeature[] = [
     ],
     testimonials: [
       { name: "Sarah M.", location: "Katy, TX", quote: "The sun shelf is where we live. Two loungers in ankle-deep water is our idea of heaven." },
-      { name: "Ben T.", location: "Cypress, TX", quote: "The beach entry lets our toddler walk in on her own — safest feature we could've picked." },
+      { name: "Ben T.", location: "Cypress, TX", quote: "The beach entry lets our toddler walk in on her own - safest feature we could've picked." },
       { name: "Jordan K.", location: "Spring, TX", quote: "It doubles the usable pool space without adding footprint. Design-wise, brilliant." },
     ],
   },
   {
     slug: "fast-lane",
     name: "Fast Lane Swim System",
-    tagline: "Endless-pool swim jets — laps in any pool size.",
-    body: "The Fast Lane by Endless Pools is a stationary current system that lets you swim laps in place — no matter the size of your pool. HCP is an official vendor and installer. It's perfect for narrow lots, training swimmers, or anyone who wants a real workout without a 25-yard pool.",
+    tagline: "Endless-pool swim jets - laps in any pool size.",
+    body: "The Fast Lane by Endless Pools is a stationary current system that lets you swim laps in place - no matter the size of your pool. HCP is an official vendor and installer. It's perfect for narrow lots, training swimmers, or anyone who wants a real workout without a 25-yard pool.",
     heroImage: "/images/features/features-4/05.jpg",
     gallery: [
       { src: "/images/features/features-4/04.jpg", alt: "Fast Lane swim jet installed on a custom pool" },
@@ -142,14 +142,14 @@ export const POOL_FEATURES: PoolFeature[] = [
     testimonials: [
       { name: "The Bretts", location: "Tomball, TX", quote: "It's like a spring in our backyard. The stone selection and layout are exactly what we hoped for." },
       { name: "Miguel R.", location: "Cypress, TX", quote: "The waterfall makes the pool feel three times bigger. Every guest gravitates toward it." },
-      { name: "Cass H.", location: "The Woodlands, TX", quote: "HCP paired the rock with the right landscaping — it disappears into the yard like it grew there." },
+      { name: "Cass H.", location: "The Woodlands, TX", quote: "HCP paired the rock with the right landscaping - it disappears into the yard like it grew there." },
     ],
   },
   {
     slug: "grotto-waterfalls",
     name: "Grotto Waterfalls",
     tagline: "A hidden cave you can swim behind or under.",
-    body: "A grotto waterfall combines a rock cascade with a covered stone cavern behind or beneath it — a private pocket you can swim into. It's dramatic, kid-approved, and adds a memorable focal point that pairs beautifully with color-changing LED lighting.",
+    body: "A grotto waterfall combines a rock cascade with a covered stone cavern behind or beneath it - a private pocket you can swim into. It's dramatic, kid-approved, and adds a memorable focal point that pairs beautifully with color-changing LED lighting.",
     heroImage: "/images/features/features-5/04.jpg",
     gallery: [
       { src: "/images/features/features-5/05.jpg", alt: "Grotto cave behind a pool waterfall" },
@@ -172,7 +172,7 @@ export const POOL_FEATURES: PoolFeature[] = [
       { src: "/images/features/features-6/03.jpg", alt: "Pool bar with tile accents" },
     ],
     testimonials: [
-      { name: "The Corbeils", location: "Katy, TX", quote: "Sunday afternoons live at the pool bar. We built the outdoor kitchen right behind it — genius call." },
+      { name: "The Corbeils", location: "Katy, TX", quote: "Sunday afternoons live at the pool bar. We built the outdoor kitchen right behind it - genius call." },
       { name: "Aiden J.", location: "Houston, TX", quote: "Guests never leave the water. Best entertaining feature we added." },
     ],
   },
@@ -180,7 +180,7 @@ export const POOL_FEATURES: PoolFeature[] = [
     slug: "stepping-stones",
     name: "Stepping Stones",
     tagline: "Sculptural pads that let you walk across the water.",
-    body: "Stepping stones sit just above the water line and create a path across your pool — connecting decks, sun shelves, or landscape islands. They double as visual detail and functional bridges, and pair beautifully with tanning ledges and shallow lounge zones.",
+    body: "Stepping stones sit just above the water line and create a path across your pool - connecting decks, sun shelves, or landscape islands. They double as visual detail and functional bridges, and pair beautifully with tanning ledges and shallow lounge zones.",
     heroImage: "/images/features/features-7/hero.jpg",
     gallery: [
       { src: "/images/features/features-7/01.jpg", alt: "Stepping stones across a pool" },
@@ -203,7 +203,7 @@ export const POOL_FEATURES: PoolFeature[] = [
       { src: "/images/features/features-8/03.jpg", alt: "Slide integrated into a landscape rockery" },
     ],
     testimonials: [
-      { name: "The Silverman family", location: "Katy, TX", quote: "Two kids, three friends, one pool slide — it's a summer institution now." },
+      { name: "The Silverman family", location: "Katy, TX", quote: "Two kids, three friends, one pool slide - it's a summer institution now." },
       { name: "Regina P.", location: "Spring, TX", quote: "HCP built the slide right into our waterfall. Looks natural, works great." },
     ],
   },
@@ -211,7 +211,7 @@ export const POOL_FEATURES: PoolFeature[] = [
     slug: "fire-features",
     name: "Fire Features",
     tagline: "Fire bowls, pits, and torches that light up the poolscape.",
-    body: "Fire and water pair beautifully. Fire bowls on raised walls, pits between lounge chairs, or Malibu-style torches along the deck edge — HCP integrates fire features into the pool design so they feel intentional rather than added-on. Gas or propane, wired to automation, and enjoyable all year.",
+    body: "Fire and water pair beautifully. Fire bowls on raised walls, pits between lounge chairs, or Malibu-style torches along the deck edge - HCP integrates fire features into the pool design so they feel intentional rather than added-on. Gas or propane, wired to automation, and enjoyable all year.",
     heroImage: "/images/features/features-9/hero.jpg",
     gallery: [
       { src: "/images/features/features-9/01.jpg", alt: "Fire bowl on a raised pool wall" },
@@ -219,7 +219,7 @@ export const POOL_FEATURES: PoolFeature[] = [
       { src: "/images/features/features-10/01.jpg", alt: "Twin fire bowls flanking a spa" },
     ],
     testimonials: [
-      { name: "Elena T.", location: "The Heights, TX", quote: "Two fire bowls above the spa — it's the reason we sit outside on cool Houston evenings." },
+      { name: "Elena T.", location: "The Heights, TX", quote: "Two fire bowls above the spa - it's the reason we sit outside on cool Houston evenings." },
       { name: "James H.", location: "Memorial, TX", quote: "The fire pit is on automation. One tap on our phone and the yard turns into a lounge." },
       { name: "Whitney G.", location: "Cypress, TX", quote: "The fire bowls tie the whole space together at night. Cinematic." },
     ],
@@ -228,7 +228,7 @@ export const POOL_FEATURES: PoolFeature[] = [
     slug: "decking",
     name: "Pool Decking",
     tagline: "The right deck material sets the entire tone of your yard.",
-    body: "Travertine, natural stone, stamped or broomed concrete, cool decking, and premium pavers — each has a look, a temperature, a maintenance profile, and a price point. HCP walks you through them side-by-side and coordinates the deck with your landscape drainage, coping profile, and outdoor living plan.",
+    body: "Travertine, natural stone, stamped or broomed concrete, cool decking, and premium pavers - each has a look, a temperature, a maintenance profile, and a price point. HCP walks you through them side-by-side and coordinates the deck with your landscape drainage, coping profile, and outdoor living plan.",
     heroImage: "/images/features/features-pool-decking/hero.jpg",
     gallery: [
       { src: "/images/features/features-pool-decking/01.jpg", alt: "Travertine pool deck" },
@@ -237,7 +237,7 @@ export const POOL_FEATURES: PoolFeature[] = [
       { src: "/images/features/features-pool-decking/04.jpg", alt: "Natural stone pool coping and deck" },
     ],
     testimonials: [
-      { name: "Rachel K.", location: "Cypress, TX", quote: "Travertine was the right call — cool underfoot in August and looks like a resort." },
+      { name: "Rachel K.", location: "Cypress, TX", quote: "Travertine was the right call - cool underfoot in August and looks like a resort." },
       { name: "Miguel & Ana C.", location: "Katy, TX", quote: "HCP helped us match the deck to our home's stone. It feels like the yard was always this way." },
     ],
   },
@@ -245,7 +245,7 @@ export const POOL_FEATURES: PoolFeature[] = [
     slug: "custom-features",
     name: "Fully Custom Features",
     tagline: "Anything the design calls for, built to order.",
-    body: "Beyond the standard menu — mosaic tile logos, wet-edge sculptures, integrated planters, swim-up TVs, negative-edge tricks, and one-off pieces designed around your yard. If you can describe it, HCP has probably built it or can figure out how.",
+    body: "Beyond the standard menu - mosaic tile logos, wet-edge sculptures, integrated planters, swim-up TVs, negative-edge tricks, and one-off pieces designed around your yard. If you can describe it, HCP has probably built it or can figure out how.",
     heroImage: "/images/features/features-11/hero.jpg",
     gallery: [
       { src: "/images/features/features-11/01.jpg", alt: "Custom mosaic tile pool floor" },
@@ -255,7 +255,7 @@ export const POOL_FEATURES: PoolFeature[] = [
     ],
     testimonials: [
       { name: "The Drexel family", location: "Memorial, TX", quote: "We asked for a mosaic of our family crest on the floor. HCP made it happen and it turned out incredible." },
-      { name: "Owen B.", location: "The Heights, TX", quote: "Every backyard is different — HCP's custom side is where they really shine." },
+      { name: "Owen B.", location: "The Heights, TX", quote: "Every backyard is different - HCP's custom side is where they really shine." },
     ],
   },
 ];

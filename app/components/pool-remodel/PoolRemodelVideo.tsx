@@ -12,7 +12,7 @@ const VIDEO_POSTER = "/images/gallery/hd/estate-twilight.jpg";
 /**
  * Video section on the pool-remodel page. Uses the same YouTube facade
  * pattern as the contact hero so the transformation clip is embedded once
- * a visitor clicks — keeping first-load light while still highlighting a
+ * a visitor clicks - keeping first-load light while still highlighting a
  * real Houston Cool Pools remodel.
  */
 export function PoolRemodelVideo() {
@@ -53,7 +53,7 @@ export function PoolRemodelVideo() {
           </h2>
           <p className="mt-5 max-w-lg text-[15.5px] leading-relaxed text-white/75">
             Take a two-minute tour through one of our recent Houston-area
-            transformations — new tile, coping, plaster, decking and lighting,
+            transformations - new tile, coping, plaster, decking and lighting,
             all delivered on-budget and on-time.
           </p>
         </motion.div>

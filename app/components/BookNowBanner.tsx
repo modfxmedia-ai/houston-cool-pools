@@ -10,7 +10,7 @@ const ease = [0.22, 1, 0.36, 1] as const;
 
 const SHOW_AFTER_PX = 480;
 
-// Routes where the sticky "free quote" banner should never appear — pages
+// Routes where the sticky "free quote" banner should never appear - pages
 // that already surface a full quote/contact form on-page (except the
 // homepage, which keeps the banner even though it has BookingForm).
 const HIDDEN_PATHS = [

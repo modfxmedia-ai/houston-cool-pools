@@ -122,7 +122,7 @@ export function BeforeAfterSlider({
         </div>
       </div>
 
-      {/* Corner labels — each fades out once the slider is fully past its side */}
+      {/* Corner labels - each fades out once the slider is fully past its side */}
       <span
         aria-hidden={position < 4}
         className={`pointer-events-none absolute left-4 top-4 inline-flex items-center gap-1.5 rounded-full bg-black/55 px-3 py-1.5 text-[10px] font-bold uppercase tracking-[0.24em] text-white/95 backdrop-blur-sm ring-1 ring-white/20 transition-opacity duration-200 ${

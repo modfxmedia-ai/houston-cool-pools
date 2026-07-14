@@ -216,7 +216,7 @@ function VideoFacade({ videoId, poster }: { videoId: string; poster: string }) {
               What to expect &middot; Next steps
             </p>
             <p className="font-[family-name:var(--font-display)] text-lg font-extrabold leading-tight text-white sm:text-xl md:text-2xl">
-              You signed up — what’s next?
+              You signed up - what’s next?
             </p>
           </div>
         </button>
