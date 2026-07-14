@@ -162,7 +162,7 @@ function PhotoCard({
   aspect,
   spanClass,
 }: {
-  photo: { src: string; caption: string };
+  photo: { src: string; caption?: string; orientation?: "landscape" | "portrait" };
   index: number;
   aspect: string;
   spanClass: string;
