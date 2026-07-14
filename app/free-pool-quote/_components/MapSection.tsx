@@ -234,7 +234,7 @@ export function MapSection() {
                     Hours
                   </div>
                   <div className="truncate text-xs font-semibold text-white">
-                    Mon-Fri 8a-6p
+                    Mon-Fri 9a-5p
                   </div>
                 </div>
               </div>

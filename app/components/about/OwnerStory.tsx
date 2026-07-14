@@ -85,17 +85,19 @@ export function OwnerStory({
                     >
                       <Image
                         src={photo.src}
-                        alt={photo.caption}
+                        alt={photo.caption ?? "Mike Lopez, owner of Houston Cool Pools"}
                         fill
                         sizes="(min-width: 1024px) 32rem, (min-width: 768px) 45vw, 90vw"
                         className="object-cover transition-transform duration-[1.6s] ease-out group-hover:scale-105"
                       />
                       <span className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[var(--color-navy-deep)]/60 via-transparent to-transparent" />
-                      <div className="absolute inset-x-5 bottom-4 text-white">
-                        <p className="text-xs uppercase tracking-[0.22em] text-white/85">
-                          {photo.caption}
-                        </p>
-                      </div>
+                      {photo.caption ? (
+                        <div className="absolute inset-x-5 bottom-4 text-white">
+                          <p className="text-xs uppercase tracking-[0.22em] text-white/85">
+                            {photo.caption}
+                          </p>
+                        </div>
+                      ) : null}
                     </div>
                   ) : null}
                   {/* Floating accent block */}

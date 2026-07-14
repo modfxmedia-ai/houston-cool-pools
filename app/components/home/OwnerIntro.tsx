@@ -151,7 +151,7 @@ export function OwnerIntro() {
               transition={{ duration: 0.6, delay: 0.15, ease }}
               className="mt-5 text-[16px] leading-relaxed text-slate-600"
             >
-              For more than 28 years, Mike has been designing and building the kind of
+              For more than 30 years, Mike has been designing and building the kind of
               backyards Houston families gather around — a relentless eye for craft,
               and a soft spot for lazy rivers and Texas summer nights.
             </motion.p>

@@ -16,7 +16,7 @@ export const WHY_CHOOSE_HERO = {
   eyebrow: "Why Choose HCP",
   title: "Why Choose Houston Cool Pools",
   intro:
-    "Houston Cool Pools is the greater Houston area's premier pool builder - proudly serving Houston, Cypress, Spring, Tomball, The Heights, and Katy with cutting-edge technology, 25+ years of experience, and excellent customer service.",
+    "Houston Cool Pools is the greater Houston area's premier pool builder - proudly serving Houston, Cypress, Spring, Tomball, The Heights, and Katy with cutting-edge technology, 30+ years of experience, and excellent customer service.",
 } as const;
 
 export const STORY = {
@@ -29,11 +29,11 @@ export const PROCESS_VIDEO = {
 } as const;
 
 export const PROCESS_BANNER =
-  "Peace of Mind in our Process: Cutting Edge Technology - 25+ Years experience - Excellent Customer Service.";
+  "Peace of Mind in our Process: Cutting Edge Technology - 30+ Years experience - Excellent Customer Service.";
 
 /** Animated headline counters ("motion graphs"). */
 export const HEADLINE_STATS: { value: number; suffix?: string; prefix?: string; label: string }[] = [
-  { value: 25, suffix: "+", label: "Years in Business" },
+  { value: 30, suffix: "+", label: "Years in Business" },
   { value: 2, prefix: "$", suffix: "M", label: "GL Insurance" },
   { value: 100, suffix: "%", label: "On-Budget Guarantee" },
 ];
@@ -57,10 +57,10 @@ export const PILLARS: Pillar[] = [
   {
     title: "Stability",
     blurb: "A proven, award-winning builder you can count on for the long haul.",
-    stat: { value: 25, suffix: "+", label: "Years in Business" },
+    stat: { value: 30, suffix: "+", label: "Years in Business" },
     items: [
-      "Over 25+ Years in Business",
-      "A+ Rated with the BBB - 2018 Gold Star Certificate",
+      "Over 30+ Years in Business",
+      "A+ Rated with the BBB - Gold Star Certificate",
       "Angie’s List Super Service Award Winner",
       "$2 Million in GL Insurance",
     ],

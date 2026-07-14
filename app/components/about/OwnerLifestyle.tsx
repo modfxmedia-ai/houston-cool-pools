@@ -177,18 +177,20 @@ function PhotoCard({
     >
       <Image
         src={photo.src}
-        alt={photo.caption}
+        alt={photo.caption ?? "Mike Lopez, owner of Houston Cool Pools"}
         fill
         sizes="(min-width: 1280px) 33vw, (min-width: 768px) 50vw, 100vw"
         className="object-cover transition-transform duration-[1.6s] ease-out group-hover:scale-105"
       />
       <span className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[var(--color-navy-deep)]/80 via-[var(--color-navy-deep)]/10 to-transparent opacity-70 transition-opacity duration-500 group-hover:opacity-95" />
       <span className="pointer-events-none absolute -top-1/2 -right-1/2 h-[200%] w-[200%] -translate-x-full bg-[linear-gradient(115deg,transparent_30%,rgba(79,195,224,0.18)_45%,transparent_60%)] transition-transform duration-[1200ms] ease-out group-hover:translate-x-0" />
-      <figcaption className="absolute inset-x-0 bottom-0 translate-y-3 p-5 text-white opacity-90 transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100">
-        <p className="font-[family-name:var(--font-display)] text-base leading-tight md:text-lg">
-          {photo.caption}
-        </p>
-      </figcaption>
+      {photo.caption ? (
+        <figcaption className="absolute inset-x-0 bottom-0 translate-y-3 p-5 text-white opacity-90 transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100">
+          <p className="font-[family-name:var(--font-display)] text-base leading-tight md:text-lg">
+            {photo.caption}
+          </p>
+        </figcaption>
+      ) : null}
       <span className="pointer-events-none absolute inset-0 rounded-2xl ring-1 ring-inset ring-[var(--color-pool)]/0 transition-all duration-500 group-hover:ring-[var(--color-pool)]/60" />
     </motion.figure>
   );

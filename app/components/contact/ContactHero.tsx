@@ -8,7 +8,7 @@ import { BUSINESS } from "../../../lib/business";
 
 const ease = [0.22, 1, 0.36, 1] as const;
 
-const VIDEO_ID = "y48ObILPIwo";
+const VIDEO_ID = "9kyTaOiFA2U";
 const VIDEO_POSTER = "/images/gallery/hd/estate-twilight.jpg";
 
 /**
@@ -134,7 +134,7 @@ function VideoFacade({ videoId, poster }: { videoId: string; poster: string }) {
     <div className="relative aspect-video w-full overflow-hidden rounded-[22px] bg-black">
       {playing ? (
         <iframe
-          title="Houston Cool Pools - about our business"
+          title="Houston Cool Pools - you signed up, what's next?"
           src={`https://www.youtube-nocookie.com/embed/${videoId}?autoplay=1&rel=0&modestbranding=1&iv_load_policy=3&color=white&playsinline=1&cc_load_policy=0`}
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           referrerPolicy="strict-origin-when-cross-origin"
@@ -145,7 +145,7 @@ function VideoFacade({ videoId, poster }: { videoId: string; poster: string }) {
         <button
           type="button"
           onClick={() => setPlaying(true)}
-          aria-label="Play Houston Cool Pools story video"
+          aria-label="Play Houston Cool Pools video: you signed up, what's next?"
           className="group absolute inset-0 h-full w-full cursor-pointer"
         >
           {/* Poster image */}
@@ -184,7 +184,7 @@ function VideoFacade({ videoId, poster }: { videoId: string; poster: string }) {
               <circle cx="12" cy="12" r="9" stroke="currentColor" strokeWidth="1.8" />
               <path d="M12 7v5l3 2" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
             </svg>
-            Watch story
+            Next steps
           </span>
 
           {/* Center play button */}
@@ -213,10 +213,10 @@ function VideoFacade({ videoId, poster }: { videoId: string; poster: string }) {
           {/* Bottom-left title block */}
           <div className="absolute inset-x-0 bottom-0 z-10 flex flex-col gap-1.5 p-5 text-left sm:p-6">
             <p className="text-[10px] font-bold uppercase tracking-[0.28em] text-[var(--color-gold-light)]">
-              See our work &middot; 2 min tour
+              What to expect &middot; Next steps
             </p>
             <p className="font-[family-name:var(--font-display)] text-lg font-extrabold leading-tight text-white sm:text-xl md:text-2xl">
-              See how we build your dream pool.
+              You signed up — what’s next?
             </p>
           </div>
         </button>

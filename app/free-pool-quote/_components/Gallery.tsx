@@ -121,7 +121,7 @@ export function Gallery() {
 
         <div className="mt-10 text-center">
           <p className="text-sm text-slate-600">
-            56+ real Houston builds · 4 price tiers · 100% on-budget guarantee
+            Real Houston builds · 4 price tiers · 100% on-budget guarantee
           </p>
           <a
             href="#quote-form"

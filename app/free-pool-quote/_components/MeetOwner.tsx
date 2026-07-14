@@ -7,7 +7,7 @@ import { LP_CONTACT } from "../_lib/data";
 const ease = [0.22, 1, 0.36, 1] as const;
 
 const QUALIFICATIONS = [
-  "28+ yrs custom pool builder",
+  "30+ yrs custom pool builder",
   "Genesis 3 Society Member",
   "APSP Member",
   "Personally oversees every build",
@@ -16,7 +16,7 @@ const QUALIFICATIONS = [
 ];
 
 const STATS = [
-  { value: "28+", label: "Years" },
+  { value: "30+", label: "Years" },
   { value: "1,600+", label: "Pools" },
   { value: "A+", label: "BBB Rated", star: true },
 ];
@@ -92,7 +92,7 @@ export function MeetOwner({ compact = false }: { compact?: boolean }) {
                   Mike Lopez
                 </div>
                 <div className="text-[10px] font-semibold uppercase tracking-[0.18em] text-slate-500">
-                  Owner · 28+ Yrs
+                  Owner · 30+ Yrs
                 </div>
               </div>
               <span className="inline-flex items-center gap-1 rounded-full border border-amber-200 bg-amber-50 px-2.5 py-1 text-[10px] font-bold uppercase tracking-[0.1em] text-amber-700">
@@ -186,7 +186,7 @@ export function MeetOwner({ compact = false }: { compact?: boolean }) {
 
           {compact ? (
             <p className="mt-6 text-base leading-relaxed text-slate-600 sm:text-lg">
-              Mike has spent more than 28 years designing the kind of backyards
+              Mike has spent more than 30 years designing the kind of backyards
               Houston families gather around, and he personally oversees every
               build.{" "}
               <strong className="text-[#0a1628]">
@@ -196,7 +196,7 @@ export function MeetOwner({ compact = false }: { compact?: boolean }) {
           ) : (
             <div className="mt-6 space-y-4 text-base leading-relaxed text-slate-600 sm:text-lg">
               <p>
-                For more than 28 years, Mike has been designing and building
+                For more than 30 years, Mike has been designing and building
                 the kind of backyards Houston families gather around. His
                 philosophy is simple: designing fun, building fun, and having
                 fun while doing it, and then watching customers enjoy their

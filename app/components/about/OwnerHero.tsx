@@ -130,7 +130,7 @@ export function OwnerHero({ owner }: { owner: TeamMember }) {
             transition={{ duration: 0.7, delay: 0.3, ease }}
             className="mt-7 max-w-xl text-base leading-relaxed text-white/75 md:text-lg"
           >
-            For more than 28 years, Mike has been designing and building the kind of
+            For more than 30 years, Mike has been designing and building the kind of
             backyards Houston families gather around. {owner.yearsExperience} in the
             pool industry, a relentless eye for craft, and a soft spot for lazy
             rivers and Texas summer nights.
@@ -216,7 +216,7 @@ export function OwnerHero({ owner }: { owner: TeamMember }) {
               >
                 <div>
                   <p className="font-[family-name:var(--font-display)] text-xl leading-none">
-                    20+
+                    30+
                   </p>
                   <p className="mt-1 text-[8px] font-bold uppercase tracking-[0.18em] text-white/85">
                     Years

@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { buildPageMetadata } from "../../lib/business";
-import { getGalleryStats } from "../../lib/gallery";
 import {
   PHONE_DISPLAY,
   PHONE_HREF,
@@ -14,11 +13,9 @@ import { GalleryCollections } from "../components/gallery/GalleryCollections";
 export const metadata: Metadata = buildPageMetadata("/gallery");
 
 export default function GalleryPage() {
-  const { pools } = getGalleryStats();
-
   return (
     <>
-      <GalleryHero poolCount={pools} />
+      <GalleryHero />
 
       <main className="relative bg-white">
         <GalleryFilterGrid />

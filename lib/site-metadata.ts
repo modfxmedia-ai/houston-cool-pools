@@ -506,7 +506,7 @@ export const PAGE_META: Record<string, PageMeta> = {
   },
   "/whychoosehcp": {
     title: "Houston Cool Pools, Your Premier Pool Builder in Houston, TX",
-    description: "Houston Cool Pools is a pool builder in Houston with over 25 years of experience. We offer custom pool building, remodeling, and pool service. Contact us today.",
+    description: "Houston Cool Pools is a pool builder in Houston with over 30 years of experience. We offer custom pool building, remodeling, and pool service. Contact us today.",
     keywords: "Pool Builder, Pool Builder Tomball, Pool Company, Pool Company Tomball, Pool Construction, Pool Construction Tomball, Pool Contractor, Pool Contractor Tomball, Pool Designer, Pool Designer Tomball, Pool Installer, Pool Installer Tomball",
   },
 };

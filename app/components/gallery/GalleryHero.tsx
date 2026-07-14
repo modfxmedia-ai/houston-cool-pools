@@ -16,7 +16,7 @@ const ease = [0.22, 1, 0.36, 1] as const;
  * the backdrop, a tight headline, an inline stats line, and the dual CTAs.
  * Replaces the previous 4-photo collage that competed with the grid below.
  */
-export function GalleryHero({ poolCount }: { poolCount: number }) {
+export function GalleryHero() {
   return (
     <section className="relative isolate overflow-hidden bg-[var(--color-navy-deep)] pt-36 text-white md:pt-44 lg:pt-48">
       {/* Background image */}
@@ -72,7 +72,7 @@ export function GalleryHero({ poolCount }: { poolCount: number }) {
           transition={{ duration: 0.7, delay: 0.2, ease }}
           className="mx-auto mt-6 max-w-xl text-base leading-relaxed text-white/75 md:text-lg"
         >
-          Browse {poolCount}+ Houston backyards we&apos;ve built. Filter by price tier
+          Browse the Houston backyards we&apos;ve built. Filter by price tier
           to find the pool that fits your space - and your investment.
         </motion.p>
 
@@ -83,8 +83,6 @@ export function GalleryHero({ poolCount }: { poolCount: number }) {
           transition={{ duration: 0.7, delay: 0.3, ease }}
           className="mx-auto mt-8 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-[11px] font-semibold uppercase tracking-[0.22em] text-white/65 md:gap-x-8"
         >
-          <span>{poolCount}+ Real builds</span>
-          <span aria-hidden className="h-1 w-1 rounded-full bg-[var(--color-pool)]" />
           <span>4 Price tiers</span>
           <span aria-hidden className="h-1 w-1 rounded-full bg-[var(--color-pool)]" />
           <span>100% On-budget guarantee</span>

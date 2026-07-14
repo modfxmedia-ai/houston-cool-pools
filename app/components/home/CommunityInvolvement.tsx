@@ -63,7 +63,7 @@ export function CommunityInvolvement() {
               className="absolute -bottom-8 left-1/2 flex w-[min(86%,320px)] -translate-x-1/2 items-center gap-3 rounded-2xl bg-[var(--color-navy-deep)] px-4 py-3 text-white shadow-2xl ring-1 ring-white/10 sm:left-[44%] sm:top-[42%] sm:bottom-auto sm:w-auto sm:-translate-x-0 sm:px-5 sm:py-4"
             >
               <span className="grid h-10 w-10 place-items-center rounded-xl bg-gradient-to-br from-[var(--color-pool)] to-[var(--color-pool-deep)] font-[family-name:var(--font-display)] text-lg sm:h-12 sm:w-12 sm:text-xl">
-                25+
+                30+
               </span>
               <div className="leading-tight">
                 <p className="text-sm font-semibold">Years Giving Back</p>

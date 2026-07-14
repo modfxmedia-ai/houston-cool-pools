@@ -86,9 +86,6 @@ export const GALLERY_TIERS: GalleryTier[] = [
       aspect: "wide",
     },
     pools: [
-      { src: "/images/gallery/hd/antisdel-1.jpg", title: "Antisdel Residence", caption: "Pool & spa with water features" },
-      { src: "/images/gallery/hd/antisdel-2.jpg", title: "Designer Spa Combo", caption: "Raised spa with spillover" },
-      { src: "/images/gallery/hd/antisdel-3.jpg", title: "Antisdel Detail", caption: "Custom tile work" },
       { src: "/images/gallery/hd/antisdel-4.jpg", title: "Antisdel Twilight", caption: "LED color scenes" },
       { src: "/images/gallery/hd/antisdel-5.jpg", title: "Antisdel Sunset", caption: "Outdoor living integration" },
       { src: "/images/gallery/hd/antisdel-6.jpg", title: "Antisdel Pool", caption: "Full design view" },

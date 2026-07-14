@@ -35,7 +35,7 @@ export default function WhyChooseHcpPage() {
             <span className="italic text-[var(--color-gold-light)]">difference</span>
           </h2>
           <p className="mx-auto mt-6 max-w-2xl text-base text-white/70 md:text-lg">
-            Cutting-edge technology, 25+ years of experience, and excellent customer
+            Cutting-edge technology, 30+ years of experience, and excellent customer
             service - all backed by our 100% on-budget guarantee. Let&apos;s build your
             backyard retreat.
           </p>

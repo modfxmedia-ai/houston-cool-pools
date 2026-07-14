@@ -12,7 +12,7 @@ export const LP_CONTACT = {
   phoneHref: "tel:+12816456631",
   smsHref: "sms:+12816456631",
   address: "21902 Highway 249, Houston, TX 77070",
-  hours: "Mon-Fri 8AM-6PM · Sat 9AM-4PM · Sun by Appointment",
+  hours: "Mon-Fri 9AM-5PM · Sat 9AM-1PM · Sun by Appointment",
   facebook: "https://www.facebook.com/HoustonCoolPools/",
   privacyHref: "/privacynotice",
 } as const;

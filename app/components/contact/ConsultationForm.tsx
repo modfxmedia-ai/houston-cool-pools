@@ -14,6 +14,7 @@ const HELP_OPTIONS = [
   "Pool Remodel / Renovation",
   "Outdoor Living / Hardscape",
   "Pool Service / Repair",
+  "Pool Cleaning",
   "General Question",
 ] as const;
 
@@ -22,6 +23,10 @@ const HEAR_OPTIONS = [
   "Social Media",
   "Referral / Word of Mouth",
   "Saw a Pool We Built",
+  "Saw Truck",
+  "Saw Sign",
+  "Customer Referral",
+  "Home Builder Referral",
   "Other",
 ] as const;
 

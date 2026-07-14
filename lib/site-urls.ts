@@ -232,6 +232,8 @@ export const HTML_REDIRECTS: ReadonlyArray<{ source: string; destination: string
   { source: "/pool-remodel.html", destination: "/pool-remodel" },
   { source: "/pool-school-1.html", destination: "/pool-school-1" },
   { source: "/pool-service.html", destination: "/pool-service" },
+  { source: "/pool-maintenance", destination: "/pool-service" },
+  { source: "/pool-maintenance.html", destination: "/pool-service" },
   { source: "/pool-specifications.html", destination: "/pool-specifications" },
   { source: "/pooldefinitions.html", destination: "/pooldefinitions" },
   { source: "/poolfinancing.html", destination: "/poolfinancing" },

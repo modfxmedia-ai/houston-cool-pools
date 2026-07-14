@@ -6,7 +6,7 @@ import { motion } from "motion/react";
 const ease = [0.22, 1, 0.36, 1] as const;
 
 const STATS = [
-  { value: "25+", label: "Years Building Pools" },
+  { value: "30+", label: "Years Building Pools" },
   { value: "1,600+", label: "Pools Delivered" },
   { value: "100%", label: "On-Budget Guarantee" },
   { value: "$2M", label: "GL Insurance" },

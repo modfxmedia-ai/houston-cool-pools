@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { PoolRemodelHero } from "../components/pool-remodel/PoolRemodelHero";
 import { PoolRemodelIntro } from "../components/pool-remodel/PoolRemodelIntro";
+import { PoolRemodelVideo } from "../components/pool-remodel/PoolRemodelVideo";
 import { RenovationIdeas } from "../components/pool-remodel/RenovationIdeas";
 import { WhatsCovered } from "../components/pool-remodel/WhatsCovered";
 
@@ -47,7 +48,7 @@ const REASON_GROUPS: { heading: string; items: string[] }[] = [
   {
     heading: "Why Choose Houston Cool Pools?",
     items: [
-      "25+ Years in Business",
+      "30+ Years in Business",
       "A+ Rated with the BBB",
       "A Rated with Angie's List",
     ],
@@ -96,6 +97,7 @@ export default function PoolRemodelPage() {
 
       <PoolRemodelHero />
       <PoolRemodelIntro reasonGroups={REASON_GROUPS} />
+      <PoolRemodelVideo />
       <WhatsCovered />
       <RenovationIdeas ideas={RENOVATION_IDEAS} />
     </>

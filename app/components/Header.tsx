@@ -17,9 +17,9 @@ import { PromoBanner } from "./PromoBanner";
 export function Header() {
   const pathname = usePathname();
   const isHome = pathname === "/";
-  const logoSrc = isHome ? "/images/logo-white.png" : "/images/logo.png";
-  const logoWidth = isHome ? 895 : 343;
-  const logoHeight = isHome ? 275 : 101;
+  const logoSrc = isHome ? "/images/hcp-logo-print.png" : "/images/logo.png";
+  const logoWidth = isHome ? 2365 : 343;
+  const logoHeight = isHome ? 655 : 101;
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [openMenu, setOpenMenu] = useState<string | null>(null);
@@ -292,9 +292,9 @@ function MobileOverlay({
 }) {
   const pathname = usePathname();
   const isHome = pathname === "/";
-  const logoSrc = isHome ? "/images/logo-white.png" : "/images/logo.png";
-  const logoWidth = isHome ? 895 : 150;
-  const logoHeight = isHome ? 275 : 48;
+  const logoSrc = isHome ? "/images/hcp-logo-print.png" : "/images/logo.png";
+  const logoWidth = isHome ? 2365 : 150;
+  const logoHeight = isHome ? 655 : 48;
   const [expanded, setExpanded] = useState<string | null>(null);
   return (
     <AnimatePresence>

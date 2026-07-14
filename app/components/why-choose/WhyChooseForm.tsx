@@ -8,7 +8,7 @@ const ease = [0.22, 1, 0.36, 1] as const;
 
 const POINTS = [
   "100% on-budget guarantee - no surprise change orders",
-  "25+ years building pools across the Houston area",
+  "30+ years building pools across the Houston area",
   "Real-time project updates, start to finish",
   "One dedicated team from design through dive-in",
 ] as const;

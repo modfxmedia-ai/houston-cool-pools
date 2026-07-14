@@ -11,6 +11,8 @@ type GalleryEntry = {
   folder: string;
   /** Image file names within `<folder>_files/vlb_images1/`. */
   names: string[];
+  /** Optional locally-hosted images prepended before the live-site set. */
+  extras?: GalleryImage[];
 };
 
 const DATA: Record<string, GalleryEntry> = {
@@ -198,6 +200,11 @@ const DATA: Record<string, GalleryEntry> = {
   // ===== Outdoor Structures =====
   "outdoor-structures-gallery-1": {
     folder: "outdoorstructuresgallery1",
+    extras: [
+      { src: "/images/gallery/hd/antisdel-1.jpg", alt: "Outdoor structure by Houston Cool Pools - covered patio with outdoor kitchen" },
+      { src: "/images/gallery/hd/antisdel-2.jpg", alt: "Outdoor structure by Houston Cool Pools - covered patio with wood ceiling and lounge seating" },
+      { src: "/images/gallery/hd/antisdel-3.jpg", alt: "Outdoor structure by Houston Cool Pools - covered patio with columns overlooking pool" },
+    ],
     names: [
       "outdoorstructuresbyhoustoncoolpools002.jpg", "outdoorstructuresbyhoustoncoolpools004.jpg",
       "outdoorstructuresbyhoustoncoolpools006.jpg", "outdoorstructuresbyhoustoncoolpools007.jpg",
@@ -222,10 +229,11 @@ const DATA: Record<string, GalleryEntry> = {
 export function getGalleryImages(slug: string, altPrefix: string): GalleryImage[] {
   const entry = DATA[slug];
   if (!entry) return [];
-  return entry.names.map((name, i) => ({
+  const live = entry.names.map((name, i) => ({
     src: `${HOST}/${entry.folder}_files/vlb_images1/${encodeURIComponent(name)}`,
     alt: `${altPrefix} by Houston Cool Pools - photo ${i + 1}`,
   }));
+  return entry.extras ? [...entry.extras, ...live] : live;
 }
 
 /** ImageGallery JSON-LD for a gallery sub-page. */

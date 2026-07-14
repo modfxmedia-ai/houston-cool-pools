@@ -7,7 +7,7 @@ export type TeamMember = {
   /** True when no real headshot exists yet - UI shows a styled placeholder. */
   portraitPending?: boolean;
   /** Optional lifestyle / hobby photos (owner gallery). */
-  photos?: { src: string; caption: string; orientation?: "landscape" | "portrait" }[];
+  photos?: { src: string; caption?: string; orientation?: "landscape" | "portrait" }[];
   /** Pull-quote used as a visual breaker. */
   quote: string;
   /** Long-form bio rendered as paragraph blocks. */
@@ -15,7 +15,7 @@ export type TeamMember = {
     heading: string;
     body: string;
     /** Optional per-chapter image override; falls back to `photos[i]` when omitted. */
-    image?: { src: string; caption: string; orientation?: "landscape" | "portrait" };
+    image?: { src: string; caption?: string; orientation?: "landscape" | "portrait" };
   }[];
   /** Quick-fact chips (owner hero). */
   facts?: { label: string; value: string }[];
@@ -33,14 +33,14 @@ export const MIKE_LOPEZ: TeamMember = {
   id: "mike-lopez",
   name: "Mike Lopez",
   title: "Owner",
-  yearsExperience: "20+ years",
+  yearsExperience: "30+ years",
   portrait: "/images/team/mike-lopez.jpg",
   photos: [
-    { src: "/images/team/mlp2.jpg", caption: "Family time around the pool", orientation: "landscape" },
-    { src: "/images/team/mlp3.jpg", caption: "Hunting & the great outdoors", orientation: "landscape" },
-    { src: "/images/team/mlp4.jpg", caption: "Off-shore fishing days", orientation: "portrait" },
-    { src: "/images/team/mlp5.jpg", caption: "On the road - ballpark #13", orientation: "landscape" },
-    { src: "/images/team/mlp6.jpg", caption: "Cold drinks, good company", orientation: "landscape" },
+    { src: "/images/team/mlp2.jpg", orientation: "landscape" },
+    { src: "/images/team/mlp3.jpg", orientation: "landscape" },
+    { src: "/images/team/mlp4.jpg", orientation: "portrait" },
+    { src: "/images/team/mlp5.jpg", orientation: "landscape" },
+    { src: "/images/team/mlp6.jpg", orientation: "landscape" },
   ],
   quote: "It is what it is. We just pivot and move forward.",
   bio: [
@@ -54,9 +54,9 @@ export const MIKE_LOPEZ: TeamMember = {
     },
   ],
   facts: [
-    { label: "Years in pools", value: "20+" },
+    { label: "Years in pools", value: "30+" },
     { label: "MLB ballparks visited", value: "13 / 30" },
-    { label: "Years building HCP", value: "28+" },
+    { label: "Years building HCP", value: "30+" },
     { label: "Favorite saying", value: "It is what it is" },
   ],
   hobbies: [

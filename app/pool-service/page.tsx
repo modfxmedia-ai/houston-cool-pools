@@ -39,7 +39,19 @@ const serviceJsonLd = {
       postalCode: "77070",
     },
   },
-  areaServed: ["Houston", "Tomball", "Cypress", "Spring", "Katy", "The Heights"],
+  areaServed: [
+    "Houston",
+    "Tomball",
+    "Cypress",
+    "Spring",
+    "Katy",
+    "The Heights",
+    "Magnolia",
+    "The Woodlands",
+    "Hockley",
+    "Garden Oaks",
+    "Pinehurst",
+  ],
   serviceType: "Pool Cleaning, Pool Maintenance, Pool Repair",
 };
 

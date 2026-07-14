@@ -14,8 +14,8 @@ const MAP_EMBED = `https://www.google.com/maps?q=${MAP_QUERY}&z=11&output=embed`
 const MAP_LINK = `https://www.google.com/maps/search/?api=1&query=${MAP_QUERY}`;
 
 const HOURS = [
-  { day: "Mon – Fri", time: "8:00 AM – 6:00 PM" },
-  { day: "Saturday", time: "9:00 AM – 4:00 PM" },
+  { day: "Mon – Fri", time: "9:00 AM – 5:00 PM" },
+  { day: "Saturday", time: "9:00 AM – 1:00 PM" },
   { day: "Sunday", time: "By Appointment" },
 ];
 

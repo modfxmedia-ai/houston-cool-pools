@@ -91,7 +91,7 @@ export function PoolRemodelHero() {
             className="mt-8 flex flex-wrap items-center gap-2.5"
           >
             {[
-              "25+ Yrs in Business",
+              "30+ Yrs in Business",
               "A+ BBB Rated",
               "Angie's List A Rated",
               "10+ Ways to Renovate",

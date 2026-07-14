@@ -2,6 +2,7 @@
 
 import { motion } from "motion/react";
 import { ConsultationForm } from "../contact/ConsultationForm";
+import { BUSINESS } from "../../../lib/business";
 
 const ease = [0.22, 1, 0.36, 1] as const;
 
@@ -132,6 +133,29 @@ export function BookingForm() {
                 </div>
               </a>
             </div>
+
+            {/* Proudly Serving */}
+            <motion.div
+              initial={{ opacity: 0, y: 16 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.3 }}
+              transition={{ duration: 0.6, delay: 0.15, ease }}
+              className="mt-6 rounded-2xl border border-[var(--color-pool)]/25 bg-white/[0.04] p-5 backdrop-blur-sm"
+            >
+              <p className="text-[10px] font-bold uppercase tracking-[0.22em] text-[var(--color-gold-light)]">
+                Proudly Serving
+              </p>
+              <div className="mt-3 flex flex-wrap gap-2">
+                {BUSINESS.areaServed.map((city) => (
+                  <span
+                    key={city}
+                    className="rounded-full border border-white/10 bg-white/[0.06] px-3 py-1.5 text-xs font-semibold text-white/90 shadow-[0_2px_8px_rgba(0,0,0,0.25)]"
+                  >
+                    {city}
+                  </span>
+                ))}
+              </div>
+            </motion.div>
           </motion.div>
 
           {/* ---------- FORM CARD ---------- */}
