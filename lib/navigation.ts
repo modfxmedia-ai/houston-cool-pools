@@ -78,7 +78,6 @@ export const PRIMARY_NAV: NavGroup[] = [
       {
         heading: "Pool Owners",
         links: [
-          { label: "Pool Maintenance", href: "/pool-service" },
           { label: "Severe Weather Guide", href: "/severe-weather" },
         ],
       },
