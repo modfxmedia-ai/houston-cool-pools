@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
 import {
@@ -15,11 +14,9 @@ import {
 import { PromoBanner } from "./PromoBanner";
 
 export function Header() {
-  const pathname = usePathname();
-  const isHome = pathname === "/";
-  const logoSrc = isHome ? "/images/hcp-logo-print.png" : "/images/logo.png";
-  const logoWidth = isHome ? 2365 : 343;
-  const logoHeight = isHome ? 655 : 101;
+  const logoSrc = "/images/hcp-logo-print.png";
+  const logoWidth = 2365;
+  const logoHeight = 655;
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [openMenu, setOpenMenu] = useState<string | null>(null);
@@ -69,11 +66,7 @@ export function Header() {
               width={logoWidth}
               height={logoHeight}
               priority
-              className={
-                isHome
-                  ? "h-14 w-auto md:h-16"
-                  : "h-12 w-auto md:h-14"
-              }
+              className="h-14 w-auto md:h-16"
             />
           </Link>
 
@@ -196,26 +189,16 @@ function DesktopNavItem({
           >
             <div
               className={`relative overflow-hidden rounded-2xl bg-[var(--color-navy-deep)] shadow-[0_30px_80px_-20px_rgba(0,0,0,0.6)] ring-1 ring-white/10 ${
-                (item.columns?.length ?? 0) > 1 ? "min-w-[820px]" : "min-w-[260px]"
+                (item.columns?.length ?? 1) === 1 ? "min-w-[240px]" : "w-fit"
               }`}
             >
               {/* Soft cyan glow */}
               <span className="pointer-events-none absolute -left-24 -top-24 h-64 w-64 rounded-full bg-[var(--color-pool)]/15 blur-[100px]" />
               <span className="pointer-events-none absolute -right-24 bottom-0 h-56 w-56 rounded-full bg-[var(--color-gold-light)]/8 blur-[100px]" />
 
-              <div
-                className={`relative grid gap-x-4 p-8 ${
-                  (item.columns?.length ?? 1) >= 4
-                    ? "grid-cols-4"
-                    : (item.columns?.length ?? 1) === 3
-                    ? "grid-cols-3"
-                    : (item.columns?.length ?? 1) === 2
-                    ? "grid-cols-2"
-                    : "grid-cols-1"
-                }`}
-              >
+              <div className="relative flex flex-nowrap items-start gap-x-10 p-8">
                 {item.columns!.map((col, i) => (
-                  <div key={i}>
+                  <div key={i} className="w-max shrink-0">
                     {col.heading && (
                       <div className="mb-5 px-3">
                         <h4 className="text-[15px] font-extrabold uppercase tracking-[0.18em] text-[var(--color-gold)]">
@@ -290,11 +273,9 @@ function MobileOverlay({
   open: boolean;
   onClose: () => void;
 }) {
-  const pathname = usePathname();
-  const isHome = pathname === "/";
-  const logoSrc = isHome ? "/images/hcp-logo-print.png" : "/images/logo.png";
-  const logoWidth = isHome ? 2365 : 150;
-  const logoHeight = isHome ? 655 : 48;
+  const logoSrc = "/images/hcp-logo-print.png";
+  const logoWidth = 2365;
+  const logoHeight = 655;
   const [expanded, setExpanded] = useState<string | null>(null);
   return (
     <AnimatePresence>
@@ -313,7 +294,7 @@ function MobileOverlay({
               alt="Houston Cool Pools"
               width={logoWidth}
               height={logoHeight}
-              className={isHome ? "h-12 w-auto" : "h-10 w-auto"}
+              className="h-12 w-auto"
             />
             <button
               type="button"

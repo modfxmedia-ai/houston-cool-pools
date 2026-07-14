@@ -34,7 +34,7 @@ export default function Page() {
       />
       <GalleryCategoryPage
         category="Outdoor Structures"
-        heading="Outdoor Structures - Page 2"
+        heading="Outdoor Structures"
         intro="Pergolas, pavilions and outdoor kitchens that complete your backyard retreat."
         images={images}
         prevHref="/outdoor-structures-gallery-1"
