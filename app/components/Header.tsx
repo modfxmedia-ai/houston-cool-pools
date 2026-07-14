@@ -157,7 +157,7 @@ function DesktopNavItem({
     <div className="relative" onMouseEnter={onOpen}>
       <Link
         href={item.href}
-        className={`relative inline-flex items-center gap-1 whitespace-nowrap px-2.5 py-6 text-[11px] font-semibold uppercase tracking-[0.14em] text-white/90 transition-colors hover:text-[var(--color-gold-light)] ${
+        className={`relative inline-flex items-center gap-1 whitespace-nowrap px-2.5 py-6 text-[13px] font-semibold uppercase tracking-[0.14em] text-white/90 transition-colors hover:text-[var(--color-gold-light)] ${
           isOpen ? "text-[var(--color-gold-light)]" : ""
         }`}
       >
@@ -229,7 +229,7 @@ function DesktopNavItem({
                         <li key={link.href}>
                           <Link
                             href={link.href}
-                            className="block rounded-md px-3 py-2 text-[13px] font-medium leading-snug text-white/80 transition-colors hover:bg-white/[0.05] hover:text-white"
+                            className="block rounded-md px-3 py-2 text-[14px] font-medium leading-snug text-white/80 transition-colors hover:bg-white/[0.05] hover:text-white"
                           >
                             {link.label}
                           </Link>
@@ -350,7 +350,7 @@ function MobileOverlay({
                       onClick={() =>
                         setExpanded(expanded === item.label ? null : item.label)
                       }
-                      className="flex w-full items-center justify-between px-4 py-4 text-left text-base font-semibold uppercase tracking-[0.16em]"
+                      className="flex w-full items-center justify-between px-4 py-4 text-left text-lg font-semibold uppercase tracking-[0.16em]"
                     >
                       <span>{item.label}</span>
                       <svg
@@ -398,7 +398,7 @@ function MobileOverlay({
                                       <Link
                                         href={link.href}
                                         onClick={onClose}
-                                        className="block py-2 text-sm text-white/85 hover:text-[var(--color-gold-light)]"
+                                        className="block py-2 text-base text-white/85 hover:text-[var(--color-gold-light)]"
                                       >
                                         {link.label}
                                       </Link>
@@ -450,7 +450,7 @@ function MobileOverlay({
                   <Link
                     href={item.href}
                     onClick={onClose}
-                    className="block px-4 py-4 text-base font-semibold uppercase tracking-[0.16em]"
+                    className="block px-4 py-4 text-lg font-semibold uppercase tracking-[0.16em]"
                   >
                     {item.label}
                   </Link>
