@@ -10,7 +10,7 @@ const ease = [0.22, 1, 0.36, 1] as const;
 
 const STATS: { value: number; suffix?: string; prefix?: string; label: string }[] = [
   { value: 17, label: "Resource Guides" },
-  { value: 25, suffix: "+", label: "Years of Expertise" },
+  { value: 30, suffix: "+", label: "Years of Expertise" },
   { value: 100, suffix: "%", label: "On-Budget Guarantee" },
   { value: 6, label: "Areas Served" },
 ];
