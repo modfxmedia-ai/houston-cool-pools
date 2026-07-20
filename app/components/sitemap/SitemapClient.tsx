@@ -146,6 +146,14 @@ const GALLERIES: { heading: string; links: SectionLink[] }[] = [
       href: `/outdoor-structures-gallery-${i + 1}`,
     })),
   },
+  {
+    heading: "Commercial Projects",
+    links: [{ label: "Commercial Projects", href: "/commercial-projects-gallery-1" }],
+  },
+  {
+    heading: "Water Features",
+    links: [{ label: "Water Features", href: "/water-features-gallery-1" }],
+  },
 ];
 
 const PSEO_LIVE = LOCATIONS.filter((l) => l.live);

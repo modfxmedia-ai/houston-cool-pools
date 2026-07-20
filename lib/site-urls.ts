@@ -96,6 +96,8 @@ export const SITE_URLS: SiteUrl[] = [
   { path: "/nautilus-real-estate", priority: 0.51, lastModified: "2025-06-12T21:32:41+00:00" },
   { path: "/outdoor-structures-gallery-1", priority: 0.51, lastModified: "2025-06-12T21:32:41+00:00" },
   { path: "/outdoor-structures-gallery-2", priority: 0.51, lastModified: "2025-06-12T21:32:41+00:00" },
+  { path: "/commercial-projects-gallery-1", priority: 0.51, lastModified: "2026-07-21T00:00:00+00:00" },
+  { path: "/water-features-gallery-1", priority: 0.51, lastModified: "2026-07-21T00:00:00+00:00" },
   { path: "/pdf/AMP-30-1310.pdf", priority: 0.51, lastModified: "2021-05-21T08:56:31+00:00" },
   { path: "/pdf/Amerlite-White-Halogen-OM.pdf", priority: 0.51, lastModified: "2024-10-31T10:15:37+00:00" },
   { path: "/pdf/BoostRiteBoosterPumpOM.pdf", priority: 0.51, lastModified: "2024-10-31T10:15:37+00:00" },

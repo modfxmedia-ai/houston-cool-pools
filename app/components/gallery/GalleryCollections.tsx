@@ -60,6 +60,22 @@ const COLLECTIONS: {
     coverSlug: "outdoor-structures-gallery-1",
     altPrefix: "Outdoor structure",
   },
+  {
+    label: "Commercial Projects",
+    description: "Fountains and water features for HOAs, apartments and commercial properties.",
+    href: "/commercial-projects-gallery-1",
+    pages: 1,
+    coverSlug: "commercial-projects-gallery-1",
+    altPrefix: "Commercial project",
+  },
+  {
+    label: "Water Features",
+    description: "Sheer-descent walls, spillways and bubblers that turn a pool into a statement piece.",
+    href: "/water-features-gallery-1",
+    pages: 1,
+    coverSlug: "water-features-gallery-1",
+    altPrefix: "Water feature",
+  },
 ];
 
 export function GalleryCollections() {

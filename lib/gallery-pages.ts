@@ -204,6 +204,7 @@ const DATA: Record<string, GalleryEntry> = {
       { src: "/images/gallery/hd/antisdel-1.jpg", alt: "Outdoor structure by Houston Cool Pools - covered patio with outdoor kitchen" },
       { src: "/images/gallery/hd/antisdel-2.jpg", alt: "Outdoor structure by Houston Cool Pools - covered patio with wood ceiling and lounge seating" },
       { src: "/images/gallery/hd/antisdel-3.jpg", alt: "Outdoor structure by Houston Cool Pools - covered patio with columns overlooking pool" },
+      { src: "/images/gallery/hd/poolside-1.jpg", alt: "Outdoor structure by Houston Cool Pools - lakeside wood pavilion with pool" },
     ],
     names: [
       "outdoorstructuresbyhoustoncoolpools002.jpg", "outdoorstructuresbyhoustoncoolpools004.jpg",
@@ -222,6 +223,25 @@ const DATA: Record<string, GalleryEntry> = {
       "outdoorstructuresbyhoustoncoolpools086.jpg", "outdoorstructuresbyhoustoncoolpools094.jpg",
       "outdoorstructuresbyhoustoncoolpools099.jpg", "outdoorstructuresbyhoustoncoolpools100.jpg",
     ],
+  },
+
+  // ===== Commercial Projects =====
+  "commercial-projects-gallery-1": {
+    folder: "commercial-projects-gallery-1",
+    extras: [
+      { src: "/images/gallery/hd/family-1.jpg", alt: "Commercial courtyard fountain by Houston Cool Pools" },
+      { src: "/images/gallery/hd/portrait-1.jpg", alt: "Commercial courtyard fountain by Houston Cool Pools" },
+    ],
+    names: [],
+  },
+
+  // ===== Water Features =====
+  "water-features-gallery-1": {
+    folder: "water-features-gallery-1",
+    extras: [
+      { src: "/images/gallery/hd/feature-pool-3.jpg", alt: "Water feature by Houston Cool Pools - stacked-stone spillway wall" },
+    ],
+    names: [],
   },
 };
 

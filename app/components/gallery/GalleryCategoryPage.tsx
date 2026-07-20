@@ -75,6 +75,18 @@ const GALLERY_CATEGORIES: {
       "/outdoor-structures-gallery-2",
     ],
   },
+  {
+    label: "Commercial",
+    match: "Commercial Projects",
+    href: "/commercial-projects-gallery-1",
+    slugs: ["/commercial-projects-gallery-1"],
+  },
+  {
+    label: "Water Features",
+    match: "Water Features",
+    href: "/water-features-gallery-1",
+    slugs: ["/water-features-gallery-1"],
+  },
 ];
 
 /** Rising-bubble decorations for the hero (water motion graph). */
