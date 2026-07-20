@@ -1,22 +1,12 @@
 "use client";
 
 import { motion } from "motion/react";
+import { BUSINESS } from "../../../lib/business";
 import { LP_CONTACT } from "../_lib/data";
 
 const ease = [0.22, 1, 0.36, 1] as const;
 
-const SERVICE_AREAS = [
-  "Houston",
-  "Spring",
-  "Cypress",
-  "Tomball",
-  "The Woodlands",
-  "Katy",
-  "Sugar Land",
-  "Pearland",
-  "Kingwood",
-  "Memorial",
-] as const;
+const SERVICE_AREAS = BUSINESS.areaServed;
 
 const MAP_QUERY = encodeURIComponent(LP_CONTACT.address);
 const MAP_EMBED_URL = `https://maps.google.com/maps?q=${MAP_QUERY}&t=&z=11&ie=UTF8&iwloc=&output=embed`;

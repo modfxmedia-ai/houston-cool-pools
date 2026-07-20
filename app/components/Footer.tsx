@@ -1,12 +1,13 @@
 "use client";
 
-import Link from "next/link";
-import Image from "next/image";
 import { motion } from "motion/react";
+import Image from "next/image";
+import Link from "next/link";
+import { BUSINESS } from "../../lib/business";
 import {
-  PRIMARY_NAV,
-  PHONE_DISPLAY,
-  PHONE_HREF,
+    PHONE_DISPLAY,
+    PHONE_HREF,
+    PRIMARY_NAV,
 } from "../../lib/navigation";
 
 const QUICK_LINKS = [
@@ -19,7 +20,7 @@ const QUICK_LINKS = [
   { label: "Contact", href: "/contact" },
 ];
 
-const SERVICE_AREAS = ["Houston", "Cypress", "Spring", "Tomball", "The Heights", "Katy"];
+const SERVICE_AREAS = BUSINESS.areaServed;
 
 const poolInfoLinks = (
   PRIMARY_NAV.find((n) => n.label === "Pool Information")?.columns ?? []
