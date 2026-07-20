@@ -9,8 +9,6 @@ const ease = [0.22, 1, 0.36, 1] as const;
 
 const SIGNATURES = [
   "Founder & Owner",
-  "A+ BBB Rated",
-  "Angie's List Super Service Award",
   "Houston-born, Houston-built",
 ];
 
