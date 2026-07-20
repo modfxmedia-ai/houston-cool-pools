@@ -444,29 +444,24 @@ export const PAGE_META: Record<string, PageMeta> = {
     description: "Houston Cool Pools Custom Inground Pools financing options.",
     keywords: "Financing for Custom Pool Building",
   },
-  "/pricing-65k-75k": {
+  "/pricing-65k-90k": {
     title: "Affordable Pool Construction Pricing in Houston, TX",
-    description: "Explore affordable pool pricing options within $45k-$55k at Houston Cool Pools. We're the premier pool builder serving Cypress, Spring, Tomball, The Heights, and Katy.",
+    description: "Explore custom pool pricing options within $65k-$90k at Houston Cool Pools. We're the premier pool builder serving Cypress, Spring, Tomball, The Heights, and Katy.",
     keywords: "Pool Builder, Pool Builder Tomball, Pool Company, Pool Company Tomball, Pool Construction, Pool Construction Tomball, Pool Contractor, Pool Contractor Tomball, Pool Designer, Pool Designer Tomball, Pool Installer, Pool Installer Tomball",
   },
-  "/pricing-75k-85k": {
+  "/pricing-90k-115k": {
     title: "Pool Builders Katy Kingwood Cypress Spring Tomball",
-    description: "Custom Pool examples by price, page 2",
+    description: "Custom pool examples by price - the $90k to $115k range.",
     keywords: "Pool Builder, Pool Builder Tomball, Pool Company, Pool Company Tomball, Pool Construction, Pool Construction Tomball, Pool Contractor, Pool Contractor Tomball, Pool Designer, Pool Designer Tomball, Pool Installer, Pool Installer Tomball",
   },
-  "/pricing-85k-95k": {
+  "/pricing-115k-150k": {
     title: "Pool Builders Katy Kingwood Cypress Spring Tomball",
-    description: "Custom Pool examples by price, page 3",
+    description: "Custom pool examples by price - the $115k to $150k range.",
     keywords: "Pool Builder, Pool Builder Tomball, Pool Company, Pool Company Tomball, Pool Construction, Pool Construction Tomball, Pool Contractor, Pool Contractor Tomball, Pool Designer, Pool Designer Tomball, Pool Installer, Pool Installer Tomball",
   },
-  "/pricing-95k-105k": {
+  "/pricing-150k-plus": {
     title: "Pool Builders Katy Kingwood Cypress Spring Tomball",
-    description: "Custom Pool examples by price, page 4",
-    keywords: "Pool Builder, Pool Builder Tomball, Pool Company, Pool Company Tomball, Pool Construction, Pool Construction Tomball, Pool Contractor, Pool Contractor Tomball, Pool Designer, Pool Designer Tomball, Pool Installer, Pool Installer Tomball",
-  },
-  "/pricing-105k-125k": {
-    title: "Pool Builders Katy Kingwood Cypress Spring Tomball",
-    description: "Custom Pool examples by price, page 5",
+    description: "Custom pool examples by price - the $150k+ range.",
     keywords: "Pool Builder, Pool Builder Tomball, Pool Company, Pool Company Tomball, Pool Construction, Pool Construction Tomball, Pool Contractor, Pool Contractor Tomball, Pool Designer, Pool Designer Tomball, Pool Installer, Pool Installer Tomball",
   },
   "/privacynotice": {

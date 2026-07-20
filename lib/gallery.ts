@@ -37,8 +37,8 @@ export type GalleryTier = {
  */
 export const GALLERY_TIERS: GalleryTier[] = [
   {
-    id: "75k-85k",
-    label: "$75K – $85K",
+    id: "65k-90k",
+    label: "$65K – $90K",
     tagline: "Signature starter pools",
     description:
       "Beautifully crafted gunite pools designed to elevate any backyard - clean lines, premium plaster finishes, and the build quality Houston Cool Pools is known for.",
@@ -68,8 +68,8 @@ export const GALLERY_TIERS: GalleryTier[] = [
     ],
   },
   {
-    id: "85k-120k",
-    label: "$85K – $120K",
+    id: "90k-115k",
+    label: "$90K – $115K",
     tagline: "Designer custom pools",
     description:
       "Custom shapes, integrated spas, and extensive water features. The sweet spot for homeowners who want a backyard centerpiece that turns heads.",
@@ -101,8 +101,8 @@ export const GALLERY_TIERS: GalleryTier[] = [
     ],
   },
   {
-    id: "120k-200k",
-    label: "$120K – $200K",
+    id: "115k-150k",
+    label: "$115K – $150K",
     tagline: "Premier outdoor environments",
     description:
       "Full backyard transformations - pool, spa, outdoor kitchen, fire features, and custom hardscape designed as one cohesive luxury environment.",
@@ -137,8 +137,8 @@ export const GALLERY_TIERS: GalleryTier[] = [
     ],
   },
   {
-    id: "200k-plus",
-    label: "$200K+",
+    id: "150k-plus",
+    label: "$150K+",
     tagline: "Signature estate pools",
     description:
       "One-of-a-kind backyard estates. Custom shapes, premium finishes, and complete outdoor environments for the most discerning Houston homeowners.",

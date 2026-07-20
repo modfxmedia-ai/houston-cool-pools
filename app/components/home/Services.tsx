@@ -42,7 +42,7 @@ const SERVICES: Service[] = [
   {
     title: "Pricing",
     desc: "Transparent pricing from $65K and up.",
-    href: "/pricing-85k-95k",
+    href: "/pricing-65k-90k",
     image: "/images/gallery/_mg_0300.jpg",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" className="h-5 w-5">

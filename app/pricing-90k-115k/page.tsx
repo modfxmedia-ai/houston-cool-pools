@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { buildPageMetadata } from "../../lib/business";
 import { PricingTierPage } from "../components/pricing/PricingTierPage";
 
-const SLUG = "pricing-95k-105k";
+const SLUG = "pricing-90k-115k";
 const CANONICAL = `https://houstoncoolpools.com/${SLUG}.html`;
 
 const base = buildPageMetadata(`/${SLUG}`);
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
 const serviceJsonLd = {
   "@context": "https://schema.org",
   "@type": "Service",
-  name: "Custom Pool Construction $95k - $105k",
+  name: "Custom Pool Construction $90k - $115k",
   serviceType: "Custom Gunite Pool Construction",
   provider: {
     "@type": "LocalBusiness",

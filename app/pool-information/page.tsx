@@ -81,7 +81,7 @@ const RESOURCES: Resource[] = [
   },
   {
     title: "Pool Pricing",
-    href: "/pricing-85k-95k",
+    href: "/pricing-65k-90k",
     description: "Transparent pricing packages from $65K and up.",
     icon: "pricing",
   },

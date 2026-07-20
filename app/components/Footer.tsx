@@ -11,7 +11,7 @@ import {
 } from "../../lib/navigation";
 
 const QUICK_LINKS = [
-  { label: "Pricing", href: "/pricing-85k-95k" },
+  { label: "Pricing", href: "/pricing-65k-90k" },
   { label: "Features", href: "/custom-pool-features-1" },
   { label: "Financing", href: "/poolfinancing" },
   { label: "Why Choose Us", href: "/whychoosehcp" },

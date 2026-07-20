@@ -37,16 +37,16 @@ export const PRIMARY_NAV: NavGroup[] = [
         heading: "Browse by Price",
         links: [
           { label: "All Pools", href: "/gallery?tier=all" },
-          { label: "$75K – $85K", href: "/gallery?tier=75k-85k" },
-          { label: "$85K – $120K", href: "/gallery?tier=85k-120k" },
-          { label: "$120K – $200K", href: "/gallery?tier=120k-200k" },
-          { label: "$200K+", href: "/gallery?tier=200k-plus" },
+          { label: "$65K – $90K", href: "/gallery?tier=65k-90k" },
+          { label: "$90K – $115K", href: "/gallery?tier=90k-115k" },
+          { label: "$115K – $150K", href: "/gallery?tier=115k-150k" },
+          { label: "$150K+", href: "/gallery?tier=150k-plus" },
         ],
       },
       {
         heading: "Explore",
         links: [
-          { label: "Pricing", href: "/pricing-65k-75k" },
+          { label: "Pricing", href: "/pricing-65k-90k" },
           { label: "Pool Types & Styles", href: "/custom-pool-types" },
           { label: "Custom Pool Features", href: "/custom-pool-features-1" },
           { label: "Outdoor Structures", href: "/outdoor-structures-gallery-1" },
@@ -63,7 +63,7 @@ export const PRIMARY_NAV: NavGroup[] = [
       {
         heading: "Plan Your Pool",
         links: [
-          { label: "Pool Pricing & Packages", href: "/pricing-65k-75k" },
+          { label: "Pool Pricing & Packages", href: "/pricing-65k-90k" },
           { label: "Financing Options", href: "/poolfinancing" },
           { label: "Choose The Right Builder", href: "/how-to-choose-a-pool-builder" },
           { label: "Pool Specifications", href: "/pool-specifications" },

@@ -37,7 +37,7 @@ const SECTIONS: Section[] = [
     intro: "Understand pricing, financing, and how to pick the right pool team for your backyard.",
     links: [
       { label: "Pool Information Hub", href: "/pool-information" },
-      { label: "Pool Pricing & Packages", href: "/pricing-85k-95k" },
+      { label: "Pool Pricing & Packages", href: "/pricing-65k-90k" },
       { label: "Financing Options", href: "/poolfinancing" },
       { label: "Choose The Right Builder", href: "/how-to-choose-a-pool-builder" },
       { label: "Pool Specifications", href: "/pool-specifications" },
@@ -74,11 +74,10 @@ const SECTIONS: Section[] = [
 ];
 
 const PRICING_TIERS: SectionLink[] = [
-  { label: "$45k – $55k", href: "/pricing-85k-95k" },
-  { label: "$55k – $65k", href: "/pricing-75k-85k" },
-  { label: "$65k – $75k", href: "/pricing-85k-95k" },
-  { label: "$75k – $85k", href: "/pricing-95k-105k" },
-  { label: "$85k – $105k", href: "/pricing-105k-125k" },
+  { label: "$65k – $90k", href: "/pricing-65k-90k" },
+  { label: "$90k – $115k", href: "/pricing-90k-115k" },
+  { label: "$115k – $150k", href: "/pricing-115k-150k" },
+  { label: "$150k+", href: "/pricing-150k-plus" },
 ];
 
 const CONSTRUCTION_STEPS: SectionLink[] = Array.from({ length: 6 }, (_, i) => ({
