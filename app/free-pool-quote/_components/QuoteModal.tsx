@@ -5,8 +5,10 @@ import { useRouter } from "next/navigation";
 import { AnimatePresence, motion } from "motion/react";
 import Script from "next/script";
 
-const FORM_ID = "ZkAzEfBXwI1EjbC1MJOa";
-const FORM_SRC = `https://api.leadconnectorhq.com/widget/form/${FORM_ID}`;
+const FORM_ID = "XDBGRHc1OgzH7jpnljtT";
+const FORM_NAME = "Google LP Opt-In Form";
+const FORM_SRC = `https://link.millcreekmktg.com/widget/form/${FORM_ID}`;
+const FORM_INITIAL_HEIGHT = 1271;
 const ease = [0.22, 1, 0.36, 1] as const;
 
 export function QuoteModal() {
@@ -30,11 +32,11 @@ export function QuoteModal() {
     return () => document.removeEventListener("click", onClick);
   }, []);
 
-  // Detect form submission from the LeadConnector iframe and route to TYP.
+  // Detect form submission from the MillCreek iframe and route to TYP.
   useEffect(() => {
     function onMessage(e: MessageEvent) {
       const origin = typeof e.origin === "string" ? e.origin : "";
-      if (!/leadconnectorhq|msgsndr/i.test(origin)) return;
+      if (!/millcreekmktg|leadconnectorhq|msgsndr/i.test(origin)) return;
 
       let raw: string;
       try {
@@ -80,7 +82,7 @@ export function QuoteModal() {
   return (
     <>
       <Script
-        src="https://link.msgsndr.com/js/form_embed.js"
+        src="https://link.millcreekmktg.com/js/form_embed.js"
         strategy="afterInteractive"
       />
 
@@ -200,12 +202,13 @@ export function QuoteModal() {
                   data-activation-value=""
                   data-deactivation-type="neverDeactivate"
                   data-deactivation-value=""
-                  data-form-name="🔵 (Vercel Build) Google LP 30-06-26"
-                  data-height="520"
+                  data-form-name={FORM_NAME}
+                  data-height={String(FORM_INITIAL_HEIGHT)}
                   data-layout-iframe-id={`inline-${FORM_ID}`}
                   data-form-id={FORM_ID}
-                  title="Free Pool Quote Form"
-                  className="block h-[540px] w-full border-0 sm:h-[580px]"
+                  title={FORM_NAME}
+                  height={FORM_INITIAL_HEIGHT}
+                  className="block w-full border-0"
                 />
               </div>
 

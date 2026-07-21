@@ -244,7 +244,7 @@ function ComparisonSlider({
       tabIndex={0}
       onKeyDown={onKeyDown}
     >
-      {/* BEFORE — full base layer (always visible under after) */}
+      {/* BEFORE - full base layer (always visible under after) */}
       <div className="pointer-events-none absolute inset-0">
         <Image
           src={before}
@@ -257,7 +257,7 @@ function ComparisonSlider({
         />
       </div>
 
-      {/* AFTER — full size, clipped from the left by pct */}
+      {/* AFTER - full size, clipped from the left by pct */}
       <motion.div
         aria-hidden
         style={{ clipPath: afterClip, WebkitClipPath: afterClip }}
@@ -274,7 +274,7 @@ function ComparisonSlider({
         />
       </motion.div>
 
-      {/* Labels — fade out once their side becomes too narrow to hold them */}
+      {/* Labels - fade out once their side becomes too narrow to hold them */}
       <motion.span
         style={{ opacity: beforeOpacity }}
         className="pointer-events-none absolute left-4 top-4 rounded-full bg-[#0a1628]/85 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.2em] text-white shadow-lg backdrop-blur"

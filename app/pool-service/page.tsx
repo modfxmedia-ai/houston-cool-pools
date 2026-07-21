@@ -103,7 +103,7 @@ export default function PoolServicePage() {
             className="object-cover"
           />
         </div>
-        {/* Bottom-weighted gradient — keeps the banner visible up top while
+        {/* Bottom-weighted gradient - keeps the banner visible up top while
             preserving contrast for the CTA row and blending into the next section. */}
         <div className="absolute inset-0 bg-gradient-to-b from-[var(--color-navy-deep)]/55 via-[var(--color-navy-deep)]/40 to-[var(--color-navy-deep)]" />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(0,124,182,0.25),transparent_65%)]" />

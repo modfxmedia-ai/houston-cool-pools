@@ -90,7 +90,7 @@ const TIER_META: Record<string, TierMeta> = {
 
 /** Build an alt string from a gallery photo's title + caption. */
 function toAlt(p: GalleryPool): string {
-  return p.caption ? `${p.title} — ${p.caption}` : p.title;
+  return p.caption ? `${p.title} - ${p.caption}` : p.title;
 }
 
 function buildTier(gallery: GalleryTier): PoolPricingTier {

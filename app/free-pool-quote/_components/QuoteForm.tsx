@@ -6,14 +6,15 @@ import { LP_CONTACT, LP_OFFER_CHECKLIST } from "../_lib/data";
 
 const ease = [0.22, 1, 0.36, 1] as const;
 
-const FORM_ID = "ZkAzEfBXwI1EjbC1MJOa";
-const FORM_SRC = `https://api.leadconnectorhq.com/widget/form/${FORM_ID}`;
+const FORM_ID = "VRhEoU5LTFoMGrDIkkAy";
+const FORM_NAME = "Website Contact Form";
+const FORM_SRC = `https://link.millcreekmktg.com/widget/form/${FORM_ID}`;
 
 export function QuoteForm() {
   return (
     <section
       id="quote-form"
-      className="relative isolate overflow-hidden bg-white py-14 sm:py-24"
+      className="relative isolate overflow-x-clip bg-white py-14 sm:py-24"
     >
       {/* Soft motion backdrop */}
       <div
@@ -43,13 +44,15 @@ export function QuoteForm() {
       />
 
       <div className="relative z-10 mx-auto grid max-w-7xl gap-10 px-4 sm:gap-12 sm:px-8 lg:grid-cols-[1fr_1.05fr] lg:items-start lg:gap-16 lg:px-16 xl:px-20">
-        {/* Left column - info */}
-        <motion.div
-          initial={{ opacity: 0, y: 24 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-80px" }}
-          transition={{ duration: 0.7, ease }}
-        >
+        {/* Left column - info (sticky on desktop so it stays visible while
+            the tall MillCreek form iframe scrolls in the right column) */}
+        <div className="lg:sticky lg:top-24 lg:self-start">
+          <motion.div
+            initial={{ opacity: 0, y: 24 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-80px" }}
+            transition={{ duration: 0.7, ease }}
+          >
           <span className="inline-flex items-center rounded-full border border-[#00b4d8]/30 bg-[#00b4d8]/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.18em] text-[#00b4d8]">
             Free · No Obligation · No Pressure
           </span>
@@ -105,6 +108,7 @@ export function QuoteForm() {
             </p>
           </div>
         </motion.div>
+        </div>
 
         {/* Right column - embedded LeadConnector form (same one as popup) */}
         <motion.div
@@ -155,12 +159,13 @@ export function QuoteForm() {
               data-activation-value=""
               data-deactivation-type="neverDeactivate"
               data-deactivation-value=""
-              data-form-name="🔵 (Vercel Build) Google LP 30-06-26"
-              data-height="600"
+              data-form-name={FORM_NAME}
+              data-height="1418"
               data-layout-iframe-id={`inline-${FORM_ID}`}
               data-form-id={FORM_ID}
-              title="Free Pool Quote Form"
-              className="block h-[640px] w-full border-0 sm:h-[680px]"
+              title={FORM_NAME}
+              height={1418}
+              className="block w-full border-0"
             />
 
             {/* Footer trust strip */}
@@ -176,9 +181,9 @@ export function QuoteForm() {
         </motion.div>
       </div>
 
-      {/* LeadConnector embed script for iframe auto-resize */}
+      {/* MillCreek embed script for iframe auto-resize */}
       <Script
-        src="https://link.msgsndr.com/js/form_embed.js"
+        src="https://link.millcreekmktg.com/js/form_embed.js"
         strategy="afterInteractive"
       />
     </section>

@@ -3,6 +3,7 @@ import { TypHero } from "../_components/TypHero";
 import { TypVideo } from "../_components/TypVideo";
 import { TypTimeline } from "../_components/TypTimeline";
 import { TypGallery } from "../_components/TypExtras";
+import { Financing } from "../_components/Financing";
 import { Testimonials } from "../_components/Testimonials";
 import { MeetOwner } from "../_components/MeetOwner";
 import { LpFooter } from "../_components/LpFooter";
@@ -43,9 +44,10 @@ export default function ThankYouPage() {
       <main>
         <TypHero />
         <TypVideo />
-        <TypTimeline />
-        <TypGallery />
         <MeetOwner compact />
+        <TypTimeline />
+        <Financing />
+        <TypGallery />
         <Testimonials />
       </main>
       <LpFooter />

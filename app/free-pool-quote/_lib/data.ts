@@ -8,9 +8,9 @@ export const LP_COLORS = {
 } as const;
 
 export const LP_CONTACT = {
-  phoneDisplay: "(281) 645-6631",
-  phoneHref: "tel:+12816456631",
-  smsHref: "sms:+12816456631",
+  phoneDisplay: "(281) 938-4830",
+  phoneHref: "tel:+12819384830",
+  smsHref: "sms:+12819384830",
   address: "21902 Highway 249, Houston, TX 77070",
   hours: "Mon-Fri 9AM-5PM · Sat 9AM-1PM · Sun by Appointment",
   facebook: "https://www.facebook.com/HoustonCoolPools/",
@@ -284,6 +284,18 @@ export const LP_TYP_GALLERY = [
   "/images/gallery/hd/silverman-1.jpg",
   "/images/gallery/hd/huckleberry-4.jpg",
   "/images/gallery/hd/merlin-1.jpg",
+  "/images/gallery/hd/huckleberry-1.jpg",
+  "/images/gallery/hd/silverman-2.jpg",
+  "/images/gallery/hd/le-pool-1.jpg",
+  "/images/gallery/hd/puranik-1.jpg",
+  "/images/gallery/hd/family-2.jpg",
+  "/images/gallery/hd/corbeil-1.jpg",
+  "/images/gallery/hd/newcastle-1.jpg",
+  "/images/gallery/hd/huckleberry-7.jpg",
+  "/images/gallery/hd/estate-luxe.jpg",
+  "/images/gallery/hd/heritage-estate.jpg",
+  "/images/gallery/hd/modern-geometric.jpg",
+  "/images/gallery/hd/antisdel-4.jpg",
 ] as const;
 
 export const LP_FAQS = [

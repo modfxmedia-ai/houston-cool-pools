@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "motion/react";
 import { LP_CONTACT } from "../_lib/data";
 
@@ -37,7 +38,22 @@ export function TypHero() {
 
   return (
     <section className="relative isolate flex min-h-[70vh] flex-col items-center justify-center overflow-hidden bg-[#0a1628] px-4 py-14 text-center text-white sm:min-h-[80vh] sm:px-8 sm:py-28 lg:px-16 xl:px-20">
-      <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_top,rgba(0,180,216,0.18),transparent_55%)]" />
+      {/* Pool background photo + dark navy gradient overlay for legibility */}
+      <div aria-hidden className="absolute inset-0 -z-20">
+        <Image
+          src="/images/free-pool-quote/typ-hero-stidham.jpg"
+          alt=""
+          fill
+          sizes="100vw"
+          priority
+          className="object-cover object-center"
+        />
+      </div>
+      <div
+        aria-hidden
+        className="absolute inset-0 -z-10 bg-gradient-to-b from-[#0a1628]/85 via-[#0a1628]/78 to-[#0a1628]"
+      />
+      <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_top,rgba(0,180,216,0.28),transparent_55%)]" />
 
       {/* Confetti */}
       <div className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">

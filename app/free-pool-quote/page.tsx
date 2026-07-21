@@ -1,8 +1,9 @@
 import { Hero } from "./_components/Hero";
+import { ServicesMarquee } from "./_components/ServicesMarquee";
 import { SocialProof } from "./_components/SocialProof";
 import { Offer } from "./_components/Offer";
+import { Financing } from "./_components/Financing";
 import { Gallery } from "./_components/Gallery";
-import { PricingPreview } from "./_components/PricingPreview";
 import { PoolTypes } from "./_components/PoolTypes";
 import { BeforeAfter } from "./_components/BeforeAfter";
 import { WhyChoose } from "./_components/WhyChoose";
@@ -19,19 +20,20 @@ export default function FreePoolQuotePage() {
     <>
       <main>
         <Hero />
+        <ServicesMarquee />
         <SocialProof />
         <Offer />
+        <Financing />
         <Gallery />
-        <PricingPreview />
+        <Testimonials />
         <PoolTypes />
+        <MeetOwner />
         <BeforeAfter />
         <WhyChoose />
-        <ProcessSteps />
-        <Testimonials />
-        <MeetOwner />
-        <AreasWeServe />
         <Faq />
         <QuoteForm />
+        <ProcessSteps />
+        <AreasWeServe />
       </main>
       <LpFooter />
     </>

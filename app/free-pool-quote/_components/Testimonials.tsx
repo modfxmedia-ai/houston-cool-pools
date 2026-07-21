@@ -30,7 +30,7 @@ export function Testimonials() {
   const total = LP_TESTIMONIALS.length;
 
   return (
-    <section className="relative isolate overflow-hidden bg-[#0a1628] py-14 sm:py-28">
+    <section className="relative isolate overflow-hidden bg-[#E8F0F7] py-14 sm:py-28">
       <BackdropGraphics />
 
       <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-8 lg:px-16 xl:px-20">
@@ -41,10 +41,10 @@ export function Testimonials() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-80px" }}
             transition={{ duration: 0.6, ease }}
-            className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.04] px-4 py-1.5 backdrop-blur-sm"
+            className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white/80 px-4 py-1.5 shadow-sm backdrop-blur-sm"
           >
             <GoogleG className="h-4 w-4" />
-            <span className="text-[11px] font-semibold uppercase tracking-[0.22em] text-[#cbd5e1]">
+            <span className="text-[11px] font-semibold uppercase tracking-[0.22em] text-slate-600">
               Verified Google Reviews
             </span>
           </motion.div>
@@ -54,7 +54,7 @@ export function Testimonials() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-80px" }}
             transition={{ duration: 0.8, ease, delay: 0.08 }}
-            className="mt-5 font-display text-3xl font-extrabold leading-[1.05] tracking-tight text-white sm:text-5xl lg:text-6xl"
+            className="mt-5 font-display text-3xl font-extrabold leading-[1.05] tracking-tight text-[#0a1628] sm:text-5xl lg:text-6xl"
           >
             Five-star reviews from real{" "}
             <span className="relative inline-block">
@@ -80,26 +80,26 @@ export function Testimonials() {
           transition={{ duration: 0.8, ease }}
           className="mx-auto mt-10 max-w-2xl"
         >
-          <div className="flex flex-col items-center justify-between gap-5 rounded-2xl border border-white/10 bg-[#0f2035]/80 px-6 py-5 shadow-[0_18px_40px_-22px_rgba(0,0,0,0.6)] backdrop-blur-sm sm:flex-row sm:gap-8">
+          <div className="flex flex-col items-center justify-between gap-5 rounded-2xl border border-slate-200 bg-white px-6 py-5 shadow-[0_18px_40px_-22px_rgba(15,32,53,0.18)] sm:flex-row sm:gap-8">
             <div className="flex items-center gap-3">
               <GoogleG className="h-9 w-9" />
               <div className="text-left">
-                <div className="text-xs font-semibold uppercase tracking-[0.18em] text-[#94a3b8]">
+                <div className="text-xs font-semibold uppercase tracking-[0.18em] text-slate-500">
                   Google Reviews
                 </div>
-                <div className="font-display text-base font-bold text-white">
+                <div className="font-display text-base font-bold text-[#0a1628]">
                   Houston Cool Pools
                 </div>
               </div>
             </div>
 
             <div className="flex items-center gap-3">
-              <span className="font-display text-3xl font-extrabold text-white">
+              <span className="font-display text-3xl font-extrabold text-[#0a1628]">
                 5.0
               </span>
               <div className="flex flex-col items-start">
                 <Stars />
-                <span className="mt-1 text-[11px] font-medium text-[#94a3b8]">
+                <span className="mt-1 text-[11px] font-medium text-slate-500">
                   Based on {total * 8}+ reviews
                 </span>
               </div>
@@ -135,13 +135,13 @@ export function Testimonials() {
             href="https://www.google.com/maps"
             target="_blank"
             rel="noreferrer"
-            className="group inline-flex items-center gap-2.5 rounded-full border border-white/10 bg-white/[0.04] px-5 py-3 text-sm font-semibold text-white backdrop-blur-sm transition hover:border-[#00b4d8]/40 hover:bg-white/[0.08]"
+            className="group inline-flex items-center gap-2.5 rounded-full border border-slate-300 bg-white px-5 py-3 text-sm font-semibold text-[#0a1628] shadow-sm transition hover:border-[#00b4d8]/60 hover:bg-[#f0fbff]"
           >
             <GoogleG className="h-4 w-4" />
             Read all reviews on Google
             <span className="transition group-hover:translate-x-1">&rarr;</span>
           </a>
-          <span className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.04] px-4 py-2 text-xs font-semibold text-white backdrop-blur-sm">
+          <span className="inline-flex items-center gap-2 rounded-full border border-slate-300 bg-white px-4 py-2 text-xs font-semibold text-[#0a1628] shadow-sm">
             <FacebookF className="h-3.5 w-3.5" />
             Verified on Facebook
           </span>
@@ -178,7 +178,7 @@ function ReviewCard({
       viewport={{ once: true, margin: "-60px" }}
       transition={{ duration: 0.7, ease, delay: index * 0.06 }}
       whileHover={{ y: -4 }}
-      className="group relative flex flex-col rounded-2xl border border-white/10 bg-[#0f2035]/80 p-6 shadow-[0_18px_40px_-22px_rgba(0,0,0,0.6)] backdrop-blur-sm transition hover:border-[#00b4d8]/40 hover:shadow-[0_25px_50px_-22px_rgba(0,180,216,0.35)]"
+      className="group relative flex flex-col rounded-2xl border border-slate-200 bg-white p-6 shadow-[0_18px_40px_-22px_rgba(15,32,53,0.18)] transition hover:-translate-y-0.5 hover:border-[#00b4d8]/40 hover:shadow-[0_25px_50px_-22px_rgba(0,180,216,0.25)]"
     >
       {/* Google G top-right */}
       <div className="absolute right-5 top-5">
@@ -194,15 +194,15 @@ function ReviewCard({
           {initial}
         </div>
         <div className="min-w-0">
-          <div className="truncate font-display text-sm font-bold text-white">
+          <div className="truncate font-display text-sm font-bold text-[#0a1628]">
             {name}
           </div>
-          <div className="flex items-center gap-1.5 text-[11px] font-medium text-[#94a3b8]">
+          <div className="flex items-center gap-1.5 text-[11px] font-medium text-slate-500">
             <svg viewBox="0 0 24 24" className="h-3 w-3 fill-current text-[#00b4d8]" aria-hidden>
               <path d="M12 2a8 8 0 0 0-8 8c0 5.25 7 12 7 12s1 0 1 0 7-6.75 7-12a8 8 0 0 0-7-8zm0 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
             </svg>
             <span className="truncate">{location}</span>
-            <span className="text-[#475569]">·</span>
+            <span className="text-slate-300">·</span>
             <span>{reviewCount} reviews</span>
           </div>
         </div>
@@ -211,14 +211,14 @@ function ReviewCard({
       {/* Stars + posted */}
       <div className="mt-4 flex items-center gap-2">
         <Stars />
-        <span className="text-[11px] text-[#94a3b8]">{posted}</span>
+        <span className="text-[11px] text-slate-500">{posted}</span>
       </div>
 
       {/* Quote */}
-      <p className="mt-3 text-sm leading-relaxed text-[#cbd5e1]">{quote}</p>
+      <p className="mt-3 text-sm leading-relaxed text-slate-700">{quote}</p>
 
       {/* Bottom row: like / share visual (decorative, Google style) */}
-      <div className="mt-5 flex items-center gap-4 border-t border-white/10 pt-4 text-[11px] font-medium text-[#94a3b8]">
+      <div className="mt-5 flex items-center gap-4 border-t border-slate-200 pt-4 text-[11px] font-medium text-slate-500">
         <span className="inline-flex items-center gap-1.5">
           <svg viewBox="0 0 24 24" className="h-3.5 w-3.5 fill-current">
             <path d="M2 21h4V9H2v12zm20-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L13.17 1 7.59 6.59C7.22 6.95 7 7.45 7 8v10c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-1z" />
@@ -295,10 +295,10 @@ function BackdropGraphics() {
     <>
       <div
         aria-hidden
-        className="absolute inset-0 opacity-[0.07] [mask-image:radial-gradient(ellipse_at_center,black_30%,transparent_75%)]"
+        className="absolute inset-0 opacity-[0.08] [mask-image:radial-gradient(ellipse_at_center,black_30%,transparent_75%)]"
         style={{
           backgroundImage:
-            "radial-gradient(rgba(255,255,255,0.6) 1px, transparent 1px)",
+            "radial-gradient(rgba(10,22,40,0.45) 1px, transparent 1px)",
           backgroundSize: "28px 28px",
         }}
       />
@@ -306,21 +306,21 @@ function BackdropGraphics() {
         aria-hidden
         animate={{ x: [-40, 30, -40], y: [-20, 30, -20] }}
         transition={{ duration: 20, repeat: Infinity, ease: "easeInOut" }}
-        className="pointer-events-none absolute left-[-8%] top-[6%] h-[380px] w-[380px] rounded-full bg-[#00b4d8]/20 blur-3xl"
+        className="pointer-events-none absolute left-[-8%] top-[6%] h-[380px] w-[380px] rounded-full bg-[#00b4d8]/10 blur-3xl"
       />
       <motion.div
         aria-hidden
         animate={{ x: [40, -30, 40], y: [20, 70, 20] }}
         transition={{ duration: 24, repeat: Infinity, ease: "easeInOut" }}
-        className="pointer-events-none absolute right-[-8%] bottom-[5%] h-[420px] w-[420px] rounded-full bg-[#22d3ee]/15 blur-3xl"
+        className="pointer-events-none absolute right-[-8%] bottom-[5%] h-[420px] w-[420px] rounded-full bg-[#22d3ee]/8 blur-3xl"
       />
       <div
         aria-hidden
-        className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[#00b4d8]/50 to-transparent"
+        className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[#00b4d8]/40 to-transparent"
       />
       <div
         aria-hidden
-        className="absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-[#00b4d8]/30 to-transparent"
+        className="absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-[#00b4d8]/25 to-transparent"
       />
     </>
   );

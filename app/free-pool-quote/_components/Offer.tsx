@@ -1,8 +1,8 @@
 "use client";
 
-import Image from "next/image";
 import { motion } from "motion/react";
 import { LP_OFFER_CHECKLIST } from "../_lib/data";
+import { MikeIntroVideoCard } from "./MikeIntroVideoCard";
 
 const ease = [0.22, 1, 0.36, 1] as const;
 
@@ -26,7 +26,7 @@ export function Offer() {
     <section className="relative isolate overflow-hidden bg-gradient-to-b from-[#f5f8fa] via-white to-[#eef3f7] py-14 sm:py-24">
       <BackdropGraphics />
 
-      <div className="relative z-10 mx-auto grid max-w-7xl items-center gap-10 px-4 sm:gap-14 sm:px-8 lg:grid-cols-[1.05fr_1fr] lg:gap-16 lg:px-16 xl:px-20">
+      <div className="relative z-10 mx-auto grid max-w-7xl items-start gap-10 px-4 sm:gap-14 sm:px-8 lg:grid-cols-[1.4fr_1fr] lg:gap-16 lg:px-16 xl:px-20">
         {/* IMAGE SIDE */}
         <motion.div
           initial={{ opacity: 0, x: -40 }}
@@ -65,26 +65,9 @@ export function Offer() {
             />
           </motion.svg>
 
-          {/* Photo card */}
-          <div className="relative aspect-[4/5] overflow-hidden rounded-[1.75rem] border border-white/40 bg-white shadow-[0_30px_70px_-20px_rgba(15,32,53,0.35)] sm:aspect-[5/6]">
-            <motion.div
-              animate={{ scale: [1, 1.06, 1] }}
-              transition={{ duration: 14, repeat: Infinity, ease: "easeInOut" }}
-              className="h-full w-full"
-            >
-              <Image
-                src="/images/gallery/hd/le-pool-1.jpg"
-                alt="Le Residence multi-level custom pool by Houston Cool Pools"
-                fill
-                sizes="(max-width: 1024px) 100vw, 50vw"
-                className="object-cover"
-                quality={90}
-                priority={false}
-              />
-            </motion.div>
-
-            {/* dark vignette */}
-            <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-black/0 to-black/0" />
+          {/* Video card (replaces the previous still photo) */}
+          <div className="relative aspect-video overflow-hidden rounded-[1.75rem] border border-white/40 bg-black shadow-[0_30px_70px_-20px_rgba(15,32,53,0.35)]">
+            <MikeIntroVideoCard />
 
             {/* corner accents */}
             <span
@@ -103,97 +86,87 @@ export function Offer() {
               aria-hidden
               className="absolute bottom-4 right-4 h-3 w-3 border-b-2 border-r-2 border-[#00b4d8]/70"
             />
-
-            {/* Floating FREE badge top-right */}
-            <motion.div
-              initial={{ opacity: 0, scale: 0.6, rotate: -8 }}
-              whileInView={{ opacity: 1, scale: 1, rotate: -8 }}
-              viewport={{ once: true }}
-              transition={{
-                type: "spring",
-                stiffness: 250,
-                damping: 14,
-                delay: 0.6,
-              }}
-              className="absolute -right-3 top-8 sm:-right-4 sm:top-10"
-            >
-              <div className="relative">
-                <motion.span
-                  aria-hidden
-                  animate={{ scale: [1, 1.18, 1], opacity: [0.6, 0, 0.6] }}
-                  transition={{ duration: 2.4, repeat: Infinity, ease: "easeInOut" }}
-                  className="absolute inset-0 rounded-2xl bg-[#00b4d8]"
-                />
-                <div className="relative rounded-2xl bg-gradient-to-br from-[#00b4d8] to-[#0ea5e9] px-4 py-2 text-white shadow-xl shadow-[#00b4d8]/40">
-                  <div className="font-display text-[10px] font-semibold uppercase tracking-[0.18em] opacity-90">
-                    Today
-                  </div>
-                  <div className="font-display text-lg font-extrabold leading-none">
-                    100% FREE
-                  </div>
-                </div>
-              </div>
-            </motion.div>
           </div>
 
-          {/* Floating stat card (bottom-left) */}
+          {/* Mike's promise pull-quote sits directly below the video card */}
+          <motion.figure
+            initial={{ opacity: 0, y: 24 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-80px" }}
+            transition={{ duration: 0.7, ease }}
+            className="relative mt-8 overflow-hidden rounded-2xl border border-[#00b4d8]/25 bg-gradient-to-br from-white via-[#f0fbff] to-white p-6 shadow-[0_18px_48px_-24px_rgba(0,180,216,0.35)] sm:p-7"
+          >
+            <span
+              aria-hidden
+              className="pointer-events-none absolute -right-8 -top-8 h-32 w-32 rounded-full bg-[#00b4d8]/12 blur-2xl"
+            />
+            <svg
+              aria-hidden
+              viewBox="0 0 24 24"
+              className="h-8 w-8 fill-current text-[#00b4d8]"
+            >
+              <path d="M7.17 6C4.87 6 3 7.87 3 10.17V18h7.17V10.17H6.5C6.5 8.7 7.7 7.5 9.17 7.5V6h-2zm10 0c-2.3 0-4.17 1.87-4.17 4.17V18h7.17V10.17H16.5c0-1.47 1.2-2.67 2.67-2.67V6h-2z" />
+            </svg>
+            <blockquote className="mt-4 font-display text-xl font-semibold leading-snug text-[#0a1628] sm:text-2xl">
+              &ldquo;Every quote I hand a homeowner is the quote they sign,
+              and it&apos;s the price they pay - in writing, with a 100%
+              on-budget guarantee.&rdquo;
+            </blockquote>
+            <figcaption className="mt-4 flex items-center gap-3 text-sm">
+              <div>
+                <div className="font-bold text-[#0a1628]">Mike Lopez</div>
+                <div className="text-[10px] font-semibold uppercase tracking-[0.22em] text-[#00b4d8]">
+                  Owner · 30+ Years
+                </div>
+              </div>
+            </figcaption>
+          </motion.figure>
+
+          {/* Proof stat row */}
           <motion.div
             initial={{ opacity: 0, y: 24 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: 0.35, ease }}
-            whileHover={{ y: -3 }}
-            className="absolute -bottom-6 left-6 right-6 rounded-2xl border border-slate-200 bg-white p-5 shadow-[0_20px_50px_-20px_rgba(15,32,53,0.25)] backdrop-blur sm:left-8 sm:right-auto sm:max-w-xs"
+            viewport={{ once: true, margin: "-80px" }}
+            transition={{ duration: 0.7, ease, delay: 0.1 }}
+            className="mt-6 grid grid-cols-3 gap-3 sm:gap-4"
           >
-            <div className="flex items-center gap-4">
-              <div className="relative">
-                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-[#00b4d8] to-[#0ea5e9] text-white shadow-md shadow-[#00b4d8]/30">
-                  <svg viewBox="0 0 24 24" className="h-6 w-6 fill-current" aria-hidden>
-                    <path d="M12 2l2.5 5 5.5.8-4 3.9.9 5.5L12 15.6 7.1 18.2l.9-5.5-4-3.9L9.5 8 12 3z" />
-                  </svg>
-                </div>
-              </div>
-              <div className="min-w-0">
-                <div className="font-display text-3xl font-extrabold leading-none">
-                  <span className="bg-gradient-to-br from-[#00b4d8] to-[#0ea5e9] bg-clip-text text-transparent">
-                    1,600+
+            {[
+              { value: "30+", label: "Years" },
+              { value: "1,600+", label: "Pools Built" },
+              { value: "A+", label: "BBB Rated" },
+            ].map((s) => (
+              <div
+                key={s.label}
+                className="relative overflow-hidden rounded-2xl border border-slate-200 bg-white/80 p-4 text-center shadow-sm backdrop-blur"
+              >
+                <div className="font-display text-2xl font-extrabold leading-none text-[#0a1628] sm:text-3xl">
+                  <span className="bg-gradient-to-r from-[#00b4d8] to-[#0ea5e9] bg-clip-text text-transparent">
+                    {s.value}
                   </span>
                 </div>
-                <div className="mt-1 text-[11px] font-semibold uppercase tracking-[0.18em] text-[#0a1628]">
-                  Pools Built · Houston
+                <div className="mt-2 text-[10px] font-bold uppercase tracking-[0.2em] text-slate-500">
+                  {s.label}
                 </div>
-                <div className="mt-0.5 text-[11px] text-slate-500">Since 1996</div>
               </div>
-            </div>
+            ))}
           </motion.div>
 
-          {/* Floating mini avatars / "today reviewing" card (top-left) */}
+          {/* Secondary CTA */}
           <motion.div
-            initial={{ opacity: 0, x: -16, y: -8 }}
-            whileInView={{ opacity: 1, x: 0, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: 0.5, ease }}
-            whileHover={{ y: -3 }}
-            className="absolute -left-3 top-6 hidden items-center gap-3 rounded-2xl border border-slate-200 bg-white p-3 shadow-[0_18px_40px_-22px_rgba(15,32,53,0.25)] sm:flex"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-80px" }}
+            transition={{ duration: 0.6, ease, delay: 0.15 }}
+            className="mt-6 flex flex-wrap items-center gap-3 border-t border-slate-200/70 pt-5 text-sm text-slate-600"
           >
-            <div className="flex -space-x-2">
-              {[
-                "from-[#4285F4] to-[#1a73e8]",
-                "from-[#34A853] to-[#188038]",
-                "from-[#EA4335] to-[#c5221f]",
-              ].map((g, i) => (
-                <span
-                  key={i}
-                  className={`inline-flex h-7 w-7 items-center justify-center rounded-full border-2 border-white bg-gradient-to-br ${g} text-[10px] font-bold text-white`}
-                >
-                  {["H", "S", "M"][i]}
-                </span>
-              ))}
-            </div>
-            <div className="text-[10px] leading-tight">
-              <div className="font-bold text-[#0a1628]">12 homeowners</div>
-              <div className="text-slate-500">requested today</div>
-            </div>
+            <span className="font-semibold text-[#0a1628]">Ready when you are.</span>
+            <a
+              href="#quote-form"
+              className="inline-flex items-center gap-1.5 font-bold text-[#00b4d8] underline-offset-4 hover:underline"
+            >
+              Start with a free quote
+              <span aria-hidden>&rarr;</span>
+            </a>
           </motion.div>
         </motion.div>
 

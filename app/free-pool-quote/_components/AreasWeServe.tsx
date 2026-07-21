@@ -6,8 +6,8 @@ import { LP_CONTACT } from "../_lib/data";
 const ease = [0.22, 1, 0.36, 1] as const;
 
 /**
- * Houston-area service map. Uses a stylized SVG "constellation" — no real
- * map tiles required — with animated pin drops, connector paths, and
+ * Houston-area service map. Uses a stylized SVG "constellation" - no real
+ * map tiles required - with animated pin drops, connector paths, and
  * hover-lift chips for each neighborhood.
  *
  * Coordinates below are on a 100x60 viewBox, roughly arranged as they sit
