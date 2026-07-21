@@ -108,10 +108,14 @@ function buildTier(gallery: GalleryTier): PoolPricingTier {
     body: meta.body,
     // Hero = the gallery tier's featured / cinematic photo.
     heroImage: gallery.featured.src,
-    // Gallery images = the same supporting photos shown in the gallery tab,
-    // in the same order. The featured photo is reserved for the hero so it
-    // isn't duplicated in the grid.
-    images: gallery.pools.map((p) => ({ src: p.src, alt: toAlt(p) })),
+    // Gallery images = the exact same set shown on `/gallery?tier=<id>`:
+    // featured photo first, followed by every supporting photo in order.
+    // The hero uses a heavy dark overlay so also surfacing the featured
+    // photo as a card lets visitors see it clearly.
+    images: [gallery.featured, ...gallery.pools].map((p) => ({
+      src: p.src,
+      alt: toAlt(p),
+    })),
   };
 }
 
