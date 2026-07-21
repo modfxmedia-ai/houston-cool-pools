@@ -114,6 +114,7 @@ export function Testimonials() {
               key={t.name}
               quote={t.quote}
               name={t.name}
+              location={t.location}
               palette={AVATAR_PALETTE[i % AVATAR_PALETTE.length]}
               posted={POSTED[i % POSTED.length]}
               reviewCount={REVIEW_COUNTS[i % REVIEW_COUNTS.length]}
@@ -155,6 +156,7 @@ export function Testimonials() {
 function ReviewCard({
   quote,
   name,
+  location,
   palette,
   posted,
   reviewCount,
@@ -162,6 +164,7 @@ function ReviewCard({
 }: {
   quote: string;
   name: string;
+  location: string;
   palette: string;
   posted: string;
   reviewCount: number;
@@ -194,8 +197,13 @@ function ReviewCard({
           <div className="truncate font-display text-sm font-bold text-white">
             {name}
           </div>
-          <div className="text-[11px] font-medium text-[#94a3b8]">
-            {reviewCount} reviews
+          <div className="flex items-center gap-1.5 text-[11px] font-medium text-[#94a3b8]">
+            <svg viewBox="0 0 24 24" className="h-3 w-3 fill-current text-[#00b4d8]" aria-hidden>
+              <path d="M12 2a8 8 0 0 0-8 8c0 5.25 7 12 7 12s1 0 1 0 7-6.75 7-12a8 8 0 0 0-7-8zm0 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
+            </svg>
+            <span className="truncate">{location}</span>
+            <span className="text-[#475569]">·</span>
+            <span>{reviewCount} reviews</span>
           </div>
         </div>
       </div>

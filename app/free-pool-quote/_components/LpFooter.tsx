@@ -19,10 +19,10 @@ export function LpFooter() {
       <div className="relative mx-auto flex max-w-3xl flex-col items-center px-6 text-center sm:px-10">
         {/* Logo */}
         <Image
-          src="/images/logo.png"
+          src="/images/hcp-logo-print.png"
           alt="Houston Cool Pools"
-          width={180}
-          height={56}
+          width={2365}
+          height={655}
           className="h-12 w-auto"
         />
 

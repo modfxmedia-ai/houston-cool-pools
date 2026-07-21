@@ -73,11 +73,12 @@ export function Offer() {
               className="h-full w-full"
             >
               <Image
-                src="/images/gallery/featured-evening-pool.jpg"
-                alt="Houston Cool Pools custom evening pool with deck jets"
+                src="/images/gallery/hd/le-pool-1.jpg"
+                alt="Le Residence multi-level custom pool by Houston Cool Pools"
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 className="object-cover"
+                quality={90}
                 priority={false}
               />
             </motion.div>

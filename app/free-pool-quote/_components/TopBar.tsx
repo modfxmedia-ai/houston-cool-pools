@@ -13,10 +13,10 @@ export function TopBar() {
       <div className="mx-auto flex h-14 max-w-7xl items-center justify-between gap-3 px-4 sm:h-16 sm:px-8 lg:px-16 xl:px-20">
         <div className="flex items-center gap-3">
           <Image
-            src="/images/logo.png"
+            src="/images/hcp-logo-print.png"
             alt="Houston Cool Pools"
-            width={140}
-            height={40}
+            width={2365}
+            height={655}
             priority
             className="h-9 w-auto sm:h-10"
           />

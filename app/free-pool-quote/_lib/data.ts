@@ -49,61 +49,109 @@ export type GalleryItem = {
 
 export const LP_GALLERY: GalleryItem[] = [
   {
-    src: "/images/gallery/featured-modern-geometric.jpg",
-    alt: "Modern geometric Houston backyard pool",
+    src: "/images/gallery/hd/silverman-1.jpg",
+    alt: "Silverman modern luxe glass-tile pool at dusk",
+    category: "Estate",
+    badge: "Silverman Estate",
+  },
+  {
+    src: "/images/gallery/hd/huckleberry-4.jpg",
+    alt: "Huckleberry backyard with fire pit at sunset",
+    category: "Estate",
+    badge: "Huckleberry Sunset",
+  },
+  {
+    src: "/images/gallery/hd/modern-geometric.jpg",
+    alt: "Modern geometric backyard pool with clean tile",
     category: "Geometric",
     badge: "Modern Geometric",
   },
   {
-    src: "/images/gallery/featured-grand-pool-spa.jpg",
-    alt: "Grand pool & spa combination build",
-    category: "Pool & Spa",
-    badge: "Pool & Spa",
-  },
-  {
-    src: "/images/gallery/featured-resort-style.jpg",
-    alt: "Resort style backyard pool with tanning ledge",
-    category: "Resort Style",
-    badge: "Resort Style",
-  },
-  {
-    src: "/images/gallery/featured-natural-stone.jpg",
-    alt: "Free form pool with natural stone",
+    src: "/images/gallery/hd/merlin-1.jpg",
+    alt: "Merlin resort-style pool with custom rockwork",
     category: "Free Form",
-    badge: "Free Form",
+    badge: "Merlin Freeform",
   },
   {
-    src: "/images/gallery/featured-luxury-spa.jpg",
-    alt: "Luxury raised spa with spillover",
+    src: "/images/gallery/hd/family-2.jpg",
+    alt: "Stacked-stone waterfall wall with elevated spa",
     category: "Pool & Spa",
-    badge: "Spa Spillover",
+    badge: "Waterfall & Spa",
   },
   {
-    src: "/images/gallery/featured-grand-vista.jpg",
-    alt: "Estate-scale vanishing edge pool",
-    category: "Estate",
-    badge: "Estate · Vanishing Edge",
-  },
-  {
-    src: "/images/gallery/featured-tropical-yard.jpg",
-    alt: "Tropical resort-style backyard",
+    src: "/images/gallery/hd/antisdel-1.jpg",
+    alt: "Covered patio with outdoor kitchen and pool",
     category: "Resort Style",
-    badge: "Tropical Resort",
+    badge: "Full Outdoor Living",
   },
   {
-    src: "/images/gallery/featured-classic-build.jpg",
-    alt: "Classic geometric backyard build",
+    src: "/images/gallery/hd/clark-estate.jpg",
+    alt: "Clark Estate negative-edge pool with view",
+    category: "Estate",
+    badge: "Clark Estate",
+  },
+  {
+    src: "/images/gallery/hd/le-pool-1.jpg",
+    alt: "Le Residence multi-level pool and spa",
+    category: "Estate",
+    badge: "Le Residence",
+  },
+  {
+    src: "/images/gallery/hd/huckleberry-3.jpg",
+    alt: "Custom raised spa with fire feature",
+    category: "Pool & Spa",
+    badge: "Fire Spa",
+  },
+  {
+    src: "/images/gallery/hd/nc-resort.jpg",
+    alt: "Resort-style custom shape pool with decking",
+    category: "Resort Style",
+    badge: "Resort Retreat",
+  },
+  {
+    src: "/images/gallery/hd/newcastle-2.jpg",
+    alt: "Newcastle modern remodel pool detail",
     category: "Geometric",
-    badge: "Classic Build",
+    badge: "Newcastle Remodel",
+  },
+  {
+    src: "/images/gallery/hd/puranik-1.jpg",
+    alt: "Puranik reflecting pool with custom tile",
+    category: "Estate",
+    badge: "Puranik Estate",
+  },
+  {
+    src: "/images/gallery/hd/breth-1.jpg",
+    alt: "Breth family-friendly pool layout",
+    category: "Pool & Spa",
+    badge: "Family Pool & Spa",
+  },
+  {
+    src: "/images/gallery/hd/sunset-pool.jpg",
+    alt: "Sunset retreat with fire features and lighting",
+    category: "Free Form",
+    badge: "Sunset Retreat",
+  },
+  {
+    src: "/images/gallery/hd/corbeil-1.jpg",
+    alt: "Corbeil premier custom estate pool",
+    category: "Estate",
+    badge: "Corbeil Estate",
+  },
+  {
+    src: "/images/gallery/hd/family-4.jpg",
+    alt: "Modern geometric pool with tanning ledge and bubblers",
+    category: "Resort Style",
+    badge: "Tanning Ledge",
   },
 ];
 
 export const LP_POOL_TYPES = [
   {
     title: "Modern Geometric",
-    image: "/images/gallery/featured-modern-geometric.jpg",
+    image: "/images/gallery/hd/modern-geometric.jpg",
     copy:
-      "Rectangular and contemporary pools that complement modern Houston homes: straight edges, glass tile, minimalist sun shelves.",
+      "Straight-edge, contemporary pools built to match modern Houston homes - glass-tile waterlines, minimalist sun shelves, and honed travertine coping.",
     bullets: [
       "Rectangular & geometric shapes",
       "Glass-tile waterlines",
@@ -113,9 +161,9 @@ export const LP_POOL_TYPES = [
   },
   {
     title: "Free Form & Naturalistic",
-    image: "/images/gallery/featured-natural-stone.jpg",
+    image: "/images/gallery/hd/merlin-1.jpg",
     copy:
-      "Curved, naturalistic pools that feel like part of the backyard. Rock features, lush plantings, and waterfalls bring the resort vibe home.",
+      "Curved, resort-inspired pools with custom rockwork, waterfalls, and lush integration - built to feel like the backyard has always been there.",
     bullets: [
       "Custom curved shapes",
       "Natural rock features",
@@ -125,7 +173,7 @@ export const LP_POOL_TYPES = [
   },
   {
     title: "Pool & Spa Combos",
-    image: "/images/gallery/featured-luxury-spa.jpg",
+    image: "/images/gallery/hd/family-2.jpg",
     copy:
       "Raised spas as the architectural focal point, overflowing into the pool with sheer-descent spillways and matched tile detailing.",
     bullets: [
@@ -137,9 +185,9 @@ export const LP_POOL_TYPES = [
   },
   {
     title: "Resort Style & Tanning Ledges",
-    image: "/images/gallery/featured-resort-style.jpg",
+    image: "/images/gallery/hd/nc-resort.jpg",
     copy:
-      "Resort-inspired pools with shallow tanning ledges, beach entries, and umbrella sleeves, built for Houston summers.",
+      "Resort-inspired pools with shallow tanning ledges, beach entries, and umbrella sleeves - purpose-built for Houston summers.",
     bullets: [
       "Tanning ledges with umbrella sleeves",
       "Walk-in beach entries",
@@ -149,9 +197,9 @@ export const LP_POOL_TYPES = [
   },
   {
     title: "Complete Outdoor Environments",
-    image: "/images/gallery/featured-tropical-yard.jpg",
+    image: "/images/gallery/hd/antisdel-1.jpg",
     copy:
-      "Full backyard transformations: pool, outdoor kitchen, fireplace, fire bowls, and custom hardscape designed as one.",
+      "Full backyard transformations: pool, outdoor kitchen, fireplace, fire bowls, and custom hardscape designed as one cohesive space.",
     bullets: [
       "Outdoor kitchen integration",
       "Fire bowls & fireplaces",
@@ -161,9 +209,9 @@ export const LP_POOL_TYPES = [
   },
   {
     title: "Estate & Vanishing Edge",
-    image: "/images/gallery/featured-grand-vista.jpg",
+    image: "/images/gallery/hd/clark-estate.jpg",
     copy:
-      "Estate-scale signature builds: vanishing edges, multi-level pools, premium tile and stone for demanding Houston homeowners.",
+      "Signature estate-scale builds: vanishing edges, multi-level pools, and premium tile and stone for the most discerning Houston homeowners.",
     bullets: [
       "Vanishing & negative-edge designs",
       "Multi-level pool & spa",
@@ -176,33 +224,39 @@ export const LP_POOL_TYPES = [
 export const LP_TESTIMONIALS = [
   {
     quote:
-      "HIGHLY RECOMMEND! We had a fantastic experience with Houston Cool Pools. Very transparent company.",
+      "HIGHLY RECOMMEND! We had a fantastic experience with Houston Cool Pools. Very transparent company - the quote we signed was the quote we paid.",
     name: "Craig B.",
+    location: "Cypress, TX",
   },
   {
     quote:
-      "Mike and his team were incredible from start to finish. Our pool came in exactly on budget and on time.",
+      "Mike and his team were incredible from start to finish. Our pool came in exactly on budget and on time. Every question got a real answer.",
     name: "Henry N.",
+    location: "Tomball, TX",
   },
   {
     quote:
-      "We've had our pool for 3 years now and it's absolutely perfect. The whole process was smooth and stress-free.",
+      "We've had our pool for 3 years now and it's absolutely perfect. The whole process was smooth and stress-free. Would use them again in a heartbeat.",
     name: "Pamela C.",
+    location: "Spring, TX",
   },
   {
     quote:
-      "Best decision we ever made. Houston Cool Pools built us a stunning pool and outdoor living space.",
+      "Best decision we ever made. Houston Cool Pools built us a stunning pool and outdoor living space that our whole family enjoys year-round.",
     name: "Sarah M.",
+    location: "Katy, TX",
   },
   {
     quote:
-      "Professional, responsive, and delivered exactly what they promised. A+ all the way.",
+      "Professional, responsive, and delivered exactly what they promised. A+ all the way - crew showed up when they said they would, every single time.",
     name: "James T.",
+    location: "The Woodlands, TX",
   },
   {
     quote:
-      "Our neighbors have stopped by just to compliment the pool. We couldn't be happier with how it turned out.",
+      "Our neighbors have stopped by just to compliment the pool. Mike walked us through every finish, every option. Couldn't be happier.",
     name: "Linda R.",
+    location: "Kingwood, TX",
   },
 ] as const;
 
@@ -226,20 +280,20 @@ export const LP_TIMELINE = [
 ] as const;
 
 export const LP_TYP_GALLERY = [
-  "/images/gallery/featured-grand-vista.jpg",
-  "/images/gallery/featured-resort-style.jpg",
-  "/images/gallery/featured-luxury-spa.jpg",
-  "/images/gallery/featured-modern-geometric.jpg",
+  "/images/gallery/hd/clark-estate.jpg",
+  "/images/gallery/hd/silverman-1.jpg",
+  "/images/gallery/hd/huckleberry-4.jpg",
+  "/images/gallery/hd/merlin-1.jpg",
 ] as const;
 
 export const LP_FAQS = [
   {
     q: "How much does a custom pool cost in Houston?",
-    a: "Most custom gunite pools we build in the Houston area land between $55,000 and $105,000+ depending on size, finishes, and outdoor features. Your free in-home quote includes a transparent, line-itemed quote so you know exactly what you're investing in.",
+    a: "Most of our custom gunite builds land between $65K and $150K+ depending on size, finishes, spa, and outdoor features. Your free in-home quote comes with a transparent, line-itemed price and our 100% on-budget guarantee in writing.",
   },
   {
     q: "How long does it take to build a pool?",
-    a: "From contract to swim, most projects take 10 to 14 weeks. Permitting, weather, and any add-ons like outdoor kitchens or fire features can shift the timeline. We give you a realistic schedule up front and keep you updated every step.",
+    a: "From contract to swim, most projects take 10 to 14 weeks. Permitting, weather, and add-ons like outdoor kitchens or fire features can shift the timeline. We give you a realistic schedule up front and update you at every phase.",
   },
   {
     q: "What's included in the free in-home quote?",
@@ -247,18 +301,18 @@ export const LP_FAQS = [
   },
   {
     q: "Do you offer financing?",
-    a: "Yes. We work with several pool-financing partners offering competitive rates and flexible terms. We can connect you with a lender during your quote so you have real monthly numbers alongside your design.",
+    a: "Yes. We work with several pool-financing partners offering competitive rates and flexible terms - including no-equity soft-credit-check options. We can connect you with a lender during your quote so you have real monthly numbers alongside your design.",
   },
   {
     q: "What is the 100% on-budget guarantee?",
-    a: "Once your quote is signed, your price is locked. No surprise change orders, no inflated allowances. The number on your contract is the number you pay, in writing.",
+    a: "Once your quote is signed, your price is locked. No surprise change orders, no inflated allowances. The number on your contract is the number you pay - in writing.",
   },
   {
     q: "What areas of Houston do you serve?",
-    a: "All of Greater Houston, including Spring, Cypress, Tomball, The Woodlands, Katy, Sugar Land, Pearland, Kingwood, and Memorial. Our showroom is in Northwest Houston on Highway 249.",
+    a: "All of Greater Houston, including Spring, Cypress, Tomball, The Woodlands, Katy, Sugar Land, Pearland, Kingwood, The Heights, and Memorial. Our showroom is in Northwest Houston on Highway 249.",
   },
   {
     q: "Can you build during fall and winter?",
-    a: "Absolutely. Houston's mild winters are one of the best times to build, you'll be swimming the moment summer hits. We build year-round with the same craftsmanship and timeline.",
+    a: "Absolutely. Houston's mild winters are one of the best times to build - you'll be swimming the moment summer hits. We build year-round with the same craftsmanship and timeline.",
   },
 ] as const;

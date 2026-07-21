@@ -1,13 +1,22 @@
 "use client";
 
 import Image from "next/image";
-import { useRef } from "react";
-import { motion, useScroll, useTransform } from "motion/react";
+import { useEffect, useRef, useState } from "react";
+import { AnimatePresence, motion, useScroll, useTransform } from "motion/react";
 import { CountUp } from "./CountUp";
 import { OfferCard } from "./OfferCard";
 import { LP_CONTACT, LP_TRUST_BADGES } from "../_lib/data";
 
 const ease = [0.22, 1, 0.36, 1] as const;
+
+/* Bright, sunny backyard lifestyle photos - mirrors the homepage hero. */
+const HERO_SLIDES = [
+  { src: "/images/hero/slide-1-sunny.png", alt: "Family enjoying a sunny Houston backyard pool" },
+  { src: "/images/hero/slide-2-sunny.png", alt: "Sunny poolside family moments in Houston" },
+  { src: "/images/hero/slide-1c-family.png", alt: "Family relaxing in a custom Houston pool" },
+] as const;
+
+const SLIDE_INTERVAL_MS = 5500;
 
 /* -------- Motion variants -------- */
 const heroContainer = {
@@ -175,6 +184,43 @@ function ScrollCue() {
   );
 }
 
+/* -------- Hero slideshow (mirrors homepage) -------- */
+
+function HeroSlideshow() {
+  const [index, setIndex] = useState(0);
+  useEffect(() => {
+    const id = window.setInterval(
+      () => setIndex((i) => (i + 1) % HERO_SLIDES.length),
+      SLIDE_INTERVAL_MS,
+    );
+    return () => window.clearInterval(id);
+  }, []);
+
+  return (
+    <div className="absolute inset-0 overflow-hidden">
+      <AnimatePresence initial={false}>
+        <motion.div
+          key={index}
+          initial={{ opacity: 0, scale: 1.06 }}
+          animate={{ opacity: 1, scale: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ opacity: { duration: 1.4, ease }, scale: { duration: 7, ease: "easeOut" } }}
+          className="absolute inset-0"
+        >
+          <Image
+            src={HERO_SLIDES[index].src}
+            alt={HERO_SLIDES[index].alt}
+            fill
+            priority={index === 0}
+            sizes="100vw"
+            className="object-cover object-[center_35%] sm:object-center"
+          />
+        </motion.div>
+      </AnimatePresence>
+    </div>
+  );
+}
+
 /* -------- Main Hero -------- */
 
 export function Hero() {
@@ -194,19 +240,12 @@ export function Hero() {
       ref={sectionRef}
       className="relative isolate flex w-full flex-col justify-center overflow-hidden bg-[#0a1628] text-white sm:min-h-[100svh]"
     >
-      {/* Parallax photo */}
+      {/* Parallax slideshow - matches homepage hero */}
       <motion.div
         style={{ y: bgY, scale: bgScale }}
         className="absolute inset-0 -z-20"
       >
-        <Image
-          src="/images/free-pool-quote/hero-v2.jpg"
-          alt="Houston resort-style backyard pool"
-          fill
-          priority
-          sizes="100vw"
-          className="object-cover"
-        />
+        <HeroSlideshow />
       </motion.div>
 
       {/* Overlays */}

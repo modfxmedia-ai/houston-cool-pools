@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/images/gallery/featured-grand-pool-spa.jpg",
+        url: "/images/gallery/hd/silverman-1.jpg",
         width: 1200,
         height: 630,
         alt: "Houston Cool Pools",
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Thank You | Houston Cool Pools",
     description: "Your free pool quote request has been received.",
-    images: ["/images/gallery/featured-grand-pool-spa.jpg"],
+    images: ["/images/gallery/hd/silverman-1.jpg"],
   },
 };
 
