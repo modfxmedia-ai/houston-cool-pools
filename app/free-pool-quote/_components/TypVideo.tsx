@@ -1,6 +1,8 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "motion/react";
+import { useState } from "react";
 
 const ease = [0.22, 1, 0.36, 1] as const;
 
@@ -8,6 +10,9 @@ const ease = [0.22, 1, 0.36, 1] as const;
  * Autoplaying, muted YouTube embed placed right below the TYP hero.
  * Uses youtube-nocookie + rel=0 to keep viewers on-page (no related-channel
  * suggestions on pause; native controls are kept for accessibility).
+ *
+ * A custom poster image is shown over the iframe until the video begins
+ * autoplaying (fades out shortly after the iframe loads).
  */
 export function TypVideo() {
   const videoId = "jMgjSEhaS70";
@@ -24,6 +29,14 @@ export function TypVideo() {
     controls: "1",
   });
   const src = `https://www.youtube-nocookie.com/embed/${videoId}?${params.toString()}`;
+
+  const [posterVisible, setPosterVisible] = useState(true);
+
+  const handleIframeLoad = () => {
+    // Autoplay typically begins ~500-900ms after the iframe reports loaded.
+    // Give it a moment, then fade the poster out.
+    window.setTimeout(() => setPosterVisible(false), 900);
+  };
 
   return (
     <section
@@ -67,7 +80,23 @@ export function TypVideo() {
               loading="lazy"
               allow="autoplay; encrypted-media; picture-in-picture"
               referrerPolicy="strict-origin-when-cross-origin"
+              onLoad={handleIframeLoad}
             />
+            <div
+              aria-hidden="true"
+              className={`pointer-events-none absolute inset-0 transition-opacity duration-700 ease-out ${
+                posterVisible ? "opacity-100" : "opacity-0"
+              }`}
+            >
+              <Image
+                src="/images/free-pool-quote/typ-page-video-poster.png"
+                alt=""
+                fill
+                priority
+                sizes="(min-width: 1024px) 960px, 100vw"
+                className="object-cover"
+              />
+            </div>
           </div>
         </motion.div>
       </div>

@@ -44,10 +44,10 @@ export default function ThankYouPage() {
       <main>
         <TypHero />
         <TypVideo />
-        <MeetOwner compact />
         <TypTimeline />
         <Financing />
         <TypGallery />
+        <MeetOwner compact />
         <Testimonials />
       </main>
       <LpFooter />
