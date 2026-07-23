@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import { Outfit, Montserrat } from "next/font/google";
 import "./globals.css";
 import { BUSINESS, SITE_URL, localBusinessJsonLd } from "../lib/business";
@@ -45,6 +46,11 @@ export default function RootLayout({
       className={`${outfit.variable} ${montserrat.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col" suppressHydrationWarning>
+        <Script
+          id="cometly-pixel"
+          src="https://js.comet-serve.com/script.js?uid=6678fb-6755399442000000-d2fba5-s"
+          strategy="afterInteractive"
+        />
         <script
           type="application/ld+json"
           // eslint-disable-next-line react/no-danger
