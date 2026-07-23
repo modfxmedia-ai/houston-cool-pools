@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { motion } from "motion/react";
+import { useEffect, useState } from "react";
 import { LP_CONTACT } from "../_lib/data";
 
 const ease = [0.22, 1, 0.36, 1] as const;
@@ -35,6 +36,11 @@ const PARTICLES: Particle[] = Array.from({ length: 36 }).map((_, i) => ({
 }));
 
 export function TypHero() {
+  // Confetti uses motion's inline style animations, which serialize
+  // differently on the server vs. after client hydration (e.g. "6px" vs 6,
+  // hex vs rgb()). Render it only after mount to avoid a hydration mismatch.
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => setMounted(true), []);
 
   return (
     <section className="relative isolate flex min-h-[70vh] flex-col items-center justify-center overflow-hidden bg-[#0a1628] px-4 py-14 text-center text-white sm:min-h-[80vh] sm:px-8 sm:py-28 lg:px-16 xl:px-20">
@@ -57,7 +63,8 @@ export function TypHero() {
 
       {/* Confetti */}
       <div className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
-        {PARTICLES.map((p) => (
+        {mounted &&
+          PARTICLES.map((p) => (
             <motion.span
               key={p.id}
               initial={{ y: -40, opacity: 0, rotate: 0 }}
