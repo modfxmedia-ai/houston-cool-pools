@@ -1,6 +1,5 @@
 import { Hero } from "./_components/Hero";
 import { ServicesMarquee } from "./_components/ServicesMarquee";
-import { SocialProof } from "./_components/SocialProof";
 import { Offer } from "./_components/Offer";
 import { Financing } from "./_components/Financing";
 import { Gallery } from "./_components/Gallery";
@@ -21,7 +20,6 @@ export default function FreePoolQuotePage() {
       <main>
         <Hero />
         <ServicesMarquee />
-        <SocialProof />
         <Offer />
         <Financing />
         <Gallery />

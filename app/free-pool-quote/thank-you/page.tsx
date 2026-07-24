@@ -5,7 +5,6 @@ import { TypTimeline } from "../_components/TypTimeline";
 import { TypGallery } from "../_components/TypExtras";
 import { Financing } from "../_components/Financing";
 import { Testimonials } from "../_components/Testimonials";
-import { MeetOwner } from "../_components/MeetOwner";
 import { LpFooter } from "../_components/LpFooter";
 
 export const metadata: Metadata = {
@@ -47,7 +46,6 @@ export default function ThankYouPage() {
         <TypTimeline />
         <Financing />
         <TypGallery />
-        <MeetOwner compact />
         <Testimonials />
       </main>
       <LpFooter />
