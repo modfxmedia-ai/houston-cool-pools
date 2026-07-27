@@ -46,6 +46,21 @@ export default function RootLayout({
       className={`${outfit.variable} ${montserrat.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col" suppressHydrationWarning>
+        {/* Google tag (gtag.js) */}
+        <Script
+          id="ga4-gtag-js"
+          src="https://www.googletagmanager.com/gtag/js?id=G-ZV23BE77HG"
+          strategy="afterInteractive"
+        />
+        <Script id="ga4-gtag-init" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-ZV23BE77HG');
+          `}
+        </Script>
         <Script
           id="cometly-pixel"
           src="https://js.comet-serve.com/script.js?uid=6678fb-6755399442000000-d2fba5-s"

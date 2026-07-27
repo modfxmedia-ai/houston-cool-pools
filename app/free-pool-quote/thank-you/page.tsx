@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import { TypHero } from "../_components/TypHero";
 import { TypVideo } from "../_components/TypVideo";
 import { TypTimeline } from "../_components/TypTimeline";
@@ -40,6 +41,16 @@ export const metadata: Metadata = {
 export default function ThankYouPage() {
   return (
     <>
+      {/* Event snippet for MFX Submit lead form conversion page */}
+      <Script id="gtag-report-form-conversion" strategy="afterInteractive">
+        {`
+          gtag('event', 'conversion', {
+              'send_to': 'AW-990264356/3JEoCJf1u9ccEKT4mNgD',
+              'value': 1.0,
+              'currency': 'USD'
+          });
+        `}
+      </Script>
       <main>
         <TypHero />
         <TypVideo />
