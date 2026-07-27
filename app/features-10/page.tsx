@@ -4,7 +4,7 @@ import { FeaturePage } from "../components/features/FeaturePage";
 const TITLE = "Pool Fire Features Gallery 2 - Houston Cool Pools";
 const DESCRIPTION =
   "More outdoor fire features and fire pits from Houston Cool Pools. Custom pool features serving Cypress, Spring, Tomball, The Heights, and Katy.";
-const CANONICAL = "https://houstoncoolpools.com/features-10.html";
+const CANONICAL = "https://houstoncoolpools.com/features-10";
 
 export const metadata: Metadata = {
   title: TITLE,

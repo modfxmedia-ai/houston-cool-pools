@@ -4,7 +4,7 @@ import { FeaturePage } from "../components/features/FeaturePage";
 const TITLE = "Pool Stepping Stones - Houston Cool Pools";
 const DESCRIPTION =
   "Landscaping stepping stones line hardscape elements and add definition to your pool. Custom pool features from Houston Cool Pools serving Cypress, Spring, and Tomball.";
-const CANONICAL = "https://houstoncoolpools.com/features-7.html";
+const CANONICAL = "https://houstoncoolpools.com/features-7";
 
 export const metadata: Metadata = {
   title: TITLE,

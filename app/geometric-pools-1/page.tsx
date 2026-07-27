@@ -6,7 +6,7 @@ const SLUG = "geometric-pools-1";
 const TITLE = "Geometric Pool Gallery | Houston Cool Pools";
 const DESCRIPTION =
   "Browse geometric pool designs and photos from Houston Cool Pools. Custom gunite pool builder serving Houston, Tomball, Cypress and Spring TX.";
-const CANONICAL = `https://houstoncoolpools.com/${SLUG}.html`;
+const CANONICAL = `https://houstoncoolpools.com/${SLUG}`;
 
 export const metadata: Metadata = {
   title: TITLE,

@@ -4,7 +4,7 @@ import { FeaturePage } from "../components/features/FeaturePage";
 const TITLE = "Pool Rock Waterfalls & Grottos - Houston Cool Pools";
 const DESCRIPTION =
   "Rock waterfalls and grottos add natural beauty and the soothing sound of falling water to your pool. Custom pool features from Houston Cool Pools.";
-const CANONICAL = "https://houstoncoolpools.com/features-5.html";
+const CANONICAL = "https://houstoncoolpools.com/features-5";
 
 export const metadata: Metadata = {
   title: TITLE,

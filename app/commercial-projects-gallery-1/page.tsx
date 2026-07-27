@@ -6,7 +6,7 @@ const SLUG = "commercial-projects-gallery-1";
 const TITLE = "Commercial Projects Gallery | Houston Cool Pools";
 const DESCRIPTION =
   "Commercial fountains and water features by Houston Cool Pools. Custom gunite pool and fountain builder serving Houston, Tomball, Cypress and Spring TX.";
-const CANONICAL = `https://houstoncoolpools.com/${SLUG}.html`;
+const CANONICAL = `https://houstoncoolpools.com/${SLUG}`;
 
 export const metadata: Metadata = {
   title: TITLE,

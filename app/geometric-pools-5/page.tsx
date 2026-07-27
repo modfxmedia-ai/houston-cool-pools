@@ -5,8 +5,8 @@ import { getGalleryImages, galleryJsonLd } from "../../lib/gallery-pages";
 const SLUG = "geometric-pools-5";
 const TITLE = "Geometric Pool Gallery - Page 5 | Houston Cool Pools";
 const DESCRIPTION =
-  "More geometric pool designs and photos from Houston Cool Pools. Custom gunite pool builder serving Houston, Tomball, Cypress and Spring TX.";
-const CANONICAL = `https://houstoncoolpools.com/${SLUG}.html`;
+  "Geometric pool inspiration, page 5 — modern rectangle pools with negative-edge spillways and glass tile detail from Houston Cool Pools in Spring TX.";
+const CANONICAL = `https://houstoncoolpools.com/${SLUG}`;
 
 export const metadata: Metadata = {
   title: TITLE,

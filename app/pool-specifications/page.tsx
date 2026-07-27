@@ -7,7 +7,7 @@ import { ContactFormSection } from "../components/contact/ContactFormSection";
 const TITLE = "Detailed Pool Specifications in Houston, TX";
 const DESCRIPTION =
   "See the detailed standard pool construction specifications from Houston Cool Pools. Steel, gunite, electrical, equipment and finishes - all laid out clearly.";
-const CANONICAL = "https://houstoncoolpools.com/pool-specifications.html";
+const CANONICAL = "https://houstoncoolpools.com/pool-specifications";
 
 export const metadata: Metadata = {
   title: TITLE,
@@ -28,7 +28,7 @@ const webPageJsonLd = {
   name: "Standard Pool Construction Specifications",
   description:
     "Detailed standard pool construction specifications from Houston Cool Pools Houston TX",
-  url: "https://houstoncoolpools.com/pool-specifications.html",
+  url: "https://houstoncoolpools.com/pool-specifications",
   isPartOf: {
     "@type": "WebSite",
     name: "Houston Cool Pools",

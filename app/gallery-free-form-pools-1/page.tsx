@@ -6,7 +6,7 @@ const SLUG = "gallery-free-form-pools-1";
 const TITLE = "Free Form Pool Gallery | Houston Cool Pools";
 const DESCRIPTION =
   "Browse free form pool designs and photos from Houston Cool Pools. Custom gunite pool builder serving Houston, Tomball, Cypress and Spring TX.";
-const CANONICAL = `https://houstoncoolpools.com/${SLUG}.html`;
+const CANONICAL = `https://houstoncoolpools.com/${SLUG}`;
 
 export const metadata: Metadata = {
   title: TITLE,

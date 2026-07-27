@@ -4,7 +4,7 @@ import { ArticlesIndex } from "../components/articles/ArticlesIndex";
 import { ARTICLES } from "../../lib/articles";
 
 const SLUG = "blogs";
-const CANONICAL = `https://houstoncoolpools.com/${SLUG}.html`;
+const CANONICAL = `https://houstoncoolpools.com/${SLUG}`;
 
 const base = buildPageMetadata(`/${SLUG}`);
 export const metadata: Metadata = {
@@ -31,7 +31,7 @@ const collectionJsonLd = {
         "@type": "ListItem",
         position: 2,
         name: "Pool Information",
-        item: "https://houstoncoolpools.com/pool-information.html",
+        item: "https://houstoncoolpools.com/pool-information",
       },
       { "@type": "ListItem", position: 3, name: "Pool Articles", item: CANONICAL },
     ],

@@ -4,7 +4,7 @@ import { FeaturePage } from "../components/features/FeaturePage";
 const TITLE = "Custom Pool Features Gallery 3 - Houston Cool Pools";
 const DESCRIPTION =
   "Even more custom water features and creative pool designs from Houston Cool Pools serving Cypress, Spring, Tomball, The Heights, and Katy.";
-const CANONICAL = "https://houstoncoolpools.com/features-13.html";
+const CANONICAL = "https://houstoncoolpools.com/features-13";
 
 export const metadata: Metadata = {
   title: TITLE,

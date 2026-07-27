@@ -1,14 +1,16 @@
 import type { MetadataRoute } from "next";
-
-const BASE_URL = "https://houstoncoolpools.com";
+import { SITE_URL } from "../lib/business";
 
 export default function robots(): MetadataRoute.Robots {
   return {
-    rules: {
-      userAgent: "*",
-      allow: "/",
-    },
-    sitemap: `${BASE_URL}/sitemap.xml`,
-    host: BASE_URL,
+    rules: [
+      {
+        userAgent: "*",
+        allow: "/",
+        disallow: ["/api/", "/free-pool-quote", "/free-pool-quote/"],
+      },
+    ],
+    sitemap: `${SITE_URL}/sitemap.xml`,
+    host: SITE_URL,
   };
 }

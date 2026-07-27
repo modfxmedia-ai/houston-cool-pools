@@ -4,7 +4,7 @@ import { FeaturePage } from "../components/features/FeaturePage";
 const TITLE = "Pool Decking Options - Houston Cool Pools";
 const DESCRIPTION =
   "Explore pool decking options from travertine and flagstone to spray deck, pavers and stamped concrete. Custom pool decking from Houston Cool Pools.";
-const CANONICAL = "https://houstoncoolpools.com/features-pool-decking.html";
+const CANONICAL = "https://houstoncoolpools.com/features-pool-decking";
 
 export const metadata: Metadata = {
   title: TITLE,

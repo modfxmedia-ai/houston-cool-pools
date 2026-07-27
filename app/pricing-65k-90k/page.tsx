@@ -3,7 +3,7 @@ import { buildPageMetadata } from "../../lib/business";
 import { PricingTierPage } from "../components/pricing/PricingTierPage";
 
 const SLUG = "pricing-65k-90k";
-const CANONICAL = `https://houstoncoolpools.com/${SLUG}.html`;
+const CANONICAL = `https://houstoncoolpools.com/${SLUG}`;
 
 const base = buildPageMetadata(`/${SLUG}`);
 export const metadata: Metadata = {

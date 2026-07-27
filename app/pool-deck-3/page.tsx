@@ -5,8 +5,8 @@ import { getGalleryImages, galleryJsonLd } from "../../lib/gallery-pages";
 const SLUG = "pool-deck-3";
 const TITLE = "Pool Deck Gallery - Page 3 | Houston Cool Pools";
 const DESCRIPTION =
-  "More pool deck and coping designs from Houston Cool Pools in Houston TX. Custom gunite pool builder serving Houston, Tomball, Cypress and Spring TX.";
-const CANONICAL = `https://houstoncoolpools.com/${SLUG}.html`;
+  "Page 3 of our pool deck gallery — spray-deck, paver and shell-stone coping options installed by Houston Cool Pools in Cypress and Spring TX.";
+const CANONICAL = `https://houstoncoolpools.com/${SLUG}`;
 
 export const metadata: Metadata = {
   title: TITLE,

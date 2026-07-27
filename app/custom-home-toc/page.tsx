@@ -3,7 +3,7 @@ import { buildPageMetadata } from "../../lib/business";
 import { CustomHomeTocClient } from "../components/info/CustomHomeTocClient";
 
 const SLUG = "custom-home-toc";
-const CANONICAL = `https://houstoncoolpools.com/${SLUG}.html`;
+const CANONICAL = `https://houstoncoolpools.com/${SLUG}`;
 
 const base = buildPageMetadata(`/${SLUG}`);
 export const metadata: Metadata = {
@@ -24,7 +24,7 @@ const jsonLd = {
     "@type": "BreadcrumbList",
     itemListElement: [
       { "@type": "ListItem", position: 1, name: "Home", item: "https://houstoncoolpools.com/" },
-      { "@type": "ListItem", position: 2, name: "Pool Information", item: "https://houstoncoolpools.com/pool-information.html" },
+      { "@type": "ListItem", position: 2, name: "Pool Information", item: "https://houstoncoolpools.com/pool-information" },
       { "@type": "ListItem", position: 3, name: "Custom Home Builder", item: CANONICAL },
     ],
   },

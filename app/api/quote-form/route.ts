@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import { sendLeadEmail } from "../../../lib/lead-mailer";
 
 export const runtime = "nodejs";
 
@@ -54,18 +55,12 @@ export async function POST(request: Request) {
     );
   }
 
-  // TODO: Wire up email delivery (Resend or Nodemailer) using RESEND_API_KEY
-  // from env. Until then we log the lead so it's visible in Vercel logs.
-  // Example:
-  //   const { Resend } = await import("resend");
-  //   const resend = new Resend(process.env.RESEND_API_KEY);
-  //   await resend.emails.send({
-  //     from: "leads@houstoncoolpools.com",
-  //     to: "info@houstoncoolpools.com",
-  //     subject: "NEW FREE POOL QUOTE REQUEST",
-  //     text: JSON.stringify(body, null, 2),
-  //   });
-  console.log("[free-pool-quote] new lead:", body);
+  // Deliver the lead. `sendLeadEmail` is best-effort – if RESEND_API_KEY is
+  // not configured (e.g. local dev) it just console.logs the payload.
+  await sendLeadEmail({
+    subject: "NEW FREE POOL QUOTE REQUEST",
+    payload: body as Record<string, unknown>,
+  });
 
   return NextResponse.json({ success: true });
 }

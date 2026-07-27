@@ -4,7 +4,7 @@ import { FeaturePage } from "../components/features/FeaturePage";
 const TITLE = "Pool Sun Shelf, Beach Entry & Fast Lane - Houston Cool Pools";
 const DESCRIPTION =
   "Sun shelves, beach entries and Fast Lane swim systems for your custom pool. Houston Cool Pools serving Cypress, Spring, Tomball, The Heights, and Katy.";
-const CANONICAL = "https://houstoncoolpools.com/features-4.html";
+const CANONICAL = "https://houstoncoolpools.com/features-4";
 
 export const metadata: Metadata = {
   title: TITLE,

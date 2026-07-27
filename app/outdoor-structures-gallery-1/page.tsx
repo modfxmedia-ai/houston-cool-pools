@@ -6,7 +6,7 @@ const SLUG = "outdoor-structures-gallery-1";
 const TITLE = "Outdoor Structures Gallery | Houston Cool Pools";
 const DESCRIPTION =
   "Pergolas, outdoor kitchens and structures from Houston Cool Pools. Custom gunite pool builder serving Houston, Tomball, Cypress and Spring TX.";
-const CANONICAL = `https://houstoncoolpools.com/${SLUG}.html`;
+const CANONICAL = `https://houstoncoolpools.com/${SLUG}`;
 
 export const metadata: Metadata = {
   title: TITLE,

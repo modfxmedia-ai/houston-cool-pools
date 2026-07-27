@@ -6,7 +6,7 @@ import { PoolInfoCta } from "../components/pool-information/PoolInfoCta";
 const TITLE = "Premier Pool Building Services in Houston, TX";
 const DESCRIPTION =
   "Immerse in the world of swimming pools with Houston Cool Pools. Understand the basics of pool construction, maintenance, & customization in Houston, TX.";
-const CANONICAL = "https://houstoncoolpools.com/pool-information.html";
+const CANONICAL = "https://houstoncoolpools.com/pool-information";
 
 export const metadata: Metadata = {
   title: TITLE,
@@ -37,7 +37,7 @@ const breadcrumbJsonLd = {
       "@type": "ListItem",
       position: 2,
       name: "Pool Information",
-      item: "https://houstoncoolpools.com/pool-information.html",
+      item: "https://houstoncoolpools.com/pool-information",
     },
   ],
 };

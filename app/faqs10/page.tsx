@@ -1,16 +1,35 @@
 import type { Metadata } from "next";
 import { buildPageMetadata } from "../../lib/business";
 import { FaqPage } from "../components/faqs/FaqPage";
-import { getFaq, faqJsonLd } from "../../lib/faqs";
+import { getFaq, faqJsonLd, faqMetadata } from "../../lib/faqs";
 
 const SLUG = "faqs10";
-const CANONICAL = `https://houstoncoolpools.com/${SLUG}.html`;
+const CANONICAL = `https://houstoncoolpools.com/${SLUG}`;
+
+const { faq: FAQ_DATA, index: FAQ_INDEX, total: FAQ_TOTAL } = getFaq(SLUG);
+const { title: FAQ_TITLE, description: FAQ_DESCRIPTION } = faqMetadata(
+  FAQ_DATA,
+  FAQ_INDEX,
+  FAQ_TOTAL,
+);
 
 const base = buildPageMetadata(`/${SLUG}`);
 export const metadata: Metadata = {
   ...base,
+  title: FAQ_TITLE,
+  description: FAQ_DESCRIPTION,
   alternates: { canonical: CANONICAL },
-  openGraph: { ...base.openGraph, url: CANONICAL },
+  openGraph: {
+    ...base.openGraph,
+    url: CANONICAL,
+    title: FAQ_TITLE,
+    description: FAQ_DESCRIPTION,
+  },
+  twitter: {
+    ...base.twitter,
+    title: FAQ_TITLE,
+    description: FAQ_DESCRIPTION,
+  },
 };
 
 export default function Page() {

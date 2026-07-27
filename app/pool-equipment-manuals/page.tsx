@@ -3,7 +3,7 @@ import { buildPageMetadata } from "../../lib/business";
 import { EquipmentManualsClient } from "../components/info/EquipmentManualsClient";
 
 const SLUG = "pool-equipment-manuals";
-const CANONICAL = `https://houstoncoolpools.com/${SLUG}.html`;
+const CANONICAL = `https://houstoncoolpools.com/${SLUG}`;
 
 const base = buildPageMetadata(`/${SLUG}`);
 export const metadata: Metadata = {

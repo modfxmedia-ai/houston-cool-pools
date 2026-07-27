@@ -4,7 +4,7 @@ import { FeaturePage } from "../components/features/FeaturePage";
 const TITLE = "Pool Fire Features & Fire Pits - Houston Cool Pools";
 const DESCRIPTION =
   "Outdoor fire features and fire pits turn your pool area into a year-round gathering space. Custom pool features from Houston Cool Pools serving Cypress, Spring, and Tomball.";
-const CANONICAL = "https://houstoncoolpools.com/features-9.html";
+const CANONICAL = "https://houstoncoolpools.com/features-9";
 
 export const metadata: Metadata = {
   title: TITLE,

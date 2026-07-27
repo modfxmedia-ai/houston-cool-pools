@@ -5,8 +5,8 @@ import { getGalleryImages, galleryJsonLd } from "../../lib/gallery-pages";
 const SLUG = "fireplace-firepits-gallery-3";
 const TITLE = "Fire Pit & Fireplace Gallery - Page 3 | Houston Cool Pools";
 const DESCRIPTION =
-  "More fire pit and fireplace designs for pools from Houston Cool Pools. Custom gunite pool builder serving Houston, Tomball, Cypress and Spring TX.";
-const CANONICAL = `https://houstoncoolpools.com/${SLUG}.html`;
+  "Even more poolside fire feature inspiration — page 3 showcases custom fireplaces and fire pits built by Houston Cool Pools across greater Houston TX.";
+const CANONICAL = `https://houstoncoolpools.com/${SLUG}`;
 
 export const metadata: Metadata = {
   title: TITLE,

@@ -4,7 +4,7 @@ import { FeaturePage } from "../components/features/FeaturePage";
 const TITLE = "Pool Slides - Houston Cool Pools";
 const DESCRIPTION =
   "Pool slides guarantee a memorable experience for the whole family. Custom pool features from Houston Cool Pools serving Cypress, Spring, Tomball, and Katy.";
-const CANONICAL = "https://houstoncoolpools.com/features-8.html";
+const CANONICAL = "https://houstoncoolpools.com/features-8";
 
 export const metadata: Metadata = {
   title: TITLE,

@@ -1,7 +1,17 @@
 import type { Metadata } from "next";
 import { getPageMeta } from "./site-metadata";
 
-export const SITE_URL = "https://houstoncoolpools.com";
+export const SITE_URL =
+  process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "") ??
+  "https://houstoncoolpools.com";
+
+/** Default social share image used when a page doesn't set its own. */
+export const DEFAULT_OG_IMAGE = {
+  url: `${SITE_URL}/images/hero/slide-1.png`,
+  width: 1200,
+  height: 630,
+  alt: "Houston Cool Pools - Premier Custom Gunite Pool Builder in Houston, TX",
+} as const;
 
 export const BUSINESS = {
   name: "Houston Cool Pools",
@@ -72,26 +82,34 @@ export function localBusinessJsonLd() {
 
 /**
  * Build a Next.js Metadata object for a given clean path using the metadata
- * scraped from the live site. Returns an empty Metadata if the path is unknown
- * so callers can spread/extend safely.
+ * scraped from the live site. Returns a minimally-valid Metadata (with default
+ * OG image + Twitter card) if the path is unknown so callers can spread/extend
+ * safely.
  */
 export function buildPageMetadata(path: string): Metadata {
   const meta = getPageMeta(path);
   const canonical = `${SITE_URL}${path}`;
-  if (!meta) {
-    return { alternates: { canonical } };
-  }
+  const title = meta?.title;
+  const description = meta?.description ?? undefined;
   return {
-    title: meta.title,
-    description: meta.description ?? undefined,
-    keywords: meta.keywords ?? undefined,
+    ...(title ? { title } : {}),
+    ...(description ? { description } : {}),
+    ...(meta?.keywords ? { keywords: meta.keywords } : {}),
     alternates: { canonical },
     openGraph: {
-      title: meta.title,
-      description: meta.description ?? undefined,
+      ...(title ? { title } : {}),
+      ...(description ? { description } : {}),
       url: canonical,
       siteName: BUSINESS.name,
       type: "website",
+      locale: "en_US",
+      images: [DEFAULT_OG_IMAGE],
+    },
+    twitter: {
+      card: "summary_large_image",
+      ...(title ? { title } : {}),
+      ...(description ? { description } : {}),
+      images: [DEFAULT_OG_IMAGE.url],
     },
   };
 }

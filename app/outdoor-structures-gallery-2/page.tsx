@@ -5,8 +5,8 @@ import { getGalleryImages, galleryJsonLd } from "../../lib/gallery-pages";
 const SLUG = "outdoor-structures-gallery-2";
 const TITLE = "Outdoor Structures Gallery - Page 2 | Houston Cool Pools";
 const DESCRIPTION =
-  "More pergolas, outdoor kitchens and structures from Houston Cool Pools. Custom gunite pool builder serving Houston, Tomball, Cypress and Spring TX.";
-const CANONICAL = `https://houstoncoolpools.com/${SLUG}.html`;
+  "Page 2 of our outdoor structures gallery — cabanas, pergolas and outdoor kitchens paired with custom Houston Cool Pools projects.";
+const CANONICAL = `https://houstoncoolpools.com/${SLUG}`;
 
 export const metadata: Metadata = {
   title: TITLE,

@@ -6,7 +6,7 @@ const SLUG = "fireplace-firepits-gallery-1";
 const TITLE = "Fire Pit & Fireplace Gallery | Houston Cool Pools";
 const DESCRIPTION =
   "Browse fire pit and fireplace designs for pools from Houston Cool Pools. Custom gunite pool builder serving Houston, Tomball, Cypress and Spring TX.";
-const CANONICAL = `https://houstoncoolpools.com/${SLUG}.html`;
+const CANONICAL = `https://houstoncoolpools.com/${SLUG}`;
 
 export const metadata: Metadata = {
   title: TITLE,

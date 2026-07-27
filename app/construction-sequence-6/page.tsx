@@ -4,7 +4,7 @@ import { ConstructionSequencePage } from "../components/construction-sequence/Co
 import { getSequencePage } from "../../lib/construction-sequence";
 
 const SLUG = "construction-sequence-6";
-const CANONICAL = `https://houstoncoolpools.com/${SLUG}.html`;
+const CANONICAL = `https://houstoncoolpools.com/${SLUG}`;
 
 const base = buildPageMetadata(`/${SLUG}`);
 export const metadata: Metadata = {
@@ -33,7 +33,7 @@ const webPageJsonLd = {
         "@type": "ListItem",
         position: 2,
         name: "Pool Information",
-        item: "https://houstoncoolpools.com/pool-information.html",
+        item: "https://houstoncoolpools.com/pool-information",
       },
       { "@type": "ListItem", position: 3, name: "Construction Sequence", item: CANONICAL },
     ],

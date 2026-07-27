@@ -5,8 +5,8 @@ import { getGalleryImages, galleryJsonLd } from "../../lib/gallery-pages";
 const SLUG = "gallery-free-form-pools-4";
 const TITLE = "Free Form Pool Gallery - Page 4 | Houston Cool Pools";
 const DESCRIPTION =
-  "More free form pool designs and photos from Houston Cool Pools. Custom gunite pool builder serving Houston, Tomball, Cypress and Spring TX.";
-const CANONICAL = `https://houstoncoolpools.com/${SLUG}.html`;
+  "Page 4 of our free-form pool photo gallery — natural stone coping, tropical landscaping and grotto features from Houston Cool Pools in Houston TX.";
+const CANONICAL = `https://houstoncoolpools.com/${SLUG}`;
 
 export const metadata: Metadata = {
   title: TITLE,

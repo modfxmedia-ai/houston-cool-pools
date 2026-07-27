@@ -6,7 +6,7 @@ const SLUG = "water-features-gallery-1";
 const TITLE = "Water Features Gallery | Houston Cool Pools";
 const DESCRIPTION =
   "Custom pool water features by Houston Cool Pools - spillways, sheer-descent walls, and bubblers. Custom gunite pool builder serving Houston, Tomball, Cypress and Spring TX.";
-const CANONICAL = `https://houstoncoolpools.com/${SLUG}.html`;
+const CANONICAL = `https://houstoncoolpools.com/${SLUG}`;
 
 export const metadata: Metadata = {
   title: TITLE,

@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import { sendLeadEmail } from "../../../lib/lead-mailer";
 
 export const runtime = "nodejs";
 
@@ -49,8 +50,11 @@ export async function POST(request: Request) {
     );
   }
 
-  // TODO: Wire up email delivery (Resend or Nodemailer) using RESEND_API_KEY.
-  console.log("[pool-service] new lead:", body);
+  // Deliver the lead. Falls back to console.log when RESEND_API_KEY is not set.
+  await sendLeadEmail({
+    subject: "NEW POOL-SERVICE LEAD",
+    payload: body as Record<string, unknown>,
+  });
 
   return NextResponse.json({ success: true });
 }

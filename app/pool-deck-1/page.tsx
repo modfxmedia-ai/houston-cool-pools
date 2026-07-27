@@ -6,7 +6,7 @@ const SLUG = "pool-deck-1";
 const TITLE = "Pool Deck Gallery | Houston Cool Pools";
 const DESCRIPTION =
   "Browse pool deck and coping designs from Houston Cool Pools in Houston TX. Custom gunite pool builder serving Houston, Tomball, Cypress and Spring TX.";
-const CANONICAL = `https://houstoncoolpools.com/${SLUG}.html`;
+const CANONICAL = `https://houstoncoolpools.com/${SLUG}`;
 
 export const metadata: Metadata = {
   title: TITLE,

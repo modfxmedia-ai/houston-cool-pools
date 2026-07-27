@@ -8,7 +8,7 @@ import { WhatsCovered } from "../components/pool-remodel/WhatsCovered";
 const TITLE = "Pool Renovation & Remodeling Services in Houston, TX";
 const DESCRIPTION =
   "Is your old pool looking dated? Houston Cool Pools offers expert pool remodeling and renovation services in Houston, TX. Resurfacing, tile, spa additions and more.";
-const CANONICAL = "https://houstoncoolpools.com/pool-remodel.html";
+const CANONICAL = "https://houstoncoolpools.com/pool-remodel";
 
 export const metadata: Metadata = {
   title: TITLE,

@@ -7,7 +7,7 @@ const TITLE =
   "Houston Cool Pools offers a wide variety of pool services - Cleaning, maintenance and repair.";
 const DESCRIPTION =
   "With Houston Cool Pools' superior pool service, keep your pool clean. For pool maintenance, repair, and services call or visit us in Houston, TX.";
-const CANONICAL = "https://houstoncoolpools.com/pool-service.html";
+const CANONICAL = "https://houstoncoolpools.com/pool-service";
 
 export const metadata: Metadata = {
   title: TITLE,

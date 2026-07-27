@@ -6,7 +6,7 @@ import { getCustomHomeBuilder } from "../../lib/custom-home-builders";
 
 const SLUG = "mazzarino-construction";
 const builder = getCustomHomeBuilder(SLUG);
-const CANONICAL = `https://houstoncoolpools.com/${SLUG}.html`;
+const CANONICAL = `https://houstoncoolpools.com/${SLUG}`;
 
 const base = buildPageMetadata(`/${SLUG}`);
 export const metadata: Metadata = {

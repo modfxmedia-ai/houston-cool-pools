@@ -3,7 +3,7 @@ import { buildPageMetadata } from "../../lib/business";
 import { GlossaryClient } from "../components/info/GlossaryClient";
 
 const SLUG = "glossary5";
-const CANONICAL = `https://houstoncoolpools.com/${SLUG}.html`;
+const CANONICAL = `https://houstoncoolpools.com/${SLUG}`;
 
 const base = buildPageMetadata(`/${SLUG}`);
 export const metadata: Metadata = {

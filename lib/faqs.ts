@@ -137,6 +137,20 @@ export function getFaq(slug: string) {
 }
 
 /**
+ * Per-page metadata for FAQ routes so each of the 13 pages gets a unique
+ * <title> and <meta description>, keyed off the section + question.
+ */
+export function faqMetadata(faq: Faq, index: number, total: number) {
+  const title = `${faq.section}: ${faq.question} | Houston Pool FAQ ${index + 1} of ${total}`;
+  const answer = faq.answer.replace(/\s+/g, " ").trim();
+  const description =
+    answer.length <= 155
+      ? answer
+      : `${answer.slice(0, 152).replace(/[,;:]?\s*\S*$/, "")}...`;
+  return { title, description };
+}
+
+/**
  * Shared FAQPage JSON-LD. Includes the page's single Q&A as mainEntity so the
  * structured data is a valid FAQPage while matching the requested template.
  */
@@ -145,7 +159,7 @@ export function faqJsonLd(faq: Faq) {
     "@context": "https://schema.org",
     "@type": "FAQPage",
     name: "Pool Construction FAQs",
-    url: `${SITE_URL}/${faq.slug}.html`,
+    url: `${SITE_URL}/${faq.slug}`,
     isPartOf: {
       "@type": "WebSite",
       name: "Houston Cool Pools",
