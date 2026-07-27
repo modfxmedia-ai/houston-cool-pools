@@ -42,7 +42,7 @@ export const SHOWCASE_IMAGES = [
   {
     src: "/images/whychoosehcp/tensteps.png",
     alt: "Ten Steps to a Perfect Pool",
-    href: "https://houstoncoolpools.com/pdfs/10-Steps-to-the-Perfect-Pool-hcp.pdf",
+    href: "https://houstoncoolpools.com/pdf/10-Steps-to-the-Perfect-Pool-hcp.pdf",
     external: true,
   },
   {

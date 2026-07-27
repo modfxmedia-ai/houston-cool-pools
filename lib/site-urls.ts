@@ -108,6 +108,10 @@ export const SITE_URLS: SiteUrl[] = [
 ];
 
 export const HTML_REDIRECTS: ReadonlyArray<{ source: string; destination: string }> = [
+  // The old site served this PDF under the plural "/pdfs/" path; the file now
+  // lives at /pdf/10-Steps-to-the-Perfect-Pool-hcp.pdf (see lib/why-choose.ts,
+  // lib/pool-resources.ts), so keep the legacy indexed URL alive with a 301.
+  { source: "/pdfs/10-Steps-to-the-Perfect-Pool-hcp.pdf", destination: "/pdf/10-Steps-to-the-Perfect-Pool-hcp.pdf" },
   { source: "/construction-sequence-1.html", destination: "/construction-sequence-1" },
   { source: "/construction-sequence-2.html", destination: "/construction-sequence-2" },
   { source: "/construction-sequence-3.html", destination: "/construction-sequence-3" },
