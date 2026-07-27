@@ -20,7 +20,7 @@ type Post = {
 const POSTS: Post[] = ARTICLES.slice(0, 3).map((a) => ({
   title: a.title,
   excerpt: a.excerpt,
-  href: `/swimming-pool-articles/${a.slug}`,
+  href: `/blogs/${a.slug}`,
   tag: a.tag,
   readTime: a.readTime,
   date: a.date,
@@ -58,7 +58,7 @@ export function BlogPreview() {
           </div>
 
           <Link
-            href="/swimming-pool-articles"
+            href="/blogs"
             className="group inline-flex w-fit items-center gap-2 text-[12px] font-bold uppercase tracking-[0.22em] text-[var(--color-navy-deep)] underline decoration-[var(--color-pool)] decoration-2 underline-offset-[10px] transition-colors hover:text-[var(--color-pool)]"
           >
             View all articles

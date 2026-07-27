@@ -1,5 +1,5 @@
 /**
- * Editorial data for the /swimming-pool-articles hub and individual posts.
+ * Editorial data for the /blogs hub and individual posts.
  * Each article is service-focused (custom features, pool remodel, pool
  * service) and links back to the relevant service page.
  */
@@ -46,6 +46,225 @@ const AUTHOR = {
 } as const;
 
 export const ARTICLES: Article[] = [
+  {
+    slug: "green-pool-summer-algae-rescue-guide-houston",
+    title: "Green Pool? A Houston Homeowner's Summer Algae Rescue Guide",
+    excerpt:
+      "Triple-digit heat, afternoon storms and heavy swimmer load turn peak summer into algae season - here's how to bring a green Houston pool back fast.",
+    category: "Pool Service",
+    tag: "Pool Service",
+    readTime: "6 min",
+    date: "Jul 21, 2026",
+    publishedAt: "2026-07-21",
+    author: AUTHOR,
+    hero: {
+      src: "/images/pool-service/hero-skimmer.jpg",
+      alt: "Pool technician skimming a Houston backyard pool in summer",
+    },
+    card: {
+      src: "/images/gallery/featured-natural-stone.jpg",
+      alt: "Clear blue Houston pool after algae treatment",
+    },
+    keywords: [
+      "green pool Houston",
+      "algae removal pool",
+      "pool turns green in summer",
+      "Houston summer pool service",
+      "shock a green pool",
+    ],
+    related: [
+      { label: "Pool Service", href: "/pool-service" },
+      { label: "Severe Weather Guide", href: "/severe-weather" },
+      { label: "Weekly Maintenance Playbook", href: "/blogs/the-houston-pool-owners-weekly-maintenance-playbook" },
+      { label: "Pool Construction FAQs", href: "/faqs1" },
+    ],
+    body: [
+      {
+        type: "p",
+        text: "Every summer, our phone starts ringing with the same panicked question: 'I left for a long weekend and came back to a swamp - what happened?' In Houston, it's almost always the same combination: 95°+ heat, heavy pool use, and one of our fast-moving afternoon thunderstorms diluting chlorine and stabilizer all at once.",
+      },
+      {
+        type: "p",
+        text: "The good news - a green pool almost always comes back. Here's the exact rescue sequence our service techs run, plus how to keep it from happening again for the rest of the summer.",
+      },
+      { type: "h2", text: "Step 1 - Figure out why it turned" },
+      {
+        type: "list",
+        items: [
+          "Rain dilution - a couple inches of rain can cut chlorine and stabilizer levels in half overnight.",
+          "Heat - chlorine burns off far faster once water temps push past 88–90°F.",
+          "Filter neglect - a dirty cartridge or a filter that hasn't been backwashed in weeks can't keep up with summer bather load.",
+          "Low run time - the pump needs 8–10+ hours a day in peak summer to turn the water over enough times.",
+        ],
+      },
+      {
+        type: "p",
+        text: "Green water is really just algae that won the race against your sanitizer. Once you know the cause, fixing it is mostly patience plus the right order of operations.",
+      },
+      { type: "h2", text: "Step 2 - Rebalance before you shock" },
+      {
+        type: "list",
+        items: [
+          "Test and adjust pH to 7.2–7.4 first - shock works far better in this range.",
+          "Brush every surface (walls, steps, ladder, behind lights) to break up algae clinging to the plaster.",
+          "Run the pump continuously - don't turn it off until the pool clears.",
+        ],
+      },
+      {
+        type: "callout",
+        title: "Not sure your chemistry is right?",
+        body: "Our weekly maintenance playbook covers the exact target ranges for Houston water - chlorine, pH, alkalinity, stabilizer and calcium.",
+        href: "/blogs/the-houston-pool-owners-weekly-maintenance-playbook",
+        cta: "Read the maintenance playbook",
+      },
+      { type: "h2", text: "Step 3 - Shock aggressively (then wait)" },
+      {
+        type: "p",
+        text: "A green pool needs a much bigger dose than a weekly maintenance shock - often 2–4× the normal amount, dosed at night so the sun doesn't burn it off instantly. Keep the pump running and don't be tempted to shock again after just a few hours; give it a full 12–24 hours to work before retesting.",
+      },
+      { type: "h2", text: "Step 4 - Filter it out" },
+      {
+        type: "p",
+        text: "Dead algae doesn't disappear - it has to be filtered out. Expect to clean or backwash your filter multiple times over 24–48 hours as it clogs with the debris. This step is where most DIY green-pool fixes stall out because homeowners stop cleaning the filter and flow (and clarity) grinds to a halt.",
+      },
+      {
+        type: "quote",
+        text: "The pool doesn't clear because you added more chemical - it clears because you kept the water moving and the filter clean long enough for the chemical to finish the job.",
+        cite: "Mike Lopez, Owner",
+      },
+      { type: "h2", text: "When to call a pro instead of DIY-ing it" },
+      {
+        type: "list",
+        items: [
+          "The pool has been green for more than 3–4 days with no improvement.",
+          "You've shocked twice and it's still cloudy or green-tinted.",
+          "Metal staining (green-blue, not algae) appears on plaster or tile.",
+          "You're heading out of town and need it swim-ready by a specific date.",
+        ],
+      },
+      {
+        type: "callout",
+        title: "Skip the guesswork",
+        body: "Our service crews carry commercial-grade test kits and pool-specific algaecides - most green-to-clean turnarounds take 24–72 hours with a scheduled visit.",
+        href: "/pool-service",
+        cta: "See pool service plans",
+      },
+      { type: "h2", text: "Preventing the next one" },
+      {
+        type: "p",
+        text: "Keep stabilizer in the 30–50 ppm range through peak summer, run the pump a full cycle daily, and re-test chemistry after any rain event over an inch. If you're leaving town for more than a few days during the hottest stretch of summer, ask your service company for a pre-vacation check rather than hoping the auto-chlorinator keeps up alone.",
+      },
+    ],
+  },
+  {
+    slug: "beat-the-houston-heat-cooling-features-for-your-pool",
+    title: "Beat the Houston Heat: 7 Ways to Keep Your Pool Deck Cool This Summer",
+    excerpt:
+      "Houston decking can hit 140°F in peak summer sun. Here are the materials, shade structures and water features that keep bare feet - and swimmers - comfortable all season.",
+    category: "Custom Features",
+    tag: "Custom Features",
+    readTime: "6 min",
+    date: "Jul 09, 2026",
+    publishedAt: "2026-07-09",
+    author: AUTHOR,
+    hero: {
+      src: "/images/features/features-pool-decking/hero.jpg",
+      alt: "Light-colored cool pool decking around a Houston backyard pool",
+    },
+    card: {
+      src: "/images/features/features-pool-decking/01.jpg",
+      alt: "Textured cool-deck coating beside a custom pool",
+    },
+    keywords: [
+      "cool pool decking Houston",
+      "pool deck too hot",
+      "shade structures for pools",
+      "cool deck coating",
+      "outdoor pool cooling features",
+    ],
+    related: [
+      { label: "Pool Decking", href: "/features-pool-decking" },
+      { label: "Custom Pool Features", href: "/custom-pool-features-1" },
+      { label: "Outdoor Structures", href: "/outdoor-structures-gallery-1" },
+      { label: "Pool Specifications", href: "/pool-specifications" },
+    ],
+    body: [
+      {
+        type: "p",
+        text: "By mid-summer, a dark, standard-broom-finish concrete deck in Houston can climb well past 140°F in direct sun - hot enough to blister bare feet in seconds. It's one of the most common complaints we hear from homeowners with pools built before cool-deck technology became standard, and one of the easiest things to fix in a remodel or new build.",
+      },
+      {
+        type: "p",
+        text: "Here are the seven deck and design choices we lean on most to keep a Houston pool comfortable from June through September.",
+      },
+      { type: "h2", text: "1. Light-colored, textured cool-deck coatings" },
+      {
+        type: "image",
+        src: "/images/features/features-pool-decking/01.jpg",
+        alt: "Cool-deck textured coating around a pool",
+        caption: "Textured acrylic cool-deck coatings can run 20–30°F cooler than plain dark concrete.",
+      },
+      {
+        type: "p",
+        text: "Light, reflective colors combined with a textured (not smooth-troweled) finish are the single biggest lever for deck temperature. Dark pavers and dark stained concrete look great in photos but absorb far more heat - always ask to see a physical sample tested in full sun before committing to a color.",
+      },
+      { type: "h2", text: "2. Travertine and other natural stone" },
+      {
+        type: "p",
+        text: "Travertine is naturally porous and stays noticeably cooler underfoot than concrete or porcelain pavers, which is why it remains our most-requested decking material for Houston builds despite the higher upfront cost.",
+      },
+      { type: "h2", text: "3. Shade structures over key traffic areas" },
+      {
+        type: "list",
+        items: [
+          "Pergolas or cabanas over lounge areas and dining spaces.",
+          "Shade sails positioned over the shallow end or sun shelf where kids play longest.",
+          "Retractable awnings for flexibility across the season.",
+        ],
+      },
+      {
+        type: "p",
+        text: "Even partial shade over the highest-traffic zones - the steps, the sun shelf, the spot where the cooler and towels live - makes a bigger comfort difference than shading the whole deck evenly.",
+      },
+      {
+        type: "callout",
+        title: "See outdoor structure options",
+        body: "Pergolas, cabanas and covered patios we've built alongside Houston pools - browse the gallery for ideas.",
+        href: "/outdoor-structures-gallery-1",
+        cta: "Browse outdoor structures",
+      },
+      { type: "h2", text: "4. Water features that double as cooling" },
+      {
+        type: "p",
+        text: "Deck jets, sheer descents and bubblers don't just look good - the fine mist and splash zone around them measurably cools the surrounding decking and air, which is part of why we place them near seating areas whenever the layout allows.",
+      },
+      { type: "h2", text: "5. Turf or paver 'cool zones' near seating" },
+      {
+        type: "p",
+        text: "Swapping a strip of solid decking near lounge chairs for artificial turf or wide-joint pavers with groundcover breaks up the heat-radiating surface and gives bare feet a genuinely cooler landing spot on the way to the pool.",
+      },
+      { type: "h2", text: "6. Overhangs and covered loggias" },
+      {
+        type: "p",
+        text: "For homes being built or remodeled alongside the pool, extending the home's roofline into a covered loggia or outdoor living space gives permanent shade with zero maintenance - our favorite long-term solution when the budget allows for it.",
+      },
+      { type: "h2", text: "7. Smart material transitions" },
+      {
+        type: "p",
+        text: "Not every square foot of decking needs to be the premium cool material. We often use a lighter, cooler surface at the pool's edge and high-traffic paths, then transition to a more budget-friendly finish farther from the water where feet spend less time.",
+      },
+      {
+        type: "quote",
+        text: "Deck temperature is one of those things homeowners don't think about at the design table in January - then it's the first thing they mention the following summer.",
+        cite: "Mike Lopez, Owner",
+      },
+      { type: "h2", text: "Retrofitting an existing hot deck" },
+      {
+        type: "p",
+        text: "If your deck is already down and just runs too hot, a cool-deck resurfacing coating can usually be applied over existing concrete without a full tear-out - one of the highest-ROI, lowest-disruption upgrades we install during a pool remodel.",
+      },
+    ],
+  },
   {
     slug: "custom-water-features-that-transform-a-backyard-pool",
     title: "Custom Water Features That Transform a Backyard Pool",

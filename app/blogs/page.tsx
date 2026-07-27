@@ -3,7 +3,7 @@ import { buildPageMetadata } from "../../lib/business";
 import { ArticlesIndex } from "../components/articles/ArticlesIndex";
 import { ARTICLES } from "../../lib/articles";
 
-const SLUG = "swimming-pool-articles";
+const SLUG = "blogs";
 const CANONICAL = `https://houstoncoolpools.com/${SLUG}.html`;
 
 const base = buildPageMetadata(`/${SLUG}`);
@@ -41,7 +41,7 @@ const collectionJsonLd = {
     itemListElement: ARTICLES.map((a, i) => ({
       "@type": "ListItem",
       position: i + 1,
-      url: `https://houstoncoolpools.com/swimming-pool-articles/${a.slug}`,
+      url: `https://houstoncoolpools.com/blogs/${a.slug}`,
       name: a.title,
     })),
   },

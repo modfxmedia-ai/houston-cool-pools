@@ -26,6 +26,7 @@ export const PRIMARY_NAV: NavGroup[] = [
           { label: "Meet The Team", href: "/about/team" },
           { label: "Why Choose HCP", href: "/whychoosehcp" },
           { label: "Reviews & Testimonials", href: "/customer-reviews-testimonials" },
+          { label: "Blog", href: "/blogs" },
         ],
       },
     ],

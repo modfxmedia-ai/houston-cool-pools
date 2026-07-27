@@ -86,7 +86,7 @@ export function ArticlePost({ article, related }: ArticlePostProps) {
   const shareUrl =
     typeof window !== "undefined"
       ? window.location.href
-      : `https://houstoncoolpools.com/swimming-pool-articles/${article.slug}`;
+      : `https://houstoncoolpools.com/blogs/${article.slug}`;
   const shareText = encodeURIComponent(article.title);
 
   return (
@@ -144,7 +144,7 @@ export function ArticlePost({ article, related }: ArticlePostProps) {
           >
             <Link href="/" className="transition hover:text-white">Home</Link>
             <span aria-hidden>/</span>
-            <Link href="/swimming-pool-articles" className="transition hover:text-white">Articles</Link>
+            <Link href="/blogs" className="transition hover:text-white">Articles</Link>
             <span aria-hidden>/</span>
             <span className="text-white">{article.category}</span>
           </motion.nav>
@@ -510,7 +510,7 @@ export function ArticlePost({ article, related }: ArticlePostProps) {
                 </h2>
               </div>
               <Link
-                href="/swimming-pool-articles"
+                href="/blogs"
                 className="hidden text-[12px] font-bold uppercase tracking-[0.22em] text-[var(--color-navy-deep)] underline decoration-[var(--color-pool)] decoration-2 underline-offset-[8px] transition hover:text-[var(--color-pool)] sm:inline-block"
               >
                 All articles →
@@ -528,7 +528,7 @@ export function ArticlePost({ article, related }: ArticlePostProps) {
                   className="group"
                 >
                   <Link
-                    href={`/swimming-pool-articles/${a.slug}`}
+                    href={`/blogs/${a.slug}`}
                     className="flex h-full flex-col overflow-hidden rounded-3xl border border-slate-200/70 bg-white transition duration-300 hover:-translate-y-1 hover:border-[var(--color-pool)]/50 hover:shadow-[0_20px_60px_-30px_rgba(0,27,36,0.35)]"
                   >
                     <div className="relative aspect-[16/10] overflow-hidden bg-slate-100">

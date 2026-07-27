@@ -19,7 +19,7 @@ export async function generateMetadata({
   const article = getArticle(slug);
   if (!article) return {};
 
-  const canonical = `${SITE_URL}/swimming-pool-articles/${article.slug}`;
+  const canonical = `${SITE_URL}/blogs/${article.slug}`;
   const image = `${SITE_URL}${article.hero.src}`;
   return {
     title: `${article.title} | Houston Cool Pools`,
@@ -55,7 +55,7 @@ export default async function Page({
   if (!article) notFound();
 
   const related = getRelatedArticles(slug, 2);
-  const canonical = `${SITE_URL}/swimming-pool-articles/${article.slug}`;
+  const canonical = `${SITE_URL}/blogs/${article.slug}`;
 
   const articleJsonLd = {
     "@context": "https://schema.org",

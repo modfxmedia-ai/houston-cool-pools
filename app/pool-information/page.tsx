@@ -141,7 +141,7 @@ const RESOURCES: Resource[] = [
   },
   {
     title: "Pool Articles",
-    href: "/swimming-pool-articles",
+    href: "/blogs",
     description: "Tips, guides and insights from our pool experts.",
     icon: "articles",
   },

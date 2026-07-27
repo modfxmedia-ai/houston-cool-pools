@@ -62,7 +62,7 @@ const SECTIONS: Section[] = [
     eyebrow: "Pool School",
     intro: "Long-form learning - articles, FAQs, glossaries, equipment manuals and brochures.",
     links: [
-      { label: "Swimming Pool Articles", href: "/swimming-pool-articles" },
+      { label: "Blog", href: "/blogs" },
       { label: "Pool School", href: "/pool-school-1" },
       { label: "Pool Terms", href: "/pooldefinitions" },
       { label: "Pool Glossary", href: "/glossary1" },
@@ -105,9 +105,11 @@ const FEATURES: SectionLink[] = Array.from({ length: 13 }, (_, i) => ({
 }));
 
 const ARTICLES: SectionLink[] = [
-  { label: "Custom Water Features That Transform a Backyard Pool", href: "/swimming-pool-articles/custom-water-features-that-transform-a-backyard-pool" },
-  { label: "Signs It's Time to Remodel Your Houston Pool", href: "/swimming-pool-articles/signs-its-time-to-remodel-your-houston-pool" },
-  { label: "The Houston Pool Owner's Weekly Maintenance Playbook", href: "/swimming-pool-articles/the-houston-pool-owners-weekly-maintenance-playbook" },
+  { label: "Green Pool? A Houston Homeowner's Summer Algae Rescue Guide", href: "/blogs/green-pool-summer-algae-rescue-guide-houston" },
+  { label: "Beat the Houston Heat: 7 Ways to Keep Your Pool Deck Cool This Summer", href: "/blogs/beat-the-houston-heat-cooling-features-for-your-pool" },
+  { label: "Custom Water Features That Transform a Backyard Pool", href: "/blogs/custom-water-features-that-transform-a-backyard-pool" },
+  { label: "Signs It's Time to Remodel Your Houston Pool", href: "/blogs/signs-its-time-to-remodel-your-houston-pool" },
+  { label: "The Houston Pool Owner's Weekly Maintenance Playbook", href: "/blogs/the-houston-pool-owners-weekly-maintenance-playbook" },
 ];
 
 const GALLERIES: { heading: string; links: SectionLink[] }[] = [

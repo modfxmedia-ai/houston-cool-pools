@@ -489,8 +489,8 @@ export const PAGE_META: Record<string, PageMeta> = {
     description: "Houston Cool Pools - Protect Your Pool From Severe Weather",
     keywords: "Houston Pools Protect Your Pool From Severe Weather",
   },
-  "/swimming-pool-articles": {
-    title: "Swimming Pool Articles | Tomball Cypress Spring Katy",
+  "/blogs": {
+    title: "Blog | Tomball Cypress Spring Katy",
     description: "Swimming Pool Articles - Custom Pool Information",
     keywords: "Swimming Pool Articles, Pool Articles, Pool Technical articles, Landscaping Articles, Equipment Articles",
   },

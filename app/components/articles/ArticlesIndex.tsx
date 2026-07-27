@@ -261,7 +261,7 @@ function FeaturedCard({ article }: { article: Article }) {
       className="group mt-6 grid overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-[0_20px_50px_-25px_rgba(0,0,0,0.25)] lg:grid-cols-2"
     >
       <Link
-        href={`/swimming-pool-articles/${article.slug}`}
+        href={`/blogs/${article.slug}`}
         className="relative block aspect-[4/3] lg:aspect-auto"
       >
         <Image
@@ -283,7 +283,7 @@ function FeaturedCard({ article }: { article: Article }) {
         </div>
         <h3 className="font-display text-2xl font-extrabold text-[var(--color-navy-deep)] sm:text-3xl md:text-4xl">
           <Link
-            href={`/swimming-pool-articles/${article.slug}`}
+            href={`/blogs/${article.slug}`}
             className="transition-colors hover:text-[var(--color-pool)]"
           >
             {article.title}
@@ -294,7 +294,7 @@ function FeaturedCard({ article }: { article: Article }) {
         </p>
         <div className="flex items-center gap-4 pt-2">
           <Link
-            href={`/swimming-pool-articles/${article.slug}`}
+            href={`/blogs/${article.slug}`}
             className="inline-flex items-center gap-2 rounded-full bg-[var(--color-navy-deep)] px-5 py-2.5 text-[12px] font-bold uppercase tracking-[0.14em] text-white transition hover:bg-[var(--color-pool-deep)]"
           >
             Read article
@@ -329,7 +329,7 @@ function ArticleCard({ article }: { article: Article }) {
       className="group"
     >
       <Link
-        href={`/swimming-pool-articles/${article.slug}`}
+        href={`/blogs/${article.slug}`}
         className="block h-full overflow-hidden rounded-2xl border border-slate-200 bg-white transition duration-500 hover:-translate-y-1 hover:border-[var(--color-pool)]/50 hover:shadow-[0_20px_40px_-20px_rgba(0,124,182,0.3)]"
       >
         <div className="relative aspect-[4/3] overflow-hidden bg-slate-100">
