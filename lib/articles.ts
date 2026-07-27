@@ -58,12 +58,12 @@ export const ARTICLES: Article[] = [
     publishedAt: "2026-07-21",
     author: AUTHOR,
     hero: {
-      src: "/images/pool-service/hero-skimmer.jpg",
-      alt: "Pool technician skimming a Houston backyard pool in summer",
+      src: "/images/blogs/green-pool-summer-algae-rescue-guide-houston/hero.jpg",
+      alt: "Houston backyard pool being cleaned during algae season",
     },
     card: {
-      src: "/images/gallery/featured-natural-stone.jpg",
-      alt: "Clear blue Houston pool after algae treatment",
+      src: "/images/blogs/green-pool-summer-algae-rescue-guide-houston/card.jpg",
+      alt: "Houston backyard pool being cleaned during algae season",
     },
     keywords: [
       "green pool Houston",
@@ -168,12 +168,12 @@ export const ARTICLES: Article[] = [
     publishedAt: "2026-07-09",
     author: AUTHOR,
     hero: {
-      src: "/images/features/features-pool-decking/hero.jpg",
-      alt: "Light-colored cool pool decking around a Houston backyard pool",
+      src: "/images/blogs/beat-the-houston-heat-cooling-features-for-your-pool/hero.jpg",
+      alt: "Houston backyard pool and cool deck patio at dusk",
     },
     card: {
-      src: "/images/features/features-pool-decking/01.jpg",
-      alt: "Textured cool-deck coating beside a custom pool",
+      src: "/images/blogs/beat-the-houston-heat-cooling-features-for-your-pool/card.jpg",
+      alt: "Houston backyard pool and cool deck patio at dusk",
     },
     keywords: [
       "cool pool decking Houston",
@@ -277,12 +277,12 @@ export const ARTICLES: Article[] = [
     publishedAt: "2026-05-12",
     author: AUTHOR,
     hero: {
-      src: "/images/gallery/featured-spillover-deckjets.jpg",
-      alt: "Backyard pool with arcing deck jets and a spa spillover",
+      src: "/images/blogs/custom-water-features-that-transform-a-backyard-pool/hero.jpg",
+      alt: "Custom backyard pool with water feature and travertine decking",
     },
     card: {
-      src: "/images/features/custom-pool-features-1/hero.jpg",
-      alt: "Sheer-descent waterfall with lion-head scuppers",
+      src: "/images/blogs/custom-water-features-that-transform-a-backyard-pool/card.jpg",
+      alt: "Custom backyard pool with water feature and travertine decking",
     },
     keywords: [
       "custom pool water features",
