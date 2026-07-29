@@ -46,6 +46,10 @@ export const BUSINESS = {
     "A+ Rated with the Better Business Bureau",
     "BBB Gold Star Certificate",
     "Angie's List Super Service Award Winner",
+    "Best of Houzz",
+    "SBA Emerging Leaders Award",
+    "GHBA Member",
+    "NAHB Member",
   ],
   sameAs: [] as string[],
 } as const;
