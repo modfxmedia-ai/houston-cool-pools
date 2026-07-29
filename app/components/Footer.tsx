@@ -167,52 +167,74 @@ export function Footer() {
         <ul className="flex flex-wrap items-center justify-center gap-x-10 gap-y-6 sm:gap-x-14">
           {[
             {
-              src: "/images/certifications/logo_BBB_white.png",
-              alt: "BBB Accredited Business",
-              w: 110,
-              h: 44,
+              src: "/images/member-logos/bbb-gold-star-award.jpg",
+              alt: "BBB Gold Star Award",
+              w: 60,
+              h: 60,
               href: "http://www.bbb.org/houston/business-reviews/swimming-pool-contractors-dealers-design/houston-cool-pools-in-houston-tx-16001322/",
             },
             {
-              src: "/images/certifications/apsp.png",
-              alt: "APSP Member - Association of Pool & Spa Professionals",
+              src: "/images/member-logos/angies-super-service-award.png",
+              alt: "Angie's List Super Service Award",
               w: 96,
-              h: 44,
-              href: "https://apsp.org/",
-            },
-            {
-              src: "/images/certifications/angies.png",
-              alt: "Angi (Angie's List) Reviewed",
-              w: 110,
               h: 44,
               href: "https://www.angieslist.com/companylist/us/tx/houston/houston-cool-pools-reviews-7638586.htm",
             },
             {
-              src: "/images/certifications/footer_houzz_logo.png",
-              alt: "Featured on Houzz",
+              src: "/images/member-logos/best-of-houzz.jpg",
+              alt: "Best of Houzz",
               w: 96,
               h: 44,
               href: "http://www.houzz.com/pro/houstoncoolpools/houston-cool-pools",
             },
-          ].map((cert) => (
-            <li key={cert.src}>
-              <a
-                href={cert.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label={cert.alt}
-                className="block opacity-80 transition-opacity hover:opacity-100 focus-visible:opacity-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-gold-light)]/60 focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--color-navy-deep)] rounded-md"
-              >
-                <Image
-                  src={cert.src}
-                  alt={cert.alt}
-                  width={cert.w}
-                  height={cert.h}
-                  className="h-10 w-auto object-contain sm:h-11"
-                />
-              </a>
-            </li>
-          ))}
+            {
+              src: "/images/member-logos/sba-emerging-leaders-award.png",
+              alt: "SBA Emerging Leaders Award",
+              w: 96,
+              h: 44,
+            },
+            {
+              src: "/images/member-logos/ghba.jpg",
+              alt: "GHBA Member - Greater Houston Builders Association",
+              w: 110,
+              h: 44,
+            },
+            {
+              src: "/images/member-logos/nahb.jpg",
+              alt: "NAHB Member - National Association of Home Builders",
+              w: 110,
+              h: 44,
+            },
+          ].map((cert) => {
+            const logo = (
+              <Image
+                src={cert.src}
+                alt={cert.alt}
+                width={cert.w}
+                height={cert.h}
+                className="h-10 w-auto object-contain sm:h-11"
+              />
+            );
+            return (
+              <li key={cert.src}>
+                {cert.href ? (
+                  <a
+                    href={cert.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={cert.alt}
+                    className="block opacity-80 transition-opacity hover:opacity-100 focus-visible:opacity-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-gold-light)]/60 focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--color-navy-deep)] rounded-md"
+                  >
+                    {logo}
+                  </a>
+                ) : (
+                  <span aria-label={cert.alt} className="block opacity-80">
+                    {logo}
+                  </span>
+                )}
+              </li>
+            );
+          })}
         </ul>
       </motion.div>
 

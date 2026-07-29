@@ -28,9 +28,11 @@ export const LP_OFFER_CHECKLIST = [
 
 export const LP_TRUST_BADGES = [
   "★ BBB A+ Rated",
-  "Genesis 3 Member",
-  "APSP Member",
-  "Houstonia Award Winner",
+  "Best of Houzz",
+  "Angie's List Super Service Award",
+  "SBA Emerging Leaders Award",
+  "BBB Gold Star Award",
+  "GHBA & NAHB Member",
 ] as const;
 
 export const LP_HERO_STATS = [

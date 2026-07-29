@@ -105,8 +105,7 @@ export const SARAH_MOORE: TeamMember = {
   name: "Sarah Moore",
   title: "Pool Specialist & Equipment Repair Manager",
   yearsExperience: "8+ years",
-  portrait: "",
-  portraitPending: true,
+  portrait: "/images/team/sarah-moore.png",
   quote:
     "I love that every day is different. Each problem and each customer brings a new challenge. There's always something to learn in this industry, and I love that.",
   bio: [

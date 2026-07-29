@@ -35,8 +35,8 @@ const FEATURES: ReadonlyArray<{
   },
   {
     title: "Award-Winning Design",
-    body: "Genesis 3 Society. APSP Member. Houstonia award winner.",
-    bullets: ["Genesis 3 Society", "APSP Member", "Houstonia Award"],
+    body: "Best of Houzz. Angie's List Super Service Award. SBA Emerging Leaders Award.",
+    bullets: ["Best of Houzz", "Angie's List Super Service", "SBA Emerging Leaders Award"],
     icon: (
       <svg viewBox="0 0 24 24" className="h-6 w-6 fill-none stroke-current" strokeWidth={1.7}>
         <path
@@ -155,9 +155,11 @@ export function WhyChoose() {
         >
           {[
             "BBB A+ Rated",
-            "Genesis 3 Member",
-            "APSP Member",
-            "Houstonia Award Winner",
+            "Best of Houzz",
+            "Angie's List Super Service Award",
+            "SBA Emerging Leaders Award",
+            "BBB Gold Star Award",
+            "GHBA & NAHB Member",
             "100% On-Budget Guarantee",
           ].map((t) => (
             <span key={t} className="inline-flex items-center gap-2">

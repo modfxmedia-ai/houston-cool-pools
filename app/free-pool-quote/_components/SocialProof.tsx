@@ -4,9 +4,11 @@ import { motion } from "motion/react";
 
 const ITEMS = [
   "BBB A+ RATED",
-  "GENESIS 3 MEMBER",
-  "APSP MEMBER",
-  "HOUSTONIA AWARD WINNER",
+  "BEST OF HOUZZ",
+  "ANGIE'S LIST SUPER SERVICE AWARD",
+  "SBA EMERGING LEADERS AWARD",
+  "BBB GOLD STAR AWARD",
+  "GHBA & NAHB MEMBER",
 ];
 
 const containerVariants = {

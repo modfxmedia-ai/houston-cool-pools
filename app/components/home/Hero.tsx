@@ -575,7 +575,7 @@ function StatsBand() {
               Award-winning custom pools - on time, on budget, built to last.
             </p>
             <ul className="flex flex-wrap items-center gap-2">
-              {["BBB A+ Rated", "Genesis 3 Member", "APSP Member", "Houstonia Award"].map((a) => (
+              {["BBB A+ Rated", "Best of Houzz", "Angie's List Super Service Award", "SBA Emerging Leaders Award", "BBB Gold Star Award"].map((a) => (
                 <li
                   key={a}
                   className="inline-flex items-center gap-1.5 rounded-full border border-[var(--color-gold-light)]/30 bg-[var(--color-gold-light)]/10 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.16em] text-[var(--color-gold-light)]"
@@ -587,6 +587,9 @@ function StatsBand() {
                 </li>
               ))}
             </ul>
+            <p className="text-[10px] text-white/40 md:text-right">
+              Also members of the GHBA and NAHB.
+            </p>
           </div>
         </motion.div>
 

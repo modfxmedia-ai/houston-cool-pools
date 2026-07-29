@@ -8,11 +8,13 @@ const ease = [0.22, 1, 0.36, 1] as const;
 
 const QUALIFICATIONS = [
   "30+ yrs custom pool builder",
-  "Genesis 3 Society Member",
-  "APSP Member",
+  "Best of Houzz",
+  "Angie's List Super Service Award",
   "Personally oversees every build",
   "BBB A+ Rated",
-  "Houstonia Award Winner",
+  "SBA Emerging Leaders Award",
+  "BBB Gold Star Award",
+  "GHBA & NAHB Member",
 ];
 
 const STATS = [

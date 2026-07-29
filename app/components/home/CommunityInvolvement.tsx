@@ -13,7 +13,7 @@ const HIGHLIGHTS = [
   },
   {
     title: "Industry Memberships",
-    desc: "Proud members of the BBB (A+ Rated), APSP, and Genesis 3 Design Group.",
+    desc: "Recognized with Best of Houzz, Angie's List Super Service, and SBA Emerging Leaders awards - and proud members of the GHBA and NAHB.",
   },
   {
     title: "Built in Houston, Since 1996",

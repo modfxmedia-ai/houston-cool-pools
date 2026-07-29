@@ -55,10 +55,10 @@ const HIGHLIGHTS: Highlight[] = [
 
 const BADGES = [
   "A+ BBB Rated",
-  "Angie's List Super Service",
-  "Genesis 3 Member",
-  "APSP Member",
-  "Houstonia Award Winner",
+  "Best of Houzz",
+  "Angie's List Super Service Award",
+  "SBA Emerging Leaders Award",
+  "BBB Gold Star Award",
 ] as const;
 
 /**
