@@ -492,6 +492,7 @@ type Stat = {
   suffix: string;
   caption: string;
   icon: React.ReactNode;
+  plain?: boolean;
 };
 
 const STATS: Stat[] = [
@@ -500,6 +501,7 @@ const STATS: Stat[] = [
     value: 1996,
     suffix: "",
     caption: "Three decades of craft",
+    plain: true,
     icon: (
       <svg viewBox="0 0 24 24" fill="none" className="h-5 w-5">
         <path d="M3 7l9-4 9 4-9 4-9-4z" stroke="currentColor" strokeWidth="1.6" strokeLinejoin="round" />
@@ -623,7 +625,7 @@ function StatCard({ stat, index }: { stat: Stat; index: number }) {
         <div className="flex items-baseline gap-0.5">
           <span className="font-[family-name:var(--font-display)] text-2xl leading-none text-white sm:text-3xl md:text-4xl">
             {typeof stat.value === "number" && inView ? (
-              <Counter to={stat.value} />
+              <Counter to={stat.value} plain={stat.plain} />
             ) : (
               stat.value
             )}
@@ -656,9 +658,11 @@ function StatCard({ stat, index }: { stat: Stat; index: number }) {
   );
 }
 
-function Counter({ to }: { to: number }) {
+function Counter({ to, plain }: { to: number; plain?: boolean }) {
   const mv = useMotionValue(0);
-  const rounded = useTransform(mv, (v) => Math.round(v).toLocaleString("en-US"));
+  const rounded = useTransform(mv, (v) =>
+    plain ? String(Math.round(v)) : Math.round(v).toLocaleString("en-US")
+  );
   const [text, setText] = useState("0");
 
   useEffect(() => {
