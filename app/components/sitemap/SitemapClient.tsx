@@ -105,6 +105,8 @@ const FEATURES: SectionLink[] = Array.from({ length: 13 }, (_, i) => ({
 }));
 
 const ARTICLES: SectionLink[] = [
+  { label: "Are Pool Fire Bowls Worth Adding to a Houston Backyard?", href: "/blogs/why-pool-fire-bowls-elevate-houston-backyards" },
+  { label: "Should You Add Pool Lighting for Safer Houston Nights?", href: "/blogs/enhance-pool-safety-with-professional-lighting" },
   { label: "Green Pool? A Houston Homeowner's Summer Algae Rescue Guide", href: "/blogs/green-pool-summer-algae-rescue-guide-houston" },
   { label: "Beat the Houston Heat: 7 Ways to Keep Your Pool Deck Cool This Summer", href: "/blogs/beat-the-houston-heat-cooling-features-for-your-pool" },
   { label: "Custom Water Features That Transform a Backyard Pool", href: "/blogs/custom-water-features-that-transform-a-backyard-pool" },

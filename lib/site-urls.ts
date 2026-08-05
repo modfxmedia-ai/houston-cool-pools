@@ -20,6 +20,8 @@ export const SITE_URLS: SiteUrl[] = [
   { path: "/blogs/the-houston-pool-owners-weekly-maintenance-playbook", priority: 0.80, lastModified: "2026-07-02T00:00:00+00:00" },
   { path: "/blogs/green-pool-summer-algae-rescue-guide-houston", priority: 0.80, lastModified: "2026-07-21T00:00:00+00:00" },
   { path: "/blogs/beat-the-houston-heat-cooling-features-for-your-pool", priority: 0.80, lastModified: "2026-07-09T00:00:00+00:00" },
+  { path: "/blogs/why-pool-fire-bowls-elevate-houston-backyards", priority: 0.80, lastModified: "2026-08-04T00:00:00+00:00" },
+  { path: "/blogs/enhance-pool-safety-with-professional-lighting", priority: 0.80, lastModified: "2026-07-28T00:00:00+00:00" },
   { path: "/whychoosehcp", priority: 0.80, lastModified: "2025-06-13T02:03:51+00:00" },
   { path: "/construction-sequence-1", priority: 0.64, lastModified: "2025-06-12T21:32:41+00:00" },
   { path: "/custom-home-toc", priority: 0.64, lastModified: "2025-06-12T21:32:41+00:00" },
