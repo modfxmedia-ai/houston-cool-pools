@@ -32,6 +32,7 @@ const EXCLUDE_FILE_PATTERNS = [
   /^images(\s*\(\d+\))?\.(jpe?g|png)$/i,
   /ambiance/i,
   /Photo Jan 29 2025, 11 04 09 AM/i, // Goel - client requested removal
+  /^IMG_6970\.jpg$/i, // outdoor daybed/furniture product shot, not a project photo - user requested removal
 ];
 
 function mulberry32(seed) {

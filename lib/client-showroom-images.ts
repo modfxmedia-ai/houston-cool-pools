@@ -29,11 +29,6 @@ export const CLIENT_SHOWROOM_IMAGES: ShowroomImage[] = [
     "height": 900
   },
   {
-    "src": "/images/client-showroom/photo-0006.jpg",
-    "width": 1200,
-    "height": 1600
-  },
-  {
     "src": "/images/client-showroom/photo-0007.jpg",
     "width": 1174,
     "height": 880
