@@ -52,6 +52,7 @@ export const PRIMARY_NAV: NavGroup[] = [
           { label: "Custom Pool Features", href: "/custom-pool-features-1" },
           { label: "Outdoor Structures", href: "/outdoor-structures-gallery-1" },
           { label: "Pool Remodel", href: "/pool-remodel" },
+          { label: "Client Showroom", href: "/client-showroom" },
         ],
       },
     ],
@@ -80,7 +81,6 @@ export const PRIMARY_NAV: NavGroup[] = [
       {
         heading: "Pool Owners",
         links: [
-          { label: "Client Showroom", href: "/client-showroom" },
           { label: "Pool Maintenance", href: "/pool-service" },
           { label: "Severe Weather Guide", href: "/severe-weather" },
         ],
