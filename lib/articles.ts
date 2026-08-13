@@ -47,6 +47,138 @@ const AUTHOR = {
 
 export const ARTICLES: Article[] = [
   {
+    slug: "what-to-expect-from-a-houston-pool-site-evaluation",
+    title: "What to Expect From a Houston Pool Site Evaluation",
+    excerpt:
+      "Learn how a custom pool builder in Houston evaluates your property, plans drainage, access, and design details for a personalized backyard project.",
+    category: "Custom Features",
+    tag: "Custom Features",
+    readTime: "6 min",
+    date: "Aug 12, 2026",
+    publishedAt: "2026-08-12",
+    author: AUTHOR,
+    hero: {
+      src: "/images/blogs/what-to-expect-from-a-houston-pool-site-evaluation/hero.jpg",
+      alt: "Houston backyard lot with a freeform pool and raised spa in front of a two-story brick home",
+    },
+    card: {
+      src: "/images/blogs/what-to-expect-from-a-houston-pool-site-evaluation/card.jpg",
+      alt: "Houston backyard lot with a freeform pool and raised spa in front of a two-story brick home",
+    },
+    keywords: [
+      "pool site evaluation Houston",
+      "custom pool builder Houston",
+      "backyard pool planning",
+      "pool drainage Houston",
+      "gunite pool design",
+    ],
+    related: [
+      { label: "Custom Pool Types", href: "/custom-pool-types" },
+      { label: "Custom Home Builder", href: "/custom-home-toc" },
+      { label: "Excavation FAQs", href: "/faqs3" },
+      { label: "Contact Us", href: "/contact" },
+    ],
+    body: [
+      {
+        type: "p",
+        text: "A professional site evaluation is where a successful pool project begins. Before we draw a pool shape or talk about finishes, we take time to understand your backyard, your goals, and the details that can affect construction.",
+      },
+      {
+        type: "p",
+        text: "At Houston Cool Pools, we start by asking how you want to use the space. Your plans may center on family fun, quiet relaxation, exercise, entertaining, or creating a full backyard retreat. A visit to your property helps us see what can work well, where a pool may fit best, and which features make sense for the way you live.",
+      },
+      { type: "h2", text: "Start with a Plan That Fits Your Houston Backyard" },
+      {
+        type: "p",
+        text: "No two Houston backyards are alike. A design that feels open and natural in one yard may feel crowded or impractical in another. During an on-site evaluation, we look beyond the open patch of grass and consider how the whole outdoor area can work together.",
+      },
+      {
+        type: "p",
+        text: "September is a smart time to begin those conversations. With the back-to-school season underway and the calendar turning toward fall, many Greater Houston homeowners have time to think through design choices before the next warm-weather swimming season. Early planning leaves room to refine the layout, choose features, and prepare for approvals and construction scheduling.",
+      },
+      { type: "h2", text: "Assess Lot Conditions Before Designing the Pool" },
+      {
+        type: "p",
+        text: "The size, shape, and slope of your lot guide every part of the design. We review property lines, setbacks, easements, existing structures, mature trees, and landscaping that may affect the usable space. Rather than forcing a standard layout into the yard, we shape the plan around the property.",
+      },
+      {
+        type: "p",
+        text: "Houston-area ground conditions also deserve close attention. Some yards have expansive clay soil, uneven grades, or low areas where water lingers after heavy rain. Those conditions can affect excavation planning, structural details, and the long-term function of the pool environment. Gunite construction gives us flexibility in pool shape and design, but the site still helps guide the right approach.",
+      },
+      {
+        type: "p",
+        text: "Sun, shade, privacy, and views matter just as much as the pool footprint. During a site visit, we consider where afternoon sun lands, which areas already have shade, and how nearby homes may affect the feel of the space. These details can shape decisions about pool orientation, spa placement, seating, landscaping, and shade structures.",
+      },
+      { type: "h2", text: "Confirm Access, Utilities, and Drainage Details" },
+      {
+        type: "p",
+        text: "A beautiful pool design also needs a workable construction path. Equipment, excavation machinery, deliveries, and materials all need safe access to the backyard. Narrow side yards, fences, gates, utility boxes, and existing patios can change how we plan the project.",
+      },
+      {
+        type: "p",
+        text: "We also review visible site details and discuss known utility locations before work begins. Electrical lines, gas lines, irrigation systems, sewer connections, septic components, drainage pipes, and future pool equipment areas all deserve consideration. Careful planning helps us place pool features and equipment in practical locations while respecting the systems already serving your home.",
+      },
+      {
+        type: "p",
+        text: "Drainage deserves special attention in Houston, especially after late-summer and early-fall rain events. We look at how water moves through the yard and where it tends to collect. Depending on the property, the design may call for grading adjustments, thoughtful deck slopes, drainage solutions, or landscaping choices that help manage runoff.",
+      },
+      { type: "p", text: "Key site details we commonly review include:" },
+      {
+        type: "list",
+        items: [
+          "Backyard entry points for equipment and materials",
+          "Existing utility lines, irrigation, and drainage paths",
+          "Yard slope, low spots, and areas that hold water",
+          "Fences, trees, patios, and structures that affect placement",
+          "Sun exposure, shade, privacy, and sightlines",
+        ],
+      },
+      { type: "h2", text: "Shape a Pool Design Around How You Live" },
+      {
+        type: "p",
+        text: "A site evaluation is also a lifestyle conversation. We want to know who will use the pool, whether children or pets will be part of the picture, how often you host guests, and which outdoor activities matter most to your household. Those answers help guide the pool's size, depth, entry style, seating layout, and safety features.",
+      },
+      {
+        type: "p",
+        text: "For a family-centered backyard, the design may include a tanning ledge, broad entry steps, a shallow play area, and plenty of open deck space. If your goal is a resort-like setting, an attached spa, water feature, fire feature, swim-up seating, or outdoor kitchen may be a better fit. The property itself helps determine how those ideas can come together without making the yard feel crowded.",
+      },
+      {
+        type: "p",
+        text: "Planning the entire environment from the start often leads to a better result. Patios, shade structures, lighting, landscaping, and gathering areas should feel connected to the pool instead of added as an afterthought. We consider future additions during the evaluation so your backyard can grow in a coordinated way.",
+      },
+      { type: "h2", text: "Review Budget, Timeline, and Permitting Expectations" },
+      {
+        type: "p",
+        text: "Early site findings help create a more realistic project plan. Access limits, excavation conditions, drainage work, utility needs, decking, retaining walls, and selected features can all affect the scope of construction. By identifying those details before finalizing the design, we can help you make informed choices that match your priorities.",
+      },
+      {
+        type: "p",
+        text: "Permit and neighborhood requirements can also shape the timeline. Depending on your property, local building codes, municipal permits, deed restrictions, and homeowners association guidelines may apply. Reviewing these items early helps avoid last-minute surprises and gives everyone a clearer path forward.",
+      },
+      {
+        type: "p",
+        text: "A September evaluation gives you time to consider materials, review plans, and account for approvals before peak swimming months return. Every project has its own timeline, shaped by design details, weather, permits, and material availability, but starting early gives the planning process more breathing room.",
+      },
+      { type: "h2", text: "Bring the Full Backyard Into Focus" },
+      {
+        type: "p",
+        text: "Every backyard has its own possibilities and limits. A thoughtful evaluation brings those details into focus before construction begins, helping us create a custom pool plan that reflects both the land and the people who will enjoy it.",
+      },
+      {
+        type: "quote",
+        text: "By looking at the property, daily lifestyle, drainage, access, utilities, and future outdoor features together, we can build a clearer foundation for a personalized gunite pool, spa, or complete outdoor living environment.",
+        cite: "Mike Lopez, Owner",
+      },
+      {
+        type: "callout",
+        title: "Bring your backyard vision into focus",
+        body: "At Houston Cool Pools, we help homeowners turn ideas into practical, beautiful outdoor spaces designed for everyday enjoyment.",
+        href: "/custom-pool-types",
+        cta: "Explore custom pool types",
+      },
+    ],
+  },
+  {
     slug: "why-pool-fire-bowls-elevate-houston-backyards",
     title: "Are Pool Fire Bowls Worth Adding to a Houston Backyard?",
     excerpt:

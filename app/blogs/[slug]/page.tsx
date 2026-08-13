@@ -90,7 +90,7 @@ export default async function Page({
         // eslint-disable-next-line react/no-danger
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
       />
-      <ArticlePost article={article} related={related} />
+      <ArticlePost article={article} related={related} canonical={canonical} />
     </>
   );
 }

@@ -106,6 +106,7 @@ const FEATURES: SectionLink[] = Array.from({ length: 13 }, (_, i) => ({
 }));
 
 const ARTICLES: SectionLink[] = [
+  { label: "What to Expect From a Houston Pool Site Evaluation", href: "/blogs/what-to-expect-from-a-houston-pool-site-evaluation" },
   { label: "Are Pool Fire Bowls Worth Adding to a Houston Backyard?", href: "/blogs/why-pool-fire-bowls-elevate-houston-backyards" },
   { label: "Should You Add Pool Lighting for Safer Houston Nights?", href: "/blogs/enhance-pool-safety-with-professional-lighting" },
   { label: "Green Pool? A Houston Homeowner's Summer Algae Rescue Guide", href: "/blogs/green-pool-summer-algae-rescue-guide-houston" },

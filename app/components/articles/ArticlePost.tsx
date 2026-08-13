@@ -12,6 +12,7 @@ const ease = [0.22, 1, 0.36, 1] as const;
 export type ArticlePostProps = {
   article: Article;
   related: Article[];
+  canonical: string;
 };
 
 function getInitials(name: string) {
@@ -30,7 +31,7 @@ function slugify(text: string) {
     .replace(/(^-|-$)/g, "");
 }
 
-export function ArticlePost({ article, related }: ArticlePostProps) {
+export function ArticlePost({ article, related, canonical }: ArticlePostProps) {
   const heroRef = useRef<HTMLElement>(null);
 
   const { scrollYProgress: heroProgress } = useScroll({
@@ -76,17 +77,13 @@ export function ArticlePost({ article, related }: ArticlePostProps) {
 
   const [copied, setCopied] = useState(false);
   const handleCopy = () => {
-    if (typeof window === "undefined") return;
-    navigator.clipboard.writeText(window.location.href).then(() => {
+    navigator.clipboard.writeText(canonical).then(() => {
       setCopied(true);
       window.setTimeout(() => setCopied(false), 1800);
     });
   };
 
-  const shareUrl =
-    typeof window !== "undefined"
-      ? window.location.href
-      : `https://houstoncoolpools.com/blogs/${article.slug}`;
+  const shareUrl = canonical;
   const shareText = encodeURIComponent(article.title);
 
   return (
