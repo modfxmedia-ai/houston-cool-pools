@@ -105,6 +105,14 @@ export default function RootLayout({
           <TaglineBanner />
           <Footer />
           <BookNowBanner />
+          {/* LeadConnector chat widget - hidden on standalone landing pages via ChromeGate */}
+          <Script
+            id="leadconnector-chat-widget"
+            src="https://widgets.leadconnectorhq.com/loader.js"
+            data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js"
+            data-widget-id="6a3ede17af23a3deea23eb8c"
+            strategy="afterInteractive"
+          />
         </ChromeGate>
       </body>
     </html>

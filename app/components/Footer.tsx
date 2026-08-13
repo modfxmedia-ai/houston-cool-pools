@@ -66,7 +66,7 @@ export function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="relative overflow-hidden bg-[var(--color-navy-deep)] text-white/80">
+    <footer id="site-footer" className="relative overflow-hidden bg-[var(--color-navy-deep)] text-white/80">
       {/* Top hairline */}
       <div
         aria-hidden
