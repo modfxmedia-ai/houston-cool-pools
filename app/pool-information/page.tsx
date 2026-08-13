@@ -44,6 +44,12 @@ const breadcrumbJsonLd = {
 
 const RESOURCES: Resource[] = [
   {
+    title: "Client Showroom",
+    href: "/client-showroom",
+    description: "Browse hundreds of real finished pool photos from our clients.",
+    icon: "reviews",
+  },
+  {
     title: "Choose The Right Builder",
     href: "/how-to-choose-a-pool-builder",
     description: "Learn what separates great pool builders from the rest.",

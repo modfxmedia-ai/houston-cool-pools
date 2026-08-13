@@ -414,6 +414,11 @@ export const PAGE_META: Record<string, PageMeta> = {
     description: "Immerse in the world of swimming pools with Houston Cool Pools. Understand the basics of pool construction, maintenance, & customization in Houston, TX.",
     keywords: "Pool Builder, Pool Builder Tomball, Pool Company, Pool Company Tomball, Pool Construction, Pool Construction Tomball, Pool Contractor, Pool Contractor Tomball, Pool Designer, Pool Designer Tomball, Pool Installer, Pool Installer Tomball",
   },
+  "/client-showroom": {
+    title: "Client Showroom - Real Pool Photos in Houston, TX | Houston Cool Pools",
+    description: "Browse hundreds of real finished pool, spa and outdoor living photos from Houston Cool Pools clients. A living showroom of what we build in Houston, TX.",
+    keywords: "Pool Photos, Pool Gallery, Client Showroom, Pool Builder Houston, Pool Company Photos, Finished Pools Houston",
+  },
   "/pool-remodel": {
     title: "Pool Renovation & Remodeling Services in Houston, TX",
     description: "Revamp your outdated pool with Houston Cool Pools. From resurfacing to LED lighting, we bring innovation & quality to your backyard oasis in the Houston area.",

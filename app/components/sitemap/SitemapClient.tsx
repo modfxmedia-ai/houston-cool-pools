@@ -37,6 +37,7 @@ const SECTIONS: Section[] = [
     intro: "Understand pricing, financing, and how to pick the right pool team for your backyard.",
     links: [
       { label: "Pool Information Hub", href: "/pool-information" },
+      { label: "Client Showroom", href: "/client-showroom" },
       { label: "Pool Pricing & Packages", href: "/pricing-65k-90k" },
       { label: "Financing Options", href: "/poolfinancing" },
       { label: "Choose The Right Builder", href: "/how-to-choose-a-pool-builder" },

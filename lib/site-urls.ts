@@ -11,6 +11,7 @@ export const SITE_URLS: SiteUrl[] = [
   { path: "/custom-pool-features-1", priority: 0.80, lastModified: "2025-06-12T21:32:41+00:00" },
   { path: "/gallery", priority: 0.80, lastModified: "2025-06-12T21:32:41+00:00" },
   { path: "/pool-information", priority: 0.80, lastModified: "2025-06-12T21:32:41+00:00" },
+  { path: "/client-showroom", priority: 0.70, lastModified: "2026-08-13T00:00:00+00:00" },
   { path: "/pool-remodel", priority: 0.80, lastModified: "2025-06-12T21:32:41+00:00" },
   { path: "/pool-service", priority: 0.80, lastModified: "2025-06-12T21:32:41+00:00" },
   { path: "/poolfinancing", priority: 0.80, lastModified: "2025-06-12T21:32:41+00:00" },
