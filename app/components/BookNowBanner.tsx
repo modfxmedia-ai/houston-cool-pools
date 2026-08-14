@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import { AnimatePresence, motion } from "motion/react";
 import { PHONE_DISPLAY, PHONE_HREF } from "../../lib/navigation";
+import { COOKIE_CONSENT_EVENT, getStoredConsent } from "./CookieConsent";
 
 const ease = [0.22, 1, 0.36, 1] as const;
 
@@ -31,6 +32,18 @@ export function BookNowBanner() {
   const [visible, setVisible] = useState(false);
   const [dismissed, setDismissed] = useState(false);
   const [nearFooter, setNearFooter] = useState(false);
+  const [consentDecided, setConsentDecided] = useState(false);
+
+  // Don't stack on top of the cookie consent bar - wait for a decision.
+  useEffect(() => {
+    const frame = requestAnimationFrame(() => setConsentDecided(getStoredConsent() !== null));
+    const onChange = () => setConsentDecided(true);
+    window.addEventListener(COOKIE_CONSENT_EVENT, onChange);
+    return () => {
+      cancelAnimationFrame(frame);
+      window.removeEventListener(COOKIE_CONSENT_EVENT, onChange);
+    };
+  }, []);
 
   useEffect(() => {
     if (typeof window === "undefined") return;
@@ -76,7 +89,7 @@ export function BookNowBanner() {
   const bookHref = "/contact";
 
   const hiddenRoute = HIDDEN_PATHS.some((p) => pathname === p || pathname.startsWith(`${p}/`));
-  const show = visible && !dismissed && !hiddenRoute && !nearFooter;
+  const show = visible && !dismissed && !hiddenRoute && !nearFooter && consentDecided;
 
   return (
     <AnimatePresence>
