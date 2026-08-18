@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { createPortal } from "react-dom";
 import { AnimatePresence, motion } from "motion/react";
 import Script from "next/script";
 
@@ -19,6 +20,12 @@ export function PriceEstimator({
   className?: string;
 }) {
   const [open, setOpen] = useState(false);
+  const [mounted, setMounted] = useState(false);
+
+  // Only portal once mounted on the client (document isn't available during SSR).
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   // Lock background scroll while the drawer is open.
   useEffect(() => {
@@ -99,57 +106,63 @@ export function PriceEstimator({
         </svg>
       </button>
 
-      {/* Drawer */}
-      <AnimatePresence>
-        {open && (
-          <>
-            <motion.div
-              key="pg-overlay"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 0.25 }}
-              onClick={() => setOpen(false)}
-              className="fixed inset-0 z-[55] bg-black/50 backdrop-blur-sm"
-              aria-hidden
-            />
-            <motion.div
-              key="pg-drawer"
-              initial={{ y: "100%" }}
-              animate={{ y: 0 }}
-              exit={{ y: "100%" }}
-              transition={{ duration: 0.4, ease }}
-              role="dialog"
-              aria-modal="true"
-              aria-label="Free pool price estimator"
-              className="fixed inset-x-0 bottom-0 z-[56] flex max-h-[90vh] flex-col rounded-t-2xl bg-white shadow-[0_-20px_60px_-20px_rgba(0,0,0,0.5)]"
-            >
-              <div className="flex shrink-0 items-center justify-between border-b border-slate-200 px-4 py-3 sm:px-6">
-                <p className="font-display text-[15px] font-bold text-[var(--color-navy-deep)]">
-                  Get Your Instant Pool Price Estimate
-                </p>
-                <button
-                  type="button"
+      {/* Drawer - portaled to <body> so it always escapes transformed ancestors
+          (e.g. the animated BookNowBanner), which would otherwise trap this
+          "fixed" drawer inside their own small box instead of the viewport. */}
+      {mounted &&
+        createPortal(
+          <AnimatePresence>
+            {open && (
+              <>
+                <motion.div
+                  key="pg-overlay"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  transition={{ duration: 0.25 }}
                   onClick={() => setOpen(false)}
-                  aria-label="Close price estimator"
-                  className="grid h-8 w-8 shrink-0 place-items-center rounded-full text-slate-500 transition hover:bg-slate-100 hover:text-slate-800"
+                  className="fixed inset-0 z-[55] bg-black/50 backdrop-blur-sm"
+                  aria-hidden
+                />
+                <motion.div
+                  key="pg-drawer"
+                  initial={{ y: "100%" }}
+                  animate={{ y: 0 }}
+                  exit={{ y: "100%" }}
+                  transition={{ duration: 0.4, ease }}
+                  role="dialog"
+                  aria-modal="true"
+                  aria-label="Free pool price estimator"
+                  className="fixed inset-x-0 bottom-0 z-[56] flex max-h-[90vh] flex-col rounded-t-2xl bg-white shadow-[0_-20px_60px_-20px_rgba(0,0,0,0.5)]"
                 >
-                  <svg viewBox="0 0 24 24" fill="none" className="h-4 w-4">
-                    <path d="M6 6l12 12M18 6L6 18" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" />
-                  </svg>
-                </button>
-              </div>
-              <iframe
-                src={ESTIMATOR_URL}
-                title="Houston Cool Pools price estimator"
-                width="100%"
-                height="100%"
-                style={{ width: "100%", height: "75vh", border: 0 }}
-              />
-            </motion.div>
-          </>
+                  <div className="flex shrink-0 items-center justify-between border-b border-slate-200 px-4 py-3 sm:px-6">
+                    <p className="font-display text-[15px] font-bold text-[var(--color-navy-deep)]">
+                      Get Your Instant Pool Price Estimate
+                    </p>
+                    <button
+                      type="button"
+                      onClick={() => setOpen(false)}
+                      aria-label="Close price estimator"
+                      className="grid h-8 w-8 shrink-0 place-items-center rounded-full text-slate-500 transition hover:bg-slate-100 hover:text-slate-800"
+                    >
+                      <svg viewBox="0 0 24 24" fill="none" className="h-4 w-4">
+                        <path d="M6 6l12 12M18 6L6 18" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" />
+                      </svg>
+                    </button>
+                  </div>
+                  <iframe
+                    src={ESTIMATOR_URL}
+                    title="Houston Cool Pools price estimator"
+                    width="100%"
+                    height="100%"
+                    style={{ width: "100%", height: "75vh", border: 0 }}
+                  />
+                </motion.div>
+              </>
+            )}
+          </AnimatePresence>,
+          document.body
         )}
-      </AnimatePresence>
     </>
   );
 }

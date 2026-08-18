@@ -203,7 +203,7 @@ export function OwnerIntro() {
                 href="/contact"
                 className="inline-flex items-center gap-2 rounded-full border border-slate-300 bg-white px-6 py-3 text-[11.5px] font-bold uppercase tracking-[0.18em] text-[var(--color-navy-deep)] transition hover:border-[var(--color-pool)] hover:text-[var(--color-pool)]"
               >
-                Get a free quote
+                Book a Call
               </Link>
             </motion.div>
           </div>

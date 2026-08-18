@@ -126,7 +126,7 @@ export function About() {
 
           <div className="mt-9 flex flex-wrap items-center gap-5">
             <PriceEstimator
-              label="Click to See Your Free Estimate"
+              label="Click to Customize Your Pool Package"
               className="group inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-[var(--color-pool)] to-[var(--color-pool-deep)] px-6 py-3 text-xs font-bold uppercase tracking-[0.2em] text-white shadow-[0_10px_28px_-8px_rgba(0,124,182,0.6)] transition-all hover:-translate-y-0.5 hover:shadow-[0_14px_34px_-10px_rgba(79,195,224,0.7)]"
             />
           </div>

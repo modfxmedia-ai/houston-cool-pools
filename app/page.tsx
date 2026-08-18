@@ -6,7 +6,6 @@ import { OwnerIntro } from "./components/home/OwnerIntro";
 import { Services } from "./components/home/Services";
 import { Financing } from "./components/home/Financing";
 import { VideoShowcase } from "./components/home/VideoShowcase";
-import { Testimonials } from "./components/home/Testimonials";
 import { BlogPreview } from "./components/home/BlogPreview";
 import { BookingForm } from "./components/home/BookingForm";
 import { MapLocation } from "./components/home/MapLocation";
@@ -22,7 +21,6 @@ export default function Home() {
       <Financing />
       <OwnerIntro />
       <VideoShowcase />
-      <Testimonials />
       <BlogPreview />
       <BookingForm />
       <MapLocation />

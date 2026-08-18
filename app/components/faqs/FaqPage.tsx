@@ -433,7 +433,7 @@ export function FaqPage({ faq, index, total, prev, next }: FaqPageProps) {
               href={QUOTE_HREF}
               className="group inline-flex items-center gap-3 rounded-full bg-white px-7 py-3.5 text-xs font-bold uppercase tracking-[0.22em] text-[var(--color-navy-deep)] shadow-lg transition-all hover:-translate-y-0.5 hover:shadow-2xl"
             >
-              Get Your Free Estimate
+              Book a Call
               <svg
                 viewBox="0 0 24 24"
                 fill="none"

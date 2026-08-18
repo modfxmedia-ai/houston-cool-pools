@@ -258,7 +258,7 @@ export function PseoPageClient({
               href="/contact"
               className="group inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-[var(--color-pool)] via-[var(--color-gold-light)] to-[var(--color-gold)] px-6 py-3 text-[12px] font-bold uppercase tracking-[0.22em] text-[var(--color-navy-deep)] shadow-[0_20px_50px_-20px_rgba(79,195,224,0.6)] transition hover:brightness-110"
             >
-              Get Your Free Estimate
+              Book a Call
               <span aria-hidden>→</span>
             </Link>
             <a
@@ -500,7 +500,7 @@ export function PseoPageClient({
                   { label: "Why Choose HCP", href: "/whychoosehcp" },
                   { label: "Pool Gallery", href: "/gallery" },
                   { label: "Financing Options", href: "/poolfinancing" },
-                  { label: "Get a Free Quote", href: "/contact" },
+                  { label: "Book a Call", href: "/contact" },
                 ].map((l) => (
                   <li key={l.href}>
                     <Link
@@ -563,7 +563,7 @@ export function PseoPageClient({
                   href="/contact"
                   className="group inline-flex items-center justify-center gap-2 rounded-full bg-white px-6 py-3.5 text-[12px] font-bold uppercase tracking-[0.2em] text-[var(--color-navy-deep)] shadow-[0_16px_40px_-14px_rgba(0,0,0,0.5)] transition hover:-translate-y-0.5 hover:bg-[var(--color-gold-light)]"
                 >
-                  Get Your Free Estimate
+                  Book a Call
                   <span aria-hidden>→</span>
                 </Link>
                 <a

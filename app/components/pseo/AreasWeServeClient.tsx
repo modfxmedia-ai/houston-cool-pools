@@ -228,7 +228,7 @@ export function AreasWeServeClient() {
                 href="/contact"
                 className="inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 text-[12px] font-bold uppercase tracking-[0.2em] text-[var(--color-navy-deep)] shadow-[0_16px_40px_-14px_rgba(0,0,0,0.5)] transition hover:-translate-y-0.5 hover:bg-[var(--color-gold-light)]"
               >
-                Get a Free Estimate
+                Book a Call
                 <span aria-hidden>→</span>
               </Link>
               <a

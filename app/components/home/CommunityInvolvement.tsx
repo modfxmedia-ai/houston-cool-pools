@@ -123,7 +123,7 @@ export function CommunityInvolvement() {
                 href="/contact"
                 className="group inline-flex items-center gap-3 rounded-full bg-gradient-to-r from-[var(--color-pool)] to-[var(--color-pool-deep)] px-7 py-3 text-xs font-bold uppercase tracking-[0.22em] text-white shadow-lg shadow-[var(--color-pool)]/25 transition-all hover:-translate-y-0.5 hover:shadow-xl hover:shadow-[var(--color-pool)]/40"
               >
-                Get Your Free Estimate
+                Book a Call
                 <svg viewBox="0 0 24 24" fill="none" className="h-3 w-3 transition-transform group-hover:translate-x-1">
                   <path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                 </svg>

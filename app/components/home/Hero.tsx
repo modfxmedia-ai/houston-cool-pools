@@ -146,7 +146,7 @@ function HeroVisual() {
               href={QUOTE_HREF}
               className="group relative inline-flex items-center gap-2.5 overflow-hidden rounded-full bg-[var(--color-pool)] px-6 py-3 text-[10px] font-bold uppercase tracking-[0.26em] text-white shadow-[0_12px_40px_-12px_rgba(0,124,182,0.85)] transition-all hover:shadow-[0_18px_55px_-12px_rgba(79,195,224,1)]"
             >
-              <span className="relative z-10">Get Your Free Estimate</span>
+              <span className="relative z-10">Book a Call</span>
               <span className="relative z-10 grid h-6 w-6 place-items-center rounded-full bg-white/15 transition-transform group-hover:translate-x-1">
                 <svg className="h-3 w-3" viewBox="0 0 16 16" fill="none">
                   <path

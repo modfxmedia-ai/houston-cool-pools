@@ -1,9 +1,8 @@
 "use client";
 
-import Link from "next/link";
 import { motion } from "motion/react";
 import { useEffect, useState } from "react";
-import { PHONE_DISPLAY, PHONE_HREF, QUOTE_HREF } from "../../lib/navigation";
+import { PriceEstimator } from "./PriceEstimator";
 
 const STORAGE_KEY = "hcp:promo-banner-dismissed-v1";
 
@@ -43,13 +42,12 @@ export function PromoBanner({ collapsed = false }: { collapsed?: boolean }) {
         />
         <p className="text-[11px] font-semibold uppercase tracking-[0.2em] sm:text-xs">
           <span className="font-bold text-[var(--color-gold-light)]">
-            Free In-Home Quote
+            Get Your Instant Price Estimate
           </span>
           <span className="mx-2 hidden text-white/40 sm:inline">|</span>
           <span className="hidden text-white/90 sm:inline">
             Custom gunite pools starting at $65K
           </span>
-          <span className="mx-2 hidden text-white/40 md:inline">|</span>
           <motion.span
             animate={{
               scale: [1, 1.06, 1],
@@ -62,28 +60,11 @@ export function PromoBanner({ collapsed = false }: { collapsed?: boolean }) {
             transition={{ duration: 1.6, repeat: Infinity, ease: "easeInOut" }}
             className="ml-2 inline-block rounded-full"
           >
-            <Link
-              href={QUOTE_HREF}
-              className="inline-flex items-center gap-1 rounded-full bg-[var(--color-gold)] px-3 py-1 font-extrabold text-[var(--color-navy-deep)] ring-2 ring-[var(--color-gold-light)] transition-colors hover:bg-[var(--color-gold-light)]"
-            >
-              Book Now
-              <svg viewBox="0 0 24 24" fill="none" className="h-3 w-3">
-                <path
-                  d="M5 12h14M13 6l6 6-6 6"
-                  stroke="currentColor"
-                  strokeWidth="2.5"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
-            </Link>
+            <PriceEstimator
+              label="See Price Estimate"
+              className="group inline-flex items-center gap-1 rounded-full bg-[var(--color-gold)] px-3 py-1 font-extrabold text-[var(--color-navy-deep)] ring-2 ring-[var(--color-gold-light)] transition-colors hover:bg-[var(--color-gold-light)]"
+            />
           </motion.span>
-          <a
-            href={PHONE_HREF}
-            className="ml-2 hidden font-bold text-white underline-offset-4 hover:underline md:inline"
-          >
-            or call {PHONE_DISPLAY}
-          </a>
         </p>
 
         <button

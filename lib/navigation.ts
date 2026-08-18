@@ -10,7 +10,7 @@ export type NavGroup = {
 };
 
 const BOOK_APPOINTMENT: NavLink = {
-  label: "Get Free Estimate",
+  label: "Book a Call",
   href: "/contact",
 };
 

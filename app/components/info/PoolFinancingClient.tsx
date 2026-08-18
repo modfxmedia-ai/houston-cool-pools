@@ -3,6 +3,7 @@
 import { motion } from "motion/react";
 import { InfoHero } from "./InfoHero";
 import { ContactFormSection } from "../contact/ContactFormSection";
+import { PriceEstimator } from "../PriceEstimator";
 
 const ease = [0.22, 1, 0.36, 1] as const;
 
@@ -176,6 +177,36 @@ export function PoolFinancingClient() {
                   </li>
                 ))}
               </ul>
+            </div>
+          </motion.div>
+
+          {/* ----- Price estimate CTA - know your budget before you apply ----- */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.6, ease }}
+            className="relative mx-auto mt-10 max-w-4xl overflow-hidden rounded-3xl border border-slate-200/80 bg-gradient-to-br from-white via-white to-[var(--color-pool)]/5 p-6 text-center shadow-[0_18px_50px_-30px_rgba(0,55,73,0.3)] md:mt-12 md:p-9"
+          >
+            <span
+              aria-hidden
+              className="absolute inset-x-0 top-0 h-0.5 bg-gradient-to-r from-[var(--color-pool)] via-[var(--color-gold-light)] to-[var(--color-gold)]"
+            />
+            <p className="text-[10.5px] font-bold uppercase tracking-[0.24em] text-[var(--color-pool)]">
+              Know your budget first
+            </p>
+            <h2 className="mt-3 font-display text-2xl font-extrabold tracking-tight text-[var(--color-navy-deep)] md:text-3xl">
+              Not sure how much to finance?
+            </h2>
+            <p className="mx-auto mt-3 max-w-xl text-[15px] leading-relaxed text-slate-600">
+              Get an instant, personalized price estimate for your pool before you apply -
+              it only takes a minute and helps you know exactly how much financing to ask for.
+            </p>
+            <div className="mt-6 flex justify-center">
+              <PriceEstimator
+                label="Get Your Instant Price Estimate"
+                className="group inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-[var(--color-pool)] to-[var(--color-pool-deep)] px-7 py-3.5 text-xs font-bold uppercase tracking-[0.22em] text-white shadow-[0_14px_36px_-10px_rgba(0,124,182,0.65)] transition-all hover:-translate-y-0.5"
+              />
             </div>
           </motion.div>
 

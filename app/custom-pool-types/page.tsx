@@ -6,9 +6,7 @@ import { PHONE_DISPLAY, PHONE_HREF, QUOTE_HREF } from "../../lib/navigation";
 
 export const metadata: Metadata = buildPageMetadata("/custom-pool-types");
 
-const HOST = "https://houstoncoolpools.com";
-const src = (folder: string, name: string) =>
-  `${HOST}/${folder}_files/vlb_images1/${encodeURIComponent(name)}`;
+const HD = "/images/gallery/hd";
 
 type Tile = { href: string; src: string; alt: string };
 type Section = { id: string; title: string; tiles: Tile[] };
@@ -20,27 +18,27 @@ const SECTIONS: Section[] = [
     tiles: [
       {
         href: "/gallery-free-form-pools-1",
-        src: src("free-form-pool-2019a", "8th_street_heights.jpg"),
+        src: `${HD}/merlin-1.jpg`,
         alt: "Free form pool by Houston Cool Pools",
       },
       {
         href: "/gallery-free-form-pools-2",
-        src: src("free-form-pool-2019b", "img_0598.jpg"),
+        src: `${HD}/merlin-3.jpg`,
         alt: "Free form pool by Houston Cool Pools",
       },
       {
         href: "/gallery-free-form-pools-3",
-        src: src("freeformgallery", "20120710171609.jpg"),
+        src: `${HD}/le-pool-2.jpg`,
         alt: "Free form pool by Houston Cool Pools",
       },
       {
         href: "/gallery-free-form-pools-4",
-        src: src("freeformgallery2", "freeformpoolbyhoustoncoolpools014.jpg"),
+        src: `${HD}/courtyard-pool.jpg`,
         alt: "Free form pool by Houston Cool Pools",
       },
       {
         href: "/gallery-free-form-pools-5",
-        src: src("freeformgallery3", "freeformpoolbyhoustoncoolpools029.jpg"),
+        src: `${HD}/kros.jpg`,
         alt: "Free form pool by Houston Cool Pools",
       },
     ],
@@ -51,32 +49,32 @@ const SECTIONS: Section[] = [
     tiles: [
       {
         href: "/geometric-pools-1",
-        src: src("geometric-pool-a", "andersontarr_1.jpg"),
+        src: `${HD}/anderson-tarr-1.jpg`,
         alt: "Geometric pool by Houston Cool Pools",
       },
       {
         href: "/geometric-pools-2",
-        src: src("geometric-pool-b", "img_0336.jpg"),
+        src: `${HD}/silverman-1.jpg`,
         alt: "Geometric pool by Houston Cool Pools",
       },
       {
         href: "/geometric-pools-3",
-        src: src("geometric-pool-c", "img_1538.jpg"),
+        src: `${HD}/family-4.jpg`,
         alt: "Geometric pool by Houston Cool Pools",
       },
       {
         href: "/geometric-pools-4",
-        src: src("geometricgallery1", "20120709173510.jpg"),
+        src: `${HD}/stidham.jpg`,
         alt: "Geometric pool by Houston Cool Pools",
       },
       {
         href: "/geometric-pools-5",
-        src: src("geometricgallery2", "geometricpoolbyhoustoncoolpools014.jpg"),
+        src: `${HD}/puranik-2.jpg`,
         alt: "Geometric pool by Houston Cool Pools",
       },
       {
         href: "/geometric-pools-6",
-        src: src("geometricgallery3", "geometricpoolbyhoustoncoolpools028.jpg"),
+        src: `${HD}/clark-estate.jpg`,
         alt: "Geometric pool by Houston Cool Pools",
       },
     ],
@@ -87,17 +85,17 @@ const SECTIONS: Section[] = [
     tiles: [
       {
         href: "/fireplace-firepits-gallery-1",
-        src: src("fireplace-firepits-2019-a", "8th_street_heights_9.jpg"),
+        src: `${HD}/sunset-pool.jpg`,
         alt: "Fireplace and firepit by Houston Cool Pools",
       },
       {
         href: "/fireplace-firepits-gallery-2",
-        src: src("fireplace-firepits-2019-b", "crown_plaza_2.jpg"),
+        src: `${HD}/estate-twilight.jpg`,
         alt: "Fireplace and firepit by Houston Cool Pools",
       },
       {
         href: "/fireplace-firepits-gallery-3",
-        src: src("fireplacegallery", "20120710171007.jpg"),
+        src: `${HD}/sunset-pool.jpg`,
         alt: "Fireplace and firepit by Houston Cool Pools",
       },
     ],
@@ -108,22 +106,22 @@ const SECTIONS: Section[] = [
     tiles: [
       {
         href: "/pool-deck-1",
-        src: src("PoolDecksGallery1", "deckbyhoustoncoolpools001.jpg"),
+        src: `${HD}/courtyard-pool.jpg`,
         alt: "Pool deck by Houston Cool Pools",
       },
       {
         href: "/pool-deck-2",
-        src: src("PoolDecksGallery2", "deckbyhoustoncoolpools014.jpg"),
+        src: `${HD}/family-1.jpg`,
         alt: "Pool deck by Houston Cool Pools",
       },
       {
         href: "/pool-deck-3",
-        src: src("PoolDecksGallery3", "deckbyhoustoncoolpools027.jpg"),
+        src: `${HD}/huckleberry-3.jpg`,
         alt: "Pool deck by Houston Cool Pools",
       },
       {
         href: "/pool-deck-4",
-        src: src("PoolDecksGallery4", "deckbyhoustoncoolpools047.jpg"),
+        src: `${HD}/family-2.jpg`,
         alt: "Pool deck by Houston Cool Pools",
       },
     ],
@@ -134,12 +132,12 @@ const SECTIONS: Section[] = [
     tiles: [
       {
         href: "/outdoor-structures-gallery-1",
-        src: src("outdoorstructuresgallery1", "outdoorstructuresbyhoustoncoolpools002.jpg"),
+        src: `${HD}/antisdel-1.jpg`,
         alt: "Outdoor structure by Houston Cool Pools",
       },
       {
         href: "/outdoor-structures-gallery-2",
-        src: src("outdoorstructuresgallery2", "outdoorstructuresbyhoustoncoolpools035.jpg"),
+        src: `${HD}/antisdel-4.jpg`,
         alt: "Outdoor structure by Houston Cool Pools",
       },
     ],
@@ -182,7 +180,7 @@ export default function PoolTypesPage() {
               href={QUOTE_HREF}
               className="group inline-flex items-center gap-3 rounded-full bg-gradient-to-r from-[var(--color-pool)] to-[var(--color-pool-deep)] px-7 py-3.5 text-xs font-bold uppercase tracking-[0.22em] text-white shadow-[0_14px_36px_-10px_rgba(0,124,182,0.65)] transition-all hover:-translate-y-0.5"
             >
-              Get Your Free Estimate
+              Book a Call
               <svg viewBox="0 0 24 24" fill="none" className="h-3 w-3 transition-transform group-hover:translate-x-1">
                 <path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
@@ -233,7 +231,6 @@ export default function PoolTypesPage() {
                         src={tile.src}
                         alt={tile.alt}
                         fill
-                        unoptimized
                         loading="lazy"
                         sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
                         className="object-cover transition-transform duration-500 group-hover:scale-[1.04]"
@@ -288,7 +285,7 @@ export default function PoolTypesPage() {
               href={QUOTE_HREF}
               className="group inline-flex items-center gap-3 rounded-full bg-white px-8 py-4 text-xs font-bold uppercase tracking-[0.22em] text-[var(--color-navy-deep)] shadow-lg transition-all hover:-translate-y-0.5"
             >
-              Get Your Free Estimate
+              Book a Call
               <svg viewBox="0 0 24 24" fill="none" className="h-3 w-3 transition-transform group-hover:translate-x-1">
                 <path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
               </svg>

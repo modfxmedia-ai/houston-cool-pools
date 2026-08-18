@@ -95,7 +95,7 @@ export function BookNowBanner() {
           animate={{ y: 0, opacity: 1 }}
           exit={{ y: 90, opacity: 0 }}
           transition={{ duration: 0.45, ease }}
-          className="fixed inset-x-0 bottom-0 z-40 pl-3 pr-20 pb-2 sm:pl-6 sm:pr-28 sm:pb-3"
+          className="fixed inset-x-0 bottom-0 z-40 pl-3 pr-24 pb-2 sm:pl-6 sm:pr-28 sm:pb-3"
           role="complementary"
           aria-label="Get your instant pool price estimate"
         >
@@ -116,22 +116,46 @@ export function BookNowBanner() {
                 className="pointer-events-none absolute inset-x-0 top-0 h-[2px] bg-gradient-to-r from-[var(--color-pool)] via-[var(--color-gold-light)] to-[var(--color-gold)]"
               />
 
-              {/* Mobile: icon-only row, no wrapping text */}
-              <div className="relative flex items-center justify-end gap-2 px-3 py-2 sm:hidden">
+              {/* Mobile: text row on top, full-width CTA below (avoids cramping) */}
+              <div className="relative flex flex-col gap-2 px-3 py-2.5 sm:hidden">
+                <div className="flex items-center gap-2">
+                  <span className="grid h-8 w-8 shrink-0 place-items-center rounded-lg bg-gradient-to-br from-[var(--color-pool)] to-[var(--color-pool-deep)] text-white shadow-md">
+                    <svg viewBox="0 0 24 24" fill="none" className="h-4 w-4">
+                      <path
+                        d="M8 2v3M16 2v3M3.5 9h17M5 5h14a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2Z"
+                        stroke="currentColor"
+                        strokeWidth="1.9"
+                        strokeLinecap="round"
+                      />
+                      <path d="M9 14h2M9 17h6M13 14h2" stroke="currentColor" strokeWidth="1.9" strokeLinecap="round" />
+                    </svg>
+                  </span>
+
+                  <div className="min-w-0 flex-1">
+                    <p className="text-[8.5px] font-bold uppercase tracking-[0.18em] text-[var(--color-gold-light)]">
+                      Price estimator
+                    </p>
+                    <p className="truncate font-display text-[12.5px] font-extrabold leading-tight text-white">
+                      Curious what your dream pool costs?
+                    </p>
+                  </div>
+
+                  <button
+                    type="button"
+                    onClick={handleDismiss}
+                    aria-label="Dismiss banner"
+                    className="grid h-7 w-7 shrink-0 place-items-center rounded-full text-white/50 transition hover:bg-white/10 hover:text-white"
+                  >
+                    <svg viewBox="0 0 24 24" fill="none" className="h-3.5 w-3.5">
+                      <path d="M6 6l12 12M18 6L6 18" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" />
+                    </svg>
+                  </button>
+                </div>
+
                 <PriceEstimator
-                  label="Price Estimate"
-                  className="group inline-flex h-10 flex-1 max-w-[168px] items-center justify-center gap-1.5 overflow-hidden rounded-full bg-gradient-to-r from-[var(--color-pool)] to-[var(--color-pool-deep)] text-[11px] font-bold uppercase tracking-[0.12em] text-white shadow-[0_10px_28px_-8px_rgba(0,124,182,0.7)]"
+                  label="See Price Estimate"
+                  className="group flex h-9 w-full items-center justify-center gap-1.5 rounded-full bg-gradient-to-r from-[var(--color-pool)] to-[var(--color-pool-deep)] text-[11px] font-bold uppercase tracking-[0.12em] text-white shadow-[0_10px_28px_-8px_rgba(0,124,182,0.7)]"
                 />
-                <button
-                  type="button"
-                  onClick={handleDismiss}
-                  aria-label="Dismiss banner"
-                  className="grid h-8 w-8 shrink-0 place-items-center rounded-full text-white/50 transition hover:bg-white/10 hover:text-white"
-                >
-                  <svg viewBox="0 0 24 24" fill="none" className="h-3.5 w-3.5">
-                    <path d="M6 6l12 12M18 6L6 18" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" />
-                  </svg>
-                </button>
               </div>
 
               {/* Desktop/tablet: full copy + labeled CTAs */}
