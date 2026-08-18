@@ -54,6 +54,15 @@ export default function RootLayout({
           // eslint-disable-next-line react/no-danger
           dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessJsonLd()) }}
         />
+        {/* Review Stream (embedmyreviews) pixel - powers the live Google reviews carousel */}
+        <Script
+          id="review-stream-pixel"
+          strategy="afterInteractive"
+          // eslint-disable-next-line react/no-danger
+          dangerouslySetInnerHTML={{
+            __html: `!function(){var e,t=document;e=function(){if(window.EMRPixel)return console.info("EMR: Pixel already loaded");var e=t.createElement("script");e.defer=!0,e.src="https://cdn2.revw.me/js/pixel.js?t="+864e5*Math.ceil(new Date/864e5);var n=t.getElementsByTagName("script")[0];n.charset="utf-8",n.parentNode.insertBefore(e,n),e.onload=function(){EMRPixel.init("xpz.app.embedmyreviews.com",582)}},"interactive"===t.readyState||"complete"===t.readyState?e():t.addEventListener("DOMContentLoaded",e())}();`,
+          }}
+        />
         <ChromeGate>
           <Header />
         </ChromeGate>
@@ -63,12 +72,10 @@ export default function RootLayout({
           <TaglineBanner />
           <Footer />
           <BookNowBanner />
-          {/* LeadConnector chat widget - hidden on standalone landing pages via ChromeGate */}
+          {/* Dandy chat widget - hidden on standalone landing pages via ChromeGate */}
           <Script
-            id="leadconnector-chat-widget"
-            src="https://widgets.leadconnectorhq.com/loader.js"
-            data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js"
-            data-widget-id="6a3ede17af23a3deea23eb8c"
+            id="dandy-chat-widget"
+            src="https://widget.chat.getdandy.com/widget/widget.js"
             strategy="afterInteractive"
           />
         </ChromeGate>

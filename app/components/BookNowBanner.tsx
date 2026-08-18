@@ -1,11 +1,10 @@
 "use client";
 
-import Link from "next/link";
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import { AnimatePresence, motion } from "motion/react";
-import { PHONE_DISPLAY, PHONE_HREF } from "../../lib/navigation";
 import { COOKIE_CONSENT_EVENT, getStoredConsent } from "./CookieConsent";
+import { PriceEstimator } from "./PriceEstimator";
 
 const ease = [0.22, 1, 0.36, 1] as const;
 
@@ -84,10 +83,6 @@ export function BookNowBanner() {
     }
   }
 
-  // Route the CTA to the dedicated contact page so users land on the full
-  // free-quote form.
-  const bookHref = "/contact";
-
   const hiddenRoute = HIDDEN_PATHS.some((p) => pathname === p || pathname.startsWith(`${p}/`));
   const show = visible && !dismissed && !hiddenRoute && !nearFooter && consentDecided;
 
@@ -102,7 +97,7 @@ export function BookNowBanner() {
           transition={{ duration: 0.45, ease }}
           className="fixed inset-x-0 bottom-0 z-40 pl-3 pr-20 pb-2 sm:pl-6 sm:pr-28 sm:pb-3"
           role="complementary"
-          aria-label="Get a free pool estimate"
+          aria-label="Get your instant pool price estimate"
         >
           <div className="pointer-events-none mx-auto max-w-4xl">
             <div className="pointer-events-auto relative overflow-hidden rounded-xl border border-white/10 bg-[var(--color-navy-deep)]/95 shadow-[0_20px_60px_-20px_rgba(0,0,0,0.6)] backdrop-blur-xl">
@@ -123,32 +118,14 @@ export function BookNowBanner() {
 
               {/* Mobile: icon-only row, no wrapping text */}
               <div className="relative flex items-center justify-end gap-2 px-3 py-2 sm:hidden">
-                <a
-                  href={PHONE_HREF}
-                  aria-label={`Call ${PHONE_DISPLAY}`}
-                  className="grid h-10 w-10 shrink-0 place-items-center rounded-full border border-white/20 text-white transition hover:border-[var(--color-gold-light)] hover:text-[var(--color-gold-light)]"
-                >
-                  <svg viewBox="0 0 24 24" fill="none" className="h-4 w-4">
-                    <path
-                      d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                  </svg>
-                </a>
-                <Link
-                  href={bookHref}
-                  aria-label="Get a free pool estimate"
-                  className="grid h-10 flex-1 max-w-[168px] place-items-center rounded-full bg-gradient-to-r from-[var(--color-pool)] to-[var(--color-pool-deep)] text-[11px] font-bold uppercase tracking-[0.12em] text-white shadow-[0_10px_28px_-8px_rgba(0,124,182,0.7)]"
-                >
-                  Free Estimate
-                </Link>
+                <PriceEstimator
+                  label="Price Estimate"
+                  className="group inline-flex h-10 flex-1 max-w-[168px] items-center justify-center gap-1.5 overflow-hidden rounded-full bg-gradient-to-r from-[var(--color-pool)] to-[var(--color-pool-deep)] text-[11px] font-bold uppercase tracking-[0.12em] text-white shadow-[0_10px_28px_-8px_rgba(0,124,182,0.7)]"
+                />
                 <button
                   type="button"
                   onClick={handleDismiss}
-                  aria-label="Dismiss booking banner"
+                  aria-label="Dismiss banner"
                   className="grid h-8 w-8 shrink-0 place-items-center rounded-full text-white/50 transition hover:bg-white/10 hover:text-white"
                 >
                   <svg viewBox="0 0 24 24" fill="none" className="h-3.5 w-3.5">
@@ -183,55 +160,23 @@ export function BookNowBanner() {
                 {/* Copy */}
                 <div className="min-w-0 flex-1">
                   <p className="text-[9.5px] font-bold uppercase tracking-[0.22em] text-[var(--color-gold-light)]">
-                    Free quote
+                    Price estimator
                   </p>
                   <p className="mt-0.5 truncate font-display text-[15px] font-extrabold leading-tight text-white">
-                    Ready to build your dream pool?
+                    Curious what your dream pool costs?
                   </p>
                 </div>
 
                 {/* CTAs */}
                 <div className="flex shrink-0 items-center gap-1.5">
-                  <a
-                    href={PHONE_HREF}
-                    aria-label={`Call ${PHONE_DISPLAY}`}
-                    className="hidden items-center gap-2 rounded-full border border-white/20 px-3 py-2 text-[10px] font-bold uppercase tracking-[0.14em] text-white transition hover:border-[var(--color-gold-light)] hover:text-[var(--color-gold-light)] md:inline-flex"
-                  >
-                    <svg viewBox="0 0 24 24" fill="none" className="h-3.5 w-3.5">
-                      <path
-                        d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"
-                        stroke="currentColor"
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      />
-                    </svg>
-                    {PHONE_DISPLAY}
-                  </a>
-                  <Link
-                    href={bookHref}
+                  <PriceEstimator
+                    label="See Price Estimate"
                     className="group relative inline-flex items-center gap-2 overflow-hidden rounded-full bg-gradient-to-r from-[var(--color-pool)] to-[var(--color-pool-deep)] px-4 py-2 text-[10px] font-bold uppercase tracking-[0.14em] text-white shadow-[0_10px_28px_-8px_rgba(0,124,182,0.7)] transition-all hover:-translate-y-0.5 hover:shadow-[0_14px_36px_-8px_rgba(79,195,224,0.85)]"
-                  >
-                    <span className="pointer-events-none absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/25 to-transparent transition-transform duration-700 group-hover:translate-x-full" />
-                    <span className="relative">Free Estimate</span>
-                    <svg
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      className="relative h-3 w-3 transition-transform group-hover:translate-x-0.5"
-                    >
-                      <path
-                        d="M5 12h14M13 6l6 6-6 6"
-                        stroke="currentColor"
-                        strokeWidth="2.5"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      />
-                    </svg>
-                  </Link>
+                  />
                   <button
                     type="button"
                     onClick={handleDismiss}
-                    aria-label="Dismiss booking banner"
+                    aria-label="Dismiss banner"
                     className="grid h-7 w-7 place-items-center rounded-full text-white/50 transition hover:bg-white/10 hover:text-white"
                   >
                     <svg viewBox="0 0 24 24" fill="none" className="h-3.5 w-3.5">

@@ -93,7 +93,7 @@ export function Header() {
               className="group relative inline-flex shrink-0 items-center gap-2 overflow-hidden whitespace-nowrap rounded-full border border-white/15 bg-gradient-to-r from-[var(--color-pool)] to-[var(--color-pool-deep)] px-4 py-2.5 text-[11px] font-bold uppercase tracking-[0.16em] text-white shadow-[0_8px_24px_-6px_rgba(0,124,182,0.65)] transition-all hover:shadow-[0_12px_32px_-8px_rgba(79,195,224,0.8)] hover:-translate-y-0.5"
             >
               <span className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/25 to-transparent transition-transform duration-700 group-hover:translate-x-full" />
-              <span className="relative">Get Free Estimate</span>
+              <span className="relative">Book a Call</span>
               <svg className="relative h-3 w-3 transition-transform group-hover:translate-x-0.5" viewBox="0 0 24 24" fill="none">
                 <path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
@@ -115,7 +115,7 @@ export function Header() {
               href={QUOTE_HREF}
               className="inline-flex shrink-0 items-center gap-2 whitespace-nowrap rounded-full bg-gradient-to-r from-[var(--color-pool)] to-[var(--color-pool-deep)] px-4 py-2 text-[11px] font-bold uppercase tracking-[0.16em] text-white shadow-[0_8px_24px_-6px_rgba(0,124,182,0.65)]"
             >
-              Free Estimate
+              Book a Call
             </Link>
           </div>
 
@@ -452,7 +452,7 @@ function MobileOverlay({
               onClick={onClose}
               className="block rounded-sm bg-[var(--color-gold)] py-3 text-center text-sm font-bold uppercase tracking-[0.2em] text-[var(--color-navy-deep)]"
             >
-              Get Free Estimate
+              Book a Call
             </Link>
           </div>
         </motion.div>

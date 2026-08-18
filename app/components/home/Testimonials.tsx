@@ -177,6 +177,11 @@ export function Testimonials() {
           </div>
         </div>
 
+        {/* Live Google reviews carousel (Review Stream / embedmyreviews widget) */}
+        <div className="mx-auto mt-16 max-w-4xl">
+          <emr-simple-carousel widget-id="17b1c110-208f-4b60-a962-7cd6ae91b4da" />
+        </div>
+
         {/* ----- Bottom controls ----- */}
         <div className="mt-10 flex flex-col items-center gap-6">
           <div className="flex items-center gap-1">

@@ -132,6 +132,11 @@ export function TestimonialsClient() {
             </p>
           </motion.div>
 
+          {/* Live Google reviews carousel (Review Stream / embedmyreviews widget) */}
+          <div className="mx-auto mb-14 max-w-4xl">
+            <emr-simple-carousel widget-id="17b1c110-208f-4b60-a962-7cd6ae91b4da" />
+          </div>
+
           {/* Masonry-ish column layout for varying review lengths */}
           <div className="columns-1 gap-6 md:columns-2 lg:columns-3">
             {REVIEWS.map((r, i) => (

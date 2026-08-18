@@ -1,8 +1,8 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
 import { motion } from "motion/react";
+import { PriceEstimator } from "../PriceEstimator";
 
 const ease = [0.22, 1, 0.36, 1] as const;
 
@@ -125,15 +125,10 @@ export function About() {
           </div>
 
           <div className="mt-9 flex flex-wrap items-center gap-5">
-            <Link
-              href="/contact"
+            <PriceEstimator
+              label="Click to See Your Free Estimate"
               className="group inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-[var(--color-pool)] to-[var(--color-pool-deep)] px-6 py-3 text-xs font-bold uppercase tracking-[0.2em] text-white shadow-[0_10px_28px_-8px_rgba(0,124,182,0.6)] transition-all hover:-translate-y-0.5 hover:shadow-[0_14px_34px_-10px_rgba(79,195,224,0.7)]"
-            >
-              Get Your Free Estimate
-              <svg className="h-3 w-3 transition-transform group-hover:translate-x-0.5" viewBox="0 0 24 24" fill="none">
-                <path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
-              </svg>
-            </Link>
+            />
           </div>
         </motion.div>
       </div>
