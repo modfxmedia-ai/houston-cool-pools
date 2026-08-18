@@ -2,6 +2,7 @@
 
 import { motion } from "motion/react";
 import { InfoHero } from "./InfoHero";
+import { ReviewsWidget } from "../ReviewsWidget";
 import { TESTIMONIALS } from "../../../lib/testimonials";
 
 const ease = [0.22, 1, 0.36, 1] as const;
@@ -65,6 +66,8 @@ export function TestimonialsClient() {
           </motion.div>
         </div>
       </section>
+
+      <ReviewsWidget />
     </>
   );
 }

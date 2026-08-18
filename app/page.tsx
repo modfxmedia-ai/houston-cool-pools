@@ -9,6 +9,7 @@ import { VideoShowcase } from "./components/home/VideoShowcase";
 import { BlogPreview } from "./components/home/BlogPreview";
 import { BookingForm } from "./components/home/BookingForm";
 import { MapLocation } from "./components/home/MapLocation";
+import { ReviewsWidget } from "./components/ReviewsWidget";
 
 export const metadata: Metadata = buildPageMetadata("/");
 
@@ -20,6 +21,7 @@ export default function Home() {
       <Services />
       <Financing />
       <OwnerIntro />
+      <ReviewsWidget />
       <VideoShowcase />
       <BlogPreview />
       <BookingForm />
