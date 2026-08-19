@@ -45,9 +45,6 @@ export function PromoBanner({ collapsed = false }: { collapsed?: boolean }) {
             Custom Gunite Pools Starting at $65K
           </span>
           <span className="mx-2 hidden text-white/40 sm:inline">|</span>
-          <span className="hidden text-white/90 sm:inline">
-            Design Your Own Pool
-          </span>
           <motion.span
             animate={{
               scale: [1, 1.06, 1],
@@ -61,8 +58,8 @@ export function PromoBanner({ collapsed = false }: { collapsed?: boolean }) {
             className="ml-2 inline-block rounded-full"
           >
             <PriceEstimator
-              label="See Price Estimate"
-              className="group inline-flex items-center gap-1 rounded-full bg-[var(--color-gold)] px-3 py-1 font-extrabold text-[var(--color-navy-deep)] ring-2 ring-[var(--color-gold-light)] transition-colors hover:bg-[var(--color-gold-light)]"
+              label="Design Your Own Pool"
+              className="group inline-flex items-center gap-1 rounded-full bg-[var(--color-gold)] px-3 py-1 font-extrabold uppercase tracking-[0.2em] text-[var(--color-navy-deep)] ring-2 ring-[var(--color-gold-light)] transition-colors hover:bg-[var(--color-gold-light)]"
             />
           </motion.span>
         </p>

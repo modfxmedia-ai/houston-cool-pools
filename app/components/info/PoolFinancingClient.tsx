@@ -111,23 +111,6 @@ export function PoolFinancingClient() {
 
       <section className="relative bg-white py-16 md:py-20">
         <div className="mx-auto max-w-6xl px-6 md:px-10">
-          <motion.div
-            initial={{ opacity: 0, y: 16 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.4 }}
-            transition={{ duration: 0.6, ease }}
-            className="mx-auto max-w-3xl rounded-3xl border border-slate-200/80 bg-gradient-to-br from-[var(--color-pool)]/5 via-white to-[var(--color-gold-light)]/5 p-6 text-center md:p-8"
-          >
-            <p className="text-[10.5px] font-bold uppercase tracking-[0.24em] text-[var(--color-pool)]">
-              Please note
-            </p>
-            <p className="mt-3 text-[15px] leading-relaxed text-slate-700">
-              The companies listed below are in no way affiliated with Houston Cool Pools.
-              We have, however, worked with each of them and can attest to their service and
-              professionalism.
-            </p>
-          </motion.div>
-
           {/* ----- Financing highlights (intro + 4 bullets) ----- */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -366,6 +349,24 @@ export function PoolFinancingClient() {
               </>
             );
           })()}
+
+          {/* ----- Disclaimer - lending partners are not affiliated with Houston Cool Pools ----- */}
+          <motion.div
+            initial={{ opacity: 0, y: 16 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.4 }}
+            transition={{ duration: 0.6, ease }}
+            className="mx-auto mt-12 max-w-3xl rounded-3xl border border-slate-200/80 bg-gradient-to-br from-[var(--color-pool)]/5 via-white to-[var(--color-gold-light)]/5 p-6 text-center md:mt-14 md:p-8"
+          >
+            <p className="text-[10.5px] font-bold uppercase tracking-[0.24em] text-[var(--color-pool)]">
+              Please note
+            </p>
+            <p className="mt-3 text-[15px] leading-relaxed text-slate-700">
+              The companies listed above are in no way affiliated with Houston Cool Pools.
+              We have, however, worked with each of them and can attest to their service and
+              professionalism.
+            </p>
+          </motion.div>
         </div>
       </section>
 
