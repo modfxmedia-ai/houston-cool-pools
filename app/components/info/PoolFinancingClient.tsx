@@ -204,7 +204,7 @@ export function PoolFinancingClient() {
             </p>
             <div className="mt-6 flex justify-center">
               <PriceEstimator
-                label="Get Your Instant Price Estimate"
+                label="Click to Customize Your Pool Package"
                 className="group inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-[var(--color-pool)] to-[var(--color-pool-deep)] px-7 py-3.5 text-xs font-bold uppercase tracking-[0.22em] text-white shadow-[0_14px_36px_-10px_rgba(0,124,182,0.65)] transition-all hover:-translate-y-0.5"
               />
             </div>

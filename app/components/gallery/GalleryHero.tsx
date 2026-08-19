@@ -8,6 +8,7 @@ import {
   PHONE_HREF,
   QUOTE_HREF,
 } from "../../../lib/navigation";
+import { PriceEstimator } from "../PriceEstimator";
 
 const ease = [0.22, 1, 0.36, 1] as const;
 
@@ -109,6 +110,18 @@ export function GalleryHero() {
           >
             Call {PHONE_DISPLAY}
           </a>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 16 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: 0.55, ease }}
+          className="mt-4 flex justify-center"
+        >
+          <PriceEstimator
+            label="Click to Customize Your Pool Package"
+            className="group inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-[var(--color-gold)] to-[var(--color-gold-light)] px-7 py-3.5 text-xs font-bold uppercase tracking-[0.22em] text-[var(--color-navy-deep)] shadow-[0_14px_36px_-10px_rgba(79,195,224,0.5)] transition-all hover:-translate-y-0.5"
+          />
         </motion.div>
 
         {/* Scroll cue */}

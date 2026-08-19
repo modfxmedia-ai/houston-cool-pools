@@ -42,11 +42,11 @@ export function PromoBanner({ collapsed = false }: { collapsed?: boolean }) {
         />
         <p className="text-[11px] font-semibold uppercase tracking-[0.2em] sm:text-xs">
           <span className="font-bold text-[var(--color-gold-light)]">
-            Get Your Instant Price Estimate
+            Custom Gunite Pools Starting at $65K
           </span>
           <span className="mx-2 hidden text-white/40 sm:inline">|</span>
           <span className="hidden text-white/90 sm:inline">
-            Custom gunite pools starting at $65K
+            Design Your Own Pool
           </span>
           <motion.span
             animate={{

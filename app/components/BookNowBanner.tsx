@@ -136,7 +136,7 @@ export function BookNowBanner() {
                       Price estimator
                     </p>
                     <p className="truncate font-display text-[12.5px] font-extrabold leading-tight text-white">
-                      Curious what your dream pool costs?
+                      Ready to build your dream pool?
                     </p>
                   </div>
 
@@ -153,7 +153,7 @@ export function BookNowBanner() {
                 </div>
 
                 <PriceEstimator
-                  label="See Price Estimate"
+                  label="Get Started"
                   className="group flex h-9 w-full items-center justify-center gap-1.5 rounded-full bg-gradient-to-r from-[var(--color-pool)] to-[var(--color-pool-deep)] text-[11px] font-bold uppercase tracking-[0.12em] text-white shadow-[0_10px_28px_-8px_rgba(0,124,182,0.7)]"
                 />
               </div>
@@ -187,14 +187,14 @@ export function BookNowBanner() {
                     Price estimator
                   </p>
                   <p className="mt-0.5 truncate font-display text-[15px] font-extrabold leading-tight text-white">
-                    Curious what your dream pool costs?
+                    Ready to build your dream pool?
                   </p>
                 </div>
 
                 {/* CTAs */}
                 <div className="flex shrink-0 items-center gap-1.5">
                   <PriceEstimator
-                    label="See Price Estimate"
+                    label="Get Started"
                     className="group relative inline-flex items-center gap-2 overflow-hidden rounded-full bg-gradient-to-r from-[var(--color-pool)] to-[var(--color-pool-deep)] px-4 py-2 text-[10px] font-bold uppercase tracking-[0.14em] text-white shadow-[0_10px_28px_-8px_rgba(0,124,182,0.7)] transition-all hover:-translate-y-0.5 hover:shadow-[0_14px_36px_-8px_rgba(79,195,224,0.85)]"
                   />
                   <button
