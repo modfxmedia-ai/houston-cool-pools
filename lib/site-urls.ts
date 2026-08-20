@@ -17,6 +17,7 @@ export const SITE_URLS: SiteUrl[] = [
   { path: "/pool-service", priority: 0.80, lastModified: "2025-06-12T21:32:41+00:00" },
   { path: "/poolfinancing", priority: 0.80, lastModified: "2025-06-12T21:32:41+00:00" },
   { path: "/pricing-65k-90k", priority: 0.80, lastModified: "2025-06-12T21:32:41+00:00" },
+  { path: "/blogs/how-pool-builders-in-greater-houston-design-for-heavy-rain", priority: 0.80, lastModified: "2026-08-19T00:00:00+00:00" },
   { path: "/blogs/what-to-expect-from-a-houston-pool-site-evaluation", priority: 0.80, lastModified: "2026-08-12T00:00:00+00:00" },
   { path: "/blogs/custom-water-features-that-transform-a-backyard-pool", priority: 0.80, lastModified: "2026-07-02T00:00:00+00:00" },
   { path: "/blogs/signs-its-time-to-remodel-your-houston-pool", priority: 0.80, lastModified: "2026-07-02T00:00:00+00:00" },

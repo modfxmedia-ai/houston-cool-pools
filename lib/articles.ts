@@ -47,6 +47,160 @@ const AUTHOR = {
 
 export const ARTICLES: Article[] = [
   {
+    slug: "how-pool-builders-in-greater-houston-design-for-heavy-rain",
+    title: "How Pool Builders in Greater Houston Design for Heavy Rain",
+    excerpt:
+      "Discover how pool builders in Greater Houston plan drainage, elevation, and durable materials to help custom pools handle intense rain and runoff.",
+    category: "Custom Features",
+    tag: "Custom Features",
+    readTime: "6 min",
+    date: "Aug 19, 2026",
+    publishedAt: "2026-08-19",
+    author: AUTHOR,
+    hero: {
+      src: "/images/blogs/how-pool-builders-in-greater-houston-design-for-heavy-rain/hero.jpg",
+      alt: "Custom Houston backyard pool and deck designed with drainage in mind for heavy rain",
+    },
+    card: {
+      src: "/images/blogs/how-pool-builders-in-greater-houston-design-for-heavy-rain/card.jpg",
+      alt: "Custom Houston backyard pool and deck designed with drainage in mind for heavy rain",
+    },
+    keywords: [
+      "pool builders Greater Houston",
+      "pool drainage design",
+      "Houston pool construction rain",
+      "backyard drainage planning",
+      "gunite pool deck grading",
+    ],
+    related: [
+      { label: "Pool Builders in Greater Houston", href: "/areas-we-serve" },
+      { label: "Excavation FAQs", href: "/faqs3" },
+      { label: "Custom Pool Types", href: "/custom-pool-types" },
+      { label: "Contact Us", href: "/contact" },
+    ],
+    body: [
+      {
+        type: "p",
+        text: "Heavy rain is part of life in Greater Houston, especially during late-summer thunderstorms and hurricane season. When we design a custom pool, we look beyond its shape, tile, and water features. We also consider where rainwater will go, how it may affect the deck and landscaping, and how the full backyard can recover after a major storm.",
+      },
+      {
+        type: "p",
+        text: "Planning for water before excavation begins can help protect more than the pool itself. Runoff may collect near the equipment pad, wash across gathering spaces, settle in low parts of the yard, or move toward a nearby foundation. At Houston Cool Pools, we take a tailored approach to pool design by studying your property's layout, elevation changes, soil, and existing drainage patterns.",
+      },
+      { type: "h2", text: "Map Water Flow Before Construction Begins" },
+      {
+        type: "p",
+        text: "Every property handles rain differently. Before we finalize a pool location or spa placement, we evaluate how water enters, travels across, and exits the yard. A level-looking backyard can still have small grade changes that influence where water gathers during a downpour.",
+      },
+      {
+        type: "p",
+        text: "During the planning process, we may look for:",
+      },
+      {
+        type: "list",
+        items: [
+          "Low spots where water tends to stand",
+          "Existing swales or drainage paths",
+          "Downspouts that discharge into the backyard",
+          "Neighboring grades that may send water toward your property",
+          "Areas near the home, fence, or landscaping that need added attention",
+        ],
+      },
+      {
+        type: "p",
+        text: "Pool placement and elevation matter from the start. We work to position the pool so it fits the natural flow of the lot while allowing practical drainage around the pool shell, deck, and home. The goal is not to fight the entire site, but to create a backyard plan that directs water thoughtfully.",
+      },
+      {
+        type: "p",
+        text: "A pool is only one part of the finished space. Patios, outdoor kitchens, pathways, retaining features, and planting beds all change the way rain moves through a yard. By considering these features together, we can create an outdoor living environment that feels connected and purposeful instead of pieced together over time.",
+      },
+      { type: "h2", text: "Create Clear Drainage Paths" },
+      {
+        type: "p",
+        text: "Good drainage needs a route, not just a place to collect water. Depending on your property's needs, pool builders in Greater Houston may include several drainage features within a custom backyard design. The right solution depends on the lot, the surrounding improvements, and applicable local requirements.",
+      },
+      {
+        type: "p",
+        text: "Possible drainage elements can include:",
+      },
+      {
+        type: "list",
+        items: [
+          "Deck surfaces graded toward planned drainage areas",
+          "Channel drains near patios or transition points",
+          "French drains below selected landscape areas",
+          "Catch basins that collect surface runoff",
+          "Swales and downspout extensions that guide water away from structures",
+        ],
+      },
+      {
+        type: "p",
+        text: "Deck slope plays a large role in how comfortable and functional your outdoor space feels after a storm. We plan deck grading to encourage water to move away from the pool edge, home foundation, and seating areas. At the same time, the deck should remain comfortable for bare feet, pool furniture, and everyday use.",
+      },
+      {
+        type: "p",
+        text: "Even a well-planned drainage system cannot remove every flood risk during extreme weather. What it can do is reduce avoidable pooling, direct everyday stormwater toward an appropriate outlet or collection area, and help protect the investment you are making in your backyard.",
+      },
+      { type: "h2", text: "Build for Wet Soil and Seasonal Movement" },
+      {
+        type: "p",
+        text: "Houston-area soil can create its own set of concerns. Clay-heavy soil may expand when it is wet and contract as conditions become drier. Those repeated changes can affect the ground around a pool, patio, retaining feature, or outdoor kitchen.",
+      },
+      {
+        type: "p",
+        text: "For that reason, we treat construction planning as more than a visual exercise. A custom gunite pool must be designed with the site in mind, including the desired depth, spa location, water features, surrounding hardscape, and conditions below the surface. Quality excavation, reinforcing steel, and gunite application all contribute to a pool structure built for long-term use.",
+      },
+      {
+        type: "p",
+        text: "The surfaces around the pool deserve the same attention. Proper base preparation, material selection, deck installation, and room for expected movement can support the performance of coping, patios, pathways, and outdoor living features. Rain planning is not limited to where water flows above ground. It also means respecting what changing moisture can do below it.",
+      },
+      { type: "h2", text: "Keep Equipment Safe and Accessible After Storms" },
+      {
+        type: "p",
+        text: "Your pool equipment needs a practical home. Pumps, filters, heaters, automation controls, and electrical components should sit on a stable, accessible pad that is less exposed to standing water. Easy access also makes post-storm inspection and professional service simpler.",
+      },
+      {
+        type: "p",
+        text: "When we plan an equipment area, we consider clearances, secure connections, drainage around the pad, and a layout that supports applicable requirements. You should also know where equipment shutoffs are located and how to spot unusual operation after severe weather.",
+      },
+      {
+        type: "p",
+        text: "A few design choices can make storm recovery less stressful:",
+      },
+      {
+        type: "list",
+        items: [
+          "Accessible equipment pads with drainage nearby",
+          "Automation or remote monitoring features, when selected for the project",
+          "Skimmers placed with everyday debris collection in mind",
+          "Clear access to drains and service areas",
+          "Durable hardscape around equipment locations",
+        ],
+      },
+      {
+        type: "p",
+        text: "After heavy rain, we recommend removing visible debris, checking the pool water level, and looking over accessible equipment for signs of damage or unusual operation. If something does not look right, a qualified pool professional can help assess the situation safely.",
+      },
+      { type: "h2", text: "Plan a Rain-Ready Backyard From the Start" },
+      {
+        type: "p",
+        text: "Heavy rain does not have to keep you from creating a refined outdoor retreat. It simply needs to be part of the design conversation early on. Water flow, drainage routes, soil movement, deck grading, structural planning, and equipment access all work together to shape how your backyard performs through Houston's storm season.",
+      },
+      {
+        type: "quote",
+        text: "At Houston Cool Pools, we design custom gunite pools, spas, and outdoor living environments around the conditions of each property. A thoughtful plan can bring lasting beauty to your backyard while giving rainwater a clearer place to go.",
+        cite: "Mike Lopez, Owner",
+      },
+      {
+        type: "callout",
+        title: "Plan a backyard that's ready for anything",
+        body: "Explore our service areas to connect with experienced pool builders in Greater Houston, then schedule a consultation to discuss your project.",
+        href: "/areas-we-serve",
+        cta: "See areas we serve",
+      },
+    ],
+  },
+  {
     slug: "what-to-expect-from-a-houston-pool-site-evaluation",
     title: "What to Expect From a Houston Pool Site Evaluation",
     excerpt:
