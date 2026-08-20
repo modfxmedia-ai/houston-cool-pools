@@ -47,21 +47,6 @@ const LENDERS: Lender[] = [
     contact: [{ line: "www.LyonFinancial.net" }, { line: "877-754-5966" }],
   },
   {
-    name: "Central Bank",
-    tag: "Lending Partner",
-    domain: "cbhou.com",
-    logo: "/images/financing-logos/central-bank.png",
-    blurb:
-      "Whether you plan to put in a pool, remodel your home, or use the equity in your home for another reason - Ana Torrez at Central Bank is here to help.",
-    cta: "Apply Now",
-    href: "https://www.cbhou.com/Pool-Loans/Home/Apply-Now",
-    contact: [
-      { line: "Ana Torrez • NMLS #2259842" },
-      { line: "713-388-1350" },
-      { line: "ana.torrez@frostbank.com" },
-    ],
-  },
-  {
     name: "LightStream Financial",
     tag: "Lending Partner",
     domain: "lightstream.com",

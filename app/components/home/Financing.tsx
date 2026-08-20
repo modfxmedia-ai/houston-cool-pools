@@ -25,10 +25,9 @@ const LENDERS: {
 }[] = [
   { name: "HFS Financial", href: "https://www.hfsfinancial.net/promo/HoustonCoolPoolsTX/", domain: "hfsfinancial.net" },
   { name: "Lyon Financial", href: "https://www.lyonfinancial.net/dealer/houston-cool-pools-tx/", domain: "lyonfinancial.net" },
-  { name: "Central Bank", href: "https://www.cbhou.com/Pool-Loans/Home/Apply-Now", domain: "cbhou.com", logo: "/images/financing-logos/central-bank.png" },
   { name: "LightStream", href: "https://www.lightstream.com/", domain: "lightstream.com" },
   { name: "Viking Capital", href: "https://poolloan.net/houston-cool-pools/", domain: "poolloan.net" },
-  { name: "Texas Pool Financing", href: "https://www.VinceGutierrezMortgages.com", domain: "vincegutierrezmortgages.com", logo: "/images/financing-logos/vince-gutierrez-mortgages.png" },
+  { name: "Frost Bank", href: "https://apply.frostbank.com/#/loan-officers/ana.torrez@frostbank", domain: "frostbank.com" },
 ];
 
 /**

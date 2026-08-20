@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   ...base,
   title: "Pool Financing - Houston Cool Pools",
   description:
-    "Trusted lending partners for financing your Houston pool build or remodel - HFS, Lyon Financial, LightStream, Viking Capital, Central Bank and more.",
+    "Trusted lending partners for financing your Houston pool build or remodel - HFS, Lyon Financial, LightStream, Viking Capital, Frost Bank and more.",
   alternates: { canonical: CANONICAL },
   openGraph: { ...base.openGraph, url: CANONICAL },
 };

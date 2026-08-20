@@ -57,10 +57,9 @@ const BENEFITS: { title: string; body: string; icon: React.ReactNode }[] = [
 const LENDERS = [
   "HFS Financial",
   "Lyon Financial",
-  "Central Bank",
   "LightStream Financial",
   "Viking Capital",
-  "Texas Pool Financing",
+  "Frost Bank",
 ] as const;
 
 const list = {
