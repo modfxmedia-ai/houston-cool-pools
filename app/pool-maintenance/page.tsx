@@ -18,7 +18,6 @@ import {
   UserCheck,
 } from "lucide-react";
 import Image from "next/image";
-import Link from "next/link";
 import { PoolCtaBanner } from "../components/PoolCtaBanner";
 import { ReviewsWidget } from "../components/ReviewsWidget";
 import { Hero } from "./components/Hero";
@@ -348,7 +347,7 @@ export default function PoolMaintenancePage() {
           </div>
 
           <div className="mt-12 text-center">
-            <Link
+            <a
               href="#booking"
               className="group inline-flex items-center gap-3 rounded-full bg-white px-8 py-4 text-xs font-bold uppercase tracking-[0.22em] text-[var(--color-navy-deep)] shadow-lg transition-all hover:-translate-y-0.5 hover:shadow-2xl"
             >
@@ -356,7 +355,7 @@ export default function PoolMaintenancePage() {
               <svg viewBox="0 0 24 24" fill="none" className="h-3 w-3 transition-transform group-hover:translate-x-1">
                 <path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
-            </Link>
+            </a>
           </div>
         </div>
       </section>
@@ -412,7 +411,7 @@ export default function PoolMaintenancePage() {
             ))}
           </div>
           <div className="mt-12 text-center">
-            <Link
+            <a
               href="#booking"
               className="group inline-flex items-center gap-3 rounded-full bg-[var(--color-pool)] px-8 py-4 text-xs font-bold uppercase tracking-[0.22em] text-white shadow-lg transition-all hover:-translate-y-0.5 hover:shadow-2xl"
             >
@@ -420,7 +419,7 @@ export default function PoolMaintenancePage() {
               <svg viewBox="0 0 24 24" fill="none" className="h-3 w-3 transition-transform group-hover:translate-x-1">
                 <path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
-            </Link>
+            </a>
           </div>
         </div>
       </section>

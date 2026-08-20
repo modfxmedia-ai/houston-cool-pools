@@ -1,7 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
 import { motion } from "motion/react";
 import { ShieldCheck, BadgeCheck, Clock3 } from "lucide-react";
 
@@ -104,7 +103,7 @@ export function Hero() {
             transition={{ delay: 1.2, duration: 0.7, ease }}
             className="mt-8 flex flex-wrap items-center gap-4"
           >
-            <Link
+            <a
               href="#booking"
               className="group inline-flex items-center gap-3 rounded-full bg-white px-8 py-4 text-xs font-bold uppercase tracking-[0.22em] text-[var(--color-navy-deep)] shadow-lg transition-all hover:-translate-y-0.5 hover:shadow-2xl"
             >
@@ -112,7 +111,7 @@ export function Hero() {
               <svg viewBox="0 0 24 24" fill="none" className="h-3 w-3 transition-transform group-hover:translate-x-1">
                 <path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
-            </Link>
+            </a>
           </motion.div>
 
           <motion.div

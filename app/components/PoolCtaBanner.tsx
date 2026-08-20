@@ -36,15 +36,30 @@ export function PoolCtaBanner({
         <h2 className="font-[family-name:var(--font-display)] text-3xl leading-tight md:text-4xl">
           {quote ? <>&ldquo;{heading}&rdquo;</> : heading}
         </h2>
-        <Link
-          href={href}
-          className="group inline-flex shrink-0 items-center gap-3 rounded-full bg-white px-8 py-4 text-xs font-bold uppercase tracking-[0.22em] text-[var(--color-navy-deep)] shadow-lg transition-all hover:-translate-y-0.5 hover:shadow-2xl"
-        >
-          Book a Call
-          <svg viewBox="0 0 24 24" fill="none" className="h-3 w-3 transition-transform group-hover:translate-x-1">
-            <path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" />
-          </svg>
-        </Link>
+        {href.startsWith("#") ? (
+          // Plain anchor for same-page hash targets (e.g. #booking) so a
+          // page's own click-delegated modal handler can preventDefault it -
+          // next/link's built-in hash-scroll would otherwise run first.
+          <a
+            href={href}
+            className="group inline-flex shrink-0 items-center gap-3 rounded-full bg-white px-8 py-4 text-xs font-bold uppercase tracking-[0.22em] text-[var(--color-navy-deep)] shadow-lg transition-all hover:-translate-y-0.5 hover:shadow-2xl"
+          >
+            Book a Call
+            <svg viewBox="0 0 24 24" fill="none" className="h-3 w-3 transition-transform group-hover:translate-x-1">
+              <path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" />
+            </svg>
+          </a>
+        ) : (
+          <Link
+            href={href}
+            className="group inline-flex shrink-0 items-center gap-3 rounded-full bg-white px-8 py-4 text-xs font-bold uppercase tracking-[0.22em] text-[var(--color-navy-deep)] shadow-lg transition-all hover:-translate-y-0.5 hover:shadow-2xl"
+          >
+            Book a Call
+            <svg viewBox="0 0 24 24" fill="none" className="h-3 w-3 transition-transform group-hover:translate-x-1">
+              <path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" />
+            </svg>
+          </Link>
+        )}
       </motion.div>
     </section>
   );

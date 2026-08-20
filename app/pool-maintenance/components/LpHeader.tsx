@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
 import { PHONE_DISPLAY, PHONE_HREF } from "../_lib/phone";
 
 export function LpHeader() {
@@ -21,12 +20,12 @@ export function LpHeader() {
           >
             {PHONE_DISPLAY}
           </a>
-          <Link
+          <a
             href="#booking"
             className="inline-flex shrink-0 items-center gap-2 whitespace-nowrap rounded-full bg-[var(--color-pool)] px-5 py-2.5 text-[11px] font-bold uppercase tracking-[0.18em] text-white shadow-lg transition-all hover:-translate-y-0.5 hover:shadow-xl"
           >
             Book a Call
-          </Link>
+          </a>
         </div>
       </div>
     </header>
