@@ -87,7 +87,7 @@ const LENDERS: Lender[] = [
     logo: "/images/financing-logos/vince-gutierrez-mortgages.png",
     blurb: "Vince Gutierrez Mortgages - local Texas-based pool financing broker.",
     cta: "Learn More",
-    href: "https://www.VinceGutierrezMortgages.com",
+    href: "https://apply.frostbank.com/#/loan-officers/ana.torrez@frostbank",
     contact: [{ line: "281-597-9234" }],
   },
 ];
