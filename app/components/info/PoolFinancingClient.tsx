@@ -81,14 +81,18 @@ const LENDERS: Lender[] = [
     href: "https://poolloan.net/houston-cool-pools/",
   },
   {
-    name: "Texas Pool Financing",
+    name: "Frost Bank",
     tag: "Lending Partner",
-    domain: "vincegutierrezmortgages.com",
-    logo: "/images/financing-logos/vince-gutierrez-mortgages.png",
-    blurb: "Vince Gutierrez Mortgages - local Texas-based pool financing broker.",
-    cta: "Learn More",
+    domain: "frostbank.com",
+    blurb:
+      "Ana Torrez at Frost Bank helps Texas homeowners finance a new pool, remodel or home improvement project with competitive rates and a simple online application.",
+    cta: "Apply Now",
     href: "https://apply.frostbank.com/#/loan-officers/ana.torrez@frostbank",
-    contact: [{ line: "281-597-9234" }],
+    contact: [
+      { line: "Ana Torrez • NMLS #2259842" },
+      { line: "(713) 388-1350" },
+      { line: "ana.torrez@frostbank.com" },
+    ],
   },
 ];
 
