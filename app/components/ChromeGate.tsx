@@ -2,7 +2,7 @@
 
 import { usePathname } from "next/navigation";
 
-const HIDDEN_PREFIXES = ["/free-pool-quote"];
+const HIDDEN_PREFIXES = ["/free-pool-quote", "/pool-maintenance"];
 
 // Shared with other components (e.g. AnalyticsScripts) that need to know
 // whether the current route is a standalone landing page.

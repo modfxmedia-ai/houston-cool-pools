@@ -5,7 +5,15 @@ import { motion } from "motion/react";
 
 const ease = [0.22, 1, 0.36, 1] as const;
 
-export function PoolCtaBanner({ heading, quote = false }: { heading: string; quote?: boolean }) {
+export function PoolCtaBanner({
+  heading,
+  quote = false,
+  href = "/contact",
+}: {
+  heading: string;
+  quote?: boolean;
+  href?: string;
+}) {
   return (
     <section className="relative isolate overflow-hidden bg-[var(--color-navy-deep)] px-6 py-20 text-white md:px-10">
       <div className="absolute inset-0 -z-10">
@@ -29,7 +37,7 @@ export function PoolCtaBanner({ heading, quote = false }: { heading: string; quo
           {quote ? <>&ldquo;{heading}&rdquo;</> : heading}
         </h2>
         <Link
-          href="/contact"
+          href={href}
           className="group inline-flex shrink-0 items-center gap-3 rounded-full bg-white px-8 py-4 text-xs font-bold uppercase tracking-[0.22em] text-[var(--color-navy-deep)] shadow-lg transition-all hover:-translate-y-0.5 hover:shadow-2xl"
         >
           Book a Call
