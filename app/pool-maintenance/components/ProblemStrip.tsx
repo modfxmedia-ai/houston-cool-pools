@@ -11,11 +11,13 @@ const PROBLEMS = [
   {
     title: "Equipment Not Working",
     body: "Pump won't prime, motor is loud or dead, or the salt cell has stopped producing chlorine.",
+    cause: "Usually a worn impeller, a failing capacitor, or a cell that's reached the end of its life.",
     icon: Wrench,
   },
   {
     title: "Leaks & Water Loss",
     body: "Losing more than an inch a week, or noticing wet spots around equipment or decking.",
+    cause: "Usually a cracked fitting, a failing skimmer or light niche seal, or a crack below the waterline.",
     icon: Droplet,
   },
 ];

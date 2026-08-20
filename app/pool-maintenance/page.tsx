@@ -245,7 +245,7 @@ export default function PoolMaintenancePage() {
           </div>
           <div className="relative overflow-hidden rounded-2xl lg:sticky lg:top-28 lg:self-start">
             <Image
-              src="/images/pool-maintenance/pool-maintenance-1.png"
+              src="/images/pool-maintenance/pool-maintenance-intro.png"
               alt="Pool equipment maintained by Houston Cool Pools"
               width={1536}
               height={1024}

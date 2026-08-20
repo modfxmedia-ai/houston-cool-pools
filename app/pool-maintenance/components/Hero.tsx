@@ -75,7 +75,7 @@ export function Hero() {
             className="mt-6 max-w-xl text-base text-white/80 md:text-lg"
           >
             Fast, reliable maintenance for Houston pool owners dealing with a
-            problem right now, no sales pitch, just a technician who shows up
+            problem right now. No sales pitch, just a technician who shows up
             and fixes it.
           </motion.p>
 
