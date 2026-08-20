@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { PHONE_DISPLAY, PHONE_HREF } from "../../../lib/navigation";
+import { PHONE_DISPLAY, PHONE_HREF } from "../_lib/phone";
 
 export function LpHeader() {
   return (

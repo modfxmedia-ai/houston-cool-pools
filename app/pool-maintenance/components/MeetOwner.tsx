@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { motion } from "motion/react";
-import { PHONE_DISPLAY, PHONE_HREF } from "../../../lib/navigation";
+import { PHONE_DISPLAY, PHONE_HREF } from "../_lib/phone";
 
 const ease = [0.22, 1, 0.36, 1] as const;
 

@@ -118,7 +118,7 @@ const serviceJsonLd = {
   provider: {
     "@type": "LocalBusiness",
     name: "Houston Cool Pools",
-    telephone: "+1-281-645-6631",
+    telephone: "+1-281-938-4830",
     address: {
       "@type": "PostalAddress",
       streetAddress: "21902 Highway 249",
@@ -430,21 +430,7 @@ export default function PoolMaintenancePage() {
       {/* ----- Section 4.5: Booking ----- */}
       <section id="booking" className="bg-slate-50 px-6 py-20 md:px-10">
         <div className="mx-auto max-w-2xl">
-          <div className="text-center">
-            <p className="text-[11px] font-bold uppercase tracking-[0.32em] text-[var(--color-pool-deep)]">
-              Schedule Service
-            </p>
-            <h2 className="font-[family-name:var(--font-display)] mt-4 text-3xl leading-tight text-[var(--color-navy-deep)] md:text-4xl">
-              Book Your Service Call
-            </h2>
-            <p className="mt-4 text-base leading-relaxed text-slate-600">
-              Tell us what&rsquo;s going on and a technician will reach out to
-              get it scheduled.
-            </p>
-          </div>
-          <div className="mt-10">
-            <BookingForm />
-          </div>
+          <BookingForm />
         </div>
       </section>
 

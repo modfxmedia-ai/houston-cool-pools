@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { PHONE_DISPLAY, PHONE_HREF } from "../../../lib/navigation";
+import { PHONE_DISPLAY, PHONE_HREF } from "../_lib/phone";
 import { BUSINESS } from "../../../lib/business";
 
 export function LpFooter() {

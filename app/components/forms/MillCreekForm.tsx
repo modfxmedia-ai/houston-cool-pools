@@ -13,7 +13,20 @@ export const MILLCREEK_EMBED_SCRIPT = "https://link.millcreekmktg.com/js/form_em
 
 type Variant = "brand" | "lp";
 
-type MillCreekFormProps = {
+type MillCreekEmbedProps = {
+  /** Overrides the default site-wide form ID (for page-specific MillCreek forms). */
+  formId?: string;
+  /** Overrides the default site-wide form name (used as the iframe title + data-form-name). */
+  formName?: string;
+  /**
+   * Rendered height of the iframe (px). Defaults to 1418 (the height reported
+   * by MillCreek for this form). The MillCreek script auto-resizes based on
+   * actual content so this is only the initial value.
+   */
+  height?: number;
+};
+
+type MillCreekFormProps = MillCreekEmbedProps & {
   /** Optional wrapper className (e.g. width overrides). */
   className?: string;
   /** Small eyebrow text above the form heading. Defaults to "Free Pool Quote". */
@@ -29,13 +42,49 @@ type MillCreekFormProps = {
    * "lp" uses the Google Ads landing-page navy + cyan palette.
    */
   variant?: Variant;
-  /**
-   * Rendered height of the iframe (px). Defaults to 1418 (the height reported
-   * by MillCreek for this form). The MillCreek script auto-resizes based on
-   * actual content so this is only the initial value.
-   */
-  height?: number;
 };
+
+/**
+ * Just the MillCreek iframe + embed script, with no card/header chrome around
+ * it. Used directly by contexts (e.g. a custom modal) that already provide
+ * their own header/footer and only need the raw form.
+ */
+export function MillCreekFormEmbed({
+  formId = MILLCREEK_FORM_ID,
+  formName = MILLCREEK_FORM_NAME,
+  height = 1418,
+}: MillCreekEmbedProps) {
+  const src = `https://link.millcreekmktg.com/widget/form/${formId}`;
+  return (
+    <>
+      <iframe
+        src={src}
+        id={`inline-${formId}`}
+        data-layout='{"id":"INLINE"}'
+        data-trigger-type="alwaysShow"
+        data-trigger-value=""
+        data-activation-type="alwaysActivated"
+        data-activation-value=""
+        data-deactivation-type="neverDeactivate"
+        data-deactivation-value=""
+        data-form-name={formName}
+        data-height={String(height)}
+        data-layout-iframe-id={`inline-${formId}`}
+        data-form-id={formId}
+        title={formName}
+        height={height}
+        style={{
+          width: "100%",
+          border: "none",
+          borderRadius: "0 0 20px 20px",
+          display: "block",
+        }}
+      />
+      {/* MillCreek embed script (auto-resizes the iframe based on content). */}
+      <Script src={MILLCREEK_EMBED_SCRIPT} strategy="afterInteractive" />
+    </>
+  );
+}
 
 /**
  * Beautifully wrapped MillCreek Marketing form embed. Used everywhere on the
@@ -49,6 +98,8 @@ export function MillCreekForm({
   subheading = "Fill out the form and we'll reach out with your free, no-pressure pool quote - usually within one business day.",
   footerNote = "No obligation · We never share your information",
   variant = "brand",
+  formId,
+  formName,
   height = 1418,
 }: MillCreekFormProps) {
   const isLp = variant === "lp";
@@ -145,29 +196,7 @@ export function MillCreekForm({
             form. The `data-height` attribute is only used as the initial
             height before the script kicks in. */}
         <div className="relative bg-white">
-          <iframe
-            src={MILLCREEK_FORM_SRC}
-            id={`inline-${MILLCREEK_FORM_ID}`}
-            data-layout='{"id":"INLINE"}'
-            data-trigger-type="alwaysShow"
-            data-trigger-value=""
-            data-activation-type="alwaysActivated"
-            data-activation-value=""
-            data-deactivation-type="neverDeactivate"
-            data-deactivation-value=""
-            data-form-name={MILLCREEK_FORM_NAME}
-            data-height={String(height)}
-            data-layout-iframe-id={`inline-${MILLCREEK_FORM_ID}`}
-            data-form-id={MILLCREEK_FORM_ID}
-            title={MILLCREEK_FORM_NAME}
-            height={height}
-            style={{
-              width: "100%",
-              border: "none",
-              borderRadius: "0 0 20px 20px",
-              display: "block",
-            }}
-          />
+          <MillCreekFormEmbed formId={formId} formName={formName} height={height} />
         </div>
 
         {/* Footer trust strip */}

@@ -1,42 +1,21 @@
 "use client";
 
-import { useEffect, useState, type FormEvent } from "react";
+import { useEffect, useState } from "react";
 import { createPortal } from "react-dom";
-import { useRouter } from "next/navigation";
 import { AnimatePresence, motion } from "motion/react";
+import { MillCreekFormEmbed } from "../../components/forms/MillCreekForm";
 
 const ease = [0.22, 1, 0.36, 1] as const;
 
-const POOL_ISSUES = [
-  "Green or cloudy water",
-  "Algae",
-  "Equipment not working / broken pump",
-  "Leak",
-  "Routine weekly or bi-weekly maintenance",
-  "Something else",
-] as const;
+const POOL_MAINTENANCE_FORM_ID = "rnI3QM3VluWfGzUE1dhK";
+const POOL_MAINTENANCE_FORM_NAME = "\ud83d\udd35 Google LP Opt-In Form pool-maintenance";
 
-const CONTACT_TIMES = [
-  "Morning (8am\u201312pm)",
-  "Afternoon (12pm\u20134pm)",
-  "Evening (4pm\u20137pm)",
-  "Anytime",
-] as const;
-
-const inputClasses =
-  "w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm text-slate-800 shadow-sm outline-none transition-colors focus:border-[var(--color-pool)] focus:ring-2 focus:ring-[var(--color-pool)]/20";
-
-const labelClasses = "block text-[11px] font-bold uppercase tracking-[0.2em] text-slate-400";
-
-// Bottom-sheet booking form, opened from any element pointing at #booking or
+// Booking popup, opened from any element pointing at #booking or
 // tagged [data-booking-modal] (see click-delegation effect below), so every
 // "Book a Call" CTA on the page opens this popup instead of scrolling.
 export function BookingModal() {
   const [open, setOpen] = useState(false);
   const [mounted, setMounted] = useState(false);
-  const [submitting, setSubmitting] = useState(false);
-  const [error, setError] = useState<string | null>(null);
-  const router = useRouter();
 
   useEffect(() => {
     setMounted(true);
@@ -51,7 +30,6 @@ export function BookingModal() {
       );
       if (!trigger) return;
       e.preventDefault();
-      setError(null);
       setOpen(true);
     }
     document.addEventListener("click", onClick);
@@ -75,35 +53,6 @@ export function BookingModal() {
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
   }, [open]);
-
-  async function handleSubmit(event: FormEvent<HTMLFormElement>) {
-    event.preventDefault();
-    setSubmitting(true);
-    setError(null);
-
-    const form = new FormData(event.currentTarget);
-    const contactTime = String(form.get("contactTime") ?? "");
-
-    try {
-      const res = await fetch("/api/service-form", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          name: String(form.get("name") ?? ""),
-          phone: String(form.get("phone") ?? ""),
-          email: String(form.get("email") ?? ""),
-          lookingFor: String(form.get("issue") ?? ""),
-          message: contactTime ? `Preferred contact time: ${contactTime}` : undefined,
-        }),
-      });
-      if (!res.ok) throw new Error("Submission failed");
-      setOpen(false);
-      router.push("/pool-maintenance/thank-you");
-    } catch {
-      setError("Something went wrong. Please try again or call us directly.");
-      setSubmitting(false);
-    }
-  }
 
   return (
     mounted &&
@@ -187,102 +136,12 @@ export function BookingModal() {
               </div>
 
               {/* Form */}
-              <div className="overflow-y-auto bg-white px-6 py-6 sm:px-8">
-                <form onSubmit={handleSubmit} className="grid gap-5 sm:grid-cols-2">
-                  <div>
-                    <label htmlFor="booking-modal-name" className={labelClasses}>
-                      Name
-                    </label>
-                    <input
-                      id="booking-modal-name"
-                      name="name"
-                      type="text"
-                      required
-                      className={`mt-2 ${inputClasses}`}
-                    />
-                  </div>
-                  <div>
-                    <label htmlFor="booking-modal-phone" className={labelClasses}>
-                      Phone
-                    </label>
-                    <input
-                      id="booking-modal-phone"
-                      name="phone"
-                      type="tel"
-                      required
-                      className={`mt-2 ${inputClasses}`}
-                    />
-                  </div>
-                  <div className="sm:col-span-2">
-                    <label htmlFor="booking-modal-email" className={labelClasses}>
-                      Email
-                    </label>
-                    <input
-                      id="booking-modal-email"
-                      name="email"
-                      type="email"
-                      required
-                      className={`mt-2 ${inputClasses}`}
-                    />
-                  </div>
-                  <div>
-                    <label htmlFor="booking-modal-issue" className={labelClasses}>
-                      Pool issue
-                    </label>
-                    <select
-                      id="booking-modal-issue"
-                      name="issue"
-                      required
-                      defaultValue=""
-                      className={`mt-2 ${inputClasses}`}
-                    >
-                      <option value="" disabled>
-                        Select an issue
-                      </option>
-                      {POOL_ISSUES.map((issue) => (
-                        <option key={issue} value={issue}>
-                          {issue}
-                        </option>
-                      ))}
-                    </select>
-                  </div>
-                  <div>
-                    <label htmlFor="booking-modal-time" className={labelClasses}>
-                      Preferred contact time
-                    </label>
-                    <select
-                      id="booking-modal-time"
-                      name="contactTime"
-                      required
-                      defaultValue=""
-                      className={`mt-2 ${inputClasses}`}
-                    >
-                      <option value="" disabled>
-                        Select a time
-                      </option>
-                      {CONTACT_TIMES.map((time) => (
-                        <option key={time} value={time}>
-                          {time}
-                        </option>
-                      ))}
-                    </select>
-                  </div>
-
-                  {error && (
-                    <p className="sm:col-span-2 text-sm font-medium text-red-600">{error}</p>
-                  )}
-
-                  <button
-                    type="submit"
-                    disabled={submitting}
-                    className="group mt-2 inline-flex w-full items-center justify-center gap-3 rounded-full bg-[var(--color-pool)] px-8 py-4 text-xs font-bold uppercase tracking-[0.22em] text-white shadow-lg transition-all hover:-translate-y-0.5 hover:shadow-2xl disabled:pointer-events-none disabled:opacity-60 sm:col-span-2"
-                  >
-                    {submitting ? "Sending\u2026" : "Book a Call"}
-                    <svg viewBox="0 0 24 24" fill="none" className="h-3 w-3 transition-transform group-hover:translate-x-1">
-                      <path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" />
-                    </svg>
-                  </button>
-                </form>
+              <div className="overflow-y-auto bg-white px-2 py-2 sm:px-3">
+                <MillCreekFormEmbed
+                  formId={POOL_MAINTENANCE_FORM_ID}
+                  formName={POOL_MAINTENANCE_FORM_NAME}
+                  height={1267}
+                />
               </div>
 
               {/* Footer */}
