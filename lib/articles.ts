@@ -47,6 +47,157 @@ const AUTHOR = {
 
 export const ARTICLES: Article[] = [
   {
+    slug: "a-homeowners-guide-to-houston-pool-construction",
+    title: "A Homeowner's Guide to Houston Pool Construction",
+    excerpt:
+      "Learn the timeline, key phases, and homeowner preparations for pool construction in the Greater Houston area, from design through final startup and completion.",
+    category: "Custom Features",
+    tag: "Custom Features",
+    readTime: "7 min",
+    date: "Aug 26, 2026",
+    publishedAt: "2026-08-26",
+    author: AUTHOR,
+    hero: {
+      src: "/images/blogs/a-homeowners-guide-to-houston-pool-construction/hero.jpg",
+      alt: "Before and after view of a Houston backyard pool, from steel and gunite shell to finished waterfall spa",
+    },
+    card: {
+      src: "/images/blogs/a-homeowners-guide-to-houston-pool-construction/card.jpg",
+      alt: "Before and after view of a Houston backyard pool, from steel and gunite shell to finished waterfall spa",
+    },
+    keywords: [
+      "pool construction Greater Houston",
+      "Houston pool builder timeline",
+      "custom pool construction phases",
+      "gunite pool construction",
+      "pool startup and first swim",
+    ],
+    related: [
+      { label: "Pool Builders in Greater Houston", href: "/areas-we-serve" },
+      { label: "Length of Construction FAQs", href: "/faqs1" },
+      { label: "Gunite Application FAQs", href: "/faqs8" },
+      { label: "Contact Us", href: "/contact" },
+    ],
+    body: [
+      { type: "h2", text: "Turn Your Backyard Into a Houston Heat Escape" },
+      {
+        type: "p",
+        text: "Pool construction in the Greater Houston area starts with a clear idea of how you want to live outside. During long, hot late-summer days, a custom pool can give your family a private place to cool off, exercise, gather with friends, or simply enjoy a quieter evening at home.",
+      },
+      {
+        type: "p",
+        text: "At Houston Cool Pools, we know that a finished pool is only one part of the bigger picture. A quality-focused project takes planning, skilled work, inspections, and patient finishing. When you understand what happens at each stage, the construction process feels much easier to follow.",
+      },
+      { type: "h2", text: "Plan Your Design, Budget, and Approvals" },
+      {
+        type: "p",
+        text: "Every project begins with an on-site conversation about your yard, your goals, and the features that matter most to you. We look at the shape and size of the space, how you plan to use it, and how a pool can fit naturally with your home and outdoor areas.",
+      },
+      {
+        type: "p",
+        text: "A custom design may include:",
+      },
+      {
+        type: "list",
+        items: [
+          "A spa for relaxing after a long day",
+          "Tanning ledges for lounging in shallow water",
+          "Waterfalls, fire features, or lighting",
+          "Decking, outdoor kitchens, and landscape details",
+        ],
+      },
+      {
+        type: "p",
+        text: "Your property helps guide the design. We consider access points, existing structures, utility locations, privacy, sun exposure, drainage, and the relationship between the pool and your patio or home. In Greater Houston, soil conditions and heavy rainfall also deserve careful attention when planning the structure and drainage around a new pool.",
+      },
+      {
+        type: "p",
+        text: "Before construction begins, we help establish a strong starting point through required approvals. Permits, HOA review, engineering needs, and local building codes can vary based on your municipality, neighborhood, and project details. Take time to review the proposal so you understand the selected materials, included features, construction sequence, payment schedule, and any site responsibilities involving pets, landscaping, or yard access.",
+      },
+      { type: "h2", text: "Watch the Design Take Shape in Your Yard" },
+      {
+        type: "p",
+        text: "Once plans and approvals are in place, the work becomes very real. Our crew marks the approved pool layout in the yard before excavation begins. This gives you a full-scale view of the pool's placement, shape, and connection to your home, landscaping, and outdoor living space.",
+      },
+      {
+        type: "p",
+        text: "Excavation is one of the most noticeable phases. Equipment will need access to the yard, soil must be removed, and there will be temporary noise and disruption. We work carefully around surrounding areas whenever possible, but it helps to expect your backyard to look like an active construction site for a while.",
+      },
+      {
+        type: "p",
+        text: "After digging, the pool receives the structural systems that support it for years to come:",
+      },
+      {
+        type: "list",
+        items: [
+          "Steel reinforcement creates the framework of the pool shell",
+          "Plumbing lines are placed for circulation, drainage, filtration, spas, and water features",
+          "Inspections may take place at designated stages",
+          "Gunite is applied to form the durable concrete pool shell",
+        ],
+      },
+      {
+        type: "p",
+        text: "Gunite construction allows for custom pool shapes and details while creating a strong shell. For pool construction in the Greater Houston area, proper design and construction matter because the pool must suit the conditions of the individual site, not just look good on a drawing.",
+      },
+      { type: "h2", text: "Understand Houston Weather and Scheduling" },
+      {
+        type: "p",
+        text: "Late August can bring intense heat, humidity, heavy rain, and tropical weather concerns to Greater Houston. Those conditions can affect excavation, concrete-related work, drainage, material handling, and crew scheduling. A rain delay can be frustrating when you are excited to see progress, but it is often part of protecting the quality of the work.",
+      },
+      {
+        type: "p",
+        text: "Some phases need suitable conditions before they can move ahead. For example, wet ground may affect access or excavation, while certain concrete and finish work needs proper timing for the best long-term result. Weather-related changes do not automatically mean the project is off track. They are often a sign that the work is being handled with care instead of rushed.",
+      },
+      {
+        type: "p",
+        text: "Clear communication helps keep expectations realistic throughout the build. We recommend asking about factors that may affect the timeline, including inspections, material availability, site conditions, weather, and any changes you request after construction begins. A custom pool is not completed in a day, and each stage needs to happen in the proper order, with time for curing, finishing, and equipment setup.",
+      },
+      { type: "h2", text: "Prepare for Finishes, Startup, and First Swim" },
+      {
+        type: "p",
+        text: "After the pool shell is complete, the backyard begins to look less like a work zone and more like the space you planned. Tile, coping, decking, decorative stone, and other exterior details bring color, texture, and definition to the project. These visible stages can feel especially exciting because the final design is finally coming into view.",
+      },
+      {
+        type: "p",
+        text: "Near the end, the pool interior finish, such as plaster, is applied. Its final appearance can vary slightly based on the chosen color and texture, sunlight, water chemistry, and the curing process. That natural variation is part of working with finished materials in an outdoor setting.",
+      },
+      {
+        type: "p",
+        text: "Startup is just as important as the final look. The pool is filled, water chemistry is balanced, equipment operation is checked, and features such as lighting or automation are reviewed. The first days and weeks of ownership help protect the new surface and establish healthy water conditions.",
+      },
+      {
+        type: "p",
+        text: "During the final walkthrough, make sure you understand:",
+      },
+      {
+        type: "list",
+        items: [
+          "How the pump, filter, and other equipment operate",
+          "How to use lighting, automation, and water features",
+          "Recommended cleaning and maintenance routines",
+          "Safety features, warranty information, and future service needs",
+        ],
+      },
+      { type: "h2", text: "Build with Clear Expectations From the Start" },
+      {
+        type: "p",
+        text: "A well-built custom pool comes together through thoughtful design, dependable communication, skilled craftsmanship, and patience at every phase. From your first ideas through startup, we believe it helps to ask questions, understand the sequence of work, and keep the long-term purpose of your backyard in mind.",
+      },
+      {
+        type: "p",
+        text: "Houston Cool Pools serves Greater Houston homeowners planning pools, spas, and outdoor living environments. Bringing inspiration photos, feature ideas, budget goals, and questions about your property to the planning process can help create a space that fits the way you want to enjoy home.",
+      },
+      {
+        type: "callout",
+        title: "See if we build in your neighborhood",
+        body: "Explore our approach to pool construction in the Greater Houston area to see whether we serve your neighborhood, then contact us to start the conversation.",
+        href: "/areas-we-serve",
+        cta: "See areas we serve",
+      },
+    ],
+  },
+  {
     slug: "how-pool-builders-in-greater-houston-design-for-heavy-rain",
     title: "How Pool Builders in Greater Houston Design for Heavy Rain",
     excerpt:

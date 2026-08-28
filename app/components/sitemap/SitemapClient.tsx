@@ -106,6 +106,7 @@ const FEATURES: SectionLink[] = Array.from({ length: 13 }, (_, i) => ({
 }));
 
 const ARTICLES: SectionLink[] = [
+  { label: "A Homeowner's Guide to Houston Pool Construction", href: "/blogs/a-homeowners-guide-to-houston-pool-construction" },
   { label: "How Pool Builders in Greater Houston Design for Heavy Rain", href: "/blogs/how-pool-builders-in-greater-houston-design-for-heavy-rain" },
   { label: "What to Expect From a Houston Pool Site Evaluation", href: "/blogs/what-to-expect-from-a-houston-pool-site-evaluation" },
   { label: "Are Pool Fire Bowls Worth Adding to a Houston Backyard?", href: "/blogs/why-pool-fire-bowls-elevate-houston-backyards" },
