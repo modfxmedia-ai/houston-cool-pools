@@ -16,10 +16,7 @@ type GalleryEntry = {
 const HD = "/images/gallery/hd";
 
 const DATA: Record<string, GalleryEntry> = {
-  // ===== Free Form Pools (curved / naturalistic shapes only) =====
-  // NOTE: only 11 genuinely curved/naturalistic pool photos exist in the HD
-  // asset library, so photo counts vary per page rather than repeating any
-  // image across pages 1-5.
+  // ===== Free Form Pools (curved / naturalistic shapes only, all unique) =====
   "gallery-free-form-pools-1": {
     extras: [
       { src: `${HD}/le-pool-1.jpg`, alt: "Free form pool by Houston Cool Pools - oval infinity-edge pool overlooking the lake" },
@@ -31,24 +28,28 @@ const DATA: Record<string, GalleryEntry> = {
     extras: [
       { src: `${HD}/le-pool-2.jpg`, alt: "Free form pool by Houston Cool Pools - curved lakefront pool with raised spa" },
       { src: `${HD}/family-5.jpg`, alt: "Free form pool by Houston Cool Pools - curved pool with raised spa and fire bowls" },
+      { src: `${HD}/drew-lagoon.jpg`, alt: "Free form pool by Houston Cool Pools - organic lagoon-shaped pool with covered fireplace patio" },
     ],
   },
   "gallery-free-form-pools-3": {
     extras: [
       { src: `${HD}/stidham.jpg`, alt: "Free form pool by Houston Cool Pools - kidney-shaped pool with round spa and fire bowls" },
       { src: `${HD}/estate-premier.jpg`, alt: "Free form pool by Houston Cool Pools - curved pool and spa with rock waterfall" },
+      { src: `${HD}/colby-cove.jpg`, alt: "Free form pool by Houston Cool Pools - curved cove pool with bubblers and rock waterfall" },
     ],
   },
   "gallery-free-form-pools-4": {
     extras: [
       { src: `${HD}/lifestyle-1.jpg`, alt: "Free form pool by Houston Cool Pools - naturalistic pool with rock grotto" },
       { src: `${HD}/estate-lagoon.jpg`, alt: "Free form pool by Houston Cool Pools - lagoon-shaped pool with rock waterfall grotto" },
+      { src: `${HD}/clark-cove.jpg`, alt: "Free form pool by Houston Cool Pools - kidney-shaped pool with raised spa and bubblers" },
     ],
   },
   "gallery-free-form-pools-5": {
     extras: [
       { src: `${HD}/cove-spa.jpg`, alt: "Free form pool by Houston Cool Pools - curved cove pool with raised spa and stone column" },
       { src: `${HD}/rock-grotto.jpg`, alt: "Free form pool by Houston Cool Pools - naturalistic pool with rock waterfall grotto" },
+      { src: `${HD}/adams-grotto.jpg`, alt: "Free form pool by Houston Cool Pools - free-form pool with rock waterfall grotto and raised spa" },
     ],
   },
 
