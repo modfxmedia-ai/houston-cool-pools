@@ -6,9 +6,11 @@ import { LP_CONTACT, LP_OFFER_CHECKLIST } from "../_lib/data";
 
 const ease = [0.22, 1, 0.36, 1] as const;
 
-const FORM_ID = "VRhEoU5LTFoMGrDIkkAy";
-const FORM_NAME = "Website Contact Form";
+// Same embed as the popup (QuoteModal) so this LP only ever uses one form.
+const FORM_ID = "XDBGRHc1OgzH7jpnljtT";
+const FORM_NAME = "Google LP Opt-In Form";
 const FORM_SRC = `https://link.millcreekmktg.com/widget/form/${FORM_ID}`;
+const FORM_HEIGHT = 1271;
 
 export function QuoteForm() {
   return (
@@ -160,11 +162,11 @@ export function QuoteForm() {
               data-deactivation-type="neverDeactivate"
               data-deactivation-value=""
               data-form-name={FORM_NAME}
-              data-height="1418"
+              data-height={String(FORM_HEIGHT)}
               data-layout-iframe-id={`inline-${FORM_ID}`}
               data-form-id={FORM_ID}
               title={FORM_NAME}
-              height={1418}
+              height={FORM_HEIGHT}
               className="block w-full border-0"
             />
 
