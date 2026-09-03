@@ -73,4 +73,10 @@ export const TESTIMONIALS: Testimonial[] = [
     quote:
       "I am very satisfied with them. They are very honest and a trustworthy company. Any problems that arose, they took care of.",
   },
+  {
+    name: "D.W.",
+    rating: 5,
+    quote:
+      "Great working with Byron and Miguel to get our pool installed! The team is on top of their schedule and their business processes are top notch. Definitely highly recommend Houston Cool Pools to anyone looking at getting a pool installed!",
+  },
 ];

@@ -486,8 +486,8 @@ export function GalleryCategoryPage({
             </p>
           </motion.div>
 
-          {/* Masonry columns */}
-          <div className="[column-fill:_balance] gap-5 sm:columns-2 lg:columns-3">
+          {/* Uniform grid - every card shares the same aspect ratio so rows stay aligned */}
+          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {images.map((img, i) => (
               <motion.button
                 key={img.src}
@@ -497,17 +497,16 @@ export function GalleryCategoryPage({
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.15 }}
                 transition={{ duration: 0.5, delay: (i % 3) * 0.08, ease }}
-                className="group mb-5 block w-full overflow-hidden rounded-2xl border border-slate-200 bg-slate-100 text-left shadow-sm transition-all hover:-translate-y-1 hover:shadow-xl focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-pool)]"
+                className="group block overflow-hidden rounded-2xl border border-slate-200 bg-slate-100 text-left shadow-sm transition-all hover:-translate-y-1 hover:shadow-xl focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-pool)]"
               >
-                <span className="relative block">
+                <span className="relative block aspect-[4/3] w-full">
                   <Image
                     src={img.src}
                     alt={img.alt}
-                    width={800}
-                    height={600}
+                    fill
                     unoptimized
                     sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
-                    className="h-auto w-full transition-transform duration-700 group-hover:scale-105"
+                    className="object-cover transition-transform duration-700 group-hover:scale-105"
                   />
                   <span className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[var(--color-navy-deep)]/40 via-transparent to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
                   <span className="pointer-events-none absolute right-3 top-3 inline-flex h-7 items-center rounded-full bg-[var(--color-navy-deep)]/70 px-2.5 text-[10px] font-bold tracking-[0.12em] text-white opacity-0 backdrop-blur transition-all duration-500 group-hover:opacity-100">

@@ -19,9 +19,9 @@ const DATA: Record<string, GalleryEntry> = {
   // ===== Free Form Pools (curved / naturalistic shapes only, all unique) =====
   "gallery-free-form-pools-1": {
     extras: [
-      { src: `${HD}/le-pool-1.jpg`, alt: "Free form pool by Houston Cool Pools - oval infinity-edge pool overlooking the lake" },
       { src: `${HD}/family-4.jpg`, alt: "Free form pool by Houston Cool Pools - kidney-shaped pool with tanning ledge and bubblers" },
-      { src: `${HD}/clark-estate.jpg`, alt: "Free form pool by Houston Cool Pools - naturalistic pool with rock waterfall" },
+      { src: `${HD}/lanai-cove-spa.jpg`, alt: "Free form pool by Houston Cool Pools - screened kidney-shaped pool with raised spa" },
+      { src: `${HD}/bushland-lagoon.jpg`, alt: "Free form pool by Houston Cool Pools - kidney-shaped pool with natural rock waterfall grotto" },
     ],
   },
   "gallery-free-form-pools-2": {
@@ -41,14 +41,14 @@ const DATA: Record<string, GalleryEntry> = {
   "gallery-free-form-pools-4": {
     extras: [
       { src: `${HD}/lifestyle-1.jpg`, alt: "Free form pool by Houston Cool Pools - naturalistic pool with rock grotto" },
-      { src: `${HD}/estate-lagoon.jpg`, alt: "Free form pool by Houston Cool Pools - lagoon-shaped pool with rock waterfall grotto" },
+      { src: `${HD}/hillside-waterfall.jpg`, alt: "Free form pool by Houston Cool Pools - kidney-shaped pool with rock waterfall and raised spa" },
       { src: `${HD}/clark-cove.jpg`, alt: "Free form pool by Houston Cool Pools - kidney-shaped pool with raised spa and bubblers" },
     ],
   },
   "gallery-free-form-pools-5": {
     extras: [
       { src: `${HD}/cove-spa.jpg`, alt: "Free form pool by Houston Cool Pools - curved cove pool with raised spa and stone column" },
-      { src: `${HD}/rock-grotto.jpg`, alt: "Free form pool by Houston Cool Pools - naturalistic pool with rock waterfall grotto" },
+      { src: `${HD}/tropical-tiki-lagoon.jpg`, alt: "Free form pool by Houston Cool Pools - tropical lagoon pool with tiki-carved rock wall and spa" },
       { src: `${HD}/adams-grotto.jpg`, alt: "Free form pool by Houston Cool Pools - free-form pool with rock waterfall grotto and raised spa" },
     ],
   },
@@ -63,7 +63,7 @@ const DATA: Record<string, GalleryEntry> = {
   },
   "geometric-pools-2": {
     extras: [
-      { src: `${HD}/merlin-2.jpg`, alt: "Geometric pool by Houston Cool Pools - linear pool with fire trough at dusk" },
+      { src: `${HD}/aerial-rect-spa.jpg`, alt: "Geometric pool by Houston Cool Pools - aerial view of rectangular pool with raised spa" },
       { src: `${HD}/breth-2.jpg`, alt: "Geometric pool by Houston Cool Pools - rectangular pool with fountain feature" },
       { src: `${HD}/anderson-tarr-2.jpg`, alt: "Geometric pool by Houston Cool Pools - square pool and spa" },
     ],
@@ -78,7 +78,7 @@ const DATA: Record<string, GalleryEntry> = {
   "geometric-pools-4": {
     extras: [
       { src: `${HD}/family-3.jpg`, alt: "Geometric pool by Houston Cool Pools - rectangular pool with stacked-stone waterfall wall" },
-      { src: `${HD}/silverman-1.jpg`, alt: "Geometric pool by Houston Cool Pools - linear lap pool with glass-tile spa" },
+      { src: `${HD}/dark-tanning-ledge.jpg`, alt: "Geometric pool by Houston Cool Pools - dark-finish rectangular pool with tanning ledge" },
       { src: `${HD}/puranik-1.jpg`, alt: "Geometric pool by Houston Cool Pools - rectangular reflecting pool by the lake" },
     ],
   },
@@ -86,14 +86,14 @@ const DATA: Record<string, GalleryEntry> = {
     extras: [
       { src: `${HD}/silverman-2.jpg`, alt: "Geometric pool by Houston Cool Pools - rectangular lap pool with sun shelf" },
       { src: `${HD}/puranik-2.jpg`, alt: "Geometric pool by Houston Cool Pools - rectangular pool with raised glass-tile spa" },
-      { src: `${HD}/corbeil-1.jpg`, alt: "Geometric pool by Houston Cool Pools - rectangular estate pool" },
+      { src: `${HD}/glass-mosaic-spa.jpg`, alt: "Geometric pool by Houston Cool Pools - rectangular pool with raised glass-mosaic spa" },
     ],
   },
   "geometric-pools-6": {
     extras: [
       { src: `${HD}/corbeil-2.jpg`, alt: "Geometric pool by Houston Cool Pools - rectangular pool with premium coping" },
       { src: `${HD}/estate-luxe.jpg`, alt: "Geometric pool by Houston Cool Pools - rectangular pool with fountains" },
-      { src: `${HD}/newcastle-1.jpg`, alt: "Geometric pool by Houston Cool Pools - rectangular remodel with raised spa" },
+      { src: `${HD}/resort-deck-firepit.jpg`, alt: "Geometric pool by Houston Cool Pools - rectangular pool with raised spa and stone patio" },
     ],
   },
 
